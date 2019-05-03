@@ -1,0 +1,12 @@
+NET A(3) LOC = "p124";
+NET A(2) LOC = "p39";
+NET A(1) LOC = "p94";
+NET A(0) LOC = "p143";
+NET EN LOC = "p130";
+NET O(6) LOC = "p56";
+NET O(5) LOC = "p53";
+NET O(4) LOC = "p60";
+NET O(3) LOC = "p58";
+NET O(2) LOC = "p57";
+NET O(1) LOC = "p54";
+NET O(0) LOC = "p61";

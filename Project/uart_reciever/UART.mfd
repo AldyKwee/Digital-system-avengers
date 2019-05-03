@@ -1,0 +1,815 @@
+MDF Database:  version 1.0
+MDF_INFO | UART | XA2C384-11-TQ144
+MACROCELL | 2 | 2 | BUSY_MC
+ATTRIBUTES | 2156167954 | 0
+OUTPUTMC | 11 | 6 | 14 | 2 | 13 | 2 | 12 | 2 | 10 | 2 | 3 | 2 | 9 | 2 | 4 | 2 | 8 | 2 | 11 | 2 | 7 | 2 | 14
+INPUTS | 2 | count<3>  | N_PZ_297
+INPUTMC | 2 | 2 | 6 | 2 | 0
+EQ | 3 | 
+   !BUSY := Gnd;	// (0 pt, 0 inp)
+   BUSY.CLK  =  !RXD;	// GCK	(0 pt, 0 inp)
+    BUSY.AR = count<3> & !N_PZ_297;	// PTA	(1 pt, 2 inp)
+GLOBALS | 1 | 2 | RXD
+
+MACROCELL | 2 | 6 | count<3>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 9 | 2 | 2 | 6 | 14 | 2 | 13 | 2 | 12 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 7 | 2 | 14
+INPUTS | 3 | count<0>  | count<1>  | count<2>
+INPUTMC | 3 | 1 | 4 | 2 | 1 | 2 | 5
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 3 | 
+   count<3>.T := count<0> & count<1> & count<2>;	// (1 pt, 3 inp)
+    count<3>.CLK = clk;	// CTC	(1 pt, 1 inp)
+    count<3>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+
+MACROCELL | 1 | 4 | count<0>_MC
+ATTRIBUTES | 2185233184 | 0
+OUTPUTMC | 11 | 2 | 1 | 2 | 5 | 2 | 6 | 6 | 14 | 2 | 13 | 2 | 12 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 7 | 2 | 14
+INPUTS | 1 | clk
+INPUTMC | 1 | 0 | 5
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   !count<0>.T := Gnd;	// (0 pt, 0 inp)
+    count<0>.CLK = clk;	// PTC	(1 pt, 1 inp)
+    count<0>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+
+MACROCELL | 0 | 5 | clk_MC
+ATTRIBUTES | 2168488704 | 0
+OUTPUTMC | 1 | 1 | 4
+INPUTS | 21 | divider<12>  | divider<13>  | divider<14>  | divider<15>  | divider<16>  | divider<17>  | divider<18>  | divider<19>  | divider<20>  | divider<21>  | divider<22>  | divider<23>  | divider<24>  | N_PZ_219  | divider<10>  | divider<8>  | divider<7>  | divider<2>  | divider<4>  | divider<6>  | divider<3>
+INPUTMC | 21 | 0 | 11 | 0 | 3 | 0 | 2 | 1 | 13 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 0 | 15 | 0 | 4 | 1 | 14 | 1 | 15 | 0 | 8 | 0 | 1 | 0 | 12 | 0 | 7
+LCT | 1 | 1 | Internal_Name
+EQ | 16 | 
+   !clk.T := !divider<12> & !divider<13> & !divider<14> & 
+	!divider<15> & !divider<16> & !divider<17> & !divider<18> & 
+	!divider<19> & !divider<20> & !divider<21> & !divider<22> & 
+	!divider<23> & !divider<24> & N_PZ_219
+	# !divider<10> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24> & !divider<8> & 
+	!divider<7> & !divider<2> & !divider<4> & !divider<6>
+	# !divider<10> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24> & !divider<8> & 
+	!divider<7> & !divider<3> & !divider<4> & !divider<6>;	// (3 pt, 21 inp)
+   clk.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    clk.AP = !BUSY;	// CTS	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 0 | 4 | divider<10>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 9 | 0 | 7 | 0 | 8 | 0 | 6 | 0 | 13 | 0 | 0 | 0 | 10 | 0 | 15 | 0 | 14 | 0 | 4 | 0 | 5
+INPUTS | 19 | divider<10>  | divider<11>  | divider<12>  | divider<13>  | divider<14>  | divider<15>  | divider<16>  | divider<17>  | divider<18>  | divider<19>  | divider<20>  | divider<21>  | divider<22>  | divider<23>  | divider<24>  | divider<9>  | divider<8>  | divider<7>  | N_PZ_227
+INPUTMC | 19 | 0 | 4 | 0 | 14 | 0 | 11 | 0 | 3 | 0 | 2 | 1 | 13 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 0 | 13 | 1 | 14 | 1 | 15 | 2 | 15
+LCT | 1 | 4 | Internal_Name
+EQ | 27 | 
+   divider<10> := divider<10> & !divider<11> & !divider<12> & 
+	!divider<13> & !divider<14> & !divider<15> & !divider<16> & 
+	!divider<17> & !divider<18> & !divider<19> & !divider<20> & 
+	!divider<21> & !divider<22> & !divider<23> & !divider<24> & 
+	!divider<9>
+	# divider<10> & !divider<11> & !divider<12> & 
+	!divider<13> & !divider<14> & !divider<15> & !divider<16> & 
+	!divider<17> & !divider<18> & !divider<19> & !divider<20> & 
+	!divider<21> & !divider<22> & !divider<23> & !divider<24> & 
+	!divider<8>
+	# divider<10> & !divider<11> & !divider<12> & 
+	!divider<13> & !divider<14> & !divider<15> & !divider<16> & 
+	!divider<17> & !divider<18> & !divider<19> & !divider<20> & 
+	!divider<21> & !divider<22> & !divider<23> & !divider<24> & 
+	!divider<7>
+	# divider<10> & !divider<11> & !divider<12> & 
+	!divider<13> & !divider<14> & !divider<15> & !divider<16> & 
+	!divider<17> & !divider<18> & !divider<19> & !divider<20> & 
+	!divider<21> & !divider<22> & !divider<23> & !divider<24> & 
+	!N_PZ_227
+	# !divider<10> & !divider<11> & !divider<12> & 
+	!divider<13> & !divider<14> & !divider<15> & !divider<16> & 
+	!divider<17> & !divider<18> & !divider<19> & !divider<20> & 
+	!divider<21> & !divider<22> & !divider<23> & !divider<24> & 
+	divider<9> & divider<8> & divider<7> & N_PZ_227;	// (5 pt, 19 inp)
+   divider<10>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<10>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 0 | 14 | divider<11>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 4 | 0 | 0 | 0 | 15 | 0 | 14 | 0 | 4
+INPUTS | 25 | divider<10>  | N_PZ_246  | divider<9>  | divider<8>  | divider<7>  | N_PZ_227  | divider<11>  | divider<12>  | divider<13>  | divider<14>  | divider<15>  | divider<16>  | divider<17>  | divider<18>  | divider<19>  | divider<20>  | divider<21>  | divider<22>  | divider<23>  | divider<24>  | N_PZ_219  | divider<2>  | divider<4>  | divider<6>  | divider<3>
+INPUTMC | 25 | 0 | 4 | 0 | 0 | 0 | 13 | 1 | 14 | 1 | 15 | 2 | 15 | 0 | 14 | 0 | 11 | 0 | 3 | 0 | 2 | 1 | 13 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 0 | 15 | 0 | 8 | 0 | 1 | 0 | 12 | 0 | 7
+LCT | 1 | 4 | Internal_Name
+EQ | 20 | 
+   divider<11> := divider<10> & N_PZ_246 & divider<9> & 
+	divider<8> & divider<7> & N_PZ_227
+	# divider<11> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24> & N_PZ_219
+	# !divider<10> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24> & !N_PZ_246 & 
+	!divider<8> & !divider<7> & !divider<2> & !divider<4> & 
+	!divider<6>
+	# !divider<10> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24> & !N_PZ_246 & 
+	!divider<8> & !divider<7> & !divider<3> & !divider<4> & 
+	!divider<6>;	// (4 pt, 25 inp)
+   divider<11>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<11>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 0 | 11 | divider<12>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 9 | 0 | 1 | 0 | 7 | 0 | 8 | 0 | 6 | 0 | 13 | 0 | 0 | 0 | 10 | 0 | 14 | 0 | 4 | 0 | 5
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   divider<12> := Gnd;	// (0 pt, 0 inp)
+   divider<12>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<12>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 0 | 3 | divider<13>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 9 | 0 | 1 | 0 | 7 | 0 | 8 | 0 | 6 | 0 | 13 | 0 | 0 | 0 | 10 | 0 | 14 | 0 | 4 | 0 | 5
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   divider<13> := Gnd;	// (0 pt, 0 inp)
+   divider<13>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<13>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 0 | 2 | divider<14>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 9 | 0 | 1 | 0 | 7 | 0 | 8 | 0 | 6 | 0 | 13 | 0 | 0 | 0 | 10 | 0 | 14 | 0 | 4 | 0 | 5
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   divider<14> := Gnd;	// (0 pt, 0 inp)
+   divider<14>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<14>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 1 | 13 | divider<15>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 9 | 0 | 1 | 0 | 7 | 0 | 8 | 0 | 6 | 0 | 13 | 0 | 0 | 0 | 10 | 0 | 14 | 0 | 4 | 0 | 5
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   divider<15> := Gnd;	// (0 pt, 0 inp)
+   divider<15>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<15>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 1 | 12 | divider<16>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 9 | 0 | 1 | 0 | 7 | 0 | 8 | 0 | 6 | 0 | 13 | 0 | 0 | 0 | 10 | 0 | 14 | 0 | 4 | 0 | 5
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   divider<16> := Gnd;	// (0 pt, 0 inp)
+   divider<16>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<16>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 1 | 11 | divider<17>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 9 | 0 | 1 | 0 | 7 | 0 | 8 | 0 | 6 | 0 | 13 | 0 | 0 | 0 | 10 | 0 | 14 | 0 | 4 | 0 | 5
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   divider<17> := Gnd;	// (0 pt, 0 inp)
+   divider<17>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<17>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 1 | 10 | divider<18>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 9 | 0 | 1 | 0 | 7 | 0 | 8 | 0 | 6 | 0 | 13 | 0 | 0 | 0 | 10 | 0 | 14 | 0 | 4 | 0 | 5
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   divider<18> := Gnd;	// (0 pt, 0 inp)
+   divider<18>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<18>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 1 | 9 | divider<19>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 9 | 0 | 1 | 0 | 7 | 0 | 8 | 0 | 6 | 0 | 13 | 0 | 0 | 0 | 10 | 0 | 14 | 0 | 4 | 0 | 5
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   divider<19> := Gnd;	// (0 pt, 0 inp)
+   divider<19>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<19>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 1 | 8 | divider<20>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 9 | 0 | 1 | 0 | 7 | 0 | 8 | 0 | 6 | 0 | 13 | 0 | 0 | 0 | 10 | 0 | 14 | 0 | 4 | 0 | 5
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   divider<20> := Gnd;	// (0 pt, 0 inp)
+   divider<20>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<20>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 1 | 7 | divider<21>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 9 | 0 | 1 | 0 | 7 | 0 | 8 | 0 | 6 | 0 | 13 | 0 | 0 | 0 | 10 | 0 | 14 | 0 | 4 | 0 | 5
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   divider<21> := Gnd;	// (0 pt, 0 inp)
+   divider<21>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<21>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 1 | 6 | divider<22>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 9 | 0 | 1 | 0 | 7 | 0 | 8 | 0 | 6 | 0 | 13 | 0 | 0 | 0 | 10 | 0 | 14 | 0 | 4 | 0 | 5
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   divider<22> := Gnd;	// (0 pt, 0 inp)
+   divider<22>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<22>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 1 | 5 | divider<23>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 9 | 0 | 1 | 0 | 7 | 0 | 8 | 0 | 6 | 0 | 13 | 0 | 0 | 0 | 10 | 0 | 14 | 0 | 4 | 0 | 5
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   divider<23> := Gnd;	// (0 pt, 0 inp)
+   divider<23>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<23>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 1 | 1 | divider<24>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 9 | 0 | 1 | 0 | 7 | 0 | 8 | 0 | 6 | 0 | 13 | 0 | 0 | 0 | 10 | 0 | 14 | 0 | 4 | 0 | 5
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   divider<24> := Gnd;	// (0 pt, 0 inp)
+   divider<24>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<24>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 0 | 15 | N_PZ_219_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 8 | 0 | 9 | 0 | 1 | 0 | 7 | 0 | 8 | 0 | 6 | 0 | 13 | 0 | 14 | 0 | 5
+INPUTS | 7 | divider<11>  | divider<10>  | divider<9>  | divider<5>  | divider<8>  | divider<7>  | divider<6>
+INPUTMC | 7 | 0 | 14 | 0 | 4 | 0 | 13 | 0 | 10 | 1 | 14 | 1 | 15 | 0 | 12
+EQ | 4 | 
+   N_PZ_219 = !divider<11>
+	# !divider<10> & !divider<9>
+	# !divider<10> & !divider<5> & !divider<8> & 
+	!divider<7> & !divider<6>;	// (3 pt, 7 inp)
+
+MACROCELL | 0 | 10 | divider<5>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 4 | 0 | 12 | 2 | 15 | 0 | 10 | 0 | 15
+INPUTS | 24 | divider<5>  | N_PZ_246  | divider<0>  | divider<2>  | divider<3>  | divider<4>  | divider<1>  | divider<10>  | divider<12>  | divider<13>  | divider<14>  | divider<15>  | divider<16>  | divider<17>  | divider<18>  | divider<19>  | divider<20>  | divider<21>  | divider<22>  | divider<23>  | divider<24>  | divider<8>  | divider<7>  | divider<6>
+INPUTMC | 24 | 0 | 10 | 0 | 0 | 0 | 6 | 0 | 8 | 0 | 7 | 0 | 1 | 0 | 9 | 0 | 4 | 0 | 11 | 0 | 3 | 0 | 2 | 1 | 13 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 1 | 14 | 1 | 15 | 0 | 12
+LCT | 1 | 4 | Internal_Name
+EQ | 23 | 
+   divider<5> := divider<5> & N_PZ_246
+	$ N_PZ_246 & divider<0> & divider<2> & divider<3> & 
+	divider<4> & divider<1>
+	# !divider<10> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24> & divider<5> & 
+	!N_PZ_246 & !divider<8> & !divider<7> & !divider<2> & 
+	!divider<4> & !divider<6>
+	# !divider<10> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24> & divider<5> & 
+	!N_PZ_246 & !divider<8> & !divider<7> & !divider<3> & 
+	!divider<4> & !divider<6>
+	# !divider<10> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24> & !divider<5> & 
+	!divider<8> & !divider<7> & divider<0> & divider<2> & 
+	divider<3> & divider<4> & divider<1> & !divider<6>;	// (5 pt, 24 inp)
+   divider<5>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<5>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 0 | 0 | N_PZ_246_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 6 | 0 | 12 | 1 | 15 | 1 | 14 | 0 | 13 | 0 | 10 | 0 | 14
+INPUTS | 16 | divider<11>  | divider<12>  | divider<13>  | divider<14>  | divider<15>  | divider<16>  | divider<17>  | divider<18>  | divider<19>  | divider<20>  | divider<21>  | divider<22>  | divider<23>  | divider<24>  | divider<10>  | divider<9>
+INPUTMC | 16 | 0 | 14 | 0 | 11 | 0 | 3 | 0 | 2 | 1 | 13 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 0 | 4 | 0 | 13
+EQ | 8 | 
+   N_PZ_246 = !divider<11> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24>
+	# !divider<10> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24> & !divider<9>;	// (2 pt, 16 inp)
+
+MACROCELL | 0 | 13 | divider<9>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 5 | 0 | 13 | 0 | 0 | 0 | 15 | 0 | 14 | 0 | 4
+INPUTS | 24 | N_PZ_246  | divider<9>  | divider<7>  | N_PZ_227  | divider<8>  | divider<12>  | divider<13>  | divider<14>  | divider<15>  | divider<16>  | divider<17>  | divider<18>  | divider<19>  | divider<20>  | divider<21>  | divider<22>  | divider<23>  | divider<24>  | N_PZ_219  | divider<10>  | divider<2>  | divider<4>  | divider<6>  | divider<3>
+INPUTMC | 24 | 0 | 0 | 0 | 13 | 1 | 15 | 2 | 15 | 1 | 14 | 0 | 11 | 0 | 3 | 0 | 2 | 1 | 13 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 0 | 15 | 0 | 4 | 0 | 8 | 0 | 1 | 0 | 12 | 0 | 7
+LCT | 1 | 4 | Internal_Name
+EQ | 23 | 
+   divider<9> := N_PZ_246 & divider<9> & !divider<7>
+	# N_PZ_246 & divider<9> & !N_PZ_227
+	# N_PZ_246 & !divider<9> & divider<8> & divider<7> & 
+	N_PZ_227
+	# !divider<12> & !divider<13> & !divider<14> & 
+	!divider<15> & !divider<16> & !divider<17> & !divider<18> & 
+	!divider<19> & !divider<20> & !divider<21> & !divider<22> & 
+	!divider<23> & !divider<24> & N_PZ_219 & divider<9> & 
+	!divider<8>
+	# !divider<10> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24> & !N_PZ_246 & 
+	!divider<8> & !divider<7> & !divider<2> & !divider<4> & 
+	!divider<6>
+	# !divider<10> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24> & !N_PZ_246 & 
+	!divider<8> & !divider<7> & !divider<3> & !divider<4> & 
+	!divider<6>;	// (6 pt, 24 inp)
+   divider<9>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<9>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 1 | 14 | divider<8>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 11 | 0 | 9 | 0 | 7 | 0 | 8 | 0 | 6 | 1 | 14 | 0 | 13 | 0 | 10 | 0 | 15 | 0 | 14 | 0 | 4 | 0 | 5
+INPUTS | 4 | N_PZ_246  | divider<8>  | divider<7>  | N_PZ_227
+INPUTMC | 4 | 0 | 0 | 1 | 14 | 1 | 15 | 2 | 15
+LCT | 1 | 4 | Internal_Name
+EQ | 4 | 
+   divider<8>.T := !N_PZ_246 & divider<8>
+	# N_PZ_246 & divider<7> & N_PZ_227;	// (2 pt, 4 inp)
+   divider<8>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<8>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 1 | 15 | divider<7>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 12 | 0 | 9 | 0 | 7 | 0 | 8 | 0 | 6 | 1 | 15 | 1 | 14 | 0 | 13 | 0 | 10 | 0 | 15 | 0 | 14 | 0 | 4 | 0 | 5
+INPUTS | 3 | N_PZ_246  | divider<7>  | N_PZ_227
+INPUTMC | 3 | 0 | 0 | 1 | 15 | 2 | 15
+LCT | 1 | 4 | Internal_Name
+EQ | 4 | 
+   divider<7> := N_PZ_246 & divider<7> & !N_PZ_227
+	# N_PZ_246 & !divider<7> & N_PZ_227;	// (2 pt, 3 inp)
+   divider<7>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<7>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 2 | 15 | N_PZ_227_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 6 | 0 | 12 | 1 | 15 | 1 | 14 | 0 | 13 | 0 | 14 | 0 | 4
+INPUTS | 7 | divider<5>  | divider<0>  | divider<2>  | divider<3>  | divider<4>  | divider<1>  | divider<6>
+INPUTMC | 7 | 0 | 10 | 0 | 6 | 0 | 8 | 0 | 7 | 0 | 1 | 0 | 9 | 0 | 12
+EQ | 2 | 
+   N_PZ_227 = divider<5> & divider<0> & divider<2> & 
+	divider<3> & divider<4> & divider<1> & divider<6>;	// (1 pt, 7 inp)
+
+MACROCELL | 0 | 6 | divider<0>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 8 | 0 | 12 | 0 | 9 | 0 | 1 | 0 | 7 | 0 | 8 | 0 | 6 | 2 | 15 | 0 | 10
+INPUTS | 22 | divider<12>  | divider<13>  | divider<14>  | divider<15>  | divider<16>  | divider<17>  | divider<18>  | divider<19>  | divider<20>  | divider<21>  | divider<22>  | divider<23>  | divider<24>  | N_PZ_219  | divider<0>  | divider<10>  | divider<8>  | divider<7>  | divider<2>  | divider<4>  | divider<6>  | divider<3>
+INPUTMC | 22 | 0 | 11 | 0 | 3 | 0 | 2 | 1 | 13 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 0 | 15 | 0 | 6 | 0 | 4 | 1 | 14 | 1 | 15 | 0 | 8 | 0 | 1 | 0 | 12 | 0 | 7
+LCT | 1 | 4 | Internal_Name
+EQ | 18 | 
+   divider<0> := !divider<12> & !divider<13> & !divider<14> & 
+	!divider<15> & !divider<16> & !divider<17> & !divider<18> & 
+	!divider<19> & !divider<20> & !divider<21> & !divider<22> & 
+	!divider<23> & !divider<24> & N_PZ_219 & !divider<0>
+	# !divider<10> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24> & !divider<8> & 
+	!divider<7> & !divider<0> & !divider<2> & !divider<4> & 
+	!divider<6>
+	# !divider<10> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24> & !divider<8> & 
+	!divider<7> & !divider<0> & !divider<3> & !divider<4> & 
+	!divider<6>;	// (3 pt, 22 inp)
+   divider<0>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<0>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 0 | 8 | divider<2>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 12 | 0 | 9 | 0 | 1 | 0 | 7 | 0 | 8 | 0 | 6 | 2 | 15 | 0 | 13 | 0 | 10 | 0 | 14 | 0 | 5
+INPUTS | 23 | divider<12>  | divider<13>  | divider<14>  | divider<15>  | divider<16>  | divider<17>  | divider<18>  | divider<19>  | divider<20>  | divider<21>  | divider<22>  | divider<23>  | divider<24>  | N_PZ_219  | divider<0>  | divider<2>  | divider<1>  | divider<10>  | divider<8>  | divider<7>  | divider<4>  | divider<6>  | divider<3>
+INPUTMC | 23 | 0 | 11 | 0 | 3 | 0 | 2 | 1 | 13 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 0 | 15 | 0 | 6 | 0 | 8 | 0 | 9 | 0 | 4 | 1 | 14 | 1 | 15 | 0 | 1 | 0 | 12 | 0 | 7
+LCT | 1 | 4 | Internal_Name
+EQ | 35 | 
+   divider<2> := !divider<12> & !divider<13> & !divider<14> & 
+	!divider<15> & !divider<16> & !divider<17> & !divider<18> & 
+	!divider<19> & !divider<20> & !divider<21> & !divider<22> & 
+	!divider<23> & !divider<24> & N_PZ_219 & !divider<0> & 
+	divider<2>
+	# !divider<12> & !divider<13> & !divider<14> & 
+	!divider<15> & !divider<16> & !divider<17> & !divider<18> & 
+	!divider<19> & !divider<20> & !divider<21> & !divider<22> & 
+	!divider<23> & !divider<24> & N_PZ_219 & divider<2> & 
+	!divider<1>
+	# !divider<12> & !divider<13> & !divider<14> & 
+	!divider<15> & !divider<16> & !divider<17> & !divider<18> & 
+	!divider<19> & !divider<20> & !divider<21> & !divider<22> & 
+	!divider<23> & !divider<24> & N_PZ_219 & divider<0> & 
+	!divider<2> & divider<1>
+	# !divider<10> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24> & !divider<8> & 
+	!divider<7> & divider<0> & !divider<2> & !divider<4> & 
+	divider<1> & !divider<6>
+	# !divider<10> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24> & !divider<8> & 
+	!divider<7> & !divider<0> & divider<2> & !divider<3> & 
+	!divider<4> & !divider<6>
+	# !divider<10> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24> & !divider<8> & 
+	!divider<7> & divider<2> & !divider<3> & !divider<4> & 
+	!divider<1> & !divider<6>;	// (6 pt, 23 inp)
+   divider<2>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<2>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 0 | 7 | divider<3>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 12 | 0 | 9 | 0 | 1 | 0 | 7 | 0 | 8 | 0 | 6 | 2 | 15 | 0 | 13 | 0 | 10 | 0 | 14 | 0 | 5
+INPUTS | 23 | divider<12>  | divider<13>  | divider<14>  | divider<15>  | divider<16>  | divider<17>  | divider<18>  | divider<19>  | divider<20>  | divider<21>  | divider<22>  | divider<23>  | divider<24>  | N_PZ_219  | divider<0>  | divider<3>  | divider<2>  | divider<1>  | divider<10>  | divider<8>  | divider<7>  | divider<4>  | divider<6>
+INPUTMC | 23 | 0 | 11 | 0 | 3 | 0 | 2 | 1 | 13 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 0 | 15 | 0 | 6 | 0 | 7 | 0 | 8 | 0 | 9 | 0 | 4 | 1 | 14 | 1 | 15 | 0 | 1 | 0 | 12
+LCT | 1 | 4 | Internal_Name
+EQ | 34 | 
+   divider<3> := !divider<12> & !divider<13> & !divider<14> & 
+	!divider<15> & !divider<16> & !divider<17> & !divider<18> & 
+	!divider<19> & !divider<20> & !divider<21> & !divider<22> & 
+	!divider<23> & !divider<24> & N_PZ_219 & !divider<0> & 
+	divider<3>
+	# !divider<12> & !divider<13> & !divider<14> & 
+	!divider<15> & !divider<16> & !divider<17> & !divider<18> & 
+	!divider<19> & !divider<20> & !divider<21> & !divider<22> & 
+	!divider<23> & !divider<24> & N_PZ_219 & !divider<2> & 
+	divider<3>
+	# !divider<12> & !divider<13> & !divider<14> & 
+	!divider<15> & !divider<16> & !divider<17> & !divider<18> & 
+	!divider<19> & !divider<20> & !divider<21> & !divider<22> & 
+	!divider<23> & !divider<24> & N_PZ_219 & divider<3> & 
+	!divider<1>
+	# !divider<12> & !divider<13> & !divider<14> & 
+	!divider<15> & !divider<16> & !divider<17> & !divider<18> & 
+	!divider<19> & !divider<20> & !divider<21> & !divider<22> & 
+	!divider<23> & !divider<24> & N_PZ_219 & divider<0> & 
+	divider<2> & !divider<3> & divider<1>
+	# !divider<10> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24> & !divider<8> & 
+	!divider<7> & !divider<2> & divider<3> & !divider<4> & 
+	!divider<6>
+	# !divider<10> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24> & !divider<8> & 
+	!divider<7> & divider<0> & divider<2> & !divider<3> & 
+	!divider<4> & divider<1> & !divider<6>;	// (6 pt, 23 inp)
+   divider<3>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<3>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 0 | 1 | divider<4>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 12 | 0 | 9 | 0 | 1 | 0 | 7 | 0 | 8 | 0 | 6 | 2 | 15 | 0 | 13 | 0 | 10 | 0 | 14 | 0 | 5
+INPUTS | 19 | divider<12>  | divider<13>  | divider<14>  | divider<15>  | divider<16>  | divider<17>  | divider<18>  | divider<19>  | divider<20>  | divider<21>  | divider<22>  | divider<23>  | divider<24>  | N_PZ_219  | divider<0>  | divider<4>  | divider<2>  | divider<3>  | divider<1>
+INPUTMC | 19 | 0 | 11 | 0 | 3 | 0 | 2 | 1 | 13 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 0 | 15 | 0 | 6 | 0 | 1 | 0 | 8 | 0 | 7 | 0 | 9
+LCT | 1 | 4 | Internal_Name
+EQ | 27 | 
+   divider<4> := !divider<12> & !divider<13> & !divider<14> & 
+	!divider<15> & !divider<16> & !divider<17> & !divider<18> & 
+	!divider<19> & !divider<20> & !divider<21> & !divider<22> & 
+	!divider<23> & !divider<24> & N_PZ_219 & !divider<0> & 
+	divider<4>
+	# !divider<12> & !divider<13> & !divider<14> & 
+	!divider<15> & !divider<16> & !divider<17> & !divider<18> & 
+	!divider<19> & !divider<20> & !divider<21> & !divider<22> & 
+	!divider<23> & !divider<24> & N_PZ_219 & !divider<2> & 
+	divider<4>
+	# !divider<12> & !divider<13> & !divider<14> & 
+	!divider<15> & !divider<16> & !divider<17> & !divider<18> & 
+	!divider<19> & !divider<20> & !divider<21> & !divider<22> & 
+	!divider<23> & !divider<24> & N_PZ_219 & !divider<3> & 
+	divider<4>
+	# !divider<12> & !divider<13> & !divider<14> & 
+	!divider<15> & !divider<16> & !divider<17> & !divider<18> & 
+	!divider<19> & !divider<20> & !divider<21> & !divider<22> & 
+	!divider<23> & !divider<24> & N_PZ_219 & divider<4> & 
+	!divider<1>
+	# !divider<12> & !divider<13> & !divider<14> & 
+	!divider<15> & !divider<16> & !divider<17> & !divider<18> & 
+	!divider<19> & !divider<20> & !divider<21> & !divider<22> & 
+	!divider<23> & !divider<24> & N_PZ_219 & divider<0> & 
+	divider<2> & divider<3> & !divider<4> & divider<1>;	// (5 pt, 19 inp)
+   divider<4>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<4>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 0 | 9 | divider<1>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 7 | 0 | 12 | 0 | 9 | 0 | 1 | 0 | 7 | 0 | 8 | 2 | 15 | 0 | 10
+INPUTS | 23 | divider<12>  | divider<13>  | divider<14>  | divider<15>  | divider<16>  | divider<17>  | divider<18>  | divider<19>  | divider<20>  | divider<21>  | divider<22>  | divider<23>  | divider<24>  | N_PZ_219  | divider<0>  | divider<1>  | divider<10>  | divider<8>  | divider<7>  | divider<2>  | divider<4>  | divider<6>  | divider<3>
+INPUTMC | 23 | 0 | 11 | 0 | 3 | 0 | 2 | 1 | 13 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 0 | 15 | 0 | 6 | 0 | 9 | 0 | 4 | 1 | 14 | 1 | 15 | 0 | 8 | 0 | 1 | 0 | 12 | 0 | 7
+LCT | 1 | 4 | Internal_Name
+EQ | 36 | 
+   divider<1> := !divider<12> & !divider<13> & !divider<14> & 
+	!divider<15> & !divider<16> & !divider<17> & !divider<18> & 
+	!divider<19> & !divider<20> & !divider<21> & !divider<22> & 
+	!divider<23> & !divider<24> & N_PZ_219 & divider<0> & 
+	!divider<1>
+	# !divider<12> & !divider<13> & !divider<14> & 
+	!divider<15> & !divider<16> & !divider<17> & !divider<18> & 
+	!divider<19> & !divider<20> & !divider<21> & !divider<22> & 
+	!divider<23> & !divider<24> & N_PZ_219 & !divider<0> & 
+	divider<1>
+	# !divider<10> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24> & !divider<8> & 
+	!divider<7> & divider<0> & !divider<2> & !divider<4> & 
+	!divider<1> & !divider<6>
+	# !divider<10> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24> & !divider<8> & 
+	!divider<7> & divider<0> & !divider<3> & !divider<4> & 
+	!divider<1> & !divider<6>
+	# !divider<10> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24> & !divider<8> & 
+	!divider<7> & !divider<0> & !divider<2> & !divider<4> & 
+	divider<1> & !divider<6>
+	# !divider<10> & !divider<12> & !divider<13> & 
+	!divider<14> & !divider<15> & !divider<16> & !divider<17> & 
+	!divider<18> & !divider<19> & !divider<20> & !divider<21> & 
+	!divider<22> & !divider<23> & !divider<24> & !divider<8> & 
+	!divider<7> & !divider<0> & !divider<3> & !divider<4> & 
+	divider<1> & !divider<6>;	// (6 pt, 23 inp)
+   divider<1>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<1>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 0 | 12 | divider<6>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 12 | 0 | 9 | 0 | 7 | 0 | 8 | 0 | 6 | 2 | 15 | 0 | 13 | 0 | 10 | 0 | 15 | 0 | 14 | 0 | 5
+INPUTS | 9 | N_PZ_246  | N_PZ_227  | divider<6>  | divider<5>  | divider<0>  | divider<2>  | divider<3>  | divider<4>  | divider<1>
+INPUTMC | 9 | 0 | 0 | 2 | 15 | 0 | 12 | 0 | 10 | 0 | 6 | 0 | 8 | 0 | 7 | 0 | 1 | 0 | 9
+LCT | 1 | 4 | Internal_Name
+EQ | 5 | 
+   divider<6> := N_PZ_246 & !N_PZ_227 & divider<6>
+	# divider<5> & N_PZ_246 & !N_PZ_227 & divider<0> & 
+	divider<2> & divider<3> & divider<4> & divider<1>;	// (2 pt, 9 inp)
+   divider<6>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+    divider<6>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 2 | 1 | count<1>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 9 | 2 | 5 | 2 | 6 | 2 | 0 | 2 | 13 | 2 | 12 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 7
+INPUTS | 1 | count<0>
+INPUTMC | 1 | 1 | 4
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 3 | 
+   count<1>.T := count<0>;	// (1 pt, 1 inp)
+    count<1>.CLK = clk;	// CTC	(1 pt, 1 inp)
+    count<1>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+
+MACROCELL | 2 | 5 | count<2>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 8 | 2 | 6 | 2 | 0 | 2 | 13 | 2 | 12 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 7
+INPUTS | 2 | count<0>  | count<1>
+INPUTMC | 2 | 1 | 4 | 2 | 1
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 3 | 
+   count<2>.T := count<0> & count<1>;	// (1 pt, 2 inp)
+    count<2>.CLK = clk;	// CTC	(1 pt, 1 inp)
+    count<2>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+
+MACROCELL | 2 | 0 | N_PZ_297_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 3 | 2 | 2 | 6 | 14 | 2 | 14
+INPUTS | 2 | count<1>  | count<2>
+INPUTMC | 2 | 2 | 1 | 2 | 5
+EQ | 1 | 
+   N_PZ_297 = !count<1> & !count<2>;	// (1 pt, 2 inp)
+
+MACROCELL | 1 | 0 | DATA<0>_MC
+ATTRIBUTES | 142869250 | 0
+INPUTS | 1 | idata<1>
+INPUTMC | 1 | 6 | 14
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   DATA<0> := idata<1>;	// (1 pt, 1 inp)
+    DATA<0>.CLK = !(BUSY);	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 6 | 14 | idata<1>_MC
+ATTRIBUTES | 2290090048 | 4
+OUTPUTMC | 1 | 1 | 0
+INPUTS | 4 | count<3>  | count<0>  | BUSY  | N_PZ_297
+INPUTMC | 4 | 2 | 6 | 1 | 4 | 2 | 2 | 2 | 0
+LCT | 1 | 2 | Internal_Name
+EQ | 5 | 
+   
+// Direct Input Register
+idata<1> := RXD;	// (0 pt, 0 inp)
+    idata<1>.CLK = !(clk);	// CTC	(1 pt, 1 inp)
+    idata<1>.CE = !count<3> & count<0> & BUSY & N_PZ_297;	// (1 pt, 4 inp)
+
+MACROCELL | 1 | 2 | DATA<1>_MC
+ATTRIBUTES | 142869250 | 0
+INPUTS | 1 | idata<2>
+INPUTMC | 1 | 2 | 13
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   DATA<1> := idata<2>;	// (1 pt, 1 inp)
+    DATA<1>.CLK = !(BUSY);	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 13 | idata<2>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 1 | 2
+INPUTS | 6 | RXD  | count<3>  | count<0>  | BUSY  | count<1>  | count<2>
+INPUTMC | 5 | 2 | 6 | 1 | 4 | 2 | 2 | 2 | 1 | 2 | 5
+INPUTP | 1 | 64
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   idata<2> := RXD;	// (1 pt, 1 inp)
+    idata<2>.CLK = !(clk);	// CTC	(1 pt, 1 inp)
+    idata<2>.CE = !count<3> & !count<0> & BUSY & count<1> & 
+	!count<2>;	// (1 pt, 5 inp)
+
+MACROCELL | 1 | 3 | DATA<2>_MC
+ATTRIBUTES | 142869250 | 0
+INPUTS | 1 | idata<3>
+INPUTMC | 1 | 2 | 12
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   DATA<2> := idata<3>;	// (1 pt, 1 inp)
+    DATA<2>.CLK = !(BUSY);	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 12 | idata<3>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 1 | 3
+INPUTS | 6 | RXD  | count<3>  | count<0>  | BUSY  | count<1>  | count<2>
+INPUTMC | 5 | 2 | 6 | 1 | 4 | 2 | 2 | 2 | 1 | 2 | 5
+INPUTP | 1 | 64
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   idata<3> := RXD;	// (1 pt, 1 inp)
+    idata<3>.CLK = !(clk);	// CTC	(1 pt, 1 inp)
+    idata<3>.CE = !count<3> & count<0> & BUSY & count<1> & 
+	!count<2>;	// (1 pt, 5 inp)
+
+MACROCELL | 2 | 3 | DATA<3>_MC
+ATTRIBUTES | 8651554 | 0
+INPUTS | 2 | idata<4>  | BUSY
+INPUTMC | 2 | 2 | 10 | 2 | 2
+EQ | 2 | 
+   DATA<3> := idata<4>;	// (1 pt, 1 inp)
+    DATA<3>.CLK = !(BUSY);	// PTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 10 | idata<4>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 2 | 3
+INPUTS | 6 | RXD  | count<3>  | count<0>  | BUSY  | count<1>  | count<2>
+INPUTMC | 5 | 2 | 6 | 1 | 4 | 2 | 2 | 2 | 1 | 2 | 5
+INPUTP | 1 | 64
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   idata<4> := RXD;	// (1 pt, 1 inp)
+    idata<4>.CLK = !(clk);	// CTC	(1 pt, 1 inp)
+    idata<4>.CE = !count<3> & !count<0> & BUSY & !count<1> & 
+	count<2>;	// (1 pt, 5 inp)
+
+MACROCELL | 2 | 4 | DATA<4>_MC
+ATTRIBUTES | 8651554 | 0
+INPUTS | 2 | idata<5>  | BUSY
+INPUTMC | 2 | 2 | 9 | 2 | 2
+EQ | 2 | 
+   DATA<4> := idata<5>;	// (1 pt, 1 inp)
+    DATA<4>.CLK = !(BUSY);	// PTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 9 | idata<5>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 2 | 4
+INPUTS | 6 | RXD  | count<3>  | count<0>  | BUSY  | count<1>  | count<2>
+INPUTMC | 5 | 2 | 6 | 1 | 4 | 2 | 2 | 2 | 1 | 2 | 5
+INPUTP | 1 | 64
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   idata<5> := RXD;	// (1 pt, 1 inp)
+    idata<5>.CLK = !(clk);	// CTC	(1 pt, 1 inp)
+    idata<5>.CE = !count<3> & count<0> & BUSY & !count<1> & 
+	count<2>;	// (1 pt, 5 inp)
+
+MACROCELL | 2 | 11 | DATA<5>_MC
+ATTRIBUTES | 8651554 | 0
+INPUTS | 2 | idata<6>  | BUSY
+INPUTMC | 2 | 2 | 8 | 2 | 2
+EQ | 2 | 
+   DATA<5> := idata<6>;	// (1 pt, 1 inp)
+    DATA<5>.CLK = !(BUSY);	// PTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 8 | idata<6>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 2 | 11
+INPUTS | 6 | RXD  | count<3>  | count<0>  | BUSY  | count<1>  | count<2>
+INPUTMC | 5 | 2 | 6 | 1 | 4 | 2 | 2 | 2 | 1 | 2 | 5
+INPUTP | 1 | 64
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   idata<6> := RXD;	// (1 pt, 1 inp)
+    idata<6>.CLK = !(clk);	// CTC	(1 pt, 1 inp)
+    idata<6>.CE = !count<3> & !count<0> & BUSY & count<1> & 
+	count<2>;	// (1 pt, 5 inp)
+
+MACROCELL | 3 | 0 | DATA<6>_MC
+ATTRIBUTES | 142869250 | 0
+INPUTS | 1 | idata<7>
+INPUTMC | 1 | 2 | 7
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   DATA<6> := idata<7>;	// (1 pt, 1 inp)
+    DATA<6>.CLK = !(BUSY);	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 7 | idata<7>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 3 | 0
+INPUTS | 6 | RXD  | count<3>  | count<0>  | BUSY  | count<1>  | count<2>
+INPUTMC | 5 | 2 | 6 | 1 | 4 | 2 | 2 | 2 | 1 | 2 | 5
+INPUTP | 1 | 64
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   idata<7> := RXD;	// (1 pt, 1 inp)
+    idata<7>.CLK = !(clk);	// CTC	(1 pt, 1 inp)
+    idata<7>.CE = !count<3> & count<0> & BUSY & count<1> & 
+	count<2>;	// (1 pt, 5 inp)
+
+MACROCELL | 3 | 1 | DATA<7>_MC
+ATTRIBUTES | 142869250 | 0
+INPUTS | 1 | idata<8>
+INPUTMC | 1 | 2 | 14
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   DATA<7> := idata<8>;	// (1 pt, 1 inp)
+    DATA<7>.CLK = !(BUSY);	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 14 | idata<8>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 3 | 1
+INPUTS | 5 | RXD  | count<3>  | count<0>  | BUSY  | N_PZ_297
+INPUTMC | 4 | 2 | 6 | 1 | 4 | 2 | 2 | 2 | 0
+INPUTP | 1 | 64
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   idata<8> := RXD;	// (1 pt, 1 inp)
+    idata<8>.CLK = !(clk);	// CTC	(1 pt, 1 inp)
+    idata<8>.CE = count<3> & !count<0> & BUSY & N_PZ_297;	// (1 pt, 4 inp)
+
+PIN | RXD | 4160 | 16 | LVCMOS18 | 64 | 9 | 2 | 13 | 2 | 12 | 2 | 10 | 2 | 9 | 2 | 8 | 2 | 7 | 2 | 14 | 2 | 2 | 6 | 14
+PIN | CLK50 | 8192 | 16 | LVCMOS18 | 67 | 26 | 0 | 11 | 0 | 3 | 0 | 2 | 1 | 13 | 1 | 12 | 1 | 11 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 0 | 12 | 0 | 9 | 0 | 1 | 0 | 7 | 0 | 8 | 0 | 6 | 1 | 15 | 1 | 14 | 0 | 13 | 0 | 10 | 0 | 14 | 0 | 4 | 0 | 5
+PIN | BUSY | 536871040 | 0 | LVCMOS18 | 277
+PIN | DATA<0> | 536871040 | 0 | LVCMOS18 | 5
+PIN | DATA<1> | 536871040 | 0 | LVCMOS18 | 7
+PIN | DATA<2> | 536871040 | 0 | LVCMOS18 | 8
+PIN | DATA<3> | 536871040 | 0 | LVCMOS18 | 276
+PIN | DATA<4> | 536871040 | 0 | LVCMOS18 | 275
+PIN | DATA<5> | 536871040 | 0 | LVCMOS18 | 272
+PIN | DATA<6> | 536871040 | 0 | LVCMOS18 | 16
+PIN | DATA<7> | 536871040 | 0 | LVCMOS18 | 17

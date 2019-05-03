@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="MAINRX.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="MAINRX.bld"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_CHK" xil_pn:name="MAINRX.chk"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="MAINRX.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_CXT" xil_pn:name="MAINRX.cxt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_GYD" xil_pn:name="MAINRX.gyd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_JEDEC" xil_pn:name="MAINRX.jed"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="MAINRX.log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="MAINRX.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MFD" xil_pn:name="MAINRX.mfd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGA" xil_pn:name="MAINRX.nga"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="MAINRX.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="MAINRX.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="MAINRX.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="MAINRX.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PNX" xil_pn:name="MAINRX.pnx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MAINRX.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="MAINRX.rpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="MAINRX.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="MAINRX.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VM6" xil_pn:name="MAINRX.vm6"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="MAINRX.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="MAINRX.xst"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="MAINRX_build.xml"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="MAINRX_envsettings.html"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="MAINRX_html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="MAINRX_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="MAINRX_pad.csv"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="MAINRX_summary.html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MAINRX_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="MAINRX_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1556783959" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1556783959">
+      <status xil_pn:value="SuccessfullyRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1556783959" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="5453149471023214477" xil_pn:start_ts="1556783959">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1556784799" xil_pn:in_ck="-5612371949407067950" xil_pn:name="TRANEXT_xstsynthesize_xbr" xil_pn:prop_ck="3804263129839470096" xil_pn:start_ts="1556784792">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="MAINRX.lso"/>
+      <outfile xil_pn:name="MAINRX.ngc"/>
+      <outfile xil_pn:name="MAINRX.ngr"/>
+      <outfile xil_pn:name="MAINRX.prj"/>
+      <outfile xil_pn:name="MAINRX.stx"/>
+      <outfile xil_pn:name="MAINRX.syr"/>
+      <outfile xil_pn:name="MAINRX.xst"/>
+      <outfile xil_pn:name="MAINRX_vhdl.prj"/>
+      <outfile xil_pn:name="MAINRX_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1556784799" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="1975441281754138759" xil_pn:start_ts="1556784799">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1556784804" xil_pn:in_ck="3668316055214613" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="2821561388823001824" xil_pn:start_ts="1556784799">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="MAINRX.bld"/>
+      <outfile xil_pn:name="MAINRX.ngd"/>
+      <outfile xil_pn:name="MAINRX_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1556784823" xil_pn:in_ck="3668316055214614" xil_pn:name="TRANEXT_vm6File_xbr" xil_pn:prop_ck="9046011939825150348" xil_pn:start_ts="1556784804">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="MAINRX.chk"/>
+      <outfile xil_pn:name="MAINRX.cxt"/>
+      <outfile xil_pn:name="MAINRX.gyd"/>
+      <outfile xil_pn:name="MAINRX.log"/>
+      <outfile xil_pn:name="MAINRX.mfd"/>
+      <outfile xil_pn:name="MAINRX.nga"/>
+      <outfile xil_pn:name="MAINRX.pad"/>
+      <outfile xil_pn:name="MAINRX.pnx"/>
+      <outfile xil_pn:name="MAINRX.rpt"/>
+      <outfile xil_pn:name="MAINRX.vm6"/>
+      <outfile xil_pn:name="MAINRX.xml"/>
+      <outfile xil_pn:name="MAINRX_build.xml"/>
+      <outfile xil_pn:name="MAINRX_html"/>
+      <outfile xil_pn:name="MAINRX_pad.csv"/>
+    </transform>
+    <transform xil_pn:end_ts="1556784824" xil_pn:in_ck="3668316055223478" xil_pn:name="TRANEXT_crtProg_xbr" xil_pn:prop_ck="5245363024343" xil_pn:start_ts="1556784823">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="MAINRX.jed"/>
+    </transform>
+    <transform xil_pn:end_ts="1556784822" xil_pn:in_ck="3668316055223478" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1556784820">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+  </transforms>
+
+</generated_project>

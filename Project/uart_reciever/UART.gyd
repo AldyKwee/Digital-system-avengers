@@ -1,0 +1,58 @@
+Pin Freeze File:  version P.20131013
+
+A2C384144 XA2C384-11-TQ144
+CLK50 S:PIN32
+RXD S:PIN30
+BUSY S:PIN138
+DATA<0> S:PIN2
+DATA<1> S:PIN3
+DATA<2> S:PIN4
+DATA<3> S:PIN137
+DATA<4> S:PIN136
+DATA<5> S:PIN135
+DATA<6> S:PIN9
+DATA<7> S:PIN10
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 N_PZ_246 divider<4> divider<14> divider<13>
+		 divider<10> clk divider<0> divider<3>
+		 divider<2> divider<1> divider<5> divider<12>
+		 divider<6> divider<9> divider<11> N_PZ_219
+		
+PARTITION FB2_1 DATA<0> divider<24> DATA<1> DATA<2>
+		 count<0> divider<23> divider<22> divider<21>
+		 divider<20> divider<19> divider<18> divider<17>
+		 divider<16> divider<15> divider<8> divider<7>
+		
+PARTITION FB3_1 N_PZ_297 count<1> BUSY DATA<3>
+		 DATA<4> count<2> count<3> idata<7>
+		 idata<6> idata<5> idata<4> DATA<5>
+		 idata<3> idata<2> idata<8> N_PZ_227
+		
+PARTITION FB4_1 DATA<6> DATA<7>
+
+
+
+PARTITION FB7_15 idata<1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

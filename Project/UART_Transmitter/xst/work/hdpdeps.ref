@@ -1,0 +1,8 @@
+V3 3
+FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/UART_Transmitter/uart_tx.vhd" 2019/04/30.09:54:45 P.20131013
+EN work/UART 1556610530 \
+      FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/UART_Transmitter/uart_tx.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/UART/Behavior 1556610531 \
+      FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/UART_Transmitter/uart_tx.vhd" \
+      EN work/UART 1556610530

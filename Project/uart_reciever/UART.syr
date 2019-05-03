@@ -1,0 +1,253 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: UART.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "UART.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "UART"
+Output Format                      : NGC
+Target Device                      : Automotive CoolRunner2
+
+---- Source Options
+Top Module Name                    : UART
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Verilog 2001                       : YES
+
+---- Other Options
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/My Documents/College Assignments/Semester 4/Digital System/Project/uart_reciever/uart_rx.vhd" in Library work.
+Entity <UART> compiled.
+Entity <UART> (Architecture <Behavior>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <UART> in library <work> (architecture <Behavior>) with generics.
+	divisor = 2604
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <UART> in library <work> (Architecture <Behavior>).
+	divisor = 2604
+WARNING:Xst:819 - "D:/My Documents/College Assignments/Semester 4/Digital System/Project/uart_reciever/uart_rx.vhd" line 123: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <ibusy>
+Entity <UART> analyzed. Unit <UART> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <UART>.
+    Related source file is "D:/My Documents/College Assignments/Semester 4/Digital System/Project/uart_reciever/uart_rx.vhd".
+WARNING:Xst:646 - Signal <idata<9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <idata<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit register for signal <DATA>.
+    Found 1-bit register for signal <clk>.
+    Found 25-bit comparator less for signal <clk$cmp_lt0000> created at line 84.
+    Found 4-bit up counter for signal <count>.
+    Found 25-bit up counter for signal <divider>.
+    Found 1-bit register for signal <ibusy>.
+    Found 4-bit comparator greater for signal <ibusy$cmp_gt0000> created at line 67.
+    Found 8-bit register for signal <idata<8:1>>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  10 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <UART> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 25-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 11
+ 1-bit register                                        : 10
+ 8-bit register                                        : 1
+# Comparators                                          : 2
+ 25-bit comparator less                                : 1
+ 4-bit comparator greater                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 25-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 10
+ Flip-Flops                                            : 10
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <UART> ...
+  implementation constraint: INIT=r	 : divider_20
+  implementation constraint: INIT=r	 : divider_21
+  implementation constraint: INIT=r	 : divider_22
+  implementation constraint: INIT=r	 : divider_23
+  implementation constraint: INIT=r	 : divider_24
+  implementation constraint: INIT=r	 : count_0
+  implementation constraint: INIT=r	 : count_1
+  implementation constraint: INIT=r	 : count_2
+  implementation constraint: INIT=r	 : divider_11
+  implementation constraint: INIT=r	 : divider_10
+  implementation constraint: INIT=r	 : divider_9
+  implementation constraint: INIT=r	 : divider_8
+  implementation constraint: INIT=r	 : divider_7
+  implementation constraint: INIT=r	 : divider_5
+  implementation constraint: INIT=r	 : divider_4
+  implementation constraint: INIT=r	 : divider_3
+  implementation constraint: INIT=r	 : divider_2
+  implementation constraint: INIT=r	 : divider_1
+  implementation constraint: INIT=r	 : divider_0
+  implementation constraint: INIT=r	 : divider_19
+  implementation constraint: INIT=r	 : divider_18
+  implementation constraint: INIT=r	 : divider_17
+  implementation constraint: INIT=r	 : divider_16
+  implementation constraint: INIT=r	 : divider_15
+  implementation constraint: INIT=r	 : divider_14
+  implementation constraint: INIT=r	 : divider_13
+  implementation constraint: INIT=r	 : divider_12
+  implementation constraint: INIT=r	 : divider_6
+  implementation constraint: INIT=r	 : count_3
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : UART.ngr
+Top Level Output File Name         : UART
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+Target Technology                  : Automotive CoolRunner2
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 11
+
+Cell Usage :
+# BELS                             : 165
+#      AND2                        : 70
+#      AND3                        : 10
+#      AND4                        : 2
+#      AND6                        : 1
+#      GND                         : 1
+#      INV                         : 48
+#      OR2                         : 5
+#      VCC                         : 1
+#      XOR2                        : 27
+# FlipFlops/Latches                : 47
+#      FD                          : 8
+#      FDC                         : 30
+#      FDCE                        : 8
+#      FDPE                        : 1
+# IO Buffers                       : 11
+#      IBUF                        : 2
+#      OBUF                        : 9
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.81 secs
+ 
+--> 
+
+Total memory usage is 4520792 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

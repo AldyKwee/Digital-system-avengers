@@ -1,0 +1,402 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+FDCPE_BUSY: FDCPE port map (BUSY,NOT '0',NOT RXD,BUSY_CLR,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BUSY_CLR <= (count(3) AND NOT N_PZ_297);
+</td></tr><tr><td>
+FDCPE_DATA0: FDCPE port map (DATA(0),idata(1),BUSY,'0','0','1');
+</td></tr><tr><td>
+FDCPE_DATA1: FDCPE port map (DATA(1),idata(2),BUSY,'0','0','1');
+</td></tr><tr><td>
+FDCPE_DATA2: FDCPE port map (DATA(2),idata(3),BUSY,'0','0','1');
+</td></tr><tr><td>
+FDCPE_DATA3: FDCPE port map (DATA(3),idata(4),BUSY,'0','0','1');
+</td></tr><tr><td>
+FDCPE_DATA4: FDCPE port map (DATA(4),idata(5),BUSY,'0','0','1');
+</td></tr><tr><td>
+FDCPE_DATA5: FDCPE port map (DATA(5),idata(6),BUSY,'0','0','1');
+</td></tr><tr><td>
+FDCPE_DATA6: FDCPE port map (DATA(6),idata(7),BUSY,'0','0','1');
+</td></tr><tr><td>
+FDCPE_DATA7: FDCPE port map (DATA(7),idata(8),BUSY,'0','0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_219 <= ((NOT divider(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(5) AND NOT divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(7) AND NOT divider(6)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_227 <= (divider(5) AND divider(0) AND divider(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	divider(3) AND divider(4) AND divider(1) AND divider(6));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_246 <= ((NOT divider(11) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND NOT divider(9)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_297 <= (NOT count(1) AND NOT count(2));
+</td></tr><tr><td>
+FTCPE_clk: FTCPE port map (clk,clk_T,CLK50,'0',NOT BUSY,'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk_T <= NOT (((NOT divider(12) AND NOT divider(13) AND NOT divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND NOT divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND NOT divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(23) AND NOT divider(24) AND N_PZ_219)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND NOT divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(7) AND NOT divider(2) AND NOT divider(4) AND NOT divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND NOT divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(7) AND NOT divider(3) AND NOT divider(4) AND NOT divider(6))));
+</td></tr><tr><td>
+FTCPE_count0: FTCPE port map (count(0),'0',clk,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FTCPE_count1: FTCPE port map (count(1),count(0),clk,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FTCPE_count2: FTCPE port map (count(2),count_T(2),clk,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count_T(2) <= (count(0) AND count(1));
+</td></tr><tr><td>
+FTCPE_count3: FTCPE port map (count(3),count_T(3),clk,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count_T(3) <= (count(0) AND count(1) AND count(2));
+</td></tr><tr><td>
+FDCPE_divider0: FDCPE port map (divider(0),divider_D(0),CLK50,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;divider_D(0) <= ((NOT divider(12) AND NOT divider(13) AND NOT divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND NOT divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND NOT divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(23) AND NOT divider(24) AND N_PZ_219 AND NOT divider(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND NOT divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(7) AND NOT divider(0) AND NOT divider(2) AND NOT divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND NOT divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(7) AND NOT divider(0) AND NOT divider(3) AND NOT divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(6)));
+</td></tr><tr><td>
+FDCPE_divider1: FDCPE port map (divider(1),divider_D(1),CLK50,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;divider_D(1) <= ((NOT divider(12) AND NOT divider(13) AND NOT divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND NOT divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND NOT divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(23) AND NOT divider(24) AND N_PZ_219 AND divider(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(12) AND NOT divider(13) AND NOT divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND NOT divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND NOT divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(23) AND NOT divider(24) AND N_PZ_219 AND NOT divider(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	divider(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND NOT divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(7) AND divider(0) AND NOT divider(2) AND NOT divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(1) AND NOT divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND NOT divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(7) AND divider(0) AND NOT divider(3) AND NOT divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(1) AND NOT divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND NOT divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(7) AND NOT divider(0) AND NOT divider(2) AND NOT divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	divider(1) AND NOT divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND NOT divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(7) AND NOT divider(0) AND NOT divider(3) AND NOT divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	divider(1) AND NOT divider(6)));
+</td></tr><tr><td>
+FDCPE_divider2: FDCPE port map (divider(2),divider_D(2),CLK50,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;divider_D(2) <= ((NOT divider(12) AND NOT divider(13) AND NOT divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND NOT divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND NOT divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(23) AND NOT divider(24) AND N_PZ_219 AND NOT divider(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	divider(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(12) AND NOT divider(13) AND NOT divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND NOT divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND NOT divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(23) AND NOT divider(24) AND N_PZ_219 AND divider(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(12) AND NOT divider(13) AND NOT divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND NOT divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND NOT divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(23) AND NOT divider(24) AND N_PZ_219 AND divider(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(2) AND divider(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND NOT divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(7) AND divider(0) AND NOT divider(2) AND NOT divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	divider(1) AND NOT divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND NOT divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(7) AND NOT divider(0) AND divider(2) AND NOT divider(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(4) AND NOT divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND NOT divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(7) AND divider(2) AND NOT divider(3) AND NOT divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(1) AND NOT divider(6)));
+</td></tr><tr><td>
+FDCPE_divider3: FDCPE port map (divider(3),divider_D(3),CLK50,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;divider_D(3) <= ((NOT divider(12) AND NOT divider(13) AND NOT divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND NOT divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND NOT divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(23) AND NOT divider(24) AND N_PZ_219 AND NOT divider(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	divider(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(12) AND NOT divider(13) AND NOT divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND NOT divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND NOT divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(23) AND NOT divider(24) AND N_PZ_219 AND NOT divider(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	divider(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(12) AND NOT divider(13) AND NOT divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND NOT divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND NOT divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(23) AND NOT divider(24) AND N_PZ_219 AND divider(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(12) AND NOT divider(13) AND NOT divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND NOT divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND NOT divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(23) AND NOT divider(24) AND N_PZ_219 AND divider(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	divider(2) AND NOT divider(3) AND divider(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND NOT divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(7) AND NOT divider(2) AND divider(3) AND NOT divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND NOT divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(7) AND divider(0) AND divider(2) AND NOT divider(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(4) AND divider(1) AND NOT divider(6)));
+</td></tr><tr><td>
+FDCPE_divider4: FDCPE port map (divider(4),divider_D(4),CLK50,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;divider_D(4) <= ((NOT divider(12) AND NOT divider(13) AND NOT divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND NOT divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND NOT divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(23) AND NOT divider(24) AND N_PZ_219 AND NOT divider(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	divider(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(12) AND NOT divider(13) AND NOT divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND NOT divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND NOT divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(23) AND NOT divider(24) AND N_PZ_219 AND NOT divider(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	divider(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(12) AND NOT divider(13) AND NOT divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND NOT divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND NOT divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(23) AND NOT divider(24) AND N_PZ_219 AND NOT divider(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	divider(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(12) AND NOT divider(13) AND NOT divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND NOT divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND NOT divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(23) AND NOT divider(24) AND N_PZ_219 AND divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(12) AND NOT divider(13) AND NOT divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND NOT divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND NOT divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(23) AND NOT divider(24) AND N_PZ_219 AND divider(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	divider(2) AND divider(3) AND NOT divider(4) AND divider(1)));
+</td></tr><tr><td>
+FDCPE_divider5: FDCPE port map (divider(5),divider_D(5),CLK50,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;divider_D(5) <= (divider(5) AND N_PZ_246)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((N_PZ_246 AND divider(0) AND divider(2) AND divider(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	divider(4) AND divider(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND divider(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_246 AND NOT divider(8) AND NOT divider(7) AND NOT divider(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(4) AND NOT divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND divider(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_246 AND NOT divider(8) AND NOT divider(7) AND NOT divider(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(4) AND NOT divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND NOT divider(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(8) AND NOT divider(7) AND divider(0) AND divider(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	divider(3) AND divider(4) AND divider(1) AND NOT divider(6)));
+</td></tr><tr><td>
+FDCPE_divider6: FDCPE port map (divider(6),divider_D(6),CLK50,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;divider_D(6) <= ((N_PZ_246 AND NOT N_PZ_227 AND divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (divider(5) AND N_PZ_246 AND NOT N_PZ_227 AND divider(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	divider(2) AND divider(3) AND divider(4) AND divider(1)));
+</td></tr><tr><td>
+FDCPE_divider7: FDCPE port map (divider(7),divider_D(7),CLK50,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;divider_D(7) <= ((N_PZ_246 AND divider(7) AND NOT N_PZ_227)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_246 AND NOT divider(7) AND N_PZ_227));
+</td></tr><tr><td>
+FTCPE_divider8: FTCPE port map (divider(8),divider_T(8),CLK50,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;divider_T(8) <= ((NOT N_PZ_246 AND divider(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_246 AND divider(7) AND N_PZ_227));
+</td></tr><tr><td>
+FDCPE_divider9: FDCPE port map (divider(9),divider_D(9),CLK50,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;divider_D(9) <= ((N_PZ_246 AND divider(9) AND NOT divider(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_246 AND divider(9) AND NOT N_PZ_227)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_246 AND NOT divider(9) AND divider(8) AND divider(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_227)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(12) AND NOT divider(13) AND NOT divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND NOT divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND NOT divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(23) AND NOT divider(24) AND N_PZ_219 AND divider(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND NOT N_PZ_246 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(8) AND NOT divider(7) AND NOT divider(2) AND NOT divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND NOT N_PZ_246 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(8) AND NOT divider(7) AND NOT divider(3) AND NOT divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(6)));
+</td></tr><tr><td>
+FDCPE_divider10: FDCPE port map (divider(10),divider_D(10),CLK50,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;divider_D(10) <= ((divider(10) AND NOT divider(11) AND NOT divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(13) AND NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(17) AND NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(21) AND NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (divider(10) AND NOT divider(11) AND NOT divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(13) AND NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(17) AND NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(21) AND NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (divider(10) AND NOT divider(11) AND NOT divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(13) AND NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(17) AND NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(21) AND NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (divider(10) AND NOT divider(11) AND NOT divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(13) AND NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(17) AND NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(21) AND NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_227)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(11) AND NOT divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(13) AND NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(17) AND NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(21) AND NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	divider(9) AND divider(8) AND divider(7) AND N_PZ_227));
+</td></tr><tr><td>
+FDCPE_divider11: FDCPE port map (divider(11),divider_D(11),CLK50,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;divider_D(11) <= ((divider(10) AND N_PZ_246 AND divider(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	divider(8) AND divider(7) AND N_PZ_227)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (divider(11) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND N_PZ_219)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND NOT N_PZ_246 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(8) AND NOT divider(7) AND NOT divider(2) AND NOT divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT divider(10) AND NOT divider(12) AND NOT divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(14) AND NOT divider(15) AND NOT divider(16) AND NOT divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(18) AND NOT divider(19) AND NOT divider(20) AND NOT divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(22) AND NOT divider(23) AND NOT divider(24) AND NOT N_PZ_246 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(8) AND NOT divider(7) AND NOT divider(3) AND NOT divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT divider(6)));
+</td></tr><tr><td>
+FDCPE_divider12: FDCPE port map (divider(12),'0',CLK50,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_divider13: FDCPE port map (divider(13),'0',CLK50,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_divider14: FDCPE port map (divider(14),'0',CLK50,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_divider15: FDCPE port map (divider(15),'0',CLK50,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_divider16: FDCPE port map (divider(16),'0',CLK50,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_divider17: FDCPE port map (divider(17),'0',CLK50,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_divider18: FDCPE port map (divider(18),'0',CLK50,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_divider19: FDCPE port map (divider(19),'0',CLK50,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_divider20: FDCPE port map (divider(20),'0',CLK50,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_divider21: FDCPE port map (divider(21),'0',CLK50,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_divider22: FDCPE port map (divider(22),'0',CLK50,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_divider23: FDCPE port map (divider(23),'0',CLK50,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_divider24: FDCPE port map (divider(24),'0',CLK50,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_idata1: FDCPE port map (idata(1),RXD,clk,'0','0',idata_CE(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;idata_CE(1) <= (NOT count(3) AND count(0) AND BUSY AND N_PZ_297);
+</td></tr><tr><td>
+FDCPE_idata2: FDCPE port map (idata(2),RXD,clk,'0','0',idata_CE(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;idata_CE(2) <= (NOT count(3) AND NOT count(0) AND BUSY AND count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT count(2));
+</td></tr><tr><td>
+FDCPE_idata3: FDCPE port map (idata(3),RXD,clk,'0','0',idata_CE(3));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;idata_CE(3) <= (NOT count(3) AND count(0) AND BUSY AND count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT count(2));
+</td></tr><tr><td>
+FDCPE_idata4: FDCPE port map (idata(4),RXD,clk,'0','0',idata_CE(4));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;idata_CE(4) <= (NOT count(3) AND NOT count(0) AND BUSY AND NOT count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	count(2));
+</td></tr><tr><td>
+FDCPE_idata5: FDCPE port map (idata(5),RXD,clk,'0','0',idata_CE(5));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;idata_CE(5) <= (NOT count(3) AND count(0) AND BUSY AND NOT count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	count(2));
+</td></tr><tr><td>
+FDCPE_idata6: FDCPE port map (idata(6),RXD,clk,'0','0',idata_CE(6));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;idata_CE(6) <= (NOT count(3) AND NOT count(0) AND BUSY AND count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	count(2));
+</td></tr><tr><td>
+FDCPE_idata7: FDCPE port map (idata(7),RXD,clk,'0','0',idata_CE(7));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;idata_CE(7) <= (NOT count(3) AND count(0) AND BUSY AND count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	count(2));
+</td></tr><tr><td>
+FDCPE_idata8: FDCPE port map (idata(8),RXD,clk,'0','0',idata_CE(8));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;idata_CE(8) <= (count(3) AND NOT count(0) AND BUSY AND N_PZ_297);
+</td></tr><tr><td>
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

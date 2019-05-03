@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "D:/My Documents/College Assignments/Semester 4/Digital System/Project/uart_reciever/UART.xst" -ofn "D:/My Documents/College Assignments/Semester 4/Digital System/Project/uart_reciever/UART.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xa2c384-TQ144-11 "UART.ngc" UART.ngd  
+cpldfit -intstyle ise -p xa2c384-11-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 UART.ngd 
+XSLTProcess UART_build.xml 
+tsim -intstyle ise UART UART.nga 
+taengine -intstyle ise -f UART -w --format html1 -l UART_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -i UART 

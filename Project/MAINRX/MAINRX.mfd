@@ -1,0 +1,1115 @@
+MDF Database:  version 1.0
+MDF_INFO | MAINRX | XC2C256-7-TQ144
+MACROCELL | 3 | 0 | BUSY_MC
+ATTRIBUTES | 2189722370 | 0
+OUTPUTMC | 8 | 4 | 5 | 3 | 14 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 15 | 3 | 12
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   !BUSY := Gnd;	// (0 pt, 0 inp)
+   BUSY.CLK  =  !RXD;	// GCK	(0 pt, 0 inp)
+    BUSY.AR = uart_receiver1/count<3> & !N_PZ_277;	// CTR	(1 pt, 2 inp)
+GLOBALS | 1 | 2 | RXD
+
+MACROCELL | 2 | 0 | uart_receiver1/count<3>_MC
+ATTRIBUTES | 2185233184 | 0
+OUTPUTMC | 8 | 4 | 5 | 3 | 14 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 15 | 3 | 12
+INPUTS | 4 | uart_receiver1/count<0>  | uart_receiver1/count<1>  | uart_receiver1/count<2>  | uart_receiver1/clk
+INPUTMC | 4 | 2 | 4 | 2 | 2 | 2 | 1 | 0 | 1
+LCT | 1 | 4 | Internal_Name
+EQ | 4 | 
+   uart_receiver1/count<3>.T := uart_receiver1/count<0> & uart_receiver1/count<1> & 
+	uart_receiver1/count<2>;	// (1 pt, 3 inp)
+    uart_receiver1/count<3>.CLK = uart_receiver1/clk;	// PTC	(1 pt, 1 inp)
+    uart_receiver1/count<3>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+
+MACROCELL | 2 | 4 | uart_receiver1/count<0>_MC
+ATTRIBUTES | 2185233184 | 0
+OUTPUTMC | 11 | 2 | 2 | 2 | 1 | 2 | 0 | 4 | 5 | 3 | 14 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 15 | 3 | 12
+INPUTS | 1 | uart_receiver1/clk
+INPUTMC | 1 | 0 | 1
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   !uart_receiver1/count<0>.T := Gnd;	// (0 pt, 0 inp)
+    uart_receiver1/count<0>.CLK = uart_receiver1/clk;	// PTC	(1 pt, 1 inp)
+    uart_receiver1/count<0>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+
+MACROCELL | 0 | 1 | uart_receiver1/clk_MC
+ATTRIBUTES | 2168488704 | 0
+OUTPUTMC | 4 | 2 | 4 | 2 | 2 | 2 | 1 | 2 | 0
+INPUTS | 21 | uart_receiver1/divider<12>  | uart_receiver1/divider<13>  | uart_receiver1/divider<14>  | uart_receiver1/divider<15>  | uart_receiver1/divider<16>  | uart_receiver1/divider<17>  | uart_receiver1/divider<18>  | uart_receiver1/divider<19>  | uart_receiver1/divider<20>  | uart_receiver1/divider<21>  | uart_receiver1/divider<22>  | uart_receiver1/divider<23>  | uart_receiver1/divider<24>  | N_PZ_227  | uart_receiver1/divider<10>  | uart_receiver1/divider<8>  | uart_receiver1/divider<7>  | uart_receiver1/divider<2>  | uart_receiver1/divider<4>  | uart_receiver1/divider<6>  | uart_receiver1/divider<3>
+INPUTMC | 21 | 0 | 5 | 0 | 3 | 0 | 2 | 1 | 15 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 1 | 14 | 2 | 12 | 0 | 15 | 0 | 0 | 2 | 10 | 2 | 11 | 0 | 7 | 0 | 13 | 0 | 11 | 0 | 6
+LCT | 1 | 1 | Internal_Name
+EQ | 29 | 
+   !uart_receiver1/clk.T := !uart_receiver1/divider<12> & 
+	!uart_receiver1/divider<13> & !uart_receiver1/divider<14> & 
+	!uart_receiver1/divider<15> & !uart_receiver1/divider<16> & 
+	!uart_receiver1/divider<17> & !uart_receiver1/divider<18> & 
+	!uart_receiver1/divider<19> & !uart_receiver1/divider<20> & 
+	!uart_receiver1/divider<21> & !uart_receiver1/divider<22> & 
+	!uart_receiver1/divider<23> & !uart_receiver1/divider<24> & N_PZ_227
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24> & !uart_receiver1/divider<8> & 
+	!uart_receiver1/divider<7> & !uart_receiver1/divider<2> & 
+	!uart_receiver1/divider<4> & !uart_receiver1/divider<6>
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24> & !uart_receiver1/divider<8> & 
+	!uart_receiver1/divider<7> & !uart_receiver1/divider<3> & 
+	!uart_receiver1/divider<4> & !uart_receiver1/divider<6>;	// (3 pt, 21 inp)
+   uart_receiver1/clk.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/clk.AP = !BUSY;	// CTS	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 0 | 0 | uart_receiver1/divider<10>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 8 | 0 | 6 | 0 | 7 | 0 | 4 | 0 | 10 | 0 | 12 | 0 | 9 | 0 | 15 | 0 | 14 | 0 | 0 | 0 | 1
+INPUTS | 19 | uart_receiver1/divider<10>  | uart_receiver1/divider<11>  | uart_receiver1/divider<12>  | uart_receiver1/divider<13>  | uart_receiver1/divider<14>  | uart_receiver1/divider<15>  | uart_receiver1/divider<16>  | uart_receiver1/divider<17>  | uart_receiver1/divider<18>  | uart_receiver1/divider<19>  | uart_receiver1/divider<20>  | uart_receiver1/divider<21>  | uart_receiver1/divider<22>  | uart_receiver1/divider<23>  | uart_receiver1/divider<24>  | uart_receiver1/divider<9>  | uart_receiver1/divider<8>  | uart_receiver1/divider<7>  | N_PZ_235
+INPUTMC | 19 | 0 | 0 | 0 | 14 | 0 | 5 | 0 | 3 | 0 | 2 | 1 | 15 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 1 | 14 | 2 | 12 | 0 | 10 | 2 | 10 | 2 | 11 | 2 | 14
+LCT | 1 | 4 | Internal_Name
+EQ | 47 | 
+   uart_receiver1/divider<10> := uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<11> & !uart_receiver1/divider<12> & 
+	!uart_receiver1/divider<13> & !uart_receiver1/divider<14> & 
+	!uart_receiver1/divider<15> & !uart_receiver1/divider<16> & 
+	!uart_receiver1/divider<17> & !uart_receiver1/divider<18> & 
+	!uart_receiver1/divider<19> & !uart_receiver1/divider<20> & 
+	!uart_receiver1/divider<21> & !uart_receiver1/divider<22> & 
+	!uart_receiver1/divider<23> & !uart_receiver1/divider<24> & 
+	!uart_receiver1/divider<9>
+	# uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<11> & !uart_receiver1/divider<12> & 
+	!uart_receiver1/divider<13> & !uart_receiver1/divider<14> & 
+	!uart_receiver1/divider<15> & !uart_receiver1/divider<16> & 
+	!uart_receiver1/divider<17> & !uart_receiver1/divider<18> & 
+	!uart_receiver1/divider<19> & !uart_receiver1/divider<20> & 
+	!uart_receiver1/divider<21> & !uart_receiver1/divider<22> & 
+	!uart_receiver1/divider<23> & !uart_receiver1/divider<24> & 
+	!uart_receiver1/divider<8>
+	# uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<11> & !uart_receiver1/divider<12> & 
+	!uart_receiver1/divider<13> & !uart_receiver1/divider<14> & 
+	!uart_receiver1/divider<15> & !uart_receiver1/divider<16> & 
+	!uart_receiver1/divider<17> & !uart_receiver1/divider<18> & 
+	!uart_receiver1/divider<19> & !uart_receiver1/divider<20> & 
+	!uart_receiver1/divider<21> & !uart_receiver1/divider<22> & 
+	!uart_receiver1/divider<23> & !uart_receiver1/divider<24> & 
+	!uart_receiver1/divider<7>
+	# uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<11> & !uart_receiver1/divider<12> & 
+	!uart_receiver1/divider<13> & !uart_receiver1/divider<14> & 
+	!uart_receiver1/divider<15> & !uart_receiver1/divider<16> & 
+	!uart_receiver1/divider<17> & !uart_receiver1/divider<18> & 
+	!uart_receiver1/divider<19> & !uart_receiver1/divider<20> & 
+	!uart_receiver1/divider<21> & !uart_receiver1/divider<22> & 
+	!uart_receiver1/divider<23> & !uart_receiver1/divider<24> & !N_PZ_235
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<11> & !uart_receiver1/divider<12> & 
+	!uart_receiver1/divider<13> & !uart_receiver1/divider<14> & 
+	!uart_receiver1/divider<15> & !uart_receiver1/divider<16> & 
+	!uart_receiver1/divider<17> & !uart_receiver1/divider<18> & 
+	!uart_receiver1/divider<19> & !uart_receiver1/divider<20> & 
+	!uart_receiver1/divider<21> & !uart_receiver1/divider<22> & 
+	!uart_receiver1/divider<23> & !uart_receiver1/divider<24> & 
+	uart_receiver1/divider<9> & uart_receiver1/divider<8> & 
+	uart_receiver1/divider<7> & N_PZ_235;	// (5 pt, 19 inp)
+   uart_receiver1/divider<10>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<10>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 0 | 14 | uart_receiver1/divider<11>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 4 | 0 | 12 | 0 | 15 | 0 | 14 | 0 | 0
+INPUTS | 25 | uart_receiver1/divider<10>  | N_PZ_260  | uart_receiver1/divider<9>  | uart_receiver1/divider<8>  | uart_receiver1/divider<7>  | N_PZ_235  | uart_receiver1/divider<11>  | uart_receiver1/divider<12>  | uart_receiver1/divider<13>  | uart_receiver1/divider<14>  | uart_receiver1/divider<15>  | uart_receiver1/divider<16>  | uart_receiver1/divider<17>  | uart_receiver1/divider<18>  | uart_receiver1/divider<19>  | uart_receiver1/divider<20>  | uart_receiver1/divider<21>  | uart_receiver1/divider<22>  | uart_receiver1/divider<23>  | uart_receiver1/divider<24>  | N_PZ_227  | uart_receiver1/divider<2>  | uart_receiver1/divider<4>  | uart_receiver1/divider<6>  | uart_receiver1/divider<3>
+INPUTMC | 25 | 0 | 0 | 0 | 12 | 0 | 10 | 2 | 10 | 2 | 11 | 2 | 14 | 0 | 14 | 0 | 5 | 0 | 3 | 0 | 2 | 1 | 15 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 1 | 14 | 2 | 12 | 0 | 15 | 0 | 7 | 0 | 13 | 0 | 11 | 0 | 6
+LCT | 1 | 4 | Internal_Name
+EQ | 33 | 
+   uart_receiver1/divider<11> := uart_receiver1/divider<10> & N_PZ_260 & 
+	uart_receiver1/divider<9> & uart_receiver1/divider<8> & 
+	uart_receiver1/divider<7> & N_PZ_235
+	# uart_receiver1/divider<11> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24> & N_PZ_227
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24> & !N_PZ_260 & !uart_receiver1/divider<8> & 
+	!uart_receiver1/divider<7> & !uart_receiver1/divider<2> & 
+	!uart_receiver1/divider<4> & !uart_receiver1/divider<6>
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24> & !N_PZ_260 & !uart_receiver1/divider<8> & 
+	!uart_receiver1/divider<7> & !uart_receiver1/divider<3> & 
+	!uart_receiver1/divider<4> & !uart_receiver1/divider<6>;	// (4 pt, 25 inp)
+   uart_receiver1/divider<11>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<11>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 0 | 5 | uart_receiver1/divider<12>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 8 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 4 | 0 | 10 | 0 | 12 | 0 | 9 | 0 | 14 | 0 | 0 | 0 | 1
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   uart_receiver1/divider<12> := Gnd;	// (0 pt, 0 inp)
+   uart_receiver1/divider<12>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<12>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 0 | 3 | uart_receiver1/divider<13>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 8 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 4 | 0 | 10 | 0 | 12 | 0 | 9 | 0 | 14 | 0 | 0 | 0 | 1
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   uart_receiver1/divider<13> := Gnd;	// (0 pt, 0 inp)
+   uart_receiver1/divider<13>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<13>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 0 | 2 | uart_receiver1/divider<14>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 8 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 4 | 0 | 10 | 0 | 12 | 0 | 9 | 0 | 14 | 0 | 0 | 0 | 1
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   uart_receiver1/divider<14> := Gnd;	// (0 pt, 0 inp)
+   uart_receiver1/divider<14>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<14>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 1 | 15 | uart_receiver1/divider<15>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 8 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 4 | 0 | 10 | 0 | 12 | 0 | 9 | 0 | 14 | 0 | 0 | 0 | 1
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   uart_receiver1/divider<15> := Gnd;	// (0 pt, 0 inp)
+   uart_receiver1/divider<15>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<15>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 1 | 10 | uart_receiver1/divider<16>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 8 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 4 | 0 | 10 | 0 | 12 | 0 | 9 | 0 | 14 | 0 | 0 | 0 | 1
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   uart_receiver1/divider<16> := Gnd;	// (0 pt, 0 inp)
+   uart_receiver1/divider<16>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<16>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 1 | 9 | uart_receiver1/divider<17>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 8 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 4 | 0 | 10 | 0 | 12 | 0 | 9 | 0 | 14 | 0 | 0 | 0 | 1
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   uart_receiver1/divider<17> := Gnd;	// (0 pt, 0 inp)
+   uart_receiver1/divider<17>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<17>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 1 | 8 | uart_receiver1/divider<18>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 8 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 4 | 0 | 10 | 0 | 12 | 0 | 9 | 0 | 14 | 0 | 0 | 0 | 1
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   uart_receiver1/divider<18> := Gnd;	// (0 pt, 0 inp)
+   uart_receiver1/divider<18>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<18>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 1 | 7 | uart_receiver1/divider<19>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 8 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 4 | 0 | 10 | 0 | 12 | 0 | 9 | 0 | 14 | 0 | 0 | 0 | 1
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   uart_receiver1/divider<19> := Gnd;	// (0 pt, 0 inp)
+   uart_receiver1/divider<19>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<19>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 1 | 6 | uart_receiver1/divider<20>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 8 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 4 | 0 | 10 | 0 | 12 | 0 | 9 | 0 | 14 | 0 | 0 | 0 | 1
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   uart_receiver1/divider<20> := Gnd;	// (0 pt, 0 inp)
+   uart_receiver1/divider<20>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<20>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 1 | 5 | uart_receiver1/divider<21>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 8 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 4 | 0 | 10 | 0 | 12 | 0 | 9 | 0 | 14 | 0 | 0 | 0 | 1
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   uart_receiver1/divider<21> := Gnd;	// (0 pt, 0 inp)
+   uart_receiver1/divider<21>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<21>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 1 | 1 | uart_receiver1/divider<22>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 8 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 4 | 0 | 10 | 0 | 12 | 0 | 9 | 0 | 14 | 0 | 0 | 0 | 1
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   uart_receiver1/divider<22> := Gnd;	// (0 pt, 0 inp)
+   uart_receiver1/divider<22>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<22>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 1 | 14 | uart_receiver1/divider<23>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 8 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 4 | 0 | 10 | 0 | 12 | 0 | 9 | 0 | 14 | 0 | 0 | 0 | 1
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   uart_receiver1/divider<23> := Gnd;	// (0 pt, 0 inp)
+   uart_receiver1/divider<23>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<23>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 2 | 12 | uart_receiver1/divider<24>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 8 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 4 | 0 | 10 | 0 | 12 | 0 | 9 | 0 | 14 | 0 | 0 | 0 | 1
+INPUTS | 0
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   uart_receiver1/divider<24> := Gnd;	// (0 pt, 0 inp)
+   uart_receiver1/divider<24>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<24>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 0 | 15 | N_PZ_227_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 8 | 0 | 8 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 4 | 0 | 10 | 0 | 14 | 0 | 1
+INPUTS | 7 | uart_receiver1/divider<11>  | uart_receiver1/divider<10>  | uart_receiver1/divider<9>  | uart_receiver1/divider<5>  | uart_receiver1/divider<8>  | uart_receiver1/divider<7>  | uart_receiver1/divider<6>
+INPUTMC | 7 | 0 | 14 | 0 | 0 | 0 | 10 | 0 | 9 | 2 | 10 | 2 | 11 | 0 | 11
+EQ | 6 | 
+   N_PZ_227 = !uart_receiver1/divider<11>
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<9>
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<5> & !uart_receiver1/divider<8> & 
+	!uart_receiver1/divider<7> & !uart_receiver1/divider<6>;	// (3 pt, 7 inp)
+
+MACROCELL | 0 | 9 | uart_receiver1/divider<5>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 4 | 0 | 11 | 2 | 14 | 0 | 9 | 0 | 15
+INPUTS | 24 | uart_receiver1/divider<5>  | N_PZ_260  | uart_receiver1/divider<0>  | uart_receiver1/divider<2>  | uart_receiver1/divider<3>  | uart_receiver1/divider<4>  | uart_receiver1/divider<1>  | uart_receiver1/divider<10>  | uart_receiver1/divider<12>  | uart_receiver1/divider<13>  | uart_receiver1/divider<14>  | uart_receiver1/divider<15>  | uart_receiver1/divider<16>  | uart_receiver1/divider<17>  | uart_receiver1/divider<18>  | uart_receiver1/divider<19>  | uart_receiver1/divider<20>  | uart_receiver1/divider<21>  | uart_receiver1/divider<22>  | uart_receiver1/divider<23>  | uart_receiver1/divider<24>  | uart_receiver1/divider<8>  | uart_receiver1/divider<7>  | uart_receiver1/divider<6>
+INPUTMC | 24 | 0 | 9 | 0 | 12 | 0 | 4 | 0 | 7 | 0 | 6 | 0 | 13 | 0 | 8 | 0 | 0 | 0 | 5 | 0 | 3 | 0 | 2 | 1 | 15 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 1 | 14 | 2 | 12 | 2 | 10 | 2 | 11 | 0 | 11
+LCT | 1 | 4 | Internal_Name
+EQ | 40 | 
+   uart_receiver1/divider<5> := uart_receiver1/divider<5> & N_PZ_260
+	$ N_PZ_260 & uart_receiver1/divider<0> & 
+	uart_receiver1/divider<2> & uart_receiver1/divider<3> & 
+	uart_receiver1/divider<4> & uart_receiver1/divider<1>
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24> & uart_receiver1/divider<5> & !N_PZ_260 & 
+	!uart_receiver1/divider<8> & !uart_receiver1/divider<7> & 
+	!uart_receiver1/divider<2> & !uart_receiver1/divider<4> & 
+	!uart_receiver1/divider<6>
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24> & uart_receiver1/divider<5> & !N_PZ_260 & 
+	!uart_receiver1/divider<8> & !uart_receiver1/divider<7> & 
+	!uart_receiver1/divider<3> & !uart_receiver1/divider<4> & 
+	!uart_receiver1/divider<6>
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24> & !uart_receiver1/divider<5> & 
+	!uart_receiver1/divider<8> & !uart_receiver1/divider<7> & 
+	uart_receiver1/divider<0> & uart_receiver1/divider<2> & 
+	uart_receiver1/divider<3> & uart_receiver1/divider<4> & 
+	uart_receiver1/divider<1> & !uart_receiver1/divider<6>;	// (5 pt, 24 inp)
+   uart_receiver1/divider<5>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<5>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 0 | 12 | N_PZ_260_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 6 | 0 | 11 | 2 | 11 | 2 | 10 | 0 | 10 | 0 | 9 | 0 | 14
+INPUTS | 16 | uart_receiver1/divider<11>  | uart_receiver1/divider<12>  | uart_receiver1/divider<13>  | uart_receiver1/divider<14>  | uart_receiver1/divider<15>  | uart_receiver1/divider<16>  | uart_receiver1/divider<17>  | uart_receiver1/divider<18>  | uart_receiver1/divider<19>  | uart_receiver1/divider<20>  | uart_receiver1/divider<21>  | uart_receiver1/divider<22>  | uart_receiver1/divider<23>  | uart_receiver1/divider<24>  | uart_receiver1/divider<10>  | uart_receiver1/divider<9>
+INPUTMC | 16 | 0 | 14 | 0 | 5 | 0 | 3 | 0 | 2 | 1 | 15 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 1 | 14 | 2 | 12 | 0 | 0 | 0 | 10
+EQ | 16 | 
+   N_PZ_260 = !uart_receiver1/divider<11> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24>
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24> & !uart_receiver1/divider<9>;	// (2 pt, 16 inp)
+
+MACROCELL | 0 | 10 | uart_receiver1/divider<9>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 5 | 0 | 10 | 0 | 12 | 0 | 15 | 0 | 14 | 0 | 0
+INPUTS | 24 | N_PZ_260  | uart_receiver1/divider<9>  | uart_receiver1/divider<7>  | N_PZ_235  | uart_receiver1/divider<8>  | uart_receiver1/divider<12>  | uart_receiver1/divider<13>  | uart_receiver1/divider<14>  | uart_receiver1/divider<15>  | uart_receiver1/divider<16>  | uart_receiver1/divider<17>  | uart_receiver1/divider<18>  | uart_receiver1/divider<19>  | uart_receiver1/divider<20>  | uart_receiver1/divider<21>  | uart_receiver1/divider<22>  | uart_receiver1/divider<23>  | uart_receiver1/divider<24>  | N_PZ_227  | uart_receiver1/divider<10>  | uart_receiver1/divider<2>  | uart_receiver1/divider<4>  | uart_receiver1/divider<6>  | uart_receiver1/divider<3>
+INPUTMC | 24 | 0 | 12 | 0 | 10 | 2 | 11 | 2 | 14 | 2 | 10 | 0 | 5 | 0 | 3 | 0 | 2 | 1 | 15 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 1 | 14 | 2 | 12 | 0 | 15 | 0 | 0 | 0 | 7 | 0 | 13 | 0 | 11 | 0 | 6
+LCT | 1 | 4 | Internal_Name
+EQ | 35 | 
+   uart_receiver1/divider<9> := N_PZ_260 & uart_receiver1/divider<9> & 
+	!uart_receiver1/divider<7>
+	# N_PZ_260 & uart_receiver1/divider<9> & !N_PZ_235
+	# N_PZ_260 & !uart_receiver1/divider<9> & 
+	uart_receiver1/divider<8> & uart_receiver1/divider<7> & N_PZ_235
+	# !uart_receiver1/divider<12> & 
+	!uart_receiver1/divider<13> & !uart_receiver1/divider<14> & 
+	!uart_receiver1/divider<15> & !uart_receiver1/divider<16> & 
+	!uart_receiver1/divider<17> & !uart_receiver1/divider<18> & 
+	!uart_receiver1/divider<19> & !uart_receiver1/divider<20> & 
+	!uart_receiver1/divider<21> & !uart_receiver1/divider<22> & 
+	!uart_receiver1/divider<23> & !uart_receiver1/divider<24> & N_PZ_227 & 
+	uart_receiver1/divider<9> & !uart_receiver1/divider<8>
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24> & !N_PZ_260 & !uart_receiver1/divider<8> & 
+	!uart_receiver1/divider<7> & !uart_receiver1/divider<2> & 
+	!uart_receiver1/divider<4> & !uart_receiver1/divider<6>
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24> & !N_PZ_260 & !uart_receiver1/divider<8> & 
+	!uart_receiver1/divider<7> & !uart_receiver1/divider<3> & 
+	!uart_receiver1/divider<4> & !uart_receiver1/divider<6>;	// (6 pt, 24 inp)
+   uart_receiver1/divider<9>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<9>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 2 | 10 | uart_receiver1/divider<8>_MC
+ATTRIBUTES | 2185265920 | 0
+OUTPUTMC | 11 | 0 | 8 | 0 | 6 | 0 | 7 | 0 | 4 | 2 | 10 | 0 | 10 | 0 | 9 | 0 | 15 | 0 | 14 | 0 | 0 | 0 | 1
+INPUTS | 4 | N_PZ_260  | uart_receiver1/divider<8>  | uart_receiver1/divider<7>  | N_PZ_235
+INPUTMC | 4 | 0 | 12 | 2 | 10 | 2 | 11 | 2 | 14
+LCT | 1 | 4 | Internal_Name
+EQ | 4 | 
+   uart_receiver1/divider<8>.T := !N_PZ_260 & uart_receiver1/divider<8>
+	# N_PZ_260 & uart_receiver1/divider<7> & N_PZ_235;	// (2 pt, 4 inp)
+   uart_receiver1/divider<8>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<8>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 2 | 11 | uart_receiver1/divider<7>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 12 | 0 | 8 | 0 | 6 | 0 | 7 | 0 | 4 | 2 | 11 | 2 | 10 | 0 | 10 | 0 | 9 | 0 | 15 | 0 | 14 | 0 | 0 | 0 | 1
+INPUTS | 3 | N_PZ_260  | uart_receiver1/divider<7>  | N_PZ_235
+INPUTMC | 3 | 0 | 12 | 2 | 11 | 2 | 14
+LCT | 1 | 4 | Internal_Name
+EQ | 4 | 
+   uart_receiver1/divider<7> := N_PZ_260 & uart_receiver1/divider<7> & !N_PZ_235
+	# N_PZ_260 & !uart_receiver1/divider<7> & N_PZ_235;	// (2 pt, 3 inp)
+   uart_receiver1/divider<7>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<7>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 2 | 14 | N_PZ_235_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 6 | 0 | 11 | 2 | 11 | 2 | 10 | 0 | 10 | 0 | 14 | 0 | 0
+INPUTS | 7 | uart_receiver1/divider<5>  | uart_receiver1/divider<0>  | uart_receiver1/divider<2>  | uart_receiver1/divider<3>  | uart_receiver1/divider<4>  | uart_receiver1/divider<1>  | uart_receiver1/divider<6>
+INPUTMC | 7 | 0 | 9 | 0 | 4 | 0 | 7 | 0 | 6 | 0 | 13 | 0 | 8 | 0 | 11
+EQ | 4 | 
+   N_PZ_235 = uart_receiver1/divider<5> & 
+	uart_receiver1/divider<0> & uart_receiver1/divider<2> & 
+	uart_receiver1/divider<3> & uart_receiver1/divider<4> & 
+	uart_receiver1/divider<1> & uart_receiver1/divider<6>;	// (1 pt, 7 inp)
+
+MACROCELL | 0 | 4 | uart_receiver1/divider<0>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 8 | 0 | 11 | 0 | 8 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 4 | 2 | 14 | 0 | 9
+INPUTS | 22 | uart_receiver1/divider<12>  | uart_receiver1/divider<13>  | uart_receiver1/divider<14>  | uart_receiver1/divider<15>  | uart_receiver1/divider<16>  | uart_receiver1/divider<17>  | uart_receiver1/divider<18>  | uart_receiver1/divider<19>  | uart_receiver1/divider<20>  | uart_receiver1/divider<21>  | uart_receiver1/divider<22>  | uart_receiver1/divider<23>  | uart_receiver1/divider<24>  | N_PZ_227  | uart_receiver1/divider<0>  | uart_receiver1/divider<10>  | uart_receiver1/divider<8>  | uart_receiver1/divider<7>  | uart_receiver1/divider<2>  | uart_receiver1/divider<4>  | uart_receiver1/divider<6>  | uart_receiver1/divider<3>
+INPUTMC | 22 | 0 | 5 | 0 | 3 | 0 | 2 | 1 | 15 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 1 | 14 | 2 | 12 | 0 | 15 | 0 | 4 | 0 | 0 | 2 | 10 | 2 | 11 | 0 | 7 | 0 | 13 | 0 | 11 | 0 | 6
+LCT | 1 | 4 | Internal_Name
+EQ | 32 | 
+   uart_receiver1/divider<0> := !uart_receiver1/divider<12> & 
+	!uart_receiver1/divider<13> & !uart_receiver1/divider<14> & 
+	!uart_receiver1/divider<15> & !uart_receiver1/divider<16> & 
+	!uart_receiver1/divider<17> & !uart_receiver1/divider<18> & 
+	!uart_receiver1/divider<19> & !uart_receiver1/divider<20> & 
+	!uart_receiver1/divider<21> & !uart_receiver1/divider<22> & 
+	!uart_receiver1/divider<23> & !uart_receiver1/divider<24> & N_PZ_227 & 
+	!uart_receiver1/divider<0>
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24> & !uart_receiver1/divider<8> & 
+	!uart_receiver1/divider<7> & !uart_receiver1/divider<0> & 
+	!uart_receiver1/divider<2> & !uart_receiver1/divider<4> & 
+	!uart_receiver1/divider<6>
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24> & !uart_receiver1/divider<8> & 
+	!uart_receiver1/divider<7> & !uart_receiver1/divider<0> & 
+	!uart_receiver1/divider<3> & !uart_receiver1/divider<4> & 
+	!uart_receiver1/divider<6>;	// (3 pt, 22 inp)
+   uart_receiver1/divider<0>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<0>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 0 | 7 | uart_receiver1/divider<2>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 11 | 0 | 8 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 4 | 2 | 14 | 0 | 10 | 0 | 9 | 0 | 14 | 0 | 1
+INPUTS | 23 | uart_receiver1/divider<12>  | uart_receiver1/divider<13>  | uart_receiver1/divider<14>  | uart_receiver1/divider<15>  | uart_receiver1/divider<16>  | uart_receiver1/divider<17>  | uart_receiver1/divider<18>  | uart_receiver1/divider<19>  | uart_receiver1/divider<20>  | uart_receiver1/divider<21>  | uart_receiver1/divider<22>  | uart_receiver1/divider<23>  | uart_receiver1/divider<24>  | N_PZ_227  | uart_receiver1/divider<0>  | uart_receiver1/divider<2>  | uart_receiver1/divider<1>  | uart_receiver1/divider<10>  | uart_receiver1/divider<8>  | uart_receiver1/divider<7>  | uart_receiver1/divider<4>  | uart_receiver1/divider<6>  | uart_receiver1/divider<3>
+INPUTMC | 23 | 0 | 5 | 0 | 3 | 0 | 2 | 1 | 15 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 1 | 14 | 2 | 12 | 0 | 15 | 0 | 4 | 0 | 7 | 0 | 8 | 0 | 0 | 2 | 10 | 2 | 11 | 0 | 13 | 0 | 11 | 0 | 6
+LCT | 1 | 4 | Internal_Name
+EQ | 60 | 
+   uart_receiver1/divider<2> := !uart_receiver1/divider<12> & 
+	!uart_receiver1/divider<13> & !uart_receiver1/divider<14> & 
+	!uart_receiver1/divider<15> & !uart_receiver1/divider<16> & 
+	!uart_receiver1/divider<17> & !uart_receiver1/divider<18> & 
+	!uart_receiver1/divider<19> & !uart_receiver1/divider<20> & 
+	!uart_receiver1/divider<21> & !uart_receiver1/divider<22> & 
+	!uart_receiver1/divider<23> & !uart_receiver1/divider<24> & N_PZ_227 & 
+	!uart_receiver1/divider<0> & uart_receiver1/divider<2>
+	# !uart_receiver1/divider<12> & 
+	!uart_receiver1/divider<13> & !uart_receiver1/divider<14> & 
+	!uart_receiver1/divider<15> & !uart_receiver1/divider<16> & 
+	!uart_receiver1/divider<17> & !uart_receiver1/divider<18> & 
+	!uart_receiver1/divider<19> & !uart_receiver1/divider<20> & 
+	!uart_receiver1/divider<21> & !uart_receiver1/divider<22> & 
+	!uart_receiver1/divider<23> & !uart_receiver1/divider<24> & N_PZ_227 & 
+	uart_receiver1/divider<2> & !uart_receiver1/divider<1>
+	# !uart_receiver1/divider<12> & 
+	!uart_receiver1/divider<13> & !uart_receiver1/divider<14> & 
+	!uart_receiver1/divider<15> & !uart_receiver1/divider<16> & 
+	!uart_receiver1/divider<17> & !uart_receiver1/divider<18> & 
+	!uart_receiver1/divider<19> & !uart_receiver1/divider<20> & 
+	!uart_receiver1/divider<21> & !uart_receiver1/divider<22> & 
+	!uart_receiver1/divider<23> & !uart_receiver1/divider<24> & N_PZ_227 & 
+	uart_receiver1/divider<0> & !uart_receiver1/divider<2> & 
+	uart_receiver1/divider<1>
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24> & !uart_receiver1/divider<8> & 
+	!uart_receiver1/divider<7> & uart_receiver1/divider<0> & 
+	!uart_receiver1/divider<2> & !uart_receiver1/divider<4> & 
+	uart_receiver1/divider<1> & !uart_receiver1/divider<6>
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24> & !uart_receiver1/divider<8> & 
+	!uart_receiver1/divider<7> & !uart_receiver1/divider<0> & 
+	uart_receiver1/divider<2> & !uart_receiver1/divider<3> & 
+	!uart_receiver1/divider<4> & !uart_receiver1/divider<6>
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24> & !uart_receiver1/divider<8> & 
+	!uart_receiver1/divider<7> & uart_receiver1/divider<2> & 
+	!uart_receiver1/divider<3> & !uart_receiver1/divider<4> & 
+	!uart_receiver1/divider<1> & !uart_receiver1/divider<6>;	// (6 pt, 23 inp)
+   uart_receiver1/divider<2>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<2>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 0 | 6 | uart_receiver1/divider<3>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 11 | 0 | 8 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 4 | 2 | 14 | 0 | 10 | 0 | 9 | 0 | 14 | 0 | 1
+INPUTS | 23 | uart_receiver1/divider<12>  | uart_receiver1/divider<13>  | uart_receiver1/divider<14>  | uart_receiver1/divider<15>  | uart_receiver1/divider<16>  | uart_receiver1/divider<17>  | uart_receiver1/divider<18>  | uart_receiver1/divider<19>  | uart_receiver1/divider<20>  | uart_receiver1/divider<21>  | uart_receiver1/divider<22>  | uart_receiver1/divider<23>  | uart_receiver1/divider<24>  | N_PZ_227  | uart_receiver1/divider<0>  | uart_receiver1/divider<3>  | uart_receiver1/divider<2>  | uart_receiver1/divider<1>  | uart_receiver1/divider<10>  | uart_receiver1/divider<8>  | uart_receiver1/divider<7>  | uart_receiver1/divider<4>  | uart_receiver1/divider<6>
+INPUTMC | 23 | 0 | 5 | 0 | 3 | 0 | 2 | 1 | 15 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 1 | 14 | 2 | 12 | 0 | 15 | 0 | 4 | 0 | 6 | 0 | 7 | 0 | 8 | 0 | 0 | 2 | 10 | 2 | 11 | 0 | 13 | 0 | 11
+LCT | 1 | 4 | Internal_Name
+EQ | 58 | 
+   uart_receiver1/divider<3> := !uart_receiver1/divider<12> & 
+	!uart_receiver1/divider<13> & !uart_receiver1/divider<14> & 
+	!uart_receiver1/divider<15> & !uart_receiver1/divider<16> & 
+	!uart_receiver1/divider<17> & !uart_receiver1/divider<18> & 
+	!uart_receiver1/divider<19> & !uart_receiver1/divider<20> & 
+	!uart_receiver1/divider<21> & !uart_receiver1/divider<22> & 
+	!uart_receiver1/divider<23> & !uart_receiver1/divider<24> & N_PZ_227 & 
+	!uart_receiver1/divider<0> & uart_receiver1/divider<3>
+	# !uart_receiver1/divider<12> & 
+	!uart_receiver1/divider<13> & !uart_receiver1/divider<14> & 
+	!uart_receiver1/divider<15> & !uart_receiver1/divider<16> & 
+	!uart_receiver1/divider<17> & !uart_receiver1/divider<18> & 
+	!uart_receiver1/divider<19> & !uart_receiver1/divider<20> & 
+	!uart_receiver1/divider<21> & !uart_receiver1/divider<22> & 
+	!uart_receiver1/divider<23> & !uart_receiver1/divider<24> & N_PZ_227 & 
+	!uart_receiver1/divider<2> & uart_receiver1/divider<3>
+	# !uart_receiver1/divider<12> & 
+	!uart_receiver1/divider<13> & !uart_receiver1/divider<14> & 
+	!uart_receiver1/divider<15> & !uart_receiver1/divider<16> & 
+	!uart_receiver1/divider<17> & !uart_receiver1/divider<18> & 
+	!uart_receiver1/divider<19> & !uart_receiver1/divider<20> & 
+	!uart_receiver1/divider<21> & !uart_receiver1/divider<22> & 
+	!uart_receiver1/divider<23> & !uart_receiver1/divider<24> & N_PZ_227 & 
+	uart_receiver1/divider<3> & !uart_receiver1/divider<1>
+	# !uart_receiver1/divider<12> & 
+	!uart_receiver1/divider<13> & !uart_receiver1/divider<14> & 
+	!uart_receiver1/divider<15> & !uart_receiver1/divider<16> & 
+	!uart_receiver1/divider<17> & !uart_receiver1/divider<18> & 
+	!uart_receiver1/divider<19> & !uart_receiver1/divider<20> & 
+	!uart_receiver1/divider<21> & !uart_receiver1/divider<22> & 
+	!uart_receiver1/divider<23> & !uart_receiver1/divider<24> & N_PZ_227 & 
+	uart_receiver1/divider<0> & uart_receiver1/divider<2> & 
+	!uart_receiver1/divider<3> & uart_receiver1/divider<1>
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24> & !uart_receiver1/divider<8> & 
+	!uart_receiver1/divider<7> & !uart_receiver1/divider<2> & 
+	uart_receiver1/divider<3> & !uart_receiver1/divider<4> & 
+	!uart_receiver1/divider<6>
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24> & !uart_receiver1/divider<8> & 
+	!uart_receiver1/divider<7> & uart_receiver1/divider<0> & 
+	uart_receiver1/divider<2> & !uart_receiver1/divider<3> & 
+	!uart_receiver1/divider<4> & uart_receiver1/divider<1> & 
+	!uart_receiver1/divider<6>;	// (6 pt, 23 inp)
+   uart_receiver1/divider<3>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<3>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 0 | 13 | uart_receiver1/divider<4>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 11 | 0 | 8 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 4 | 2 | 14 | 0 | 10 | 0 | 9 | 0 | 14 | 0 | 1
+INPUTS | 19 | uart_receiver1/divider<12>  | uart_receiver1/divider<13>  | uart_receiver1/divider<14>  | uart_receiver1/divider<15>  | uart_receiver1/divider<16>  | uart_receiver1/divider<17>  | uart_receiver1/divider<18>  | uart_receiver1/divider<19>  | uart_receiver1/divider<20>  | uart_receiver1/divider<21>  | uart_receiver1/divider<22>  | uart_receiver1/divider<23>  | uart_receiver1/divider<24>  | N_PZ_227  | uart_receiver1/divider<0>  | uart_receiver1/divider<4>  | uart_receiver1/divider<2>  | uart_receiver1/divider<3>  | uart_receiver1/divider<1>
+INPUTMC | 19 | 0 | 5 | 0 | 3 | 0 | 2 | 1 | 15 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 1 | 14 | 2 | 12 | 0 | 15 | 0 | 4 | 0 | 13 | 0 | 7 | 0 | 6 | 0 | 8
+LCT | 1 | 4 | Internal_Name
+EQ | 44 | 
+   uart_receiver1/divider<4> := !uart_receiver1/divider<12> & 
+	!uart_receiver1/divider<13> & !uart_receiver1/divider<14> & 
+	!uart_receiver1/divider<15> & !uart_receiver1/divider<16> & 
+	!uart_receiver1/divider<17> & !uart_receiver1/divider<18> & 
+	!uart_receiver1/divider<19> & !uart_receiver1/divider<20> & 
+	!uart_receiver1/divider<21> & !uart_receiver1/divider<22> & 
+	!uart_receiver1/divider<23> & !uart_receiver1/divider<24> & N_PZ_227 & 
+	!uart_receiver1/divider<0> & uart_receiver1/divider<4>
+	# !uart_receiver1/divider<12> & 
+	!uart_receiver1/divider<13> & !uart_receiver1/divider<14> & 
+	!uart_receiver1/divider<15> & !uart_receiver1/divider<16> & 
+	!uart_receiver1/divider<17> & !uart_receiver1/divider<18> & 
+	!uart_receiver1/divider<19> & !uart_receiver1/divider<20> & 
+	!uart_receiver1/divider<21> & !uart_receiver1/divider<22> & 
+	!uart_receiver1/divider<23> & !uart_receiver1/divider<24> & N_PZ_227 & 
+	!uart_receiver1/divider<2> & uart_receiver1/divider<4>
+	# !uart_receiver1/divider<12> & 
+	!uart_receiver1/divider<13> & !uart_receiver1/divider<14> & 
+	!uart_receiver1/divider<15> & !uart_receiver1/divider<16> & 
+	!uart_receiver1/divider<17> & !uart_receiver1/divider<18> & 
+	!uart_receiver1/divider<19> & !uart_receiver1/divider<20> & 
+	!uart_receiver1/divider<21> & !uart_receiver1/divider<22> & 
+	!uart_receiver1/divider<23> & !uart_receiver1/divider<24> & N_PZ_227 & 
+	!uart_receiver1/divider<3> & uart_receiver1/divider<4>
+	# !uart_receiver1/divider<12> & 
+	!uart_receiver1/divider<13> & !uart_receiver1/divider<14> & 
+	!uart_receiver1/divider<15> & !uart_receiver1/divider<16> & 
+	!uart_receiver1/divider<17> & !uart_receiver1/divider<18> & 
+	!uart_receiver1/divider<19> & !uart_receiver1/divider<20> & 
+	!uart_receiver1/divider<21> & !uart_receiver1/divider<22> & 
+	!uart_receiver1/divider<23> & !uart_receiver1/divider<24> & N_PZ_227 & 
+	uart_receiver1/divider<4> & !uart_receiver1/divider<1>
+	# !uart_receiver1/divider<12> & 
+	!uart_receiver1/divider<13> & !uart_receiver1/divider<14> & 
+	!uart_receiver1/divider<15> & !uart_receiver1/divider<16> & 
+	!uart_receiver1/divider<17> & !uart_receiver1/divider<18> & 
+	!uart_receiver1/divider<19> & !uart_receiver1/divider<20> & 
+	!uart_receiver1/divider<21> & !uart_receiver1/divider<22> & 
+	!uart_receiver1/divider<23> & !uart_receiver1/divider<24> & N_PZ_227 & 
+	uart_receiver1/divider<0> & uart_receiver1/divider<2> & 
+	uart_receiver1/divider<3> & !uart_receiver1/divider<4> & 
+	uart_receiver1/divider<1>;	// (5 pt, 19 inp)
+   uart_receiver1/divider<4>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<4>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 0 | 8 | uart_receiver1/divider<1>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 7 | 0 | 11 | 0 | 8 | 0 | 13 | 0 | 6 | 0 | 7 | 2 | 14 | 0 | 9
+INPUTS | 23 | uart_receiver1/divider<12>  | uart_receiver1/divider<13>  | uart_receiver1/divider<14>  | uart_receiver1/divider<15>  | uart_receiver1/divider<16>  | uart_receiver1/divider<17>  | uart_receiver1/divider<18>  | uart_receiver1/divider<19>  | uart_receiver1/divider<20>  | uart_receiver1/divider<21>  | uart_receiver1/divider<22>  | uart_receiver1/divider<23>  | uart_receiver1/divider<24>  | N_PZ_227  | uart_receiver1/divider<0>  | uart_receiver1/divider<1>  | uart_receiver1/divider<10>  | uart_receiver1/divider<8>  | uart_receiver1/divider<7>  | uart_receiver1/divider<2>  | uart_receiver1/divider<4>  | uart_receiver1/divider<6>  | uart_receiver1/divider<3>
+INPUTMC | 23 | 0 | 5 | 0 | 3 | 0 | 2 | 1 | 15 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 1 | 14 | 2 | 12 | 0 | 15 | 0 | 4 | 0 | 8 | 0 | 0 | 2 | 10 | 2 | 11 | 0 | 7 | 0 | 13 | 0 | 11 | 0 | 6
+LCT | 1 | 4 | Internal_Name
+EQ | 62 | 
+   uart_receiver1/divider<1> := !uart_receiver1/divider<12> & 
+	!uart_receiver1/divider<13> & !uart_receiver1/divider<14> & 
+	!uart_receiver1/divider<15> & !uart_receiver1/divider<16> & 
+	!uart_receiver1/divider<17> & !uart_receiver1/divider<18> & 
+	!uart_receiver1/divider<19> & !uart_receiver1/divider<20> & 
+	!uart_receiver1/divider<21> & !uart_receiver1/divider<22> & 
+	!uart_receiver1/divider<23> & !uart_receiver1/divider<24> & N_PZ_227 & 
+	uart_receiver1/divider<0> & !uart_receiver1/divider<1>
+	# !uart_receiver1/divider<12> & 
+	!uart_receiver1/divider<13> & !uart_receiver1/divider<14> & 
+	!uart_receiver1/divider<15> & !uart_receiver1/divider<16> & 
+	!uart_receiver1/divider<17> & !uart_receiver1/divider<18> & 
+	!uart_receiver1/divider<19> & !uart_receiver1/divider<20> & 
+	!uart_receiver1/divider<21> & !uart_receiver1/divider<22> & 
+	!uart_receiver1/divider<23> & !uart_receiver1/divider<24> & N_PZ_227 & 
+	!uart_receiver1/divider<0> & uart_receiver1/divider<1>
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24> & !uart_receiver1/divider<8> & 
+	!uart_receiver1/divider<7> & uart_receiver1/divider<0> & 
+	!uart_receiver1/divider<2> & !uart_receiver1/divider<4> & 
+	!uart_receiver1/divider<1> & !uart_receiver1/divider<6>
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24> & !uart_receiver1/divider<8> & 
+	!uart_receiver1/divider<7> & uart_receiver1/divider<0> & 
+	!uart_receiver1/divider<3> & !uart_receiver1/divider<4> & 
+	!uart_receiver1/divider<1> & !uart_receiver1/divider<6>
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24> & !uart_receiver1/divider<8> & 
+	!uart_receiver1/divider<7> & !uart_receiver1/divider<0> & 
+	!uart_receiver1/divider<2> & !uart_receiver1/divider<4> & 
+	uart_receiver1/divider<1> & !uart_receiver1/divider<6>
+	# !uart_receiver1/divider<10> & 
+	!uart_receiver1/divider<12> & !uart_receiver1/divider<13> & 
+	!uart_receiver1/divider<14> & !uart_receiver1/divider<15> & 
+	!uart_receiver1/divider<16> & !uart_receiver1/divider<17> & 
+	!uart_receiver1/divider<18> & !uart_receiver1/divider<19> & 
+	!uart_receiver1/divider<20> & !uart_receiver1/divider<21> & 
+	!uart_receiver1/divider<22> & !uart_receiver1/divider<23> & 
+	!uart_receiver1/divider<24> & !uart_receiver1/divider<8> & 
+	!uart_receiver1/divider<7> & !uart_receiver1/divider<0> & 
+	!uart_receiver1/divider<3> & !uart_receiver1/divider<4> & 
+	uart_receiver1/divider<1> & !uart_receiver1/divider<6>;	// (6 pt, 23 inp)
+   uart_receiver1/divider<1>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<1>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 0 | 11 | uart_receiver1/divider<6>_MC
+ATTRIBUTES | 2189460224 | 0
+OUTPUTMC | 11 | 0 | 11 | 0 | 8 | 0 | 6 | 0 | 7 | 0 | 4 | 2 | 14 | 0 | 10 | 0 | 9 | 0 | 15 | 0 | 14 | 0 | 1
+INPUTS | 9 | N_PZ_260  | N_PZ_235  | uart_receiver1/divider<6>  | uart_receiver1/divider<5>  | uart_receiver1/divider<0>  | uart_receiver1/divider<2>  | uart_receiver1/divider<3>  | uart_receiver1/divider<4>  | uart_receiver1/divider<1>
+INPUTMC | 9 | 0 | 12 | 2 | 14 | 0 | 11 | 0 | 9 | 0 | 4 | 0 | 7 | 0 | 6 | 0 | 13 | 0 | 8
+LCT | 1 | 4 | Internal_Name
+EQ | 7 | 
+   uart_receiver1/divider<6> := N_PZ_260 & !N_PZ_235 & uart_receiver1/divider<6>
+	# uart_receiver1/divider<5> & N_PZ_260 & !N_PZ_235 & 
+	uart_receiver1/divider<0> & uart_receiver1/divider<2> & 
+	uart_receiver1/divider<3> & uart_receiver1/divider<4> & 
+	uart_receiver1/divider<1>;	// (2 pt, 9 inp)
+   uart_receiver1/divider<6>.CLK  =  CLK;	// GCK	(0 pt, 0 inp)
+    uart_receiver1/divider<6>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+GLOBALS | 1 | 2 | CLK
+
+MACROCELL | 2 | 2 | uart_receiver1/count<1>_MC
+ATTRIBUTES | 2185233184 | 0
+OUTPUTMC | 9 | 2 | 1 | 2 | 0 | 3 | 6 | 3 | 14 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 12
+INPUTS | 2 | uart_receiver1/count<0>  | uart_receiver1/clk
+INPUTMC | 2 | 2 | 4 | 0 | 1
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   uart_receiver1/count<1>.T := uart_receiver1/count<0>;	// (1 pt, 1 inp)
+    uart_receiver1/count<1>.CLK = uart_receiver1/clk;	// PTC	(1 pt, 1 inp)
+    uart_receiver1/count<1>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+
+MACROCELL | 2 | 1 | uart_receiver1/count<2>_MC
+ATTRIBUTES | 2185233184 | 0
+OUTPUTMC | 8 | 2 | 0 | 3 | 6 | 3 | 14 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 12
+INPUTS | 3 | uart_receiver1/count<0>  | uart_receiver1/count<1>  | uart_receiver1/clk
+INPUTMC | 3 | 2 | 4 | 2 | 2 | 0 | 1
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   uart_receiver1/count<2>.T := uart_receiver1/count<0> & uart_receiver1/count<1>;	// (1 pt, 2 inp)
+    uart_receiver1/count<2>.CLK = uart_receiver1/clk;	// PTC	(1 pt, 1 inp)
+    uart_receiver1/count<2>.AR = !BUSY;	// CTR	(1 pt, 1 inp)
+
+MACROCELL | 3 | 6 | N_PZ_277_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 2 | 4 | 5 | 3 | 15
+INPUTS | 2 | uart_receiver1/count<1>  | uart_receiver1/count<2>
+INPUTMC | 2 | 2 | 2 | 2 | 1
+EQ | 1 | 
+   N_PZ_277 = !uart_receiver1/count<1> & !uart_receiver1/count<2>;	// (1 pt, 2 inp)
+
+MACROCELL | 3 | 1 | EN_SEGMENT_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 0
+EQ | 1 | 
+   EN_SEGMENT = Gnd;	// (0 pt, 0 inp)
+
+MACROCELL | 1 | 3 | OUT_D<0>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 8 | buatdata<0>  | buatdata<1>  | buatdata<3>  | buatdata<4>  | buatdata<5>  | buatdata<6>  | buatdata<7>  | buatdata<2>
+INPUTMC | 8 | 2 | 9 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 13 | 2 | 7
+EQ | 6 | 
+   !OUT_D<0> = buatdata<0> & !buatdata<1> & buatdata<3> & 
+	buatdata<4> & buatdata<5> & buatdata<6> & buatdata<7>
+	# buatdata<1> & buatdata<3> & buatdata<4> & 
+	buatdata<5> & buatdata<6> & buatdata<7> & !buatdata<2>
+	# !buatdata<1> & buatdata<3> & buatdata<4> & 
+	buatdata<5> & buatdata<6> & buatdata<7> & buatdata<2>;	// (3 pt, 8 inp)
+
+MACROCELL | 2 | 9 | buatdata<0>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 7 | 1 | 3 | 1 | 4 | 1 | 2 | 1 | 0 | 1 | 13 | 1 | 11 | 1 | 12
+INPUTS | 1 | uart_receiver1/idata<1>
+INPUTMC | 1 | 4 | 5
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   buatdata<0> := uart_receiver1/idata<1>;	// (1 pt, 1 inp)
+    buatdata<0>.CLK = !(BUSY);	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 4 | 5 | uart_receiver1/idata<1>_MC
+ATTRIBUTES | 2290090048 | 4
+OUTPUTMC | 1 | 2 | 9
+INPUTS | 4 | uart_receiver1/count<3>  | uart_receiver1/count<0>  | BUSY  | N_PZ_277
+INPUTMC | 4 | 2 | 0 | 2 | 4 | 3 | 0 | 3 | 6
+LCT | 1 | 2 | Internal_Name
+EQ | 6 | 
+   
+// Direct Input Register
+uart_receiver1/idata<1> := RXD;	// (0 pt, 0 inp)
+    uart_receiver1/idata<1>.CLK = !(uart_receiver1/clk);	// CTC	(1 pt, 1 inp)
+    uart_receiver1/idata<1>.CE = !uart_receiver1/count<3> & uart_receiver1/count<0> & 
+	BUSY & N_PZ_277;	// (1 pt, 4 inp)
+
+MACROCELL | 2 | 8 | buatdata<1>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 7 | 1 | 3 | 1 | 4 | 1 | 2 | 1 | 0 | 1 | 13 | 1 | 11 | 1 | 12
+INPUTS | 1 | uart_receiver1/idata<2>
+INPUTMC | 1 | 3 | 14
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   buatdata<1> := uart_receiver1/idata<2>;	// (1 pt, 1 inp)
+    buatdata<1>.CLK = !(BUSY);	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 14 | uart_receiver1/idata<2>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 2 | 8
+INPUTS | 6 | RXD  | uart_receiver1/count<3>  | uart_receiver1/count<0>  | BUSY  | uart_receiver1/count<1>  | uart_receiver1/count<2>
+INPUTMC | 5 | 2 | 0 | 2 | 4 | 3 | 0 | 2 | 2 | 2 | 1
+INPUTP | 1 | 48
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   uart_receiver1/idata<2> := RXD;	// (1 pt, 1 inp)
+    uart_receiver1/idata<2>.CLK = !(uart_receiver1/clk);	// CTC	(1 pt, 1 inp)
+    uart_receiver1/idata<2>.CE = !uart_receiver1/count<3> & !uart_receiver1/count<0> & 
+	BUSY & uart_receiver1/count<1> & !uart_receiver1/count<2>;	// (1 pt, 5 inp)
+
+MACROCELL | 2 | 6 | buatdata<3>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 7 | 1 | 3 | 1 | 4 | 1 | 2 | 1 | 0 | 1 | 13 | 1 | 11 | 1 | 12
+INPUTS | 1 | uart_receiver1/idata<4>
+INPUTMC | 1 | 3 | 10
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   buatdata<3> := uart_receiver1/idata<4>;	// (1 pt, 1 inp)
+    buatdata<3>.CLK = !(BUSY);	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 10 | uart_receiver1/idata<4>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 2 | 6
+INPUTS | 6 | RXD  | uart_receiver1/count<3>  | uart_receiver1/count<0>  | BUSY  | uart_receiver1/count<1>  | uart_receiver1/count<2>
+INPUTMC | 5 | 2 | 0 | 2 | 4 | 3 | 0 | 2 | 2 | 2 | 1
+INPUTP | 1 | 48
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   uart_receiver1/idata<4> := RXD;	// (1 pt, 1 inp)
+    uart_receiver1/idata<4>.CLK = !(uart_receiver1/clk);	// CTC	(1 pt, 1 inp)
+    uart_receiver1/idata<4>.CE = !uart_receiver1/count<3> & !uart_receiver1/count<0> & 
+	BUSY & !uart_receiver1/count<1> & uart_receiver1/count<2>;	// (1 pt, 5 inp)
+
+MACROCELL | 2 | 5 | buatdata<4>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 7 | 1 | 3 | 1 | 4 | 1 | 2 | 1 | 0 | 1 | 13 | 1 | 11 | 1 | 12
+INPUTS | 1 | uart_receiver1/idata<5>
+INPUTMC | 1 | 3 | 9
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   buatdata<4> := uart_receiver1/idata<5>;	// (1 pt, 1 inp)
+    buatdata<4>.CLK = !(BUSY);	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 9 | uart_receiver1/idata<5>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 2 | 5
+INPUTS | 6 | RXD  | uart_receiver1/count<3>  | uart_receiver1/count<0>  | BUSY  | uart_receiver1/count<1>  | uart_receiver1/count<2>
+INPUTMC | 5 | 2 | 0 | 2 | 4 | 3 | 0 | 2 | 2 | 2 | 1
+INPUTP | 1 | 48
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   uart_receiver1/idata<5> := RXD;	// (1 pt, 1 inp)
+    uart_receiver1/idata<5>.CLK = !(uart_receiver1/clk);	// CTC	(1 pt, 1 inp)
+    uart_receiver1/idata<5>.CE = !uart_receiver1/count<3> & uart_receiver1/count<0> & 
+	BUSY & !uart_receiver1/count<1> & uart_receiver1/count<2>;	// (1 pt, 5 inp)
+
+MACROCELL | 2 | 3 | buatdata<5>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 7 | 1 | 3 | 1 | 4 | 1 | 2 | 1 | 0 | 1 | 13 | 1 | 11 | 1 | 12
+INPUTS | 1 | uart_receiver1/idata<6>
+INPUTMC | 1 | 3 | 8
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   buatdata<5> := uart_receiver1/idata<6>;	// (1 pt, 1 inp)
+    buatdata<5>.CLK = !(BUSY);	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 8 | uart_receiver1/idata<6>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 2 | 3
+INPUTS | 6 | RXD  | uart_receiver1/count<3>  | uart_receiver1/count<0>  | BUSY  | uart_receiver1/count<1>  | uart_receiver1/count<2>
+INPUTMC | 5 | 2 | 0 | 2 | 4 | 3 | 0 | 2 | 2 | 2 | 1
+INPUTP | 1 | 48
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   uart_receiver1/idata<6> := RXD;	// (1 pt, 1 inp)
+    uart_receiver1/idata<6>.CLK = !(uart_receiver1/clk);	// CTC	(1 pt, 1 inp)
+    uart_receiver1/idata<6>.CE = !uart_receiver1/count<3> & !uart_receiver1/count<0> & 
+	BUSY & uart_receiver1/count<1> & uart_receiver1/count<2>;	// (1 pt, 5 inp)
+
+MACROCELL | 2 | 15 | buatdata<6>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 7 | 1 | 3 | 1 | 4 | 1 | 2 | 1 | 0 | 1 | 13 | 1 | 11 | 1 | 12
+INPUTS | 1 | uart_receiver1/idata<7>
+INPUTMC | 1 | 3 | 7
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   buatdata<6> := uart_receiver1/idata<7>;	// (1 pt, 1 inp)
+    buatdata<6>.CLK = !(BUSY);	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 7 | uart_receiver1/idata<7>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 2 | 15
+INPUTS | 6 | RXD  | uart_receiver1/count<3>  | uart_receiver1/count<0>  | BUSY  | uart_receiver1/count<1>  | uart_receiver1/count<2>
+INPUTMC | 5 | 2 | 0 | 2 | 4 | 3 | 0 | 2 | 2 | 2 | 1
+INPUTP | 1 | 48
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   uart_receiver1/idata<7> := RXD;	// (1 pt, 1 inp)
+    uart_receiver1/idata<7>.CLK = !(uart_receiver1/clk);	// CTC	(1 pt, 1 inp)
+    uart_receiver1/idata<7>.CE = !uart_receiver1/count<3> & uart_receiver1/count<0> & 
+	BUSY & uart_receiver1/count<1> & uart_receiver1/count<2>;	// (1 pt, 5 inp)
+
+MACROCELL | 2 | 13 | buatdata<7>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 7 | 1 | 3 | 1 | 4 | 1 | 2 | 1 | 0 | 1 | 13 | 1 | 11 | 1 | 12
+INPUTS | 1 | uart_receiver1/idata<8>
+INPUTMC | 1 | 3 | 15
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   buatdata<7> := uart_receiver1/idata<8>;	// (1 pt, 1 inp)
+    buatdata<7>.CLK = !(BUSY);	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 15 | uart_receiver1/idata<8>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 2 | 13
+INPUTS | 5 | RXD  | uart_receiver1/count<3>  | uart_receiver1/count<0>  | BUSY  | N_PZ_277
+INPUTMC | 4 | 2 | 0 | 2 | 4 | 3 | 0 | 3 | 6
+INPUTP | 1 | 48
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   uart_receiver1/idata<8> := RXD;	// (1 pt, 1 inp)
+    uart_receiver1/idata<8>.CLK = !(uart_receiver1/clk);	// CTC	(1 pt, 1 inp)
+    uart_receiver1/idata<8>.CE = uart_receiver1/count<3> & !uart_receiver1/count<0> & 
+	BUSY & N_PZ_277;	// (1 pt, 4 inp)
+
+MACROCELL | 2 | 7 | buatdata<2>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 7 | 1 | 3 | 1 | 4 | 1 | 2 | 1 | 0 | 1 | 13 | 1 | 11 | 1 | 12
+INPUTS | 1 | uart_receiver1/idata<3>
+INPUTMC | 1 | 3 | 12
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   buatdata<2> := uart_receiver1/idata<3>;	// (1 pt, 1 inp)
+    buatdata<2>.CLK = !(BUSY);	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 12 | uart_receiver1/idata<3>_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 2 | 7
+INPUTS | 6 | RXD  | uart_receiver1/count<3>  | uart_receiver1/count<0>  | BUSY  | uart_receiver1/count<1>  | uart_receiver1/count<2>
+INPUTMC | 5 | 2 | 0 | 2 | 4 | 3 | 0 | 2 | 2 | 2 | 1
+INPUTP | 1 | 48
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   uart_receiver1/idata<3> := RXD;	// (1 pt, 1 inp)
+    uart_receiver1/idata<3>.CLK = !(uart_receiver1/clk);	// CTC	(1 pt, 1 inp)
+    uart_receiver1/idata<3>.CE = !uart_receiver1/count<3> & uart_receiver1/count<0> & 
+	BUSY & uart_receiver1/count<1> & !uart_receiver1/count<2>;	// (1 pt, 5 inp)
+
+MACROCELL | 1 | 4 | OUT_D<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 8 | buatdata<0>  | buatdata<1>  | buatdata<3>  | buatdata<4>  | buatdata<5>  | buatdata<6>  | buatdata<7>  | buatdata<2>
+INPUTMC | 8 | 2 | 9 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 13 | 2 | 7
+EQ | 6 | 
+   !OUT_D<1> = buatdata<0> & buatdata<1> & buatdata<3> & 
+	buatdata<4> & buatdata<5> & buatdata<6> & buatdata<7>
+	# buatdata<0> & buatdata<3> & buatdata<4> & 
+	buatdata<5> & buatdata<6> & buatdata<7> & !buatdata<2>
+	# buatdata<1> & buatdata<3> & buatdata<4> & 
+	buatdata<5> & buatdata<6> & buatdata<7> & !buatdata<2>;	// (3 pt, 8 inp)
+
+MACROCELL | 1 | 2 | OUT_D<2>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 8 | buatdata<0>  | buatdata<1>  | buatdata<3>  | buatdata<4>  | buatdata<5>  | buatdata<6>  | buatdata<7>  | buatdata<2>
+INPUTMC | 8 | 2 | 9 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 13 | 2 | 7
+EQ | 4 | 
+   !OUT_D<2> = buatdata<0> & !buatdata<1> & buatdata<3> & 
+	buatdata<4> & buatdata<5> & buatdata<6> & buatdata<7>
+	# buatdata<0> & buatdata<3> & buatdata<4> & 
+	buatdata<5> & buatdata<6> & buatdata<7> & buatdata<2>;	// (2 pt, 8 inp)
+
+MACROCELL | 1 | 0 | OUT_D<3>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 8 | buatdata<0>  | buatdata<1>  | buatdata<3>  | buatdata<4>  | buatdata<5>  | buatdata<6>  | buatdata<7>  | buatdata<2>
+INPUTMC | 8 | 2 | 9 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 13 | 2 | 7
+EQ | 9 | 
+   !OUT_D<3> = buatdata<0> & !buatdata<1> & buatdata<3> & 
+	buatdata<4> & buatdata<5> & buatdata<6> & buatdata<7>
+	# buatdata<0> & buatdata<3> & buatdata<4> & 
+	buatdata<5> & buatdata<6> & buatdata<7> & buatdata<2>
+	# !buatdata<1> & buatdata<3> & buatdata<4> & 
+	buatdata<5> & buatdata<6> & buatdata<7> & buatdata<2>
+	# !buatdata<0> & buatdata<1> & buatdata<3> & 
+	buatdata<4> & buatdata<5> & buatdata<6> & buatdata<7> & 
+	!buatdata<2>;	// (4 pt, 8 inp)
+
+MACROCELL | 1 | 13 | OUT_D<4>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 8 | buatdata<0>  | buatdata<3>  | buatdata<4>  | buatdata<5>  | buatdata<6>  | buatdata<7>  | buatdata<1>  | buatdata<2>
+INPUTMC | 8 | 2 | 9 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 13 | 2 | 8 | 2 | 7
+EQ | 6 | 
+   !OUT_D<4> = !buatdata<0> & buatdata<3> & buatdata<4> & 
+	buatdata<5> & buatdata<6> & buatdata<7>
+	# buatdata<1> & buatdata<3> & buatdata<4> & 
+	buatdata<5> & buatdata<6> & buatdata<7>
+	# buatdata<3> & buatdata<4> & buatdata<5> & 
+	buatdata<6> & buatdata<7> & !buatdata<2>;	// (3 pt, 8 inp)
+
+MACROCELL | 1 | 11 | OUT_D<5>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 8 | buatdata<3>  | buatdata<4>  | buatdata<5>  | buatdata<6>  | buatdata<7>  | buatdata<2>  | buatdata<0>  | buatdata<1>
+INPUTMC | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 13 | 2 | 7 | 2 | 9 | 2 | 8
+EQ | 6 | 
+   !OUT_D<5> = buatdata<3> & buatdata<4> & buatdata<5> & 
+	buatdata<6> & buatdata<7> & buatdata<2>
+	# buatdata<0> & buatdata<1> & buatdata<3> & 
+	buatdata<4> & buatdata<5> & buatdata<6> & buatdata<7>
+	# !buatdata<0> & !buatdata<1> & buatdata<3> & 
+	buatdata<4> & buatdata<5> & buatdata<6> & buatdata<7>;	// (3 pt, 8 inp)
+
+MACROCELL | 1 | 12 | OUT_D<6>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 8 | buatdata<1>  | buatdata<3>  | buatdata<4>  | buatdata<5>  | buatdata<6>  | buatdata<7>  | buatdata<0>  | buatdata<2>
+INPUTMC | 8 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 13 | 2 | 9 | 2 | 7
+EQ | 6 | 
+   !OUT_D<6> = !buatdata<1> & buatdata<3> & buatdata<4> & 
+	buatdata<5> & buatdata<6> & buatdata<7>
+	# buatdata<0> & buatdata<3> & buatdata<4> & 
+	buatdata<5> & buatdata<6> & buatdata<7> & buatdata<2>
+	# !buatdata<0> & buatdata<3> & buatdata<4> & 
+	buatdata<5> & buatdata<6> & buatdata<7> & !buatdata<2>;	// (3 pt, 8 inp)
+
+PIN | RXD | 4160 | 16 | LVCMOS18 | 48 | 9 | 3 | 14 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 15 | 3 | 12 | 3 | 0 | 4 | 5
+PIN | CLK | 8192 | 16 | LVCMOS18 | 50 | 26 | 0 | 5 | 0 | 3 | 0 | 2 | 1 | 15 | 1 | 10 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 5 | 1 | 1 | 1 | 14 | 2 | 12 | 0 | 11 | 0 | 8 | 0 | 13 | 0 | 6 | 0 | 7 | 0 | 4 | 2 | 11 | 2 | 10 | 0 | 10 | 0 | 9 | 0 | 14 | 0 | 0 | 0 | 1
+PIN | BUSY | 536871040 | 0 | LVCMOS18 | 15
+PIN | EN_SEGMENT | 536871040 | 0 | LVCMOS18 | 16
+PIN | OUT_D<0> | 536871040 | 0 | LVCMOS18 | 4
+PIN | OUT_D<1> | 536871040 | 0 | LVCMOS18 | 5
+PIN | OUT_D<2> | 536871040 | 0 | LVCMOS18 | 3
+PIN | OUT_D<3> | 536871040 | 0 | LVCMOS18 | 1
+PIN | OUT_D<4> | 536871040 | 0 | LVCMOS18 | 10
+PIN | OUT_D<5> | 536871040 | 0 | LVCMOS18 | 7
+PIN | OUT_D<6> | 536871040 | 0 | LVCMOS18 | 8

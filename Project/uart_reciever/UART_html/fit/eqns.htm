@@ -1,0 +1,635 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="paths.js"></script><script src="eqns.js"></script><script>
+      var design = "UART";
+      var device = "XA2C384";
+      signals = new Array("BUSY","DATA0_SPECSIG","DATA1_SPECSIG","DATA2_SPECSIG","DATA3_SPECSIG","DATA4_SPECSIG","DATA5_SPECSIG","DATA6_SPECSIG","DATA7_SPECSIG","N_PZ_219","N_PZ_227","N_PZ_246","N_PZ_297","clk","count0_SPECSIG","count1_SPECSIG","count2_SPECSIG","count3_SPECSIG","divider0_SPECSIG","divider10_SPECSIG","divider11_SPECSIG","divider12_SPECSIG","divider13_SPECSIG","divider14_SPECSIG","divider15_SPECSIG","divider16_SPECSIG","divider17_SPECSIG","divider18_SPECSIG","divider19_SPECSIG","divider1_SPECSIG","divider20_SPECSIG","divider21_SPECSIG","divider22_SPECSIG","divider23_SPECSIG","divider24_SPECSIG","divider2_SPECSIG","divider3_SPECSIG","divider4_SPECSIG","divider5_SPECSIG","divider6_SPECSIG","divider7_SPECSIG","divider8_SPECSIG","divider9_SPECSIG","idata1_SPECSIG","idata2_SPECSIG","idata3_SPECSIG","idata4_SPECSIG","idata5_SPECSIG","idata6_SPECSIG","idata7_SPECSIG","idata8_SPECSIG");
+      sigNegs = new Array("ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF");
+      sigTypes = new Array("DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","","","","","TFF","TFF","TFF","TFF","TFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","TFF","DFF","DEFF","DEFF","DEFF","DEFF","DEFF","DEFF","DEFF","DEFF");
+
+      
+           iostyle["CLK50"]=new Array("KPR");
+        
+           iostyle["RXD"]=new Array("KPR");
+        
+        specSig["b_SPECSIG"]=new Array("(b)");
+      
+        specSig["divider14_SPECSIG"]=new Array("divider<14>");
+      
+        specSig["divider13_SPECSIG"]=new Array("divider<13>");
+      
+        specSig["divider12_SPECSIG"]=new Array("divider<12>");
+      
+        specSig["divider6_SPECSIG"]=new Array("divider<6>");
+      
+        specSig["DATA0_SPECSIG"]=new Array("DATA<0>");
+      
+        specSig["DATA1_SPECSIG"]=new Array("DATA<1>");
+      
+        specSig["DATA2_SPECSIG"]=new Array("DATA<2>");
+      
+        specSig["count0_SPECSIG"]=new Array("count<0>");
+      
+        specSig["divider8_SPECSIG"]=new Array("divider<8>");
+      
+        specSig["divider7_SPECSIG"]=new Array("divider<7>");
+      
+        specSig["DATA3_SPECSIG"]=new Array("DATA<3>");
+      
+        specSig["DATA4_SPECSIG"]=new Array("DATA<4>");
+      
+        specSig["DATA5_SPECSIG"]=new Array("DATA<5>");
+      
+        specSig["DATA6_SPECSIG"]=new Array("DATA<6>");
+      
+        specSig["DATA7_SPECSIG"]=new Array("DATA<7>");
+      
+        specSig["GCKI_SPECSIG"]=new Array("GCK/I");
+      
+        specSig["divider4_SPECSIG"]=new Array("divider<4>");
+      
+        specSig["divider10_SPECSIG"]=new Array("divider<10>");
+      
+        specSig["divider0_SPECSIG"]=new Array("divider<0>");
+      
+        specSig["divider3_SPECSIG"]=new Array("divider<3>");
+      
+        specSig["divider2_SPECSIG"]=new Array("divider<2>");
+      
+        specSig["divider1_SPECSIG"]=new Array("divider<1>");
+      
+        specSig["divider5_SPECSIG"]=new Array("divider<5>");
+      
+        specSig["divider9_SPECSIG"]=new Array("divider<9>");
+      
+        specSig["divider11_SPECSIG"]=new Array("divider<11>");
+      
+        specSig["divider15_SPECSIG"]=new Array("divider<15>");
+      
+        specSig["divider16_SPECSIG"]=new Array("divider<16>");
+      
+        specSig["divider17_SPECSIG"]=new Array("divider<17>");
+      
+        specSig["divider18_SPECSIG"]=new Array("divider<18>");
+      
+        specSig["divider19_SPECSIG"]=new Array("divider<19>");
+      
+        specSig["divider20_SPECSIG"]=new Array("divider<20>");
+      
+        specSig["divider21_SPECSIG"]=new Array("divider<21>");
+      
+        specSig["divider22_SPECSIG"]=new Array("divider<22>");
+      
+        specSig["divider23_SPECSIG"]=new Array("divider<23>");
+      
+        specSig["divider24_SPECSIG"]=new Array("divider<24>");
+      
+        specSig["idata1_SPECSIG"]=new Array("idata<1>");
+      
+        specSig["idata2_SPECSIG"]=new Array("idata<2>");
+      
+        specSig["idata3_SPECSIG"]=new Array("idata<3>");
+      
+        specSig["count1_SPECSIG"]=new Array("count<1>");
+      
+        specSig["count2_SPECSIG"]=new Array("count<2>");
+      
+        specSig["count3_SPECSIG"]=new Array("count<3>");
+      
+        specSig["idata7_SPECSIG"]=new Array("idata<7>");
+      
+        specSig["idata6_SPECSIG"]=new Array("idata<6>");
+      
+        specSig["idata5_SPECSIG"]=new Array("idata<5>");
+      
+        specSig["idata4_SPECSIG"]=new Array("idata<4>");
+      
+        specSig["idata8_SPECSIG"]=new Array("idata<8>");
+      
+            pterms["FB1_0"]=new Array("/divider11_SPECSIG");
+          
+            pterms["FB1_1"]=new Array("/divider10_SPECSIG","/divider5_SPECSIG","/divider8_SPECSIG","/divider7_SPECSIG","/divider6_SPECSIG");
+          
+            pterms["FB1_2"]=new Array("/divider10_SPECSIG","/divider9_SPECSIG");
+          
+            pterms["FB1_3"]=new Array("divider11_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","N_PZ_219");
+          
+            pterms["FB1_4"]=new Array("divider10_SPECSIG","N_PZ_246","divider9_SPECSIG","divider8_SPECSIG","divider7_SPECSIG","N_PZ_227");
+          
+            pterms["FB1_5"]=new Array("/BUSY");
+          
+            pterms["FB1_6"]=new Array("/BUSY");
+          
+            pterms["FB1_7"]=new Array("/divider10_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","/N_PZ_246","/divider8_SPECSIG","/divider7_SPECSIG","/divider2_SPECSIG","/divider4_SPECSIG","/divider6_SPECSIG");
+          
+            pterms["FB1_8"]=new Array("/divider10_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","/N_PZ_246","/divider8_SPECSIG","/divider7_SPECSIG","/divider3_SPECSIG","/divider4_SPECSIG","/divider6_SPECSIG");
+          
+            pterms["FB1_9"]=new Array("/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","N_PZ_219","divider9_SPECSIG","/divider8_SPECSIG");
+          
+            pterms["FB1_10"]=new Array("N_PZ_246","divider9_SPECSIG","/divider7_SPECSIG");
+          
+            pterms["FB1_11"]=new Array("N_PZ_246","/divider9_SPECSIG","divider8_SPECSIG","divider7_SPECSIG","N_PZ_227");
+          
+            pterms["FB1_12"]=new Array("N_PZ_246","divider9_SPECSIG","/N_PZ_227");
+          
+            pterms["FB1_13"]=new Array("/divider10_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","/divider5_SPECSIG","/divider8_SPECSIG","/divider7_SPECSIG","divider0_SPECSIG","divider2_SPECSIG","divider3_SPECSIG","divider4_SPECSIG","divider1_SPECSIG","/divider6_SPECSIG");
+          
+            pterms["FB1_14"]=new Array("N_PZ_246","divider0_SPECSIG","divider2_SPECSIG","divider3_SPECSIG","divider4_SPECSIG","divider1_SPECSIG");
+          
+            pterms["FB1_15"]=new Array("/divider10_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","divider5_SPECSIG","/N_PZ_246","/divider8_SPECSIG","/divider7_SPECSIG","/divider2_SPECSIG","/divider4_SPECSIG","/divider6_SPECSIG");
+          
+            pterms["FB1_16"]=new Array("/divider10_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","divider5_SPECSIG","/N_PZ_246","/divider8_SPECSIG","/divider7_SPECSIG","/divider3_SPECSIG","/divider4_SPECSIG","/divider6_SPECSIG");
+          
+            pterms["FB1_17"]=new Array("/divider10_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","/divider8_SPECSIG","/divider7_SPECSIG","/divider0_SPECSIG","/divider2_SPECSIG","/divider4_SPECSIG","divider1_SPECSIG","/divider6_SPECSIG");
+          
+            pterms["FB1_18"]=new Array("/divider10_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","/divider8_SPECSIG","/divider7_SPECSIG","/divider0_SPECSIG","/divider3_SPECSIG","/divider4_SPECSIG","divider1_SPECSIG","/divider6_SPECSIG");
+          
+            pterms["FB1_19"]=new Array("/divider10_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","/divider8_SPECSIG","/divider7_SPECSIG","divider0_SPECSIG","/divider2_SPECSIG","/divider4_SPECSIG","/divider1_SPECSIG","/divider6_SPECSIG");
+          
+            pterms["FB1_20"]=new Array("/divider10_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","/divider8_SPECSIG","/divider7_SPECSIG","divider0_SPECSIG","/divider3_SPECSIG","/divider4_SPECSIG","/divider1_SPECSIG","/divider6_SPECSIG");
+          
+            pterms["FB1_21"]=new Array("/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","N_PZ_219","/divider0_SPECSIG","divider1_SPECSIG");
+          
+            pterms["FB1_22"]=new Array("/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","N_PZ_219","divider0_SPECSIG","/divider1_SPECSIG");
+          
+            pterms["FB1_23"]=new Array("/divider10_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","/divider8_SPECSIG","/divider7_SPECSIG","/divider0_SPECSIG","divider2_SPECSIG","/divider3_SPECSIG","/divider4_SPECSIG","/divider6_SPECSIG");
+          
+            pterms["FB1_24"]=new Array("/divider10_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","/divider8_SPECSIG","/divider7_SPECSIG","divider0_SPECSIG","/divider2_SPECSIG","/divider4_SPECSIG","divider1_SPECSIG","/divider6_SPECSIG");
+          
+            pterms["FB1_25"]=new Array("/divider10_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","/divider8_SPECSIG","/divider7_SPECSIG","divider2_SPECSIG","/divider3_SPECSIG","/divider4_SPECSIG","/divider1_SPECSIG","/divider6_SPECSIG");
+          
+            pterms["FB1_26"]=new Array("/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","N_PZ_219","/divider0_SPECSIG","divider2_SPECSIG");
+          
+            pterms["FB1_27"]=new Array("/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","N_PZ_219","divider0_SPECSIG","/divider2_SPECSIG","divider1_SPECSIG");
+          
+            pterms["FB1_28"]=new Array("/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","N_PZ_219","divider2_SPECSIG","/divider1_SPECSIG");
+          
+            pterms["FB1_29"]=new Array("/divider10_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","/divider8_SPECSIG","/divider7_SPECSIG","/divider2_SPECSIG","divider3_SPECSIG","/divider4_SPECSIG","/divider6_SPECSIG");
+          
+            pterms["FB1_30"]=new Array("/divider10_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","/divider8_SPECSIG","/divider7_SPECSIG","divider0_SPECSIG","divider2_SPECSIG","/divider3_SPECSIG","/divider4_SPECSIG","divider1_SPECSIG","/divider6_SPECSIG");
+          
+            pterms["FB1_31"]=new Array("/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","N_PZ_219","/divider0_SPECSIG","divider3_SPECSIG");
+          
+            pterms["FB1_32"]=new Array("/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","N_PZ_219","/divider2_SPECSIG","divider3_SPECSIG");
+          
+            pterms["FB1_33"]=new Array("/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","N_PZ_219","divider0_SPECSIG","divider2_SPECSIG","/divider3_SPECSIG","divider1_SPECSIG");
+          
+            pterms["FB1_34"]=new Array("/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","N_PZ_219","divider3_SPECSIG","/divider1_SPECSIG");
+          
+            pterms["FB1_35"]=new Array("/divider10_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","/divider8_SPECSIG","/divider7_SPECSIG","/divider0_SPECSIG","/divider2_SPECSIG","/divider4_SPECSIG","/divider6_SPECSIG");
+          
+            pterms["FB1_36"]=new Array("/divider10_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","/divider8_SPECSIG","/divider7_SPECSIG","/divider0_SPECSIG","/divider3_SPECSIG","/divider4_SPECSIG","/divider6_SPECSIG");
+          
+            pterms["FB1_37"]=new Array("/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","N_PZ_219","/divider0_SPECSIG");
+          
+            pterms["FB1_38"]=new Array("/divider10_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","/divider8_SPECSIG","/divider7_SPECSIG","/divider2_SPECSIG","/divider4_SPECSIG","/divider6_SPECSIG");
+          
+            pterms["FB1_39"]=new Array("/divider10_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","/divider8_SPECSIG","/divider7_SPECSIG","/divider3_SPECSIG","/divider4_SPECSIG","/divider6_SPECSIG");
+          
+            pterms["FB1_40"]=new Array("divider5_SPECSIG","N_PZ_246");
+          
+            pterms["FB1_41"]=new Array("/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","N_PZ_219");
+          
+            pterms["FB1_42"]=new Array("divider10_SPECSIG","/divider11_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","/divider7_SPECSIG");
+          
+            pterms["FB1_43"]=new Array("divider10_SPECSIG","/divider11_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","/divider8_SPECSIG");
+          
+            pterms["FB1_44"]=new Array("divider10_SPECSIG","/divider11_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","/divider9_SPECSIG");
+          
+            pterms["FB1_45"]=new Array("/divider10_SPECSIG","/divider11_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","divider9_SPECSIG","divider8_SPECSIG","divider7_SPECSIG","N_PZ_227");
+          
+            pterms["FB1_46"]=new Array("divider10_SPECSIG","/divider11_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","/N_PZ_227");
+          
+            pterms["FB1_47"]=new Array("/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","N_PZ_219","/divider0_SPECSIG","divider4_SPECSIG");
+          
+            pterms["FB1_48"]=new Array("/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","N_PZ_219","/divider2_SPECSIG","divider4_SPECSIG");
+          
+            pterms["FB1_49"]=new Array("/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","N_PZ_219","/divider3_SPECSIG","divider4_SPECSIG");
+          
+            pterms["FB1_50"]=new Array("/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","N_PZ_219","divider0_SPECSIG","divider2_SPECSIG","divider3_SPECSIG","/divider4_SPECSIG","divider1_SPECSIG");
+          
+            pterms["FB1_51"]=new Array("/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","N_PZ_219","divider4_SPECSIG","/divider1_SPECSIG");
+          
+            pterms["FB1_52"]=new Array("/divider11_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG");
+          
+            pterms["FB1_53"]=new Array("/divider10_SPECSIG","/divider12_SPECSIG","/divider13_SPECSIG","/divider14_SPECSIG","/divider15_SPECSIG","/divider16_SPECSIG","/divider17_SPECSIG","/divider18_SPECSIG","/divider19_SPECSIG","/divider20_SPECSIG","/divider21_SPECSIG","/divider22_SPECSIG","/divider23_SPECSIG","/divider24_SPECSIG","/divider9_SPECSIG");
+          
+            pterms["FB1_54"]=new Array("N_PZ_246","/N_PZ_227","divider6_SPECSIG");
+          
+            pterms["FB1_55"]=new Array("divider5_SPECSIG","N_PZ_246","/N_PZ_227","divider0_SPECSIG","divider2_SPECSIG","divider3_SPECSIG","divider4_SPECSIG","divider1_SPECSIG");
+          
+            pterms["FB2_0"]=new Array("N_PZ_246","/divider7_SPECSIG","N_PZ_227");
+          
+            pterms["FB2_1"]=new Array("N_PZ_246","divider7_SPECSIG","/N_PZ_227");
+          
+            pterms["FB2_2"]=new Array("N_PZ_246","divider7_SPECSIG","N_PZ_227");
+          
+            pterms["FB2_3"]=new Array("/N_PZ_246","divider8_SPECSIG");
+          
+            pterms["FB2_4"]=new Array("BUSY");
+          
+            pterms["FB2_5"]=new Array("/BUSY");
+          
+            pterms["FB2_10"]=new Array("idata1_SPECSIG");
+          
+            pterms["FB2_16"]=new Array("idata2_SPECSIG");
+          
+            pterms["FB2_19"]=new Array("idata3_SPECSIG");
+          
+            pterms["FB2_22"]=new Array("clk");
+          
+            pterms["FB3_0"]=new Array("idata4_SPECSIG");
+          
+            pterms["FB3_1"]=new Array("idata5_SPECSIG");
+          
+            pterms["FB3_2"]=new Array("idata6_SPECSIG");
+          
+            pterms["FB3_3"]=new Array("RXD");
+          
+            pterms["FB3_4"]=new Array("clk");
+          
+            pterms["FB3_5"]=new Array("/BUSY");
+          
+            pterms["FB3_10"]=new Array("/count1_SPECSIG","/count2_SPECSIG");
+          
+            pterms["FB3_13"]=new Array("count0_SPECSIG");
+          
+            pterms["FB3_14"]=new Array("count3_SPECSIG","/N_PZ_297");
+          
+            pterms["FB3_19"]=new Array("BUSY");
+          
+            pterms["FB3_22"]=new Array("BUSY");
+          
+            pterms["FB3_25"]=new Array("count0_SPECSIG","count1_SPECSIG");
+          
+            pterms["FB3_28"]=new Array("count0_SPECSIG","count1_SPECSIG","count2_SPECSIG");
+          
+            pterms["FB3_31"]=new Array("/count3_SPECSIG","count0_SPECSIG","BUSY","count1_SPECSIG","count2_SPECSIG");
+          
+            pterms["FB3_34"]=new Array("/count3_SPECSIG","/count0_SPECSIG","BUSY","count1_SPECSIG","count2_SPECSIG");
+          
+            pterms["FB3_37"]=new Array("/count3_SPECSIG","count0_SPECSIG","BUSY","/count1_SPECSIG","count2_SPECSIG");
+          
+            pterms["FB3_40"]=new Array("/count3_SPECSIG","/count0_SPECSIG","BUSY","/count1_SPECSIG","count2_SPECSIG");
+          
+            pterms["FB3_43"]=new Array("BUSY");
+          
+            pterms["FB3_46"]=new Array("/count3_SPECSIG","count0_SPECSIG","BUSY","count1_SPECSIG","/count2_SPECSIG");
+          
+            pterms["FB3_49"]=new Array("/count3_SPECSIG","/count0_SPECSIG","BUSY","count1_SPECSIG","/count2_SPECSIG");
+          
+            pterms["FB3_52"]=new Array("count3_SPECSIG","/count0_SPECSIG","BUSY","N_PZ_297");
+          
+            pterms["FB3_55"]=new Array("divider5_SPECSIG","divider0_SPECSIG","divider2_SPECSIG","divider3_SPECSIG","divider4_SPECSIG","divider1_SPECSIG","divider6_SPECSIG");
+          
+            pterms["FB4_4"]=new Array("BUSY");
+          
+            pterms["FB4_10"]=new Array("idata7_SPECSIG");
+          
+            pterms["FB4_13"]=new Array("idata8_SPECSIG");
+          
+            pterms["FB7_4"]=new Array("clk");
+          
+            pterms["FB7_52"]=new Array("/count3_SPECSIG","count0_SPECSIG","BUSY","N_PZ_297");
+          
+          d2["N_PZ_246"]=new Array("FB1_52","FB1_53");
+          
+          d2["divider4_SPECSIG"]=new Array("FB1_47","FB1_48","FB1_49","FB1_51","FB1_50");
+          
+              gblclk["divider4_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider4_SPECSIG"]=new Array("FB1_5");
+              prld["divider4_SPECSIG"]="GND";
+          d2["divider14_SPECSIG"]=new Array("GND");
+          
+              gblclk["divider14_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider14_SPECSIG"]=new Array("FB1_5");
+              prld["divider14_SPECSIG"]="GND";
+          d2["divider13_SPECSIG"]=new Array("GND");
+          
+              gblclk["divider13_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider13_SPECSIG"]=new Array("FB1_5");
+              prld["divider13_SPECSIG"]="GND";
+          d2["divider10_SPECSIG"]=new Array("FB1_44","FB1_43","FB1_42","FB1_46","FB1_45");
+          
+              gblclk["divider10_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider10_SPECSIG"]=new Array("FB1_5");
+              prld["divider10_SPECSIG"]="GND";
+          d2["clk"]=new Array("FB1_41","FB1_38","FB1_39");
+          
+              gblclk["clk"]=new Array("CLK50");
+            
+              set["clk"]=new Array("FB1_5");
+              prld["clk"]="GND";
+          d2["divider0_SPECSIG"]=new Array("FB1_37","FB1_35","FB1_36");
+          
+              gblclk["divider0_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider0_SPECSIG"]=new Array("FB1_5");
+              prld["divider0_SPECSIG"]="GND";
+          d2["divider3_SPECSIG"]=new Array("FB1_31","FB1_32","FB1_34","FB1_33","FB1_29","FB1_30");
+          
+              gblclk["divider3_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider3_SPECSIG"]=new Array("FB1_5");
+              prld["divider3_SPECSIG"]="GND";
+          d2["divider2_SPECSIG"]=new Array("FB1_26","FB1_28","FB1_27","FB1_24","FB1_23","FB1_25");
+          
+              gblclk["divider2_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider2_SPECSIG"]=new Array("FB1_5");
+              prld["divider2_SPECSIG"]="GND";
+          d2["divider1_SPECSIG"]=new Array("FB1_22","FB1_21","FB1_19","FB1_20","FB1_17","FB1_18");
+          
+              gblclk["divider1_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider1_SPECSIG"]=new Array("FB1_5");
+              prld["divider1_SPECSIG"]="GND";
+          d1["divider5_SPECSIG"]=new Array("FB1_40");
+          
+          d2["divider5_SPECSIG"]=new Array("FB1_14","FB1_15","FB1_16","FB1_13");
+          
+              gblclk["divider5_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider5_SPECSIG"]=new Array("FB1_5");
+              prld["divider5_SPECSIG"]="GND";
+          d2["divider12_SPECSIG"]=new Array("GND");
+          
+              gblclk["divider12_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider12_SPECSIG"]=new Array("FB1_5");
+              prld["divider12_SPECSIG"]="GND";
+          d2["divider6_SPECSIG"]=new Array("FB1_54","FB1_55");
+          
+              gblclk["divider6_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider6_SPECSIG"]=new Array("FB1_5");
+              prld["divider6_SPECSIG"]="GND";
+          d2["divider9_SPECSIG"]=new Array("FB1_10","FB1_12","FB1_11","FB1_9","FB1_7","FB1_8");
+          
+              gblclk["divider9_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider9_SPECSIG"]=new Array("FB1_5");
+              prld["divider9_SPECSIG"]="GND";
+          d2["divider11_SPECSIG"]=new Array("FB1_4","FB1_3","FB1_7","FB1_8");
+          
+              gblclk["divider11_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider11_SPECSIG"]=new Array("FB1_5");
+              prld["divider11_SPECSIG"]="GND";
+          d2["N_PZ_219"]=new Array("FB1_0","FB1_2","FB1_1");
+          
+          d1["DATA0_SPECSIG"]=new Array("FB2_10");
+          clkNegs["DATA0_SPECSIG"]=1;
+              clk["DATA0_SPECSIG"]=new Array("FB2_4");
+              prld["DATA0_SPECSIG"]="GND";
+          d2["divider24_SPECSIG"]=new Array("GND");
+          
+              gblclk["divider24_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider24_SPECSIG"]=new Array("FB2_5");
+              prld["divider24_SPECSIG"]="GND";
+          d1["DATA1_SPECSIG"]=new Array("FB2_16");
+          clkNegs["DATA1_SPECSIG"]=1;
+              clk["DATA1_SPECSIG"]=new Array("FB2_4");
+              prld["DATA1_SPECSIG"]="GND";
+          d1["DATA2_SPECSIG"]=new Array("FB2_19");
+          clkNegs["DATA2_SPECSIG"]=1;
+              clk["DATA2_SPECSIG"]=new Array("FB2_4");
+              prld["DATA2_SPECSIG"]="GND";
+          d2["count0_SPECSIG"]=new Array("GND");
+          
+              clk["count0_SPECSIG"]=new Array("FB2_22");
+              
+              rst["count0_SPECSIG"]=new Array("FB2_5");
+              prld["count0_SPECSIG"]="GND";
+          d2["divider23_SPECSIG"]=new Array("GND");
+          
+              gblclk["divider23_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider23_SPECSIG"]=new Array("FB2_5");
+              prld["divider23_SPECSIG"]="GND";
+          d2["divider22_SPECSIG"]=new Array("GND");
+          
+              gblclk["divider22_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider22_SPECSIG"]=new Array("FB2_5");
+              prld["divider22_SPECSIG"]="GND";
+          d2["divider21_SPECSIG"]=new Array("GND");
+          
+              gblclk["divider21_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider21_SPECSIG"]=new Array("FB2_5");
+              prld["divider21_SPECSIG"]="GND";
+          d2["divider20_SPECSIG"]=new Array("GND");
+          
+              gblclk["divider20_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider20_SPECSIG"]=new Array("FB2_5");
+              prld["divider20_SPECSIG"]="GND";
+          d2["divider19_SPECSIG"]=new Array("GND");
+          
+              gblclk["divider19_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider19_SPECSIG"]=new Array("FB2_5");
+              prld["divider19_SPECSIG"]="GND";
+          d2["divider18_SPECSIG"]=new Array("GND");
+          
+              gblclk["divider18_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider18_SPECSIG"]=new Array("FB2_5");
+              prld["divider18_SPECSIG"]="GND";
+          d2["divider17_SPECSIG"]=new Array("GND");
+          
+              gblclk["divider17_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider17_SPECSIG"]=new Array("FB2_5");
+              prld["divider17_SPECSIG"]="GND";
+          d2["divider16_SPECSIG"]=new Array("GND");
+          
+              gblclk["divider16_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider16_SPECSIG"]=new Array("FB2_5");
+              prld["divider16_SPECSIG"]="GND";
+          d2["divider15_SPECSIG"]=new Array("GND");
+          
+              gblclk["divider15_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider15_SPECSIG"]=new Array("FB2_5");
+              prld["divider15_SPECSIG"]="GND";
+          d2["divider8_SPECSIG"]=new Array("FB2_3","FB2_2");
+          
+              gblclk["divider8_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider8_SPECSIG"]=new Array("FB2_5");
+              prld["divider8_SPECSIG"]="GND";
+          d2["divider7_SPECSIG"]=new Array("FB2_1","FB2_0");
+          
+              gblclk["divider7_SPECSIG"]=new Array("CLK50");
+            
+              rst["divider7_SPECSIG"]=new Array("FB2_5");
+              prld["divider7_SPECSIG"]="GND";
+          d1["N_PZ_297"]=new Array("FB3_10");
+          
+          d1["count1_SPECSIG"]=new Array("FB3_13");
+          
+              clk["count1_SPECSIG"]=new Array("FB3_4");
+              
+              rst["count1_SPECSIG"]=new Array("FB3_5");
+              prld["count1_SPECSIG"]="GND";
+          d2["BUSY"]=new Array("GND");
+          clkNegs["BUSY"]=1;
+              gblclk["BUSY"]=new Array("RXD");
+            
+              rst["BUSY"]=new Array("FB3_14");
+              prld["BUSY"]="GND";
+          d2["DATA3_SPECSIG"]=new Array("FB3_0");
+          clkNegs["DATA3_SPECSIG"]=1;
+              clk["DATA3_SPECSIG"]=new Array("FB3_19");
+              prld["DATA3_SPECSIG"]="GND";
+          d2["DATA4_SPECSIG"]=new Array("FB3_1");
+          clkNegs["DATA4_SPECSIG"]=1;
+              clk["DATA4_SPECSIG"]=new Array("FB3_19");
+              prld["DATA4_SPECSIG"]="GND";
+          d1["count2_SPECSIG"]=new Array("FB3_25");
+          
+              clk["count2_SPECSIG"]=new Array("FB3_4");
+              
+              rst["count2_SPECSIG"]=new Array("FB3_5");
+              prld["count2_SPECSIG"]="GND";
+          d1["count3_SPECSIG"]=new Array("FB3_28");
+          
+              clk["count3_SPECSIG"]=new Array("FB3_4");
+              
+              rst["count3_SPECSIG"]=new Array("FB3_5");
+              prld["count3_SPECSIG"]="GND";
+          d2["idata7_SPECSIG"]=new Array("FB3_3");
+          clkNegs["idata7_SPECSIG"]=1;
+              clk["idata7_SPECSIG"]=new Array("FB3_4");
+              
+          ce["idata7_SPECSIG"]=new Array("FB3_31");
+          prld["idata7_SPECSIG"]="GND";
+          d2["idata6_SPECSIG"]=new Array("FB3_3");
+          clkNegs["idata6_SPECSIG"]=1;
+              clk["idata6_SPECSIG"]=new Array("FB3_4");
+              
+          ce["idata6_SPECSIG"]=new Array("FB3_34");
+          prld["idata6_SPECSIG"]="GND";
+          d2["idata5_SPECSIG"]=new Array("FB3_3");
+          clkNegs["idata5_SPECSIG"]=1;
+              clk["idata5_SPECSIG"]=new Array("FB3_4");
+              
+          ce["idata5_SPECSIG"]=new Array("FB3_37");
+          prld["idata5_SPECSIG"]="GND";
+          d2["idata4_SPECSIG"]=new Array("FB3_3");
+          clkNegs["idata4_SPECSIG"]=1;
+              clk["idata4_SPECSIG"]=new Array("FB3_4");
+              
+          ce["idata4_SPECSIG"]=new Array("FB3_40");
+          prld["idata4_SPECSIG"]="GND";
+          d2["DATA5_SPECSIG"]=new Array("FB3_2");
+          clkNegs["DATA5_SPECSIG"]=1;
+              clk["DATA5_SPECSIG"]=new Array("FB3_19");
+              prld["DATA5_SPECSIG"]="GND";
+          d2["idata3_SPECSIG"]=new Array("FB3_3");
+          clkNegs["idata3_SPECSIG"]=1;
+              clk["idata3_SPECSIG"]=new Array("FB3_4");
+              
+          ce["idata3_SPECSIG"]=new Array("FB3_46");
+          prld["idata3_SPECSIG"]="GND";
+          d2["idata2_SPECSIG"]=new Array("FB3_3");
+          clkNegs["idata2_SPECSIG"]=1;
+              clk["idata2_SPECSIG"]=new Array("FB3_4");
+              
+          ce["idata2_SPECSIG"]=new Array("FB3_49");
+          prld["idata2_SPECSIG"]="GND";
+          d2["idata8_SPECSIG"]=new Array("FB3_3");
+          clkNegs["idata8_SPECSIG"]=1;
+              clk["idata8_SPECSIG"]=new Array("FB3_4");
+              
+          ce["idata8_SPECSIG"]=new Array("FB3_52");
+          prld["idata8_SPECSIG"]="GND";
+          d1["N_PZ_227"]=new Array("FB3_55");
+          
+          d1["DATA6_SPECSIG"]=new Array("FB4_10");
+          clkNegs["DATA6_SPECSIG"]=1;
+              clk["DATA6_SPECSIG"]=new Array("FB4_4");
+              prld["DATA6_SPECSIG"]="GND";
+          d1["DATA7_SPECSIG"]=new Array("FB4_13");
+          clkNegs["DATA7_SPECSIG"]=1;
+              clk["DATA7_SPECSIG"]=new Array("FB4_4");
+              prld["DATA7_SPECSIG"]="GND";clkNegs["idata1_SPECSIG"]=1;
+              clk["idata1_SPECSIG"]=new Array("FB7_4");
+              
+          ce["idata1_SPECSIG"]=new Array("FB7_52");
+          prld["idata1_SPECSIG"]="GND";
+          inreg["idata1_SPECSIG"]=new Array("RXD");
+        
+
+      uimSignals = new Array();
+
+      uimSigNegs = new Array();
+
+      uimPterms = new Array();
+      
+
+      
+        function getEqnList() {
+          var str = "<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>";
+          str += "<center><h3>Equations</h3></center>";
+          str += "<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>";
+          for (s=0; s<uimSignals.length; s++) {
+            str += "<tr><td>";
+            str += retUimEqn(uimSignals[s]);
+            str += "</td></tr>";
+          }
+          for (s=0; s<signals.length; s++) {
+            str += "<tr><td>";
+            str += retEqn(signals[s]);
+            str += "</td></tr>";
+          }
+
+          var legend = retLegend();
+		      if (legend != "") {
+		        str += "<tr><td>" + legend + "</td></tr>";
+		      }
+
+          str += "</table>";
+          str += "<form><span class='pgRef'>";
+
+          if (!parent.leftnav.IsNS()) {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><input type='button' value='back to top' ";
+            str += "onclick='javascript:parent.leftnav.showEqnAll()' ";
+            str += "onmouseover=\"window.status='goto top of page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<input type='button' value='print page' ";
+            str += "onclick='javascript:window.print()' ";
+            str += "onmouseover=\"window.status='print page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+          else {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><a href='javascript:parent.leftnav.showEqnAll()'>back to top</a>";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<a href='javascript:window.print()'>";
+            str += "print page</a>";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+
+          str += "</span></form>";
+          str += "</body></html>";
+          return str;
+        }
+      
+    </script>
+</head></html>

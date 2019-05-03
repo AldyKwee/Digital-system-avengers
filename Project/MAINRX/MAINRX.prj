@@ -1,0 +1,3 @@
+vhdl work "../uart_reciever/uart_rx.vhd"
+vhdl work "../seve_segment/uart_7segment.vhd"
+vhdl work "MAINRX.vhd"
