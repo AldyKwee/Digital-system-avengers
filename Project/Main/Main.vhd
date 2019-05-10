@@ -50,7 +50,8 @@ entity Main is
 	TXD         : out    std_logic;
 	DISPLAY : out std_logic_vector(6 downto 0);
 	EN_SEGMENT : out std_logic;
-	CLK50       : in    std_logic 
+	CLK50       : in    std_logic; 
+	led 			: out std_logic
 	);
 
 end Main;
@@ -63,7 +64,7 @@ component SevenSegment
      O : out std_logic_vector(6 downto 0));
 end component;
 
-component UART
+component UART_TX
 	generic (
                 divisor    : integer := 2604    -- Set the Baud Rate Divisor here.  
                                                 -- Some common values:  300 Baud = 83333, 9600 Baud = 2604, 115200 Baud = 217, 921600 Baud = 27
@@ -74,27 +75,29 @@ component UART
             BUSY        : out    std_logic;                      -- HIGH = Busy currently transmitting, LOW = Ready to transmit.
             DATA        : in    std_logic_vector(7 downto 0);    -- 8-bits of data to be transmitted.
             LOAD        : in    std_logic;                       -- LOW-to-HIGH transition latched DATA and starts transmitting.
-            CLK50       : in    std_logic                        -- 50 MHz system clock.
+            CLK50       : in    std_logic;                        -- 50 MHz system clock.
+				led 			: out std_logic
         );
 end component;
 	
-signal buatdata : STD_LOGIC_VECTOR (7 downto 0);	
+-- signal buatdata : STD_LOGIC_VECTOR (7 downto 0);	
 
 begin
 EN_SEGMENT <= '0';
 SEVEN_SEGMENT : SevenSegment
 port map(
-	I => buatdata,	-- left is component's, right is entity's
+	I => DATA,	-- left is component's, right is entity's
 	O => DISPLAY
 );
 
-TX_CIRCUIT : UART
+TX_CIRCUIT : UART_TX
 port map(
 	TXD => TXD,
 	BUSY => BUSY,
-	DATA => buatdata,
+	DATA => DATA,
 	LOAD => LOAD,
-	CLK50 => CLK50
+	CLK50 => CLK50,
+	led => led
 );
 
 end Behavioral;

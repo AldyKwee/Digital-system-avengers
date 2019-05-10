@@ -28,9 +28,9 @@
   <properties>
     <property xil_pn:name="Device" xil_pn:value="xa2c384" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Device Family" xil_pn:value="Automotive CoolRunner2" xil_pn:valueState="non-default"/>
-    <property xil_pn:name="Implementation Top" xil_pn:value="Architecture|UART|Behavior" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Implementation Top" xil_pn:value="Architecture|UART_TX|Behavior" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Implementation Top File" xil_pn:value="uart_tx.vhd" xil_pn:valueState="non-default"/>
-    <property xil_pn:name="Implementation Top Instance Path" xil_pn:value="/UART" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Implementation Top Instance Path" xil_pn:value="/UART_TX" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Package" xil_pn:value="TQ144" xil_pn:valueState="default"/>
     <property xil_pn:name="Preferred Language" xil_pn:value="VHDL" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Property Specification in Project File" xil_pn:value="Store non-default values only" xil_pn:valueState="non-default"/>

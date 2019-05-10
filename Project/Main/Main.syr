@@ -3,13 +3,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: Main.prj
@@ -76,12 +76,12 @@ wysiwyg                            : NO
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "D:/My Documents/College Assignments/Semester 4/Digital System/Project/seve_segment/uart_7segment.vhd" in Library work.
-Architecture behavioral of Entity sevensegment is up to date.
+Entity <sevensegment> compiled.
+Entity <sevensegment> (Architecture <behavioral>) compiled.
 Compiling vhdl file "D:/My Documents/College Assignments/Semester 4/Digital System/Project/UART_Transmitter/uart_tx.vhd" in Library work.
-Architecture behavior of Entity uart is up to date.
+Architecture behavior of Entity uart_tx is up to date.
 Compiling vhdl file "D:/My Documents/College Assignments/Semester 4/Digital System/Project/Main/Main.vhd" in Library work.
-Entity <main> compiled.
-Entity <main> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity main is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -90,7 +90,7 @@ Analyzing hierarchy for entity <Main> in library <work> (architecture <behaviora
 
 Analyzing hierarchy for entity <SevenSegment> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <UART> in library <work> (architecture <behavior>) with generics.
+Analyzing hierarchy for entity <UART_TX> in library <work> (architecture <behavior>) with generics.
 	divisor = 2604
 
 
@@ -103,16 +103,17 @@ Entity <Main> analyzed. Unit <Main> generated.
 Analyzing Entity <SevenSegment> in library <work> (Architecture <behavioral>).
 Entity <SevenSegment> analyzed. Unit <SevenSegment> generated.
 
-Analyzing generic Entity <UART> in library <work> (Architecture <behavior>).
+Analyzing generic Entity <UART_TX> in library <work> (Architecture <behavior>).
 	divisor = 2604
-WARNING:Xst:819 - "D:/My Documents/College Assignments/Semester 4/Digital System/Project/UART_Transmitter/uart_tx.vhd" line 71: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "D:/My Documents/College Assignments/Semester 4/Digital System/Project/UART_Transmitter/uart_tx.vhd" line 74: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <ibusy>
-WARNING:Xst:819 - "D:/My Documents/College Assignments/Semester 4/Digital System/Project/UART_Transmitter/uart_tx.vhd" line 83: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "D:/My Documents/College Assignments/Semester 4/Digital System/Project/UART_Transmitter/uart_tx.vhd" line 87: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <count>
-INFO:Xst:2679 - Register <output<0>> in unit <UART> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <output<1>> in unit <UART> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <output<10>> in unit <UART> has a constant value of 1 during circuit operation. The register is replaced by logic.
-Entity <UART> analyzed. Unit <UART> generated.
+INFO:Xst:2679 - Register <lampu> in unit <UART_TX> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <output<0>> in unit <UART_TX> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <output<1>> in unit <UART_TX> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <output<10>> in unit <UART_TX> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <UART_TX> analyzed. Unit <UART_TX> generated.
 
 
 =========================================================================
@@ -126,21 +127,21 @@ Synthesizing Unit <SevenSegment>.
 Unit <SevenSegment> synthesized.
 
 
-Synthesizing Unit <UART>.
+Synthesizing Unit <UART_TX>.
     Related source file is "D:/My Documents/College Assignments/Semester 4/Digital System/Project/UART_Transmitter/uart_tx.vhd".
 WARNING:Xst:737 - Found 1-bit latch for signal <ibusy>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Found 1-bit 11-to-1 multiplexer for signal <TXD>.
     Found 1-bit register for signal <clk>.
-    Found 25-bit comparator less for signal <clk$cmp_lt0000> created at line 115.
+    Found 22-bit comparator less for signal <clk$cmp_lt0000> created at line 119.
     Found 4-bit up counter for signal <count>.
-    Found 25-bit up counter for signal <divider>.
+    Found 22-bit up counter for signal <divider>.
     Found 8-bit register for signal <output<9:2>>.
     Found 1-bit register for signal <start>.
     Summary:
 	inferred   2 Counter(s).
 	inferred  10 D-type flip-flop(s).
 	inferred   1 Comparator(s).
-Unit <UART> synthesized.
+Unit <UART_TX> synthesized.
 
 
 Synthesizing Unit <Main>.
@@ -153,14 +154,14 @@ HDL Synthesis Report
 
 Macro Statistics
 # Counters                                             : 2
- 25-bit up counter                                     : 1
+ 22-bit up counter                                     : 1
  4-bit up counter                                      : 1
 # Registers                                            : 10
  1-bit register                                        : 10
 # Latches                                              : 1
  1-bit latch                                           : 1
 # Comparators                                          : 1
- 25-bit comparator less                                : 1
+ 22-bit comparator less                                : 1
 # Multiplexers                                         : 1
  1-bit 11-to-1 multiplexer                             : 1
 
@@ -176,7 +177,7 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # Counters                                             : 2
- 25-bit up counter                                     : 1
+ 22-bit up counter                                     : 1
  4-bit up counter                                      : 1
 # Registers                                            : 10
  Flip-Flops                                            : 10
@@ -195,8 +196,9 @@ Optimizing unit <Main> ...
 
 Optimizing unit <SevenSegment> ...
 
-Optimizing unit <UART> ...
-  implementation constraint: INIT=r	 : divider_24
+Optimizing unit <UART_TX> ...
+  implementation constraint: INIT=r	 : clk
+  implementation constraint: INIT=r	 : divider_21
   implementation constraint: INIT=r	 : divider_0
   implementation constraint: INIT=r	 : divider_1
   implementation constraint: INIT=r	 : divider_2
@@ -218,9 +220,6 @@ Optimizing unit <UART> ...
   implementation constraint: INIT=r	 : divider_18
   implementation constraint: INIT=r	 : divider_19
   implementation constraint: INIT=r	 : divider_20
-  implementation constraint: INIT=r	 : divider_21
-  implementation constraint: INIT=r	 : divider_22
-  implementation constraint: INIT=r	 : divider_23
   implementation constraint: INIT=r	 : count_3
   implementation constraint: INIT=r	 : count_2
   implementation constraint: INIT=r	 : count_1
@@ -253,38 +252,38 @@ Clock Enable                       : YES
 wysiwyg                            : NO
 
 Design Statistics
-# IOs                              : 20
+# IOs                              : 21
 
 Cell Usage :
-# BELS                             : 240
-#      AND2                        : 90
-#      AND3                        : 4
+# BELS                             : 253
+#      AND2                        : 100
+#      AND3                        : 5
 #      AND4                        : 1
-#      AND6                        : 1
 #      GND                         : 2
-#      INV                         : 72
-#      OR2                         : 42
+#      INV                         : 77
+#      OR2                         : 34
+#      OR3                         : 9
 #      VCC                         : 1
-#      XOR2                        : 27
-# FlipFlops/Latches                : 40
-#      FD                          : 33
+#      XOR2                        : 24
+# FlipFlops/Latches                : 37
+#      FD                          : 30
 #      FDC                         : 1
 #      FDCE                        : 5
 #      LDP                         : 1
-# IO Buffers                       : 20
+# IO Buffers                       : 21
 #      IBUF                        : 10
-#      OBUF                        : 10
+#      OBUF                        : 11
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.98 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.18 secs
  
 --> 
 
-Total memory usage is 4536956 kilobytes
+Total memory usage is 4536924 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    3 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
 

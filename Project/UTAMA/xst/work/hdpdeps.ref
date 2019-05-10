@@ -1,0 +1,29 @@
+V3 15
+FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.vhd" 2019/05/03.09:54:44 P.20131013
+EN work/Main 1557155558 \
+      FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/Main/Behavioral 1557155559 \
+      FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.vhd" \
+      EN work/Main 1557155558 CP SevenSegment CP UART
+FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/seve_segment/uart_7segment.vhd" 2019/05/03.09:54:44 P.20131013
+EN work/SevenSegment 1557155554 \
+      FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/seve_segment/uart_7segment.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/SevenSegment/Behavioral 1557155555 \
+      FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/seve_segment/uart_7segment.vhd" \
+      EN work/SevenSegment 1557155554
+FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/uart_reciever/uart_rx.vhd" 2019/05/03.09:54:44 P.20131013
+EN work/UART 1557155556 \
+      FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/uart_reciever/uart_rx.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/UART/Behavior 1557155557 \
+      FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/uart_reciever/uart_rx.vhd" \
+      EN work/UART 1557155556
+FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/UTAMA/UTAMA.vhd" 2019/05/06.22:12:32 P.20131013
+EN work/UTAMA 1557155560 \
+      FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/UTAMA/UTAMA.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/UTAMA/Behavioral 1557155561 \
+      FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/UTAMA/UTAMA.vhd" \
+      EN work/UTAMA 1557155560 CP Main

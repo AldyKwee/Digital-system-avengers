@@ -1,6 +1,6 @@
-AR sevensegment behavioral "D:/My Documents/College Assignments/Semester 4/Digital System/Project/seve_segment/uart_7segment.vhd" sub00/vhpl03 1556784797
-EN sevensegment NULL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/seve_segment/uart_7segment.vhd" sub00/vhpl02 1556784796
-AR uart behavior "D:/My Documents/College Assignments/Semester 4/Digital System/Project/uart_reciever/uart_rx.vhd" sub00/vhpl01 1556784795
-AR mainrx behavioral "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/MAINRX.vhd" sub00/vhpl05 1556784799
-EN mainrx NULL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/MAINRX.vhd" sub00/vhpl04 1556784798
-EN uart NULL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/uart_reciever/uart_rx.vhd" sub00/vhpl00 1556784794
+AR sevensegment behavioral "D:/My Documents/College Assignments/Semester 4/Digital System/Project/seve_segment/uart_7segment.vhd" sub00/vhpl03 1557463164
+EN sevensegment NULL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/seve_segment/uart_7segment.vhd" sub00/vhpl02 1557463163
+AR uart behavior "D:/My Documents/College Assignments/Semester 4/Digital System/Project/uart_reciever/uart_rx.vhd" sub00/vhpl01 1557463162
+AR mainrx behavioral "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/MAINRX.vhd" sub00/vhpl05 1557463166
+EN mainrx NULL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/MAINRX.vhd" sub00/vhpl04 1557463165
+EN uart NULL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/uart_reciever/uart_rx.vhd" sub00/vhpl00 1557463161

@@ -8,5 +8,17 @@
 <msg type="warning" file="Cpld" num="0" delta="new" >Unable to retrieve the path to the iSE Project Repository. Will use the default filename of &apos;<arg fmt="%s" index="1">MAINRX.ise</arg>&apos;.
 </msg>
 
+<msg type="info" file="Cpld" num="0" delta="new" >Inferring BUFG constraint for signal &apos;<arg fmt="%s" index="1">CLK</arg>&apos; based upon the LOC constraint &apos;<arg fmt="%s" index="2">P38</arg>&apos;. It is recommended that you declare this BUFG explicitedly in your design. Note that for certain device families the output of a BUFG constraint can not drive a gated clock, and the BUFG constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="1007" delta="old" >Removing unused input(s) &apos;<arg fmt="%s" index="1">CLK</arg>&apos;.  The input(s) are unused after optimization. Please verify functionality via simulation.
+</msg>
+
+<msg type="warning" file="Cpld" num="1007" delta="old" >Removing unused input(s) &apos;<arg fmt="%s" index="1">RXD</arg>&apos;.  The input(s) are unused after optimization. Please verify functionality via simulation.
+</msg>
+
+<msg type="warning" file="Cpld" num="1006" delta="old" >Design &apos;<arg fmt="%s" index="1">MAINRX</arg>&apos; has no inputs.
+</msg>
+
 </messages>
 

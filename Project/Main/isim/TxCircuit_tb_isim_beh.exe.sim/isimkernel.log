@@ -1,0 +1,10 @@
+Command line:
+   TxCircuit_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  64498
+
+Fri May 10 10:04:23 2019
+
+
+ Elaboration Time: 0.1875 sec

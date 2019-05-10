@@ -67,11 +67,16 @@
     <transform xil_pn:end_ts="1556610524" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="6689013356647463072" xil_pn:start_ts="1556610524">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1556610538" xil_pn:in_ck="183862056958053079" xil_pn:name="TRANEXT_xstsynthesize_xbr" xil_pn:prop_ck="5189629888950835726" xil_pn:start_ts="1556610524">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="UART.lso"/>
       <outfile xil_pn:name="UART.ngc"/>
       <outfile xil_pn:name="UART.ngr"/>
@@ -88,10 +93,13 @@
     <transform xil_pn:end_ts="1556610538" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-8596020287023078393" xil_pn:start_ts="1556610538">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1556610546" xil_pn:in_ck="3709823567010" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="379248074232769310" xil_pn:start_ts="1556610538">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="UART.bld"/>
       <outfile xil_pn:name="UART.ngd"/>
       <outfile xil_pn:name="UART_ngdbuild.xrpt"/>
@@ -101,6 +109,8 @@
     <transform xil_pn:end_ts="1556610573" xil_pn:in_ck="3709823567011" xil_pn:name="TRANEXT_vm6File_xbr" xil_pn:prop_ck="-703576820171753852" xil_pn:start_ts="1556610546">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="UART.chk"/>
       <outfile xil_pn:name="UART.cxt"/>
       <outfile xil_pn:name="UART.gyd"/>
@@ -119,12 +129,14 @@
     <transform xil_pn:end_ts="1556610576" xil_pn:in_ck="3709823575875" xil_pn:name="TRANEXT_crtProg_xbr" xil_pn:prop_ck="140790170513555" xil_pn:start_ts="1556610573">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="UART.jed"/>
     </transform>
     <transform xil_pn:end_ts="1556610573" xil_pn:in_ck="3709823575875" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1556610570">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
   </transforms>
 

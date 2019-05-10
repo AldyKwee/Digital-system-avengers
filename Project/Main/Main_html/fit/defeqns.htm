@@ -10,87 +10,89 @@ LDCP_BUSY: LDCP port map (BUSY,'0',,'0',TX_CIRCUIT/start);
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/count(2) AND TX_CIRCUIT/count(3));
 </td></tr><tr><td>
 </td></tr><tr><td>
-DISPLAY(0) <= NOT (((DATA(0) AND NOT DATA(1) AND DATA(3) AND DATA(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(5) AND DATA(6) AND DATA(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(1) AND DATA(3) AND DATA(4) AND DATA(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(6) AND DATA(7) AND NOT DATA(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DATA(1) AND DATA(3) AND DATA(4) AND DATA(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(6) AND DATA(7) AND DATA(2))));
+DISPLAY(0) <= NOT (((DATA(7) AND DATA(6) AND DATA(3) AND DATA(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(4) AND DATA(5) AND NOT DATA(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(7) AND DATA(6) AND DATA(3) AND NOT DATA(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(0) AND DATA(4) AND DATA(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(7) AND DATA(6) AND DATA(3) AND NOT DATA(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(4) AND DATA(5) AND DATA(1))));
 </td></tr><tr><td>
 </td></tr><tr><td>
-DISPLAY(1) <= NOT (((DATA(0) AND DATA(1) AND DATA(3) AND DATA(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(5) AND DATA(6) AND DATA(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(0) AND DATA(3) AND DATA(4) AND DATA(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(6) AND DATA(7) AND NOT DATA(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(1) AND DATA(3) AND DATA(4) AND DATA(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(6) AND DATA(7) AND NOT DATA(2))));
+DISPLAY(1) <= NOT (((DATA(7) AND DATA(6) AND DATA(3) AND NOT DATA(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(0) AND DATA(4) AND DATA(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(7) AND DATA(6) AND DATA(3) AND NOT DATA(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(4) AND DATA(5) AND DATA(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(7) AND DATA(6) AND DATA(3) AND DATA(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(0) AND NOT DATA(4) AND NOT DATA(5) AND DATA(1))));
 </td></tr><tr><td>
 </td></tr><tr><td>
-DISPLAY(2) <= NOT (((DATA(0) AND NOT DATA(1) AND DATA(3) AND DATA(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(5) AND DATA(6) AND DATA(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(0) AND DATA(3) AND DATA(4) AND DATA(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(6) AND DATA(7) AND DATA(2))));
+DISPLAY(2) <= NOT (((DATA(7) AND DATA(6) AND DATA(3) AND DATA(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(4) AND DATA(5) AND NOT DATA(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(7) AND DATA(6) AND DATA(3) AND DATA(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(0) AND NOT DATA(4) AND NOT DATA(5) AND DATA(1))));
 </td></tr><tr><td>
 </td></tr><tr><td>
-DISPLAY(3) <= NOT (((DATA(0) AND NOT DATA(1) AND DATA(3) AND DATA(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(5) AND DATA(6) AND DATA(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(0) AND DATA(3) AND DATA(4) AND DATA(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(6) AND DATA(7) AND DATA(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DATA(1) AND DATA(3) AND DATA(4) AND DATA(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(6) AND DATA(7) AND DATA(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DATA(0) AND DATA(1) AND DATA(3) AND DATA(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(5) AND DATA(6) AND DATA(7) AND NOT DATA(2))));
+DISPLAY(3) <= NOT (((DATA(7) AND DATA(6) AND DATA(3) AND DATA(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(4) AND DATA(5) AND NOT DATA(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(7) AND DATA(6) AND DATA(3) AND DATA(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(0) AND NOT DATA(4) AND NOT DATA(5) AND DATA(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(7) AND DATA(6) AND DATA(3) AND NOT DATA(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(0) AND DATA(4) AND DATA(5) AND NOT DATA(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(7) AND DATA(6) AND DATA(3) AND NOT DATA(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT DATA(0) AND DATA(4) AND DATA(5) AND DATA(1))));
 </td></tr><tr><td>
 </td></tr><tr><td>
-DISPLAY(4) <= NOT (((NOT DATA(0) AND DATA(3) AND DATA(4) AND DATA(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(6) AND DATA(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(1) AND DATA(3) AND DATA(4) AND DATA(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(6) AND DATA(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(3) AND DATA(4) AND DATA(5) AND DATA(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(7) AND NOT DATA(2))));
+DISPLAY(4) <= NOT (((DATA(7) AND DATA(6) AND DATA(3) AND NOT DATA(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(4) AND DATA(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(7) AND DATA(6) AND DATA(3) AND NOT DATA(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(0) AND DATA(4) AND DATA(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(7) AND DATA(6) AND DATA(3) AND DATA(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(0) AND NOT DATA(4) AND NOT DATA(5) AND DATA(1))));
 </td></tr><tr><td>
 </td></tr><tr><td>
-DISPLAY(5) <= NOT (((DATA(3) AND DATA(4) AND DATA(5) AND DATA(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(7) AND DATA(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(0) AND DATA(1) AND DATA(3) AND DATA(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(5) AND DATA(6) AND DATA(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DATA(0) AND NOT DATA(1) AND DATA(3) AND DATA(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(5) AND DATA(6) AND DATA(7))));
+DISPLAY(5) <= NOT (((DATA(7) AND DATA(6) AND DATA(3) AND DATA(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT DATA(0) AND DATA(4) AND DATA(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(7) AND DATA(6) AND DATA(3) AND DATA(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(4) AND DATA(5) AND NOT DATA(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(7) AND DATA(6) AND DATA(3) AND NOT DATA(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(4) AND DATA(5) AND NOT DATA(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(7) AND DATA(6) AND DATA(3) AND DATA(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(0) AND NOT DATA(4) AND NOT DATA(5) AND DATA(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(7) AND DATA(6) AND DATA(3) AND NOT DATA(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(0) AND DATA(4) AND DATA(5) AND DATA(1))));
 </td></tr><tr><td>
 </td></tr><tr><td>
-DISPLAY(6) <= NOT (((NOT DATA(1) AND DATA(3) AND DATA(4) AND DATA(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(6) AND DATA(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(0) AND DATA(3) AND DATA(4) AND DATA(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(6) AND DATA(7) AND DATA(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT DATA(0) AND DATA(3) AND DATA(4) AND DATA(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(6) AND DATA(7) AND NOT DATA(2))));
+DISPLAY(6) <= NOT (((DATA(7) AND DATA(6) AND DATA(3) AND DATA(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(5) AND NOT DATA(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(7) AND DATA(6) AND DATA(3) AND DATA(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	DATA(0) AND NOT DATA(4) AND NOT DATA(5) AND DATA(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (DATA(7) AND DATA(6) AND DATA(3) AND NOT DATA(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT DATA(0) AND DATA(4) AND DATA(5) AND DATA(1))));
 </td></tr><tr><td>
 </td></tr><tr><td>
 EN_SEGMENT <= '0';
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_185 <= ((NOT TX_CIRCUIT/divider(11))
+N_PZ_174 <= ((NOT TX_CIRCUIT/divider(11))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(9))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(6)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(8)));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_193 <= (TX_CIRCUIT/divider(5) AND TX_CIRCUIT/divider(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(3) AND TX_CIRCUIT/divider(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(1) AND TX_CIRCUIT/divider(6));
-</td></tr><tr><td>
-</td></tr><tr><td>
-N_PZ_218 <= ((NOT TX_CIRCUIT/divider(11) AND NOT TX_CIRCUIT/divider(12) AND 
+N_PZ_208 <= ((NOT TX_CIRCUIT/divider(11) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(9)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_250 <= (TX_CIRCUIT/divider(5) AND TX_CIRCUIT/divider(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(0) AND TX_CIRCUIT/divider(4) AND TX_CIRCUIT/divider(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(1));
 </td></tr><tr><td>
 </td></tr><tr><td>
 TXD <= (NOT TX_CIRCUIT/count(0) AND NOT TX_CIRCUIT/count(2))
@@ -115,22 +117,19 @@ FTCPE_TX_CIRCUIT/clk: FTCPE port map (TX_CIRCUIT/clk,TX_CIRCUIT/clk_T,CLK50,'0',
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX_CIRCUIT/clk_T <= NOT (((NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(22) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND N_PZ_185)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(8))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(6))));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(8))));
 </td></tr><tr><td>
 FTCPE_TX_CIRCUIT/count0: FTCPE port map (TX_CIRCUIT/count(0),TX_CIRCUIT/count_T(0),TX_CIRCUIT/clk,TX_CIRCUIT/start,'0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX_CIRCUIT/count_T(0) <= NOT ((NOT TX_CIRCUIT/count(0) AND TX_CIRCUIT/count(1) AND 
@@ -149,317 +148,280 @@ FDCPE_TX_CIRCUIT/divider0: FDCPE port map (TX_CIRCUIT/divider(0),TX_CIRCUIT/divi
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX_CIRCUIT/divider_D(0) <= ((NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(22) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND N_PZ_185 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(0))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(8))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(6)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(8)));
 </td></tr><tr><td>
 FDCPE_TX_CIRCUIT/divider1: FDCPE port map (TX_CIRCUIT/divider(1),TX_CIRCUIT/divider_D(1),CLK50,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX_CIRCUIT/divider_D(1) <= ((NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(22) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND N_PZ_185 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(1))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(22) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND N_PZ_185 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(0) AND TX_CIRCUIT/divider(1))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8) AND NOT TX_CIRCUIT/divider(7) AND TX_CIRCUIT/divider(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(1) AND NOT TX_CIRCUIT/divider(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8) AND NOT TX_CIRCUIT/divider(7) AND TX_CIRCUIT/divider(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(6) AND TX_CIRCUIT/divider(1) AND NOT TX_CIRCUIT/divider(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(4) AND TX_CIRCUIT/divider(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(1) AND NOT TX_CIRCUIT/divider(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(4) AND TX_CIRCUIT/divider(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(6)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(6) AND TX_CIRCUIT/divider(1) AND NOT TX_CIRCUIT/divider(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8)));
 </td></tr><tr><td>
 FDCPE_TX_CIRCUIT/divider2: FDCPE port map (TX_CIRCUIT/divider(2),TX_CIRCUIT/divider_D(2),CLK50,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX_CIRCUIT/divider_D(2) <= ((NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(22) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND N_PZ_185 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(0) AND TX_CIRCUIT/divider(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(0))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(22) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND N_PZ_185 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(1))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(22) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND N_PZ_185 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(0) AND TX_CIRCUIT/divider(1))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8) AND NOT TX_CIRCUIT/divider(7) AND TX_CIRCUIT/divider(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(4) AND TX_CIRCUIT/divider(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(1) AND NOT TX_CIRCUIT/divider(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8) AND NOT TX_CIRCUIT/divider(7) AND TX_CIRCUIT/divider(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(6)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(6) AND TX_CIRCUIT/divider(1) AND NOT TX_CIRCUIT/divider(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8)));
 </td></tr><tr><td>
 FDCPE_TX_CIRCUIT/divider3: FDCPE port map (TX_CIRCUIT/divider(3),TX_CIRCUIT/divider_D(3),CLK50,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX_CIRCUIT/divider_D(3) <= ((NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(22) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND N_PZ_185 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(0) AND TX_CIRCUIT/divider(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(22) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND N_PZ_185 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(3))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(22) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND N_PZ_185 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(0) AND TX_CIRCUIT/divider(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(1))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(22) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND N_PZ_185 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(0) AND TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(3) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(1))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(4) AND TX_CIRCUIT/divider(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(8))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8) AND NOT TX_CIRCUIT/divider(7) AND TX_CIRCUIT/divider(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(1) AND NOT TX_CIRCUIT/divider(6)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(6) AND TX_CIRCUIT/divider(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(8)));
 </td></tr><tr><td>
 FDCPE_TX_CIRCUIT/divider4: FDCPE port map (TX_CIRCUIT/divider(4),TX_CIRCUIT/divider_D(4),CLK50,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX_CIRCUIT/divider_D(4) <= ((NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(22) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND N_PZ_185 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(0) AND TX_CIRCUIT/divider(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(22) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND N_PZ_185 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(4))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(22) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND N_PZ_185 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(3) AND TX_CIRCUIT/divider(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(0) AND TX_CIRCUIT/divider(4))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(22) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND N_PZ_185 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(1))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(22) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND N_PZ_185 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(0) AND TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(4) AND TX_CIRCUIT/divider(1)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(3) AND TX_CIRCUIT/divider(1)));
 </td></tr><tr><td>
 FDCPE_TX_CIRCUIT/divider5: FDCPE port map (TX_CIRCUIT/divider(5),TX_CIRCUIT/divider_D(5),CLK50,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX_CIRCUIT/divider_D(5) <= (TX_CIRCUIT/divider(5) AND N_PZ_218)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((N_PZ_218 AND TX_CIRCUIT/divider(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(3) AND TX_CIRCUIT/divider(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX_CIRCUIT/divider_D(5) <= ((TX_CIRCUIT/divider(5) AND NOT N_PZ_250 AND N_PZ_208)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(4) AND TX_CIRCUIT/divider(3) AND NOT N_PZ_250 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(1) AND N_PZ_208)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(5) AND NOT N_PZ_218 AND NOT TX_CIRCUIT/divider(8) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(5) AND NOT TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(8))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(5) AND NOT N_PZ_218 AND NOT TX_CIRCUIT/divider(8) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(5) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(8))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(5) AND NOT TX_CIRCUIT/divider(8) AND NOT TX_CIRCUIT/divider(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(0) AND TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(4) AND TX_CIRCUIT/divider(1) AND NOT TX_CIRCUIT/divider(6)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(0) AND TX_CIRCUIT/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(6) AND NOT N_PZ_250 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(1) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(8)));
 </td></tr><tr><td>
 FDCPE_TX_CIRCUIT/divider6: FDCPE port map (TX_CIRCUIT/divider(6),TX_CIRCUIT/divider_D(6),CLK50,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX_CIRCUIT/divider_D(6) <= ((N_PZ_218 AND NOT N_PZ_193 AND TX_CIRCUIT/divider(6))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (TX_CIRCUIT/divider(5) AND N_PZ_218 AND NOT N_PZ_193 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(0) AND TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(4) AND TX_CIRCUIT/divider(1)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX_CIRCUIT/divider_D(6) <= ((TX_CIRCUIT/divider(6) AND NOT N_PZ_250 AND N_PZ_208)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(6) AND N_PZ_250 AND N_PZ_208));
 </td></tr><tr><td>
-FDCPE_TX_CIRCUIT/divider7: FDCPE port map (TX_CIRCUIT/divider(7),TX_CIRCUIT/divider_D(7),CLK50,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX_CIRCUIT/divider_D(7) <= ((N_PZ_218 AND TX_CIRCUIT/divider(7) AND NOT N_PZ_193)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_218 AND NOT TX_CIRCUIT/divider(7) AND N_PZ_193));
+FTCPE_TX_CIRCUIT/divider7: FTCPE port map (TX_CIRCUIT/divider(7),TX_CIRCUIT/divider_T(7),CLK50,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX_CIRCUIT/divider_T(7) <= ((TX_CIRCUIT/divider(7) AND NOT N_PZ_208)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (TX_CIRCUIT/divider(6) AND N_PZ_250 AND N_PZ_208));
 </td></tr><tr><td>
 FTCPE_TX_CIRCUIT/divider8: FTCPE port map (TX_CIRCUIT/divider(8),TX_CIRCUIT/divider_T(8),CLK50,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX_CIRCUIT/divider_T(8) <= ((NOT N_PZ_218 AND TX_CIRCUIT/divider(8))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_218 AND TX_CIRCUIT/divider(7) AND N_PZ_193));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX_CIRCUIT/divider_T(8) <= ((NOT N_PZ_208 AND TX_CIRCUIT/divider(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (TX_CIRCUIT/divider(6) AND N_PZ_250 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(7) AND N_PZ_208));
 </td></tr><tr><td>
 FDCPE_TX_CIRCUIT/divider9: FDCPE port map (TX_CIRCUIT/divider(9),TX_CIRCUIT/divider_D(9),CLK50,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX_CIRCUIT/divider_D(9) <= ((N_PZ_218 AND TX_CIRCUIT/divider(9) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_218 AND TX_CIRCUIT/divider(9) AND NOT N_PZ_193)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_218 AND NOT TX_CIRCUIT/divider(9) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(8) AND TX_CIRCUIT/divider(7) AND N_PZ_193)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(22) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND N_PZ_185 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(9) AND NOT TX_CIRCUIT/divider(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX_CIRCUIT/divider_D(9) <= (N_PZ_208 AND TX_CIRCUIT/divider(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((TX_CIRCUIT/divider(6) AND N_PZ_250 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(7) AND N_PZ_208 AND TX_CIRCUIT/divider(8))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_218 AND NOT TX_CIRCUIT/divider(8) AND NOT TX_CIRCUIT/divider(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(5) AND NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_208 AND TX_CIRCUIT/divider(9) AND NOT TX_CIRCUIT/divider(8))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_218 AND NOT TX_CIRCUIT/divider(8) AND NOT TX_CIRCUIT/divider(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(6)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(7) AND NOT N_PZ_208 AND TX_CIRCUIT/divider(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(7) AND NOT N_PZ_208 AND TX_CIRCUIT/divider(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(8)));
 </td></tr><tr><td>
 FDCPE_TX_CIRCUIT/divider10: FDCPE port map (TX_CIRCUIT/divider(10),TX_CIRCUIT/divider_D(10),CLK50,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX_CIRCUIT/divider_D(10) <= ((TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(11) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(24) AND NOT TX_CIRCUIT/divider(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(6))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(11) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(24) AND NOT TX_CIRCUIT/divider(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(21) AND NOT N_PZ_250)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(11) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(24) AND NOT TX_CIRCUIT/divider(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(7))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(11) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(24) AND NOT N_PZ_193)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(8))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(11) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(24) AND TX_CIRCUIT/divider(9) AND TX_CIRCUIT/divider(8) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(7) AND N_PZ_193));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(21) AND TX_CIRCUIT/divider(6) AND N_PZ_250 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(7) AND TX_CIRCUIT/divider(9) AND TX_CIRCUIT/divider(8)));
 </td></tr><tr><td>
 FDCPE_TX_CIRCUIT/divider11: FDCPE port map (TX_CIRCUIT/divider(11),TX_CIRCUIT/divider_D(11),CLK50,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX_CIRCUIT/divider_D(11) <= ((TX_CIRCUIT/divider(10) AND N_PZ_218 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(9) AND TX_CIRCUIT/divider(8) AND TX_CIRCUIT/divider(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_193)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX_CIRCUIT/divider_D(11) <= ((TX_CIRCUIT/divider(10) AND TX_CIRCUIT/divider(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_250 AND TX_CIRCUIT/divider(7) AND N_PZ_208 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	TX_CIRCUIT/divider(9) AND TX_CIRCUIT/divider(8))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (TX_CIRCUIT/divider(11) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_185)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_174)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_218 AND NOT TX_CIRCUIT/divider(8) AND NOT TX_CIRCUIT/divider(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(7) AND NOT N_PZ_208 AND NOT TX_CIRCUIT/divider(8))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(22) AND NOT TX_CIRCUIT/divider(23) AND NOT TX_CIRCUIT/divider(24) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_218 AND NOT TX_CIRCUIT/divider(8) AND NOT TX_CIRCUIT/divider(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(6)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT TX_CIRCUIT/divider(7) AND NOT N_PZ_208 AND NOT TX_CIRCUIT/divider(8)));
 </td></tr><tr><td>
 FDCPE_TX_CIRCUIT/divider12: FDCPE port map (TX_CIRCUIT/divider(12),'0',CLK50,'0','0','1');
 </td></tr><tr><td>
@@ -481,12 +443,6 @@ FDCPE_TX_CIRCUIT/divider20: FDCPE port map (TX_CIRCUIT/divider(20),'0',CLK50,'0'
 </td></tr><tr><td>
 FDCPE_TX_CIRCUIT/divider21: FDCPE port map (TX_CIRCUIT/divider(21),'0',CLK50,'0','0','1');
 </td></tr><tr><td>
-FDCPE_TX_CIRCUIT/divider22: FDCPE port map (TX_CIRCUIT/divider(22),'0',CLK50,'0','0','1');
-</td></tr><tr><td>
-FDCPE_TX_CIRCUIT/divider23: FDCPE port map (TX_CIRCUIT/divider(23),'0',CLK50,'0','0','1');
-</td></tr><tr><td>
-FDCPE_TX_CIRCUIT/divider24: FDCPE port map (TX_CIRCUIT/divider(24),'0',CLK50,'0','0','1');
-</td></tr><tr><td>
 FDCPE_TX_CIRCUIT/output2: FDCPE port map (TX_CIRCUIT/output(2),DATA(0),LOAD,'0','0','1');
 </td></tr><tr><td>
 FDCPE_TX_CIRCUIT/output3: FDCPE port map (TX_CIRCUIT/output(3),DATA(1),LOAD,'0','0','1');
@@ -504,6 +460,9 @@ FDCPE_TX_CIRCUIT/output8: FDCPE port map (TX_CIRCUIT/output(8),DATA(6),LOAD,'0',
 FDCPE_TX_CIRCUIT/output9: FDCPE port map (TX_CIRCUIT/output(9),DATA(7),LOAD,'0','0','1');
 </td></tr><tr><td>
 FDCPE_TX_CIRCUIT/start: FDCPE port map (TX_CIRCUIT/start,NOT '0',LOAD,BUSY,'0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+led <= '0';
 </td></tr><tr><td>
 </td></tr><tr><td>
 Register Legend:

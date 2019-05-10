@@ -5,24 +5,27 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">D:/My Documents/College Assignments/Semester 4/Digital System/Project/UART_Transmitter/uart_tx.vhd</arg>&quot; line <arg fmt="%d" index="2">71</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">D:/My Documents/College Assignments/Semester 4/Digital System/Project/UART_Transmitter/uart_tx.vhd</arg>&quot; line <arg fmt="%d" index="2">74</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
 <arg fmt="%s" index="3">&lt;ibusy&gt;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">D:/My Documents/College Assignments/Semester 4/Digital System/Project/UART_Transmitter/uart_tx.vhd</arg>&quot; line <arg fmt="%d" index="2">83</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">D:/My Documents/College Assignments/Semester 4/Digital System/Project/UART_Transmitter/uart_tx.vhd</arg>&quot; line <arg fmt="%d" index="2">87</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
 <arg fmt="%s" index="3">&lt;count&gt;</arg>
 </msg>
 
-<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">output&lt;0&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">UART</arg>&gt; has a constant value of <arg fmt="%s" index="3">1</arg> during circuit operation. The register is replaced by logic.
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">lampu</arg>&gt; in unit &lt;<arg fmt="%s" index="2">UART_TX</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">output&lt;1&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">UART</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">output&lt;0&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">UART_TX</arg>&gt; has a constant value of <arg fmt="%s" index="3">1</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">output&lt;10&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">UART</arg>&gt; has a constant value of <arg fmt="%s" index="3">1</arg> during circuit operation. The register is replaced by logic.
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">output&lt;1&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">UART_TX</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ibusy</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">output&lt;10&gt;</arg>&gt; in unit &lt;<arg fmt="%s" index="2">UART_TX</arg>&gt; has a constant value of <arg fmt="%s" index="3">1</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ibusy</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
 </messages>

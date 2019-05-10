@@ -1,0 +1,30 @@
+Command line:
+   RX_TB_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  64930
+
+Fri May 10 12:04:50 2019
+
+
+ Elaboration Time: 0.15625 sec
+
+ Current Memory Usage: 5829.29 Meg
+
+ Total Signals          : 13
+ Total Nets             : 25
+ Total Signal Drivers   : 9
+ Total Blocks           : 4
+ Total Primitive Blocks : 3
+ Total Processes        : 8
+ Total Traceable Variables  : 15
+ Total Scalar Nets and Variables : 510
+Total Line Count : 54
+Total Line Count : 54
+
+ Total Simulation Time: 0.578125 sec
+
+ Current Memory Usage: 4779.25 Meg
+
+Fri May 10 12:07:09 2019
+

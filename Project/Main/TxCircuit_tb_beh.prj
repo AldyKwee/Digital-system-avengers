@@ -1,0 +1,2 @@
+vhdl work "../UART_Transmitter/uart_tx.vhd"
+vhdl work "TxCircuit_tb.vhd"

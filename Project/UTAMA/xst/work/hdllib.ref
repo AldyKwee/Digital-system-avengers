@@ -1,0 +1,8 @@
+AR sevensegment behavioral "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/seve_segment/uart_7segment.vhd" sub00/vhpl05 1557155555
+AR main behavioral "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.vhd" sub00/vhpl01 1557155559
+AR utama behavioral "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/UTAMA/UTAMA.vhd" sub00/vhpl03 1557155561
+EN main NULL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.vhd" sub00/vhpl00 1557155558
+EN sevensegment NULL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/seve_segment/uart_7segment.vhd" sub00/vhpl04 1557155554
+AR uart behavior "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/uart_reciever/uart_rx.vhd" sub00/vhpl07 1557155557
+EN uart NULL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/uart_reciever/uart_rx.vhd" sub00/vhpl06 1557155556
+EN utama NULL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/UTAMA/UTAMA.vhd" sub00/vhpl02 1557155560

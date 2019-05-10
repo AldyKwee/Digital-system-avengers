@@ -34,29 +34,31 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity UART is
+entity UART_TX is
     generic (
-                divisor    : integer := 2604    -- Set the Baud Rate Divisor here.  
+                divisor    : integer := 833    -- Set the Baud Rate Divisor here.  
                                                 -- Some common values:  300 Baud = 83333, 9600 Baud = 2604, 115200 Baud = 217, 921600 Baud = 27
             );
             
     port(
             TXD         : out    std_logic;                      -- Transmitter output.
             BUSY        : out    std_logic;                      -- HIGH = Busy currently transmitting, LOW = Ready to transmit.
-            DATA        : in    std_logic_vector(7 downto 0);    -- 8-bits of data to be transmitted.
+            DATA        : in    std_logic_vector(7 downto 0):= "00000000";    -- 8-bits of data to be transmitted.
             LOAD        : in    std_logic;                       -- LOW-to-HIGH transition latched DATA and starts transmitting.
-            CLK50       : in    std_logic                        -- 50 MHz system clock.
+            CLK50       : in    std_logic;                        -- 50 MHz system clock.
+				led			: out std_logic
         );
-end UART;
+end UART_TX;
 
-architecture Behavior of UART is
+architecture Behavior of UART_TX is
 
     signal    start        : std_logic;                        -- Starts the bit counter.
     signal    ibusy        : std_logic;                        -- Signals the module is currently transmitting.
     signal    output       : std_logic_vector(10 downto 0);    -- Shift register data.
-    signal    divider      : integer range 0 to 25000000;       -- Counter used for dividing the system clock.
-    signal    clk          : std_logic;                        -- Baud rate clock.
+    signal    divider      : integer range 0 to 4000000;       -- Counter used for dividing the system clock.
+    signal    clk          : std_logic:= '0';                        -- Baud rate clock.
     signal    count        : integer range 0 to 10;            -- Counter used for selecting bit being transmitted.
+	 signal lampu : std_logic;
     
 begin
 
@@ -64,6 +66,7 @@ begin
     -- Used to being internal signals out to the 'real world'.
     BUSY <= ibusy;            -- Make the internal busy signal available outside.
     TXD  <= output(count);    -- Assign value of data at specific bit position to the TXD signal.
+	 led <= lampu;
 
     -- START TRIGGER
     -- When the 'LOAD' sigal is received, send the 'start' signal only if it's not already busy sending
@@ -74,6 +77,7 @@ begin
             start <= '0';
         elsif (falling_edge(LOAD)) then   -- Otherwise, on the rising edge of the 'LOAD' signal, start the
             start <= '1';                -- bit counter.
+				lampu <= '0';
         end if;
     end process;
 

@@ -1,0 +1,2 @@
+vhdl work "../uart_reciever/uart_rx.vhd"
+vhdl work "RX_TB.vhd"

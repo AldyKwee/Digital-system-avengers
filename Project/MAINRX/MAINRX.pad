@@ -1,7 +1,7 @@
 Release 8.1i - Fit P.20131013
 Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
 
- 5- 2-2019  3:13PM
+ 5-10-2019 12:02PM
 
 NOTE: This file is designed to be imported into a spreadsheet program
 such as Microsoft Excel for viewing, printing and sorting. The pipe '|'
@@ -19,17 +19,17 @@ Pinout by Pin Number:
 -----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
 Pin Number|Signal Name|Pin Usage|Pin Name|Direction|IO Standard|IO Bank Number|{blank}|Slew Rate|Termination|{blank}|Voltage|Constraint|
 P1||VCC|VCC||||||||||
-P2|OUT_D<3>|O|I/O/GTS2|OUTPUT|LVCMOS18|2||FAST||||
-P3|OUT_D<2>|O|I/O/GTS3|OUTPUT|LVCMOS18|2||FAST||||
-P4|OUT_D<0>|O|I/O|OUTPUT|LVCMOS18|2||FAST||||
-P5|OUT_D<1>|O|I/O/GTS0|OUTPUT|LVCMOS18|2||FAST||||
-P6|OUT_D<5>|O|I/O/GTS1|OUTPUT|LVCMOS18|2||FAST||||
-P7|OUT_D<6>|O|I/O|OUTPUT|LVCMOS18|2||FAST||||
+P2|KPR||I/O/GTS2|||2|||||||
+P3|KPR||I/O/GTS3|||2|||||||
+P4|KPR||I/O|||2|||||||
+P5|KPR||I/O/GTS0|||2|||||||
+P6|KPR||I/O/GTS1|||2|||||||
+P7|KPR||I/O|||2|||||||
 P8||VCCAUX|VAUX||||||||||
-P9|OUT_D<4>|O|I/O|OUTPUT|LVCMOS18|2||FAST||||
+P9|KPR||I/O|||2|||||||
 P10|KPR||I/O|||2|||||||
-P11|BUSY|O|I/O|OUTPUT|LVCMOS18|2||FAST||||
-P12|EN_SEGMENT|O|I/O|OUTPUT|LVCMOS18|2||FAST||||
+P11|KPR||I/O|||2|||||||
+P12|KPR||I/O|||2|||||||
 P13|KPR||I/O|||2|||||||
 P14|KPR||I/O|||2|||||||
 P15|KPR||I/O|||2|||||||
@@ -47,9 +47,9 @@ P26|KPR||I/O|||1|||||||
 P27||VCCIO-1.8|VCCIO|||1|||||||
 P28|KPR||I/O|||1|||||||
 P29|GND||GND||||||||||
-P30|RXD|GCK/I|I/O/GCK0||LVCMOS18|1||FAST||||
+P30|KPR||I/O/GCK0|||1|||||||
 P31|KPR||I/O|||1|||||||
-P32|CLK|GCK|I/O/GCK1||LVCMOS18|1||FAST||||
+P32|KPR||I/O/GCK1|||1|||||||
 P33|KPR||I/O|||1|||||||
 P34|KPR||I/O|||1|||||||
 P35|KPR||I/O/CDR|||1|||||||
@@ -70,15 +70,15 @@ P49|KPR||I/O|||1|||||||
 P50|KPR||I/O|||1|||||||
 P51|KPR||I/O|||1|||||||
 P52|KPR||I/O|||1|||||||
-P53|KPR||I/O|||1|||||||
-P54|KPR||I/O|||1|||||||
+P53|OUT_D<5>|O|I/O|OUTPUT|LVCMOS18|1||FAST||||
+P54|OUT_D<1>|O|I/O|OUTPUT|LVCMOS18|1||FAST||||
 P55||VCCIO-1.8|VCCIO|||1|||||||
-P56|KPR||I/O|||1|||||||
-P57|KPR||I/O|||1|||||||
-P58|KPR||I/O|||1|||||||
+P56|OUT_D<6>|O|I/O|OUTPUT|LVCMOS18|1||FAST||||
+P57|OUT_D<2>|O|I/O|OUTPUT|LVCMOS18|1||FAST||||
+P58|OUT_D<3>|O|I/O|OUTPUT|LVCMOS18|1||FAST||||
 P59|KPR||I/O|||1|||||||
-P60|KPR||I/O|||1|||||||
-P61|KPR||I/O|||1|||||||
+P60|OUT_D<4>|O|I/O|OUTPUT|LVCMOS18|1||FAST||||
+P61|OUT_D<0>|O|I/O|OUTPUT|LVCMOS18|1||FAST||||
 P62|GND||GND||||||||||
 P63|TDI||TDI||||||||||
 P64|KPR||I/O|||1|||||||
@@ -147,7 +147,7 @@ P126|KPR||I/O|||2|||||||
 P127||VCCIO-1.8|VCCIO|||2|||||||
 P128|KPR||I/O|||2|||||||
 P129|KPR||I/O|||2|||||||
-P130|KPR||I/O|||2|||||||
+P130|EN_SEGMENT|O|I/O|OUTPUT|LVCMOS18|2||FAST||||
 P131|KPR||I/O|||2|||||||
 P132|KPR||I/O|||2|||||||
 P133|KPR||I/O|||2|||||||
@@ -160,7 +160,7 @@ P139|KPR||I/O|||2|||||||
 P140|KPR||I/O|||2|||||||
 P141||VCCIO-1.8|VCCIO|||2|||||||
 P142|KPR||I/O|||2|||||||
-P143|KPR||I/O/GSR|||2|||||||
+P143|BUSY|O|I/O/GSR|OUTPUT|LVCMOS18|2||FAST||||
 P144|GND||GND||||||||||
 
 To preserve the pinout above for future design iterations in

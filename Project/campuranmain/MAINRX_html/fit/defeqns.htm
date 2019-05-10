@@ -1,0 +1,660 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+FDCPE_BUSY: FDCPE port map (BUSY,NOT '0',NOT RXD,BUSY_CLR,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BUSY_CLR <= (uart_receiver1/count(3) AND NOT N_PZ_277);
+</td></tr><tr><td>
+</td></tr><tr><td>
+EN_SEGMENT <= '0';
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_227 <= ((NOT uart_receiver1/divider(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(5) AND NOT uart_receiver1/divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(6)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_235 <= (uart_receiver1/divider(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(0) AND uart_receiver1/divider(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(3) AND uart_receiver1/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(1) AND uart_receiver1/divider(6));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_260 <= ((NOT uart_receiver1/divider(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(9)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_277 <= (NOT uart_receiver1/count(1) AND NOT uart_receiver1/count(2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+OUT_D(0) <= NOT (((buatdata(0) AND NOT buatdata(1) AND buatdata(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	buatdata(4) AND buatdata(5) AND buatdata(6) AND buatdata(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (buatdata(1) AND buatdata(3) AND buatdata(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	buatdata(5) AND buatdata(6) AND buatdata(7) AND NOT buatdata(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT buatdata(1) AND buatdata(3) AND buatdata(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	buatdata(5) AND buatdata(6) AND buatdata(7) AND buatdata(2))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+OUT_D(1) <= NOT (((buatdata(0) AND buatdata(1) AND buatdata(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	buatdata(4) AND buatdata(5) AND buatdata(6) AND buatdata(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (buatdata(0) AND buatdata(3) AND buatdata(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	buatdata(5) AND buatdata(6) AND buatdata(7) AND NOT buatdata(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (buatdata(1) AND buatdata(3) AND buatdata(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	buatdata(5) AND buatdata(6) AND buatdata(7) AND NOT buatdata(2))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+OUT_D(2) <= NOT (((buatdata(0) AND NOT buatdata(1) AND buatdata(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	buatdata(4) AND buatdata(5) AND buatdata(6) AND buatdata(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (buatdata(0) AND buatdata(3) AND buatdata(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	buatdata(5) AND buatdata(6) AND buatdata(7) AND buatdata(2))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+OUT_D(3) <= NOT (((buatdata(0) AND NOT buatdata(1) AND buatdata(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	buatdata(4) AND buatdata(5) AND buatdata(6) AND buatdata(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (buatdata(0) AND buatdata(3) AND buatdata(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	buatdata(5) AND buatdata(6) AND buatdata(7) AND buatdata(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT buatdata(1) AND buatdata(3) AND buatdata(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	buatdata(5) AND buatdata(6) AND buatdata(7) AND buatdata(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT buatdata(0) AND buatdata(1) AND buatdata(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	buatdata(4) AND buatdata(5) AND buatdata(6) AND buatdata(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT buatdata(2))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+OUT_D(4) <= NOT (((NOT buatdata(0) AND buatdata(3) AND buatdata(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	buatdata(5) AND buatdata(6) AND buatdata(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (buatdata(1) AND buatdata(3) AND buatdata(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	buatdata(5) AND buatdata(6) AND buatdata(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (buatdata(3) AND buatdata(4) AND buatdata(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	buatdata(6) AND buatdata(7) AND NOT buatdata(2))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+OUT_D(5) <= NOT (((buatdata(3) AND buatdata(4) AND buatdata(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	buatdata(6) AND buatdata(7) AND buatdata(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (buatdata(0) AND buatdata(1) AND buatdata(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	buatdata(4) AND buatdata(5) AND buatdata(6) AND buatdata(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT buatdata(0) AND NOT buatdata(1) AND buatdata(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	buatdata(4) AND buatdata(5) AND buatdata(6) AND buatdata(7))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+OUT_D(6) <= NOT (((NOT buatdata(1) AND buatdata(3) AND buatdata(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	buatdata(5) AND buatdata(6) AND buatdata(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (buatdata(0) AND buatdata(3) AND buatdata(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	buatdata(5) AND buatdata(6) AND buatdata(7) AND buatdata(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT buatdata(0) AND buatdata(3) AND buatdata(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	buatdata(5) AND buatdata(6) AND buatdata(7) AND NOT buatdata(2))));
+</td></tr><tr><td>
+FDCPE_buatdata0: FDCPE port map (buatdata(0),uart_receiver1/idata(1),BUSY,'0','0','1');
+</td></tr><tr><td>
+FDCPE_buatdata1: FDCPE port map (buatdata(1),uart_receiver1/idata(2),BUSY,'0','0','1');
+</td></tr><tr><td>
+FDCPE_buatdata2: FDCPE port map (buatdata(2),uart_receiver1/idata(3),BUSY,'0','0','1');
+</td></tr><tr><td>
+FDCPE_buatdata3: FDCPE port map (buatdata(3),uart_receiver1/idata(4),BUSY,'0','0','1');
+</td></tr><tr><td>
+FDCPE_buatdata4: FDCPE port map (buatdata(4),uart_receiver1/idata(5),BUSY,'0','0','1');
+</td></tr><tr><td>
+FDCPE_buatdata5: FDCPE port map (buatdata(5),uart_receiver1/idata(6),BUSY,'0','0','1');
+</td></tr><tr><td>
+FDCPE_buatdata6: FDCPE port map (buatdata(6),uart_receiver1/idata(7),BUSY,'0','0','1');
+</td></tr><tr><td>
+FDCPE_buatdata7: FDCPE port map (buatdata(7),uart_receiver1/idata(8),BUSY,'0','0','1');
+</td></tr><tr><td>
+FTCPE_uart_receiver1/clk: FTCPE port map (uart_receiver1/clk,uart_receiver1/clk_T,CLK,'0',NOT BUSY,'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/clk_T <= NOT (((NOT uart_receiver1/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(4) AND NOT uart_receiver1/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(4) AND NOT uart_receiver1/divider(6))));
+</td></tr><tr><td>
+FTCPE_uart_receiver1/count0: FTCPE port map (uart_receiver1/count(0),'0',uart_receiver1/clk,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FTCPE_uart_receiver1/count1: FTCPE port map (uart_receiver1/count(1),uart_receiver1/count(0),uart_receiver1/clk,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FTCPE_uart_receiver1/count2: FTCPE port map (uart_receiver1/count(2),uart_receiver1/count_T(2),uart_receiver1/clk,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/count_T(2) <= (uart_receiver1/count(0) AND uart_receiver1/count(1));
+</td></tr><tr><td>
+FTCPE_uart_receiver1/count3: FTCPE port map (uart_receiver1/count(3),uart_receiver1/count_T(3),uart_receiver1/clk,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/count_T(3) <= (uart_receiver1/count(0) AND uart_receiver1/count(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/count(2));
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider0: FDCPE port map (uart_receiver1/divider(0),uart_receiver1/divider_D(0),CLK,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/divider_D(0) <= ((NOT uart_receiver1/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(2) AND NOT uart_receiver1/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(3) AND NOT uart_receiver1/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(6)));
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider1: FDCPE port map (uart_receiver1/divider(1),uart_receiver1/divider_D(1),CLK,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/divider_D(1) <= ((NOT uart_receiver1/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(0) AND NOT uart_receiver1/divider(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(0) AND uart_receiver1/divider(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(7) AND uart_receiver1/divider(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(2) AND NOT uart_receiver1/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(1) AND NOT uart_receiver1/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(7) AND uart_receiver1/divider(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(3) AND NOT uart_receiver1/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(1) AND NOT uart_receiver1/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(2) AND NOT uart_receiver1/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(1) AND NOT uart_receiver1/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(3) AND NOT uart_receiver1/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(1) AND NOT uart_receiver1/divider(6)));
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider2: FDCPE port map (uart_receiver1/divider(2),uart_receiver1/divider_D(2),CLK,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/divider_D(2) <= ((NOT uart_receiver1/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(0) AND uart_receiver1/divider(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(2) AND NOT uart_receiver1/divider(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(0) AND NOT uart_receiver1/divider(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(7) AND uart_receiver1/divider(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(2) AND NOT uart_receiver1/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(1) AND NOT uart_receiver1/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(2) AND NOT uart_receiver1/divider(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(4) AND NOT uart_receiver1/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(7) AND uart_receiver1/divider(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(3) AND NOT uart_receiver1/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(1) AND NOT uart_receiver1/divider(6)));
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider3: FDCPE port map (uart_receiver1/divider(3),uart_receiver1/divider_D(3),CLK,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/divider_D(3) <= ((NOT uart_receiver1/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(0) AND uart_receiver1/divider(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(2) AND uart_receiver1/divider(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(3) AND NOT uart_receiver1/divider(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(0) AND uart_receiver1/divider(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(3) AND uart_receiver1/divider(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(3) AND NOT uart_receiver1/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(7) AND uart_receiver1/divider(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(2) AND NOT uart_receiver1/divider(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(4) AND uart_receiver1/divider(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(6)));
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider4: FDCPE port map (uart_receiver1/divider(4),uart_receiver1/divider_D(4),CLK,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/divider_D(4) <= ((NOT uart_receiver1/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(0) AND uart_receiver1/divider(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(2) AND uart_receiver1/divider(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(3) AND uart_receiver1/divider(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(4) AND NOT uart_receiver1/divider(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(0) AND uart_receiver1/divider(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(3) AND NOT uart_receiver1/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(1)));
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider5: FDCPE port map (uart_receiver1/divider(5),uart_receiver1/divider_D(5),CLK,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/divider_D(5) <= (uart_receiver1/divider(5) AND N_PZ_260)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((N_PZ_260 AND uart_receiver1/divider(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(2) AND uart_receiver1/divider(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(4) AND uart_receiver1/divider(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24) AND uart_receiver1/divider(5) AND NOT N_PZ_260 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(8) AND NOT uart_receiver1/divider(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(2) AND NOT uart_receiver1/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24) AND uart_receiver1/divider(5) AND NOT N_PZ_260 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(8) AND NOT uart_receiver1/divider(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(3) AND NOT uart_receiver1/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(8) AND NOT uart_receiver1/divider(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(0) AND uart_receiver1/divider(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(3) AND uart_receiver1/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(1) AND NOT uart_receiver1/divider(6)));
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider6: FDCPE port map (uart_receiver1/divider(6),uart_receiver1/divider_D(6),CLK,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/divider_D(6) <= ((N_PZ_260 AND NOT N_PZ_235 AND uart_receiver1/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (uart_receiver1/divider(5) AND N_PZ_260 AND NOT N_PZ_235 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(0) AND uart_receiver1/divider(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(3) AND uart_receiver1/divider(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(1)));
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider7: FDCPE port map (uart_receiver1/divider(7),uart_receiver1/divider_D(7),CLK,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/divider_D(7) <= ((N_PZ_260 AND uart_receiver1/divider(7) AND NOT N_PZ_235)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_260 AND NOT uart_receiver1/divider(7) AND N_PZ_235));
+</td></tr><tr><td>
+FTCPE_uart_receiver1/divider8: FTCPE port map (uart_receiver1/divider(8),uart_receiver1/divider_T(8),CLK,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/divider_T(8) <= ((NOT N_PZ_260 AND uart_receiver1/divider(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_260 AND uart_receiver1/divider(7) AND N_PZ_235));
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider9: FDCPE port map (uart_receiver1/divider(9),uart_receiver1/divider_D(9),CLK,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/divider_D(9) <= ((N_PZ_260 AND uart_receiver1/divider(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_260 AND uart_receiver1/divider(9) AND NOT N_PZ_235)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_260 AND NOT uart_receiver1/divider(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(8) AND uart_receiver1/divider(7) AND N_PZ_235)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(9) AND NOT uart_receiver1/divider(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24) AND NOT N_PZ_260 AND NOT uart_receiver1/divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(4) AND NOT uart_receiver1/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24) AND NOT N_PZ_260 AND NOT uart_receiver1/divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(4) AND NOT uart_receiver1/divider(6)));
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider10: FDCPE port map (uart_receiver1/divider(10),uart_receiver1/divider_D(10),CLK,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/divider_D(10) <= ((uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(11) AND NOT uart_receiver1/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(11) AND NOT uart_receiver1/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(11) AND NOT uart_receiver1/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(11) AND NOT uart_receiver1/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND NOT N_PZ_235)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(11) AND NOT uart_receiver1/divider(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(9) AND uart_receiver1/divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(7) AND N_PZ_235));
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider11: FDCPE port map (uart_receiver1/divider(11),uart_receiver1/divider_D(11),CLK,NOT BUSY,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/divider_D(11) <= ((uart_receiver1/divider(10) AND N_PZ_260 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(9) AND uart_receiver1/divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	uart_receiver1/divider(7) AND N_PZ_235)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (uart_receiver1/divider(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24) AND N_PZ_227)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24) AND NOT N_PZ_260 AND NOT uart_receiver1/divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(4) AND NOT uart_receiver1/divider(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT uart_receiver1/divider(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(24) AND NOT N_PZ_260 AND NOT uart_receiver1/divider(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT uart_receiver1/divider(4) AND NOT uart_receiver1/divider(6)));
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider12: FDCPE port map (uart_receiver1/divider(12),'0',CLK,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider13: FDCPE port map (uart_receiver1/divider(13),'0',CLK,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider14: FDCPE port map (uart_receiver1/divider(14),'0',CLK,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider15: FDCPE port map (uart_receiver1/divider(15),'0',CLK,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider16: FDCPE port map (uart_receiver1/divider(16),'0',CLK,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider17: FDCPE port map (uart_receiver1/divider(17),'0',CLK,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider18: FDCPE port map (uart_receiver1/divider(18),'0',CLK,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider19: FDCPE port map (uart_receiver1/divider(19),'0',CLK,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider20: FDCPE port map (uart_receiver1/divider(20),'0',CLK,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider21: FDCPE port map (uart_receiver1/divider(21),'0',CLK,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider22: FDCPE port map (uart_receiver1/divider(22),'0',CLK,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider23: FDCPE port map (uart_receiver1/divider(23),'0',CLK,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_uart_receiver1/divider24: FDCPE port map (uart_receiver1/divider(24),'0',CLK,NOT BUSY,'0','1');
+</td></tr><tr><td>
+FDCPE_uart_receiver1/idata1: FDCPE port map (uart_receiver1/idata(1),RXD,uart_receiver1/clk,'0','0',uart_receiver1/idata_CE(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/idata_CE(1) <= (NOT uart_receiver1/count(3) AND uart_receiver1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BUSY AND N_PZ_277);
+</td></tr><tr><td>
+FDCPE_uart_receiver1/idata2: FDCPE port map (uart_receiver1/idata(2),RXD,uart_receiver1/clk,'0','0',uart_receiver1/idata_CE(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/idata_CE(2) <= (NOT uart_receiver1/count(3) AND NOT uart_receiver1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BUSY AND uart_receiver1/count(1) AND NOT uart_receiver1/count(2));
+</td></tr><tr><td>
+FDCPE_uart_receiver1/idata3: FDCPE port map (uart_receiver1/idata(3),RXD,uart_receiver1/clk,'0','0',uart_receiver1/idata_CE(3));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/idata_CE(3) <= (NOT uart_receiver1/count(3) AND uart_receiver1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BUSY AND uart_receiver1/count(1) AND NOT uart_receiver1/count(2));
+</td></tr><tr><td>
+FDCPE_uart_receiver1/idata4: FDCPE port map (uart_receiver1/idata(4),RXD,uart_receiver1/clk,'0','0',uart_receiver1/idata_CE(4));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/idata_CE(4) <= (NOT uart_receiver1/count(3) AND NOT uart_receiver1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BUSY AND NOT uart_receiver1/count(1) AND uart_receiver1/count(2));
+</td></tr><tr><td>
+FDCPE_uart_receiver1/idata5: FDCPE port map (uart_receiver1/idata(5),RXD,uart_receiver1/clk,'0','0',uart_receiver1/idata_CE(5));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/idata_CE(5) <= (NOT uart_receiver1/count(3) AND uart_receiver1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BUSY AND NOT uart_receiver1/count(1) AND uart_receiver1/count(2));
+</td></tr><tr><td>
+FDCPE_uart_receiver1/idata6: FDCPE port map (uart_receiver1/idata(6),RXD,uart_receiver1/clk,'0','0',uart_receiver1/idata_CE(6));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/idata_CE(6) <= (NOT uart_receiver1/count(3) AND NOT uart_receiver1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BUSY AND uart_receiver1/count(1) AND uart_receiver1/count(2));
+</td></tr><tr><td>
+FDCPE_uart_receiver1/idata7: FDCPE port map (uart_receiver1/idata(7),RXD,uart_receiver1/clk,'0','0',uart_receiver1/idata_CE(7));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/idata_CE(7) <= (NOT uart_receiver1/count(3) AND uart_receiver1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BUSY AND uart_receiver1/count(1) AND uart_receiver1/count(2));
+</td></tr><tr><td>
+FDCPE_uart_receiver1/idata8: FDCPE port map (uart_receiver1/idata(8),RXD,uart_receiver1/clk,'0','0',uart_receiver1/idata_CE(8));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uart_receiver1/idata_CE(8) <= (uart_receiver1/count(3) AND NOT uart_receiver1/count(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	BUSY AND N_PZ_277);
+</td></tr><tr><td>
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

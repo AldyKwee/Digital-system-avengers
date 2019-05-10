@@ -1,0 +1,8 @@
+AR sevensegment behavioral "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/seve_segment/uart_7segment.vhd" sub00/vhpl04 1557193449
+AR campuranmain behavioral "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/campuranmain/campuranmain.vhd" sub00/vhpl07 1557193502
+EN sevensegment NULL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/seve_segment/uart_7segment.vhd" sub00/vhpl03 1557193448
+AR uart behavior "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/uart_reciever/uart_rx.vhd" sub00/vhpl02 1557193447
+AR mainrx behavioral "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/MAINRX/MAINRX.vhd" sub00/vhpl05 1557193451
+EN campuranmain NULL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/campuranmain/campuranmain.vhd" sub00/vhpl06 1557193501
+EN mainrx NULL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/MAINRX/MAINRX.vhd" sub00/vhpl00 1557193450
+EN uart NULL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/uart_reciever/uart_rx.vhd" sub00/vhpl01 1557193446

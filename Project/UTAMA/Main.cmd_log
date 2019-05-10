@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/UTAMA/Main.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/UTAMA/Main.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc2c256-TQ144-7 "Main.ngc" Main.ngd  

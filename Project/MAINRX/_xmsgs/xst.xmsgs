@@ -5,14 +5,98 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">D:/My Documents/College Assignments/Semester 4/Digital System/Project/uart_reciever/uart_rx.vhd</arg>&quot; line <arg fmt="%d" index="2">123</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">D:/My Documents/College Assignments/Semester 4/Digital System/Project/uart_reciever/uart_rx.vhd</arg>&quot; line <arg fmt="%d" index="2">123</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
 <arg fmt="%s" index="3">&lt;ibusy&gt;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">idata&lt;9&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">ibusy</arg>&gt; in unit &lt;<arg fmt="%s" index="2">UART</arg>&gt; has a constant value of <arg fmt="%s" index="3">1</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">idata&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">DATA</arg>&gt; in unit &lt;<arg fmt="%s" index="2">UART</arg>&gt; has a constant value of <arg fmt="%s" index="3">XXXXXXXX</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">idata</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">divider_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">count_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">count_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">count_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">count_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clk</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">UART</arg>&gt;.
 </msg>
 
 </messages>

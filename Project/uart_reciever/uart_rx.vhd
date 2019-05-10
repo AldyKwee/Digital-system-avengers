@@ -35,7 +35,7 @@ use ieee.numeric_std.all;
 
 entity UART is
     generic (
-                divisor        : integer := 2604    -- Set the Baud Rate Divisor here.  
+                divisor        : integer := 416    -- Set the Baud Rate Divisor here.  
                                                     -- Some common values:  300 Baud = 83333, 9600 Baud = 2604, 115200 Baud = 217, 921600 Baud = 27
             );
     port    (
@@ -48,8 +48,8 @@ end UART;
 
 architecture Behavior of UART is
 
-    signal clk                : std_logic;                    -- Baud clock.
-    signal divider            : integer range 0 to 25000000;  -- Counter used for dividing the system clock.
+    signal clk                : std_logic:='0';                    -- Baud clock.
+    signal divider            : integer range 0 to 4000000;  -- Counter used for dividing the system clock.
     signal ibusy            : std_logic;                      -- Signals the module is currently receiving.
     signal count            : integer range 0 to 10;          -- Counter used for selecting bit being transmitted.
     signal idata            : std_logic_vector(9 downto 0);   -- Receive shift register.
@@ -64,7 +64,7 @@ begin
     -- Detect the beginning of the serial stream and start the baud clock generator.
     process(RXD,count)
     begin
-        if (count > 9) then              -- If the number of bits counted is greater then 9,
+        if (count > 10) then              -- If the number of bits counted is greater then 9,
             ibusy <= '0';                -- stop the baud clock generator/bit counter.
         elsif (falling_edge(RXD)) then   -- Otherwise, on the falling edge of RXD input,
             ibusy <= '1';                -- start the baud clock generator/bit counter.

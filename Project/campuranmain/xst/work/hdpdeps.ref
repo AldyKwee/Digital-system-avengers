@@ -1,0 +1,29 @@
+V3 14
+FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/campuranmain/campuranmain.vhd" 2019/05/07.08:41:06 P.20131013
+EN work/campuranmain 1557193501 \
+      FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/campuranmain/campuranmain.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/campuranmain/Behavioral 1557193502 \
+      FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/campuranmain/campuranmain.vhd" \
+      EN work/campuranmain 1557193501
+FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/MAINRX/MAINRX.vhd" 2019/05/07.08:44:00 P.20131013
+EN work/MAINRX 1557193450 \
+      FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/MAINRX/MAINRX.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/MAINRX/Behavioral 1557193451 \
+      FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/MAINRX/MAINRX.vhd" \
+      EN work/MAINRX 1557193450 CP UART CP SevenSegment
+FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/seve_segment/uart_7segment.vhd" 2019/05/03.09:54:44 P.20131013
+EN work/SevenSegment 1557193448 \
+      FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/seve_segment/uart_7segment.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/SevenSegment/Behavioral 1557193449 \
+      FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/seve_segment/uart_7segment.vhd" \
+      EN work/SevenSegment 1557193448
+FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/uart_reciever/uart_rx.vhd" 2019/05/03.09:54:44 P.20131013
+EN work/UART 1557193446 \
+      FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/uart_reciever/uart_rx.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/UART/Behavior 1557193447 \
+      FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/uart_reciever/uart_rx.vhd" \
+      EN work/UART 1557193446

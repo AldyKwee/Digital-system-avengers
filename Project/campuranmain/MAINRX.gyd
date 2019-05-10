@@ -1,0 +1,53 @@
+Pin Freeze File:  version P.20131013
+
+2C256144 XC2C256-7-TQ144
+CLK S:PIN32
+RXD S:PIN30
+BUSY S:PIN11
+EN_SEGMENT S:PIN12
+OUT_D<0> S:PIN4
+OUT_D<1> S:PIN5
+OUT_D<2> S:PIN3
+OUT_D<3> S:PIN2
+OUT_D<4> S:PIN9
+OUT_D<5> S:PIN6
+OUT_D<6> S:PIN7
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 uart_receiver1/divider<10> uart_receiver1/clk uart_receiver1/divider<14> uart_receiver1/divider<13>
+		 uart_receiver1/divider<0> uart_receiver1/divider<12> uart_receiver1/divider<3> uart_receiver1/divider<2>
+		 uart_receiver1/divider<1> uart_receiver1/divider<5> uart_receiver1/divider<9> uart_receiver1/divider<6>
+		 N_PZ_260 uart_receiver1/divider<4> uart_receiver1/divider<11> N_PZ_227
+		
+PARTITION FB2_1 OUT_D<3> uart_receiver1/divider<22> OUT_D<2> OUT_D<0>
+		 OUT_D<1> uart_receiver1/divider<21> uart_receiver1/divider<20> uart_receiver1/divider<19>
+		 uart_receiver1/divider<18> uart_receiver1/divider<17> uart_receiver1/divider<16> OUT_D<5>
+		 OUT_D<6> OUT_D<4> uart_receiver1/divider<23> uart_receiver1/divider<15>
+		
+PARTITION FB3_1 uart_receiver1/count<3> uart_receiver1/count<2> uart_receiver1/count<1> buatdata<5>
+		 uart_receiver1/count<0> buatdata<4> buatdata<3> buatdata<2>
+		 buatdata<1> buatdata<0> uart_receiver1/divider<8> uart_receiver1/divider<7>
+		 uart_receiver1/divider<24> buatdata<7> N_PZ_235 buatdata<6>
+		
+PARTITION FB4_1 BUSY EN_SEGMENT
+PARTITION FB4_7 N_PZ_277 uart_receiver1/idata<7> uart_receiver1/idata<6> uart_receiver1/idata<5>
+		 uart_receiver1/idata<4>
+PARTITION FB4_13 uart_receiver1/idata<3>
+PARTITION FB4_15 uart_receiver1/idata<2> uart_receiver1/idata<8>
+PARTITION FB5_6 uart_receiver1/idata<1>
+
+
+
+
+
+
+
+
+
+
+
+
+

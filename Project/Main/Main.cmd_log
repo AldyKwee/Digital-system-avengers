@@ -51,3 +51,86 @@ cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -
 XSLTProcess Main_build.xml 
 tsim -intstyle ise Main Main.nga 
 hprep6 -s IEEE1149 -i Main 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc Main_ucf.ucf -p xc2c256-TQ144-7 "Main.ngc" Main.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 Main.ngd 
+XSLTProcess Main_build.xml 
+tsim -intstyle ise Main Main.nga 
+hprep6 -s IEEE1149 -i Main 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc Main_ucf.ucf -p xc2c256-TQ144-7 "Main.ngc" Main.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 Main.ngd 
+XSLTProcess Main_build.xml 
+tsim -intstyle ise Main Main.nga 
+hprep6 -s IEEE1149 -i Main 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc Main_ucf.ucf -p xc2c256-TQ144-7 "Main.ngc" Main.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 Main.ngd 
+XSLTProcess Main_build.xml 
+tsim -intstyle ise Main Main.nga 
+hprep6 -s IEEE1149 -i Main 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc Main_ucf.ucf -p xc2c256-TQ144-7 "Main.ngc" Main.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 Main.ngd 
+XSLTProcess Main_build.xml 
+tsim -intstyle ise Main Main.nga 
+hprep6 -s IEEE1149 -i Main 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc Main_ucf.ucf -p xc2c256-TQ144-7 "Main.ngc" Main.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 Main.ngd 
+XSLTProcess Main_build.xml 
+tsim -intstyle ise Main Main.nga 
+hprep6 -s IEEE1149 -i Main 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc Main_ucf.ucf -p xc2c256-TQ144-7 "Main.ngc" Main.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 Main.ngd 
+XSLTProcess Main_build.xml 
+tsim -intstyle ise Main Main.nga 
+hprep6 -s IEEE1149 -i Main 
+ngdbuild -intstyle ise -dd _ngo -uc Main_ucf.ucf -p xc2c256-TQ144-7 "Main.ngc" Main.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 Main.ngd 
+XSLTProcess Main_build.xml 
+tsim -intstyle ise Main Main.nga 
+hprep6 -s IEEE1149 -i Main 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc Main_ucf.ucf -p xc2c256-TQ144-7 "Main.ngc" Main.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 Main.ngd 
+XSLTProcess Main_build.xml 
+tsim -intstyle ise Main Main.nga 
+hprep6 -s IEEE1149 -i Main 
+xst -intstyle ise -ifn "D:/My Documents/College Assignments/Semester 4/Digital System/Project/Main/Main.xst" -ofn "D:/My Documents/College Assignments/Semester 4/Digital System/Project/Main/Main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc Main_ucf.ucf -p xc2c256-TQ144-7 "Main.ngc" Main.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 Main.ngd 
+XSLTProcess Main_build.xml 
+tsim -intstyle ise Main Main.nga 
+hprep6 -s IEEE1149 -i Main 
+xst -intstyle ise -ifn "D:/My Documents/College Assignments/Semester 4/Digital System/Project/Main/Main.xst" -ofn "D:/My Documents/College Assignments/Semester 4/Digital System/Project/Main/Main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc Main_ucf.ucf -p xc2c256-TQ144-7 "Main.ngc" Main.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 Main.ngd 
+XSLTProcess Main_build.xml 
+tsim -intstyle ise Main Main.nga 
+hprep6 -s IEEE1149 -i Main 
+xst -intstyle ise -ifn "D:/My Documents/College Assignments/Semester 4/Digital System/Project/Main/Main.xst" -ofn "D:/My Documents/College Assignments/Semester 4/Digital System/Project/Main/Main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc Main_ucf.ucf -p xc2c256-TQ144-7 "Main.ngc" Main.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 Main.ngd 
+XSLTProcess Main_build.xml 
+tsim -intstyle ise Main Main.nga 
+hprep6 -s IEEE1149 -i Main 
+xst -intstyle ise -ifn "D:/My Documents/College Assignments/Semester 4/Digital System/Project/Main/Main.xst" -ofn "D:/My Documents/College Assignments/Semester 4/Digital System/Project/Main/Main.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc Main_ucf.ucf -p xc2c256-TQ144-7 "Main.ngc" Main.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 Main.ngd 
+XSLTProcess Main_build.xml 
+tsim -intstyle ise Main Main.nga 
+hprep6 -s IEEE1149 -i Main 

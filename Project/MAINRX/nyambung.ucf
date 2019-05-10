@@ -1,0 +1,10 @@
+NET CLK LOC = "P38";
+NET EN_SEGMENT LOC = "P130";
+NET RXD LOC = "P10";
+NET OUT_D(6) LOC = "p56";
+NET OUT_D(5) LOC = "p53";
+NET OUT_D(4) LOC = "p60";
+NET OUT_D(3) LOC = "p58";
+NET OUT_D(2) LOC = "p57";
+NET OUT_D(1) LOC = "p54";
+NET OUT_D(0) LOC = "p61"; 

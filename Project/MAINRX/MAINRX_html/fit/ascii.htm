@@ -3,7 +3,7 @@
  
 cpldfit:  version P.20131013                        Xilinx Inc.
                                   Fitter Report
-Design Name: MAINRX                              Date:  5- 2-2019,  3:13PM
+Design Name: MAINRX                              Date:  5-10-2019, 12:02PM
 Device Used: XC2C256-7-TQ144
 Fitting Status: Successful
 
@@ -11,30 +11,30 @@ Fitting Status: Successful
 
 Macrocells     Product Terms    Function Block   Registers      Pins           
 Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
-59 /256 ( 23%) 106 /896  ( 12%) 75  /640  ( 12%) 47 /256 ( 18%) 11 /118 (  9%)
+9  /256 (  4%) 0   /896  (  0%) 0   /640  (  0%) 0  /256 (  0%) 9  /118 (  8%)
 
 ** Function Block Resources **
 
 Function Mcells   FB Inps  Pterms   IO       CTC      CTR      CTS      CTE     
 Block    Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot
-FB1      16/16*    29/40    56/56*    0/ 6    0/1      1/1*     1/1*     0/1
-FB2      16/16*     9/40    15/56     7/ 8    0/1      1/1*     0/1      0/1
-FB3      16/16*    24/40    22/56     0/ 6    1/1*     1/1*     0/1      0/1
-FB4      10/16      8/40    11/56     2/ 8    1/1*     1/1*     0/1      0/1
-FB5       1/16      5/40     2/56     0/ 5    1/1*     0/1      0/1      0/1
+FB1       1/16      0/40     0/56     1/ 6    0/1      0/1      0/1      0/1
+FB2       0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
+FB3       0/16      0/40     0/56     0/ 6    0/1      0/1      0/1      0/1
+FB4       0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
+FB5       0/16      0/40     0/56     0/ 5    0/1      0/1      0/1      0/1
 FB6       0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
 FB7       0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
 FB8       0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
 FB9       0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
 FB10      0/16      0/40     0/56     0/ 9    0/1      0/1      0/1      0/1
-FB11      0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
+FB11      1/16      0/40     0/56     1/ 8    0/1      0/1      0/1      0/1
 FB12      0/16      0/40     0/56     0/ 6    0/1      0/1      0/1      0/1
 FB13      0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
-FB14      0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
+FB14      1/16      0/40     0/56     1/ 8    0/1      0/1      0/1      0/1
 FB15      0/16      0/40     0/56     0/ 7    0/1      0/1      0/1      0/1
-FB16      0/16      0/40     0/56     0/ 7    0/1      0/1      0/1      0/1
+FB16      6/16      0/40     0/56     6/ 7    0/1      0/1      0/1      0/1
          -----    -------  -------   -----    ---      ---      ---      ---
-Total    59/256    75/640  106/896    9/118   3/16     4/16     1/16     0/16
+Total     9/256     0/640    0/896    9/118   0/16     0/16     0/16     0/16
 
 CTC - Control Term Clock
 CTR - Control Term Reset
@@ -47,109 +47,52 @@ CTE - Control Term Output Enable
 
 GCK         GSR         GTS         DGE         
 Used/Tot    Used/Tot    Used/Tot    Used/Tot    
-2/3         0/1         0/4         0/1
+0/3         0/1         0/4         0/1
 
-Signal 'RXD' mapped onto global clock net GCK0.
-Signal 'CLK' mapped onto global clock net GCK1.
 
 ** Pin Resources **
 
 Signal Type    Required     Mapped  |  Pin Type            Used    Total 
 ------------------------------------|------------------------------------
-Input         :    0           0    |  I/O              :     5    108
-Output        :    9           9    |  GCK/IO           :     2      3
-Bidirectional :    0           0    |  GTS/IO           :     4      4
-GCK           :    2           2    |  GSR/IO           :     0      1
+Input         :    0           0    |  I/O              :     8    108
+Output        :    9           9    |  GCK/IO           :     0      3
+Bidirectional :    0           0    |  GTS/IO           :     0      4
+GCK           :    0           0    |  GSR/IO           :     1      1
 GTS           :    0           0    |  CDR/IO           :     0      1
 GSR           :    0           0    |  DGE/IO           :     0      1
                  ----        ----
-        Total     11          11
+        Total      9           9
 
 End of Mapped Resource Summary
 **************************  Errors and Warnings  ***************************
 
 WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
    use the default filename of 'MAINRX.ise'.
+INFO:Cpld - Inferring BUFG constraint for signal 'CLK' based upon the LOC
+   constraint 'P38'. It is recommended that you declare this BUFG explicitedly
+   in your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
+WARNING:Cpld:1007 - Removing unused input(s) 'CLK'.  The input(s) are unused
+   after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1007 - Removing unused input(s) 'RXD'.  The input(s) are unused
+   after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1006 - Design 'MAINRX' has no inputs.
 *************************  Summary of Mapped Logic  ************************
 
 ** 9 Outputs **
 
-Signal                      Total Total Bank Loc     Pin   Pin       Pin     I/O      I/O       Slew Reg     Reg Init
-Name                        Pts   Inps               No.   Type      Use     STD      Style     Rate Use     State
-OUT_D<3>                    4     8     2    FB2_1   2     GTS/I/O   O       LVCMOS18           FAST         
-OUT_D<2>                    2     8     2    FB2_3   3     GTS/I/O   O       LVCMOS18           FAST         
-OUT_D<0>                    3     8     2    FB2_4   4     I/O       O       LVCMOS18           FAST         
-OUT_D<1>                    3     8     2    FB2_5   5     GTS/I/O   O       LVCMOS18           FAST         
-OUT_D<5>                    3     8     2    FB2_12  6     GTS/I/O   O       LVCMOS18           FAST         
-OUT_D<6>                    3     8     2    FB2_13  7     I/O       O       LVCMOS18           FAST         
-OUT_D<4>                    3     8     2    FB2_14  9     I/O       O       LVCMOS18           FAST         
-BUSY                        1     2     2    FB4_1   11    I/O       O       LVCMOS18           FAST DFF     RESET
-EN_SEGMENT                  0     0     2    FB4_2   12    I/O       O       LVCMOS18           FAST         
-
-** 50 Buried Nodes **
-
-Signal                      Total Total Loc     Reg     Reg Init
-Name                        Pts   Inps          Use     State
-uart_receiver1/divider<10>  6     20    FB1_1   DFF     RESET
-uart_receiver1/clk          4     22    FB1_2   TFF     RESET
-uart_receiver1/divider<14>  1     1     FB1_3   DFF     RESET
-uart_receiver1/divider<13>  1     1     FB1_4   DFF     RESET
-uart_receiver1/divider<0>   4     23    FB1_5   DFF     RESET
-uart_receiver1/divider<12>  1     1     FB1_6   DFF     RESET
-uart_receiver1/divider<3>   7     24    FB1_7   DFF     RESET
-uart_receiver1/divider<2>   7     24    FB1_8   DFF     RESET
-uart_receiver1/divider<1>   7     24    FB1_9   DFF     RESET
-uart_receiver1/divider<5>   6     25    FB1_10  DFF     RESET
-uart_receiver1/divider<9>   7     25    FB1_11  DFF     RESET
-uart_receiver1/divider<6>   3     10    FB1_12  DFF     RESET
-N_PZ_260                    2     16    FB1_13          
-uart_receiver1/divider<4>   6     20    FB1_14  DFF     RESET
-uart_receiver1/divider<11>  5     26    FB1_15  DFF     RESET
-N_PZ_227                    3     7     FB1_16          
-uart_receiver1/divider<22>  1     1     FB2_2   DFF     RESET
-uart_receiver1/divider<21>  1     1     FB2_6   DFF     RESET
-uart_receiver1/divider<20>  1     1     FB2_7   DFF     RESET
-uart_receiver1/divider<19>  1     1     FB2_8   DFF     RESET
-uart_receiver1/divider<18>  1     1     FB2_9   DFF     RESET
-uart_receiver1/divider<17>  1     1     FB2_10  DFF     RESET
-uart_receiver1/divider<16>  1     1     FB2_11  DFF     RESET
-uart_receiver1/divider<23>  1     1     FB2_15  DFF     RESET
-uart_receiver1/divider<15>  1     1     FB2_16  DFF     RESET
-uart_receiver1/count<3>     3     5     FB3_1   TFF     RESET
-uart_receiver1/count<2>     3     4     FB3_2   TFF     RESET
-uart_receiver1/count<1>     3     3     FB3_3   TFF     RESET
-buatdata<5>                 2     2     FB3_4   DFF     RESET
-uart_receiver1/count<0>     2     2     FB3_5   TFF     RESET
-buatdata<4>                 2     2     FB3_6   DFF     RESET
-buatdata<3>                 2     2     FB3_7   DFF     RESET
-buatdata<2>                 2     2     FB3_8   DFF     RESET
-buatdata<1>                 2     2     FB3_9   DFF     RESET
-buatdata<0>                 2     2     FB3_10  DFF     RESET
-uart_receiver1/divider<8>   3     5     FB3_11  TFF     RESET
-uart_receiver1/divider<7>   3     4     FB3_12  DFF     RESET
-uart_receiver1/divider<24>  1     1     FB3_13  DFF     RESET
-buatdata<7>                 2     2     FB3_14  DFF     RESET
-N_PZ_235                    1     7     FB3_15          
-
-Signal                      Total Total Loc     Reg     Reg Init
-Name                        Pts   Inps          Use     State
-buatdata<6>                 2     2     FB3_16  DFF     RESET
-N_PZ_277                    1     2     FB4_7           
-uart_receiver1/idata<7>     3     7     FB4_8   DEFF    RESET
-uart_receiver1/idata<6>     3     7     FB4_9   DEFF    RESET
-uart_receiver1/idata<5>     3     7     FB4_10  DEFF    RESET
-uart_receiver1/idata<4>     3     7     FB4_11  DEFF    RESET
-uart_receiver1/idata<3>     3     7     FB4_13  DEFF    RESET
-uart_receiver1/idata<2>     3     7     FB4_15  DEFF    RESET
-uart_receiver1/idata<8>     3     6     FB4_16  DEFF    RESET
-uart_receiver1/idata<1>     2     5     FB5_6   DEFF    RESET
-
-** 2 Inputs **
-
-Signal                      Bank Loc     Pin   Pin       Pin     I/O      I/O
-Name                                     No.   Type      Use     STD      Style
-CLK                         1    FB5_4   32    GCK/I/O   GCK     LVCMOS18 KPR
-RXD                         1    FB5_6   30    GCK/I/O   GCK/I   LVCMOS18 KPR
+Signal              Total Total Bank Loc     Pin   Pin       Pin     I/O      I/O       Slew Reg     Reg Init
+Name                Pts   Inps               No.   Type      Use     STD      Style     Rate Use     State
+BUSY                0     0     2    FB1_3   143   GSR/I/O   O       LVCMOS18           FAST         
+EN_SEGMENT          0     0     2    FB11_16 130   I/O       O       LVCMOS18           FAST         
+OUT_D<0>            0     0     1    FB14_16 61    I/O       O       LVCMOS18           FAST         
+OUT_D<4>            0     0     1    FB16_5  60    I/O       O       LVCMOS18           FAST         
+OUT_D<3>            0     0     1    FB16_11 58    I/O       O       LVCMOS18           FAST         
+OUT_D<2>            0     0     1    FB16_12 57    I/O       O       LVCMOS18           FAST         
+OUT_D<6>            0     0     1    FB16_13 56    I/O       O       LVCMOS18           FAST         
+OUT_D<1>            0     0     1    FB16_15 54    I/O       O       LVCMOS18           FAST         
+OUT_D<5>            0     0     1    FB16_16 53    I/O       O       LVCMOS18           FAST         
 
 Legend:
 Pin No.   - ~     - User Assigned
@@ -177,256 +120,117 @@ Pin Type/Use - I  - Input             GCK - Global clock
 Pin No.      - ~  - User Assigned
 *********************************** FB1  ***********************************
 This function block is part of I/O Bank number:               2
-Number of function block inputs used/remaining:               29/11
-Number of function block control terms used/remaining:        2/2
-Number of PLA product terms used/remaining:                   56/0
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
-uart_receiver1/divider<10>    6     FB1_1        (b)     (b)        +      
-uart_receiver1/clk            4     FB1_2        (b)     (b)            +  
-uart_receiver1/divider<14>    1     FB1_3   143  GSR/I/O (b)        +      
-uart_receiver1/divider<13>    1     FB1_4   142  I/O     (b)        +      
-uart_receiver1/divider<0>     4     FB1_5        (b)     (b)        +      
-uart_receiver1/divider<12>    1     FB1_6   140  I/O     (b)        +      
-uart_receiver1/divider<3>     7     FB1_7        (b)     (b)        +      
-uart_receiver1/divider<2>     7     FB1_8        (b)     (b)        +      
-uart_receiver1/divider<1>     7     FB1_9        (b)     (b)        +      
-uart_receiver1/divider<5>     6     FB1_10       (b)     (b)        +      
-uart_receiver1/divider<9>     7     FB1_11       (b)     (b)        +      
-uart_receiver1/divider<6>     3     FB1_12  139  I/O     (b)        +      
-N_PZ_260                      2     FB1_13  138  I/O     (b)               
-uart_receiver1/divider<4>     6     FB1_14  137  I/O     (b)        +      
-uart_receiver1/divider<11>    5     FB1_15       (b)     (b)        +      
-N_PZ_227                      3     FB1_16       (b)     (b)               
+(unused)                      0     FB1_1        (b)           
+(unused)                      0     FB1_2        (b)           
+BUSY                          0     FB1_3   143  GSR/I/O O                 
+(unused)                      0     FB1_4   142  I/O           
+(unused)                      0     FB1_5        (b)           
+(unused)                      0     FB1_6   140  I/O           
+(unused)                      0     FB1_7        (b)           
+(unused)                      0     FB1_8        (b)           
+(unused)                      0     FB1_9        (b)           
+(unused)                      0     FB1_10       (b)           
+(unused)                      0     FB1_11       (b)           
+(unused)                      0     FB1_12  139  I/O           
+(unused)                      0     FB1_13  138  I/O           
+(unused)                      0     FB1_14  137  I/O           
+(unused)                      0     FB1_15       (b)           
+(unused)                      0     FB1_16       (b)           
 
 Signals Used by Logic in Function Block
-  1: BUSY                        11: uart_receiver1/divider<15>  21: uart_receiver1/divider<24> 
-  2: N_PZ_227                    12: uart_receiver1/divider<16>  22: uart_receiver1/divider<2> 
-  3: N_PZ_235                    13: uart_receiver1/divider<17>  23: uart_receiver1/divider<3> 
-  4: N_PZ_260                    14: uart_receiver1/divider<18>  24: uart_receiver1/divider<4> 
-  5: uart_receiver1/divider<0>   15: uart_receiver1/divider<19>  25: uart_receiver1/divider<5> 
-  6: uart_receiver1/divider<10>  16: uart_receiver1/divider<1>   26: uart_receiver1/divider<6> 
-  7: uart_receiver1/divider<11>  17: uart_receiver1/divider<20>  27: uart_receiver1/divider<7> 
-  8: uart_receiver1/divider<12>  18: uart_receiver1/divider<21>  28: uart_receiver1/divider<8> 
-  9: uart_receiver1/divider<13>  19: uart_receiver1/divider<22>  29: uart_receiver1/divider<9> 
- 10: uart_receiver1/divider<14>  20: uart_receiver1/divider<23> 
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-uart_receiver1/divider<10> 
-                  X.X..XXXXXXXXXX.XXXXX.....XXX........... 20      
-uart_receiver1/clk 
-                  XX...X.XXXXXXXX.XXXXXXXX.XXX............ 22      
-uart_receiver1/divider<14> 
-                  X....................................... 1       
-uart_receiver1/divider<13> 
-                  X....................................... 1       
-uart_receiver1/divider<0> 
-                  XX..XX.XXXXXXXX.XXXXXXXX.XXX............ 23      
-uart_receiver1/divider<12> 
-                  X....................................... 1       
-uart_receiver1/divider<3> 
-                  XX..XX.XXXXXXXXXXXXXXXXX.XXX............ 24      
-uart_receiver1/divider<2> 
-                  XX..XX.XXXXXXXXXXXXXXXXX.XXX............ 24      
-uart_receiver1/divider<1> 
-                  XX..XX.XXXXXXXXXXXXXXXXX.XXX............ 24      
-uart_receiver1/divider<5> 
-                  X..XXX.XXXXXXXXXXXXXXXXXXXXX............ 25      
-uart_receiver1/divider<9> 
-                  XXXX.X.XXXXXXXX.XXXXXXXX.XXXX........... 25      
-uart_receiver1/divider<6> 
-                  X.XXX..........X.....XXXXX.............. 10      
-N_PZ_260          .....XXXXXXXXXX.XXXXX.......X........... 16      
-uart_receiver1/divider<4> 
-                  XX..X..XXXXXXXXXXXXXXXXX................ 20      
-uart_receiver1/divider<11> 
-                  XXXX.XXXXXXXXXX.XXXXXXXX.XXXX........... 26      
-N_PZ_227          .....XX.................XXXXX........... 7       
+BUSY              ........................................ 0       
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB2  ***********************************
 This function block is part of I/O Bank number:               2
-Number of function block inputs used/remaining:               9/31
-Number of function block control terms used/remaining:        1/3
-Number of PLA product terms used/remaining:                   15/41
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
-OUT_D<3>                      4     FB2_1   2    GTS/I/O O                 
-uart_receiver1/divider<22>    1     FB2_2        (b)     (b)        +      
-OUT_D<2>                      2     FB2_3   3    GTS/I/O O                 
-OUT_D<0>                      3     FB2_4   4    I/O     O                 
-OUT_D<1>                      3     FB2_5   5    GTS/I/O O                 
-uart_receiver1/divider<21>    1     FB2_6        (b)     (b)        +      
-uart_receiver1/divider<20>    1     FB2_7        (b)     (b)        +      
-uart_receiver1/divider<19>    1     FB2_8        (b)     (b)        +      
-uart_receiver1/divider<18>    1     FB2_9        (b)     (b)        +      
-uart_receiver1/divider<17>    1     FB2_10       (b)     (b)        +      
-uart_receiver1/divider<16>    1     FB2_11       (b)     (b)        +      
-OUT_D<5>                      3     FB2_12  6    GTS/I/O O                 
-OUT_D<6>                      3     FB2_13  7    I/O     O                 
-OUT_D<4>                      3     FB2_14  9    I/O     O                 
-uart_receiver1/divider<23>    1     FB2_15  10   I/O     (b)        +      
-uart_receiver1/divider<15>    1     FB2_16       (b)     (b)        +      
-
-Signals Used by Logic in Function Block
-  1: BUSY               4: buatdata<2>        7: buatdata<5> 
-  2: buatdata<0>        5: buatdata<3>        8: buatdata<6> 
-  3: buatdata<1>        6: buatdata<4>        9: buatdata<7> 
-
-Signal                     1         2         3         4 FB      
-Name             0----+----0----+----0----+----0----+----0 Inputs  
-OUT_D<3>          .XXXXXXXX............................... 8       
-uart_receiver1/divider<22> 
-                  X....................................... 1       
-OUT_D<2>          .XXXXXXXX............................... 8       
-OUT_D<0>          .XXXXXXXX............................... 8       
-OUT_D<1>          .XXXXXXXX............................... 8       
-uart_receiver1/divider<21> 
-                  X....................................... 1       
-uart_receiver1/divider<20> 
-                  X....................................... 1       
-uart_receiver1/divider<19> 
-                  X....................................... 1       
-uart_receiver1/divider<18> 
-                  X....................................... 1       
-uart_receiver1/divider<17> 
-                  X....................................... 1       
-uart_receiver1/divider<16> 
-                  X....................................... 1       
-OUT_D<5>          .XXXXXXXX............................... 8       
-OUT_D<6>          .XXXXXXXX............................... 8       
-OUT_D<4>          .XXXXXXXX............................... 8       
-uart_receiver1/divider<23> 
-                  X....................................... 1       
-uart_receiver1/divider<15> 
-                  X....................................... 1       
-                 0----+----1----+----2----+----3----+----4
-                           0         0         0         0
+(unused)                      0     FB2_1   2    GTS/I/O       
+(unused)                      0     FB2_2        (b)           
+(unused)                      0     FB2_3   3    GTS/I/O       
+(unused)                      0     FB2_4   4    I/O           
+(unused)                      0     FB2_5   5    GTS/I/O       
+(unused)                      0     FB2_6        (b)           
+(unused)                      0     FB2_7        (b)           
+(unused)                      0     FB2_8        (b)           
+(unused)                      0     FB2_9        (b)           
+(unused)                      0     FB2_10       (b)           
+(unused)                      0     FB2_11       (b)           
+(unused)                      0     FB2_12  6    GTS/I/O       
+(unused)                      0     FB2_13  7    I/O           
+(unused)                      0     FB2_14  9    I/O           
+(unused)                      0     FB2_15  10   I/O           
+(unused)                      0     FB2_16       (b)           
 *********************************** FB3  ***********************************
 This function block is part of I/O Bank number:               2
-Number of function block inputs used/remaining:               24/16
-Number of function block control terms used/remaining:        2/2
-Number of PLA product terms used/remaining:                   22/34
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
-uart_receiver1/count<3>       3     FB3_1   136  I/O     (b)        +      
-uart_receiver1/count<2>       3     FB3_2   135  I/O     (b)        +      
-uart_receiver1/count<1>       3     FB3_3   134  I/O     (b)        +      
-buatdata<5>                   2     FB3_4        (b)     (b)    +          
-uart_receiver1/count<0>       2     FB3_5   133  I/O     (b)        +      
-buatdata<4>                   2     FB3_6        (b)     (b)    +          
-buatdata<3>                   2     FB3_7        (b)     (b)    +          
-buatdata<2>                   2     FB3_8        (b)     (b)    +          
-buatdata<1>                   2     FB3_9        (b)     (b)    +          
-buatdata<0>                   2     FB3_10       (b)     (b)    +          
-uart_receiver1/divider<8>     3     FB3_11       (b)     (b)        +      
-uart_receiver1/divider<7>     3     FB3_12       (b)     (b)        +      
-uart_receiver1/divider<24>    1     FB3_13       (b)     (b)        +      
-buatdata<7>                   2     FB3_14  132  I/O     (b)    +          
-N_PZ_235                      1     FB3_15       (b)     (b)               
-buatdata<6>                   2     FB3_16  131  I/O     (b)    +          
-
-Signals Used by Logic in Function Block
-  1: BUSY                        9: uart_receiver1/divider<1>  17: uart_receiver1/idata<1> 
-  2: N_PZ_235                   10: uart_receiver1/divider<2>  18: uart_receiver1/idata<2> 
-  3: N_PZ_260                   11: uart_receiver1/divider<3>  19: uart_receiver1/idata<3> 
-  4: uart_receiver1/clk         12: uart_receiver1/divider<4>  20: uart_receiver1/idata<4> 
-  5: uart_receiver1/count<0>    13: uart_receiver1/divider<5>  21: uart_receiver1/idata<5> 
-  6: uart_receiver1/count<1>    14: uart_receiver1/divider<6>  22: uart_receiver1/idata<6> 
-  7: uart_receiver1/count<2>    15: uart_receiver1/divider<7>  23: uart_receiver1/idata<7> 
-  8: uart_receiver1/divider<0>  16: uart_receiver1/divider<8>  24: uart_receiver1/idata<8> 
-
-Signal                     1         2         3         4 FB      
-Name             0----+----0----+----0----+----0----+----0 Inputs  
-uart_receiver1/count<3> 
-                  X..XXXX................................. 5       
-uart_receiver1/count<2> 
-                  X..XXX.................................. 4       
-uart_receiver1/count<1> 
-                  X..XX................................... 3       
-buatdata<5>       X....................X.................. 2       
-uart_receiver1/count<0> 
-                  X..X.................................... 2       
-buatdata<4>       X...................X................... 2       
-buatdata<3>       X..................X.................... 2       
-buatdata<2>       X.................X..................... 2       
-buatdata<1>       X................X...................... 2       
-buatdata<0>       X...............X....................... 2       
-uart_receiver1/divider<8> 
-                  XXX...........XX........................ 5       
-uart_receiver1/divider<7> 
-                  XXX...........X......................... 4       
-uart_receiver1/divider<24> 
-                  X....................................... 1       
-buatdata<7>       X......................X................ 2       
-N_PZ_235          .......XXXXXXX.......................... 7       
-buatdata<6>       X.....................X................. 2       
-                 0----+----1----+----2----+----3----+----4
-                           0         0         0         0
+(unused)                      0     FB3_1   136  I/O           
+(unused)                      0     FB3_2   135  I/O           
+(unused)                      0     FB3_3   134  I/O           
+(unused)                      0     FB3_4        (b)           
+(unused)                      0     FB3_5   133  I/O           
+(unused)                      0     FB3_6        (b)           
+(unused)                      0     FB3_7        (b)           
+(unused)                      0     FB3_8        (b)           
+(unused)                      0     FB3_9        (b)           
+(unused)                      0     FB3_10       (b)           
+(unused)                      0     FB3_11       (b)           
+(unused)                      0     FB3_12       (b)           
+(unused)                      0     FB3_13       (b)           
+(unused)                      0     FB3_14  132  I/O           
+(unused)                      0     FB3_15       (b)           
+(unused)                      0     FB3_16  131  I/O           
 *********************************** FB4  ***********************************
 This function block is part of I/O Bank number:               2
-Number of function block inputs used/remaining:               8/32
-Number of function block control terms used/remaining:        2/2
-Number of PLA product terms used/remaining:                   11/45
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
-BUSY                          1     FB4_1   11   I/O     O          +      
-EN_SEGMENT                    0     FB4_2   12   I/O     O                 
+(unused)                      0     FB4_1   11   I/O           
+(unused)                      0     FB4_2   12   I/O           
 (unused)                      0     FB4_3   13   I/O           
 (unused)                      0     FB4_4   14   I/O           
 (unused)                      0     FB4_5   15   I/O           
 (unused)                      0     FB4_6   16   I/O           
-N_PZ_277                      1     FB4_7        (b)     (b)               
-uart_receiver1/idata<7>       3     FB4_8        (b)     (b)    +          
-uart_receiver1/idata<6>       3     FB4_9        (b)     (b)    +          
-uart_receiver1/idata<5>       3     FB4_10       (b)     (b)    +          
-uart_receiver1/idata<4>       3     FB4_11       (b)     (b)    +          
+(unused)                      0     FB4_7        (b)           
+(unused)                      0     FB4_8        (b)           
+(unused)                      0     FB4_9        (b)           
+(unused)                      0     FB4_10       (b)           
+(unused)                      0     FB4_11       (b)           
 (unused)                      0     FB4_12  17   I/O           
-uart_receiver1/idata<3>       3     FB4_13       (b)     (b)    +          
+(unused)                      0     FB4_13       (b)           
 (unused)                      0     FB4_14  18   I/O           
-uart_receiver1/idata<2>       3     FB4_15       (b)     (b)    +          
-uart_receiver1/idata<8>       3     FB4_16       (b)     (b)    +          
-
-Signals Used by Logic in Function Block
-  1: BUSY               4: uart_receiver1/clk        7: uart_receiver1/count<2> 
-  2: N_PZ_277           5: uart_receiver1/count<0>   8: uart_receiver1/count<3> 
-  3: RXD                6: uart_receiver1/count<1> 
-
-Signal                     1         2         3         4 FB      
-Name             0----+----0----+----0----+----0----+----0 Inputs  
-BUSY              .X.....X................................ 2       
-EN_SEGMENT        ........................................ 0       
-N_PZ_277          .....XX................................. 2       
-uart_receiver1/idata<7> 
-                  X.XXXXXX................................ 7       
-uart_receiver1/idata<6> 
-                  X.XXXXXX................................ 7       
-uart_receiver1/idata<5> 
-                  X.XXXXXX................................ 7       
-uart_receiver1/idata<4> 
-                  X.XXXXXX................................ 7       
-uart_receiver1/idata<3> 
-                  X.XXXXXX................................ 7       
-uart_receiver1/idata<2> 
-                  X.XXXXXX................................ 7       
-uart_receiver1/idata<8> 
-                  XXXXX..X................................ 6       
-                 0----+----1----+----2----+----3----+----4
-                           0         0         0         0
+(unused)                      0     FB4_15       (b)           
+(unused)                      0     FB4_16       (b)           
 *********************************** FB5  ***********************************
 This function block is part of I/O Bank number:               1
-Number of function block inputs used/remaining:               5/35
-Number of function block control terms used/remaining:        1/3
-Number of PLA product terms used/remaining:                   2/54
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
 (unused)                      0     FB5_1        (b)           
 (unused)                      0     FB5_2   33   I/O           
 (unused)                      0     FB5_3        (b)           
-(unused)                      0     FB5_4   32   GCK/I/O GCK   
+(unused)                      0     FB5_4   32   GCK/I/O       
 (unused)                      0     FB5_5   31   I/O           
-uart_receiver1/idata<1>       2     FB5_6   30   GCK/I/O GCK/I  +          
+(unused)                      0     FB5_6   30   GCK/I/O       
 (unused)                      0     FB5_7        (b)           
 (unused)                      0     FB5_8        (b)           
 (unused)                      0     FB5_9        (b)           
@@ -437,15 +241,6 @@ uart_receiver1/idata<1>       2     FB5_6   30   GCK/I/O GCK/I  +
 (unused)                      0     FB5_14  28   I/O           
 (unused)                      0     FB5_15       (b)           
 (unused)                      0     FB5_16       (b)           
-
-Signals Used by Logic in Function Block
-  1: BUSY               3: uart_receiver1/clk        5: uart_receiver1/count<3> 
-  2: N_PZ_277           4: uart_receiver1/count<0> 
-
-Signal                     1         2         3         4 FB      
-Name             0----+----0----+----0----+----0----+----0 Inputs  
-                 0----+----1----+----2----+----3----+----4
-                           0         0         0         0
 *********************************** FB6  ***********************************
 This function block is part of I/O Bank number:               1
 Number of function block inputs used/remaining:               0/40
@@ -583,7 +378,15 @@ Name                          Pt            No.  Type    Use
 (unused)                      0     FB11_13 126  I/O           
 (unused)                      0     FB11_14 128  I/O           
 (unused)                      0     FB11_15 129  I/O           
-(unused)                      0     FB11_16 130  I/O           
+EN_SEGMENT                    0     FB11_16 130  I/O     O                 
+
+Signals Used by Logic in Function Block
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+EN_SEGMENT        ........................................ 0       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
 *********************************** FB12 ***********************************
 This function block is part of I/O Bank number:               2
 Number of function block inputs used/remaining:               0/40
@@ -652,7 +455,15 @@ Name                          Pt            No.  Type    Use
 (unused)                      0     FB14_13 66   I/O           
 (unused)                      0     FB14_14 64   I/O           
 (unused)                      0     FB14_15      (b)           
-(unused)                      0     FB14_16 61   I/O           
+OUT_D<0>                      0     FB14_16 61   I/O     O                 
+
+Signals Used by Logic in Function Block
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+OUT_D<0>          ........................................ 0       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
 *********************************** FB15 ***********************************
 This function block is part of I/O Bank number:               1
 Number of function block inputs used/remaining:               0/40
@@ -687,659 +498,61 @@ Name                          Pt            No.  Type    Use
 (unused)                      0     FB16_2       (b)           
 (unused)                      0     FB16_3       (b)           
 (unused)                      0     FB16_4       (b)           
-(unused)                      0     FB16_5  60   I/O           
+OUT_D<4>                      0     FB16_5  60   I/O     O                 
 (unused)                      0     FB16_6  59   I/O           
 (unused)                      0     FB16_7       (b)           
 (unused)                      0     FB16_8       (b)           
 (unused)                      0     FB16_9       (b)           
 (unused)                      0     FB16_10      (b)           
-(unused)                      0     FB16_11 58   I/O           
-(unused)                      0     FB16_12 57   I/O           
-(unused)                      0     FB16_13 56   I/O           
+OUT_D<3>                      0     FB16_11 58   I/O     O                 
+OUT_D<2>                      0     FB16_12 57   I/O     O                 
+OUT_D<6>                      0     FB16_13 56   I/O     O                 
 (unused)                      0     FB16_14      (b)           
-(unused)                      0     FB16_15 54   I/O           
-(unused)                      0     FB16_16 53   I/O           
+OUT_D<1>                      0     FB16_15 54   I/O     O                 
+OUT_D<5>                      0     FB16_16 53   I/O     O                 
+
+Signals Used by Logic in Function Block
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+OUT_D<4>          ........................................ 0       
+OUT_D<3>          ........................................ 0       
+OUT_D<2>          ........................................ 0       
+OUT_D<6>          ........................................ 0       
+OUT_D<1>          ........................................ 0       
+OUT_D<5>          ........................................ 0       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
 *******************************  Equations  ********************************
 
 ********** Mapped Logic **********
 
-FDCPE_BUSY: FDCPE port map (BUSY,NOT '0',NOT RXD,BUSY_CLR,'0','1');
-BUSY_CLR <= (uart_receiver1/count(3) AND NOT N_PZ_277);
+
+BUSY <= NOT ('0');
 
 
 EN_SEGMENT <= '0';
 
 
-N_PZ_227 <= ((NOT uart_receiver1/divider(11))
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(9))
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(5) AND NOT uart_receiver1/divider(8) AND 
-	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(6)));
+OUT_D(0) <= NOT ('0');
 
 
-N_PZ_235 <= (uart_receiver1/divider(5) AND 
-	uart_receiver1/divider(0) AND uart_receiver1/divider(2) AND 
-	uart_receiver1/divider(3) AND uart_receiver1/divider(4) AND 
-	uart_receiver1/divider(1) AND uart_receiver1/divider(6));
+OUT_D(1) <= NOT ('0');
 
 
-N_PZ_260 <= ((NOT uart_receiver1/divider(11) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24))
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(9)));
+OUT_D(2) <= NOT ('0');
 
 
-N_PZ_277 <= (NOT uart_receiver1/count(1) AND NOT uart_receiver1/count(2));
+OUT_D(3) <= NOT ('0');
 
 
-OUT_D(0) <= NOT (((buatdata(0) AND NOT buatdata(1) AND buatdata(3) AND 
-	buatdata(4) AND buatdata(5) AND buatdata(6) AND buatdata(7))
-	OR (buatdata(1) AND buatdata(3) AND buatdata(4) AND 
-	buatdata(5) AND buatdata(6) AND buatdata(7) AND NOT buatdata(2))
-	OR (NOT buatdata(1) AND buatdata(3) AND buatdata(4) AND 
-	buatdata(5) AND buatdata(6) AND buatdata(7) AND buatdata(2))));
+OUT_D(4) <= NOT ('0');
 
 
-OUT_D(1) <= NOT (((buatdata(0) AND buatdata(1) AND buatdata(3) AND 
-	buatdata(4) AND buatdata(5) AND buatdata(6) AND buatdata(7))
-	OR (buatdata(0) AND buatdata(3) AND buatdata(4) AND 
-	buatdata(5) AND buatdata(6) AND buatdata(7) AND NOT buatdata(2))
-	OR (buatdata(1) AND buatdata(3) AND buatdata(4) AND 
-	buatdata(5) AND buatdata(6) AND buatdata(7) AND NOT buatdata(2))));
+OUT_D(5) <= NOT ('0');
 
 
-OUT_D(2) <= NOT (((buatdata(0) AND NOT buatdata(1) AND buatdata(3) AND 
-	buatdata(4) AND buatdata(5) AND buatdata(6) AND buatdata(7))
-	OR (buatdata(0) AND buatdata(3) AND buatdata(4) AND 
-	buatdata(5) AND buatdata(6) AND buatdata(7) AND buatdata(2))));
-
-
-OUT_D(3) <= NOT (((buatdata(0) AND NOT buatdata(1) AND buatdata(3) AND 
-	buatdata(4) AND buatdata(5) AND buatdata(6) AND buatdata(7))
-	OR (buatdata(0) AND buatdata(3) AND buatdata(4) AND 
-	buatdata(5) AND buatdata(6) AND buatdata(7) AND buatdata(2))
-	OR (NOT buatdata(1) AND buatdata(3) AND buatdata(4) AND 
-	buatdata(5) AND buatdata(6) AND buatdata(7) AND buatdata(2))
-	OR (NOT buatdata(0) AND buatdata(1) AND buatdata(3) AND 
-	buatdata(4) AND buatdata(5) AND buatdata(6) AND buatdata(7) AND 
-	NOT buatdata(2))));
-
-
-OUT_D(4) <= NOT (((NOT buatdata(0) AND buatdata(3) AND buatdata(4) AND 
-	buatdata(5) AND buatdata(6) AND buatdata(7))
-	OR (buatdata(1) AND buatdata(3) AND buatdata(4) AND 
-	buatdata(5) AND buatdata(6) AND buatdata(7))
-	OR (buatdata(3) AND buatdata(4) AND buatdata(5) AND 
-	buatdata(6) AND buatdata(7) AND NOT buatdata(2))));
-
-
-OUT_D(5) <= NOT (((buatdata(3) AND buatdata(4) AND buatdata(5) AND 
-	buatdata(6) AND buatdata(7) AND buatdata(2))
-	OR (buatdata(0) AND buatdata(1) AND buatdata(3) AND 
-	buatdata(4) AND buatdata(5) AND buatdata(6) AND buatdata(7))
-	OR (NOT buatdata(0) AND NOT buatdata(1) AND buatdata(3) AND 
-	buatdata(4) AND buatdata(5) AND buatdata(6) AND buatdata(7))));
-
-
-OUT_D(6) <= NOT (((NOT buatdata(1) AND buatdata(3) AND buatdata(4) AND 
-	buatdata(5) AND buatdata(6) AND buatdata(7))
-	OR (buatdata(0) AND buatdata(3) AND buatdata(4) AND 
-	buatdata(5) AND buatdata(6) AND buatdata(7) AND buatdata(2))
-	OR (NOT buatdata(0) AND buatdata(3) AND buatdata(4) AND 
-	buatdata(5) AND buatdata(6) AND buatdata(7) AND NOT buatdata(2))));
-
-FDCPE_buatdata0: FDCPE port map (buatdata(0),uart_receiver1/idata(1),BUSY,'0','0','1');
-
-FDCPE_buatdata1: FDCPE port map (buatdata(1),uart_receiver1/idata(2),BUSY,'0','0','1');
-
-FDCPE_buatdata2: FDCPE port map (buatdata(2),uart_receiver1/idata(3),BUSY,'0','0','1');
-
-FDCPE_buatdata3: FDCPE port map (buatdata(3),uart_receiver1/idata(4),BUSY,'0','0','1');
-
-FDCPE_buatdata4: FDCPE port map (buatdata(4),uart_receiver1/idata(5),BUSY,'0','0','1');
-
-FDCPE_buatdata5: FDCPE port map (buatdata(5),uart_receiver1/idata(6),BUSY,'0','0','1');
-
-FDCPE_buatdata6: FDCPE port map (buatdata(6),uart_receiver1/idata(7),BUSY,'0','0','1');
-
-FDCPE_buatdata7: FDCPE port map (buatdata(7),uart_receiver1/idata(8),BUSY,'0','0','1');
-
-FTCPE_uart_receiver1/clk: FTCPE port map (uart_receiver1/clk,uart_receiver1/clk_T,CLK,'0',NOT BUSY,'1');
-uart_receiver1/clk_T <= NOT (((NOT uart_receiver1/divider(12) AND 
-	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
-	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
-	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
-	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
-	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
-	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227)
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
-	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(2) AND 
-	NOT uart_receiver1/divider(4) AND NOT uart_receiver1/divider(6))
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
-	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(3) AND 
-	NOT uart_receiver1/divider(4) AND NOT uart_receiver1/divider(6))));
-
-FTCPE_uart_receiver1/count0: FTCPE port map (uart_receiver1/count(0),'0',uart_receiver1/clk,NOT BUSY,'0','1');
-
-FTCPE_uart_receiver1/count1: FTCPE port map (uart_receiver1/count(1),uart_receiver1/count(0),uart_receiver1/clk,NOT BUSY,'0','1');
-
-FTCPE_uart_receiver1/count2: FTCPE port map (uart_receiver1/count(2),uart_receiver1/count_T(2),uart_receiver1/clk,NOT BUSY,'0','1');
-uart_receiver1/count_T(2) <= (uart_receiver1/count(0) AND uart_receiver1/count(1));
-
-FTCPE_uart_receiver1/count3: FTCPE port map (uart_receiver1/count(3),uart_receiver1/count_T(3),uart_receiver1/clk,NOT BUSY,'0','1');
-uart_receiver1/count_T(3) <= (uart_receiver1/count(0) AND uart_receiver1/count(1) AND 
-	uart_receiver1/count(2));
-
-FDCPE_uart_receiver1/divider0: FDCPE port map (uart_receiver1/divider(0),uart_receiver1/divider_D(0),CLK,NOT BUSY,'0','1');
-uart_receiver1/divider_D(0) <= ((NOT uart_receiver1/divider(12) AND 
-	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
-	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
-	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
-	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
-	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
-	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
-	NOT uart_receiver1/divider(0))
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
-	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(0) AND 
-	NOT uart_receiver1/divider(2) AND NOT uart_receiver1/divider(4) AND 
-	NOT uart_receiver1/divider(6))
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
-	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(0) AND 
-	NOT uart_receiver1/divider(3) AND NOT uart_receiver1/divider(4) AND 
-	NOT uart_receiver1/divider(6)));
-
-FDCPE_uart_receiver1/divider1: FDCPE port map (uart_receiver1/divider(1),uart_receiver1/divider_D(1),CLK,NOT BUSY,'0','1');
-uart_receiver1/divider_D(1) <= ((NOT uart_receiver1/divider(12) AND 
-	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
-	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
-	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
-	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
-	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
-	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
-	uart_receiver1/divider(0) AND NOT uart_receiver1/divider(1))
-	OR (NOT uart_receiver1/divider(12) AND 
-	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
-	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
-	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
-	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
-	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
-	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
-	NOT uart_receiver1/divider(0) AND uart_receiver1/divider(1))
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
-	NOT uart_receiver1/divider(7) AND uart_receiver1/divider(0) AND 
-	NOT uart_receiver1/divider(2) AND NOT uart_receiver1/divider(4) AND 
-	NOT uart_receiver1/divider(1) AND NOT uart_receiver1/divider(6))
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
-	NOT uart_receiver1/divider(7) AND uart_receiver1/divider(0) AND 
-	NOT uart_receiver1/divider(3) AND NOT uart_receiver1/divider(4) AND 
-	NOT uart_receiver1/divider(1) AND NOT uart_receiver1/divider(6))
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
-	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(0) AND 
-	NOT uart_receiver1/divider(2) AND NOT uart_receiver1/divider(4) AND 
-	uart_receiver1/divider(1) AND NOT uart_receiver1/divider(6))
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
-	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(0) AND 
-	NOT uart_receiver1/divider(3) AND NOT uart_receiver1/divider(4) AND 
-	uart_receiver1/divider(1) AND NOT uart_receiver1/divider(6)));
-
-FDCPE_uart_receiver1/divider2: FDCPE port map (uart_receiver1/divider(2),uart_receiver1/divider_D(2),CLK,NOT BUSY,'0','1');
-uart_receiver1/divider_D(2) <= ((NOT uart_receiver1/divider(12) AND 
-	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
-	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
-	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
-	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
-	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
-	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
-	NOT uart_receiver1/divider(0) AND uart_receiver1/divider(2))
-	OR (NOT uart_receiver1/divider(12) AND 
-	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
-	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
-	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
-	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
-	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
-	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
-	uart_receiver1/divider(2) AND NOT uart_receiver1/divider(1))
-	OR (NOT uart_receiver1/divider(12) AND 
-	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
-	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
-	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
-	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
-	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
-	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
-	uart_receiver1/divider(0) AND NOT uart_receiver1/divider(2) AND 
-	uart_receiver1/divider(1))
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
-	NOT uart_receiver1/divider(7) AND uart_receiver1/divider(0) AND 
-	NOT uart_receiver1/divider(2) AND NOT uart_receiver1/divider(4) AND 
-	uart_receiver1/divider(1) AND NOT uart_receiver1/divider(6))
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
-	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(0) AND 
-	uart_receiver1/divider(2) AND NOT uart_receiver1/divider(3) AND 
-	NOT uart_receiver1/divider(4) AND NOT uart_receiver1/divider(6))
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
-	NOT uart_receiver1/divider(7) AND uart_receiver1/divider(2) AND 
-	NOT uart_receiver1/divider(3) AND NOT uart_receiver1/divider(4) AND 
-	NOT uart_receiver1/divider(1) AND NOT uart_receiver1/divider(6)));
-
-FDCPE_uart_receiver1/divider3: FDCPE port map (uart_receiver1/divider(3),uart_receiver1/divider_D(3),CLK,NOT BUSY,'0','1');
-uart_receiver1/divider_D(3) <= ((NOT uart_receiver1/divider(12) AND 
-	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
-	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
-	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
-	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
-	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
-	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
-	NOT uart_receiver1/divider(0) AND uart_receiver1/divider(3))
-	OR (NOT uart_receiver1/divider(12) AND 
-	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
-	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
-	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
-	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
-	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
-	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
-	NOT uart_receiver1/divider(2) AND uart_receiver1/divider(3))
-	OR (NOT uart_receiver1/divider(12) AND 
-	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
-	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
-	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
-	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
-	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
-	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
-	uart_receiver1/divider(3) AND NOT uart_receiver1/divider(1))
-	OR (NOT uart_receiver1/divider(12) AND 
-	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
-	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
-	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
-	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
-	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
-	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
-	uart_receiver1/divider(0) AND uart_receiver1/divider(2) AND 
-	NOT uart_receiver1/divider(3) AND uart_receiver1/divider(1))
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
-	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(2) AND 
-	uart_receiver1/divider(3) AND NOT uart_receiver1/divider(4) AND 
-	NOT uart_receiver1/divider(6))
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(8) AND 
-	NOT uart_receiver1/divider(7) AND uart_receiver1/divider(0) AND 
-	uart_receiver1/divider(2) AND NOT uart_receiver1/divider(3) AND 
-	NOT uart_receiver1/divider(4) AND uart_receiver1/divider(1) AND 
-	NOT uart_receiver1/divider(6)));
-
-FDCPE_uart_receiver1/divider4: FDCPE port map (uart_receiver1/divider(4),uart_receiver1/divider_D(4),CLK,NOT BUSY,'0','1');
-uart_receiver1/divider_D(4) <= ((NOT uart_receiver1/divider(12) AND 
-	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
-	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
-	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
-	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
-	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
-	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
-	NOT uart_receiver1/divider(0) AND uart_receiver1/divider(4))
-	OR (NOT uart_receiver1/divider(12) AND 
-	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
-	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
-	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
-	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
-	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
-	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
-	NOT uart_receiver1/divider(2) AND uart_receiver1/divider(4))
-	OR (NOT uart_receiver1/divider(12) AND 
-	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
-	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
-	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
-	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
-	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
-	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
-	NOT uart_receiver1/divider(3) AND uart_receiver1/divider(4))
-	OR (NOT uart_receiver1/divider(12) AND 
-	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
-	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
-	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
-	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
-	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
-	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
-	uart_receiver1/divider(4) AND NOT uart_receiver1/divider(1))
-	OR (NOT uart_receiver1/divider(12) AND 
-	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
-	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
-	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
-	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
-	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
-	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
-	uart_receiver1/divider(0) AND uart_receiver1/divider(2) AND 
-	uart_receiver1/divider(3) AND NOT uart_receiver1/divider(4) AND 
-	uart_receiver1/divider(1)));
-
-FDCPE_uart_receiver1/divider5: FDCPE port map (uart_receiver1/divider(5),uart_receiver1/divider_D(5),CLK,NOT BUSY,'0','1');
-uart_receiver1/divider_D(5) <= (uart_receiver1/divider(5) AND N_PZ_260)
-	XOR ((N_PZ_260 AND uart_receiver1/divider(0) AND 
-	uart_receiver1/divider(2) AND uart_receiver1/divider(3) AND 
-	uart_receiver1/divider(4) AND uart_receiver1/divider(1))
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24) AND uart_receiver1/divider(5) AND NOT N_PZ_260 AND 
-	NOT uart_receiver1/divider(8) AND NOT uart_receiver1/divider(7) AND 
-	NOT uart_receiver1/divider(2) AND NOT uart_receiver1/divider(4) AND 
-	NOT uart_receiver1/divider(6))
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24) AND uart_receiver1/divider(5) AND NOT N_PZ_260 AND 
-	NOT uart_receiver1/divider(8) AND NOT uart_receiver1/divider(7) AND 
-	NOT uart_receiver1/divider(3) AND NOT uart_receiver1/divider(4) AND 
-	NOT uart_receiver1/divider(6))
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24) AND NOT uart_receiver1/divider(5) AND 
-	NOT uart_receiver1/divider(8) AND NOT uart_receiver1/divider(7) AND 
-	uart_receiver1/divider(0) AND uart_receiver1/divider(2) AND 
-	uart_receiver1/divider(3) AND uart_receiver1/divider(4) AND 
-	uart_receiver1/divider(1) AND NOT uart_receiver1/divider(6)));
-
-FDCPE_uart_receiver1/divider6: FDCPE port map (uart_receiver1/divider(6),uart_receiver1/divider_D(6),CLK,NOT BUSY,'0','1');
-uart_receiver1/divider_D(6) <= ((N_PZ_260 AND NOT N_PZ_235 AND uart_receiver1/divider(6))
-	OR (uart_receiver1/divider(5) AND N_PZ_260 AND NOT N_PZ_235 AND 
-	uart_receiver1/divider(0) AND uart_receiver1/divider(2) AND 
-	uart_receiver1/divider(3) AND uart_receiver1/divider(4) AND 
-	uart_receiver1/divider(1)));
-
-FDCPE_uart_receiver1/divider7: FDCPE port map (uart_receiver1/divider(7),uart_receiver1/divider_D(7),CLK,NOT BUSY,'0','1');
-uart_receiver1/divider_D(7) <= ((N_PZ_260 AND uart_receiver1/divider(7) AND NOT N_PZ_235)
-	OR (N_PZ_260 AND NOT uart_receiver1/divider(7) AND N_PZ_235));
-
-FTCPE_uart_receiver1/divider8: FTCPE port map (uart_receiver1/divider(8),uart_receiver1/divider_T(8),CLK,NOT BUSY,'0','1');
-uart_receiver1/divider_T(8) <= ((NOT N_PZ_260 AND uart_receiver1/divider(8))
-	OR (N_PZ_260 AND uart_receiver1/divider(7) AND N_PZ_235));
-
-FDCPE_uart_receiver1/divider9: FDCPE port map (uart_receiver1/divider(9),uart_receiver1/divider_D(9),CLK,NOT BUSY,'0','1');
-uart_receiver1/divider_D(9) <= ((N_PZ_260 AND uart_receiver1/divider(9) AND 
-	NOT uart_receiver1/divider(7))
-	OR (N_PZ_260 AND uart_receiver1/divider(9) AND NOT N_PZ_235)
-	OR (N_PZ_260 AND NOT uart_receiver1/divider(9) AND 
-	uart_receiver1/divider(8) AND uart_receiver1/divider(7) AND N_PZ_235)
-	OR (NOT uart_receiver1/divider(12) AND 
-	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
-	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
-	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
-	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
-	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
-	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND N_PZ_227 AND 
-	uart_receiver1/divider(9) AND NOT uart_receiver1/divider(8))
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24) AND NOT N_PZ_260 AND NOT uart_receiver1/divider(8) AND 
-	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(2) AND 
-	NOT uart_receiver1/divider(4) AND NOT uart_receiver1/divider(6))
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24) AND NOT N_PZ_260 AND NOT uart_receiver1/divider(8) AND 
-	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(3) AND 
-	NOT uart_receiver1/divider(4) AND NOT uart_receiver1/divider(6)));
-
-FDCPE_uart_receiver1/divider10: FDCPE port map (uart_receiver1/divider(10),uart_receiver1/divider_D(10),CLK,NOT BUSY,'0','1');
-uart_receiver1/divider_D(10) <= ((uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(11) AND NOT uart_receiver1/divider(12) AND 
-	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
-	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
-	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
-	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
-	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
-	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND 
-	NOT uart_receiver1/divider(9))
-	OR (uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(11) AND NOT uart_receiver1/divider(12) AND 
-	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
-	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
-	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
-	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
-	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
-	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND 
-	NOT uart_receiver1/divider(8))
-	OR (uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(11) AND NOT uart_receiver1/divider(12) AND 
-	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
-	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
-	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
-	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
-	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
-	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND 
-	NOT uart_receiver1/divider(7))
-	OR (uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(11) AND NOT uart_receiver1/divider(12) AND 
-	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
-	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
-	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
-	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
-	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
-	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND NOT N_PZ_235)
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(11) AND NOT uart_receiver1/divider(12) AND 
-	NOT uart_receiver1/divider(13) AND NOT uart_receiver1/divider(14) AND 
-	NOT uart_receiver1/divider(15) AND NOT uart_receiver1/divider(16) AND 
-	NOT uart_receiver1/divider(17) AND NOT uart_receiver1/divider(18) AND 
-	NOT uart_receiver1/divider(19) AND NOT uart_receiver1/divider(20) AND 
-	NOT uart_receiver1/divider(21) AND NOT uart_receiver1/divider(22) AND 
-	NOT uart_receiver1/divider(23) AND NOT uart_receiver1/divider(24) AND 
-	uart_receiver1/divider(9) AND uart_receiver1/divider(8) AND 
-	uart_receiver1/divider(7) AND N_PZ_235));
-
-FDCPE_uart_receiver1/divider11: FDCPE port map (uart_receiver1/divider(11),uart_receiver1/divider_D(11),CLK,NOT BUSY,'0','1');
-uart_receiver1/divider_D(11) <= ((uart_receiver1/divider(10) AND N_PZ_260 AND 
-	uart_receiver1/divider(9) AND uart_receiver1/divider(8) AND 
-	uart_receiver1/divider(7) AND N_PZ_235)
-	OR (uart_receiver1/divider(11) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24) AND N_PZ_227)
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24) AND NOT N_PZ_260 AND NOT uart_receiver1/divider(8) AND 
-	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(2) AND 
-	NOT uart_receiver1/divider(4) AND NOT uart_receiver1/divider(6))
-	OR (NOT uart_receiver1/divider(10) AND 
-	NOT uart_receiver1/divider(12) AND NOT uart_receiver1/divider(13) AND 
-	NOT uart_receiver1/divider(14) AND NOT uart_receiver1/divider(15) AND 
-	NOT uart_receiver1/divider(16) AND NOT uart_receiver1/divider(17) AND 
-	NOT uart_receiver1/divider(18) AND NOT uart_receiver1/divider(19) AND 
-	NOT uart_receiver1/divider(20) AND NOT uart_receiver1/divider(21) AND 
-	NOT uart_receiver1/divider(22) AND NOT uart_receiver1/divider(23) AND 
-	NOT uart_receiver1/divider(24) AND NOT N_PZ_260 AND NOT uart_receiver1/divider(8) AND 
-	NOT uart_receiver1/divider(7) AND NOT uart_receiver1/divider(3) AND 
-	NOT uart_receiver1/divider(4) AND NOT uart_receiver1/divider(6)));
-
-FDCPE_uart_receiver1/divider12: FDCPE port map (uart_receiver1/divider(12),'0',CLK,NOT BUSY,'0','1');
-
-FDCPE_uart_receiver1/divider13: FDCPE port map (uart_receiver1/divider(13),'0',CLK,NOT BUSY,'0','1');
-
-FDCPE_uart_receiver1/divider14: FDCPE port map (uart_receiver1/divider(14),'0',CLK,NOT BUSY,'0','1');
-
-FDCPE_uart_receiver1/divider15: FDCPE port map (uart_receiver1/divider(15),'0',CLK,NOT BUSY,'0','1');
-
-FDCPE_uart_receiver1/divider16: FDCPE port map (uart_receiver1/divider(16),'0',CLK,NOT BUSY,'0','1');
-
-FDCPE_uart_receiver1/divider17: FDCPE port map (uart_receiver1/divider(17),'0',CLK,NOT BUSY,'0','1');
-
-FDCPE_uart_receiver1/divider18: FDCPE port map (uart_receiver1/divider(18),'0',CLK,NOT BUSY,'0','1');
-
-FDCPE_uart_receiver1/divider19: FDCPE port map (uart_receiver1/divider(19),'0',CLK,NOT BUSY,'0','1');
-
-FDCPE_uart_receiver1/divider20: FDCPE port map (uart_receiver1/divider(20),'0',CLK,NOT BUSY,'0','1');
-
-FDCPE_uart_receiver1/divider21: FDCPE port map (uart_receiver1/divider(21),'0',CLK,NOT BUSY,'0','1');
-
-FDCPE_uart_receiver1/divider22: FDCPE port map (uart_receiver1/divider(22),'0',CLK,NOT BUSY,'0','1');
-
-FDCPE_uart_receiver1/divider23: FDCPE port map (uart_receiver1/divider(23),'0',CLK,NOT BUSY,'0','1');
-
-FDCPE_uart_receiver1/divider24: FDCPE port map (uart_receiver1/divider(24),'0',CLK,NOT BUSY,'0','1');
-
-FDCPE_uart_receiver1/idata1: FDCPE port map (uart_receiver1/idata(1),RXD,uart_receiver1/clk,'0','0',uart_receiver1/idata_CE(1));
-uart_receiver1/idata_CE(1) <= (NOT uart_receiver1/count(3) AND uart_receiver1/count(0) AND 
-	BUSY AND N_PZ_277);
-
-FDCPE_uart_receiver1/idata2: FDCPE port map (uart_receiver1/idata(2),RXD,uart_receiver1/clk,'0','0',uart_receiver1/idata_CE(2));
-uart_receiver1/idata_CE(2) <= (NOT uart_receiver1/count(3) AND NOT uart_receiver1/count(0) AND 
-	BUSY AND uart_receiver1/count(1) AND NOT uart_receiver1/count(2));
-
-FDCPE_uart_receiver1/idata3: FDCPE port map (uart_receiver1/idata(3),RXD,uart_receiver1/clk,'0','0',uart_receiver1/idata_CE(3));
-uart_receiver1/idata_CE(3) <= (NOT uart_receiver1/count(3) AND uart_receiver1/count(0) AND 
-	BUSY AND uart_receiver1/count(1) AND NOT uart_receiver1/count(2));
-
-FDCPE_uart_receiver1/idata4: FDCPE port map (uart_receiver1/idata(4),RXD,uart_receiver1/clk,'0','0',uart_receiver1/idata_CE(4));
-uart_receiver1/idata_CE(4) <= (NOT uart_receiver1/count(3) AND NOT uart_receiver1/count(0) AND 
-	BUSY AND NOT uart_receiver1/count(1) AND uart_receiver1/count(2));
-
-FDCPE_uart_receiver1/idata5: FDCPE port map (uart_receiver1/idata(5),RXD,uart_receiver1/clk,'0','0',uart_receiver1/idata_CE(5));
-uart_receiver1/idata_CE(5) <= (NOT uart_receiver1/count(3) AND uart_receiver1/count(0) AND 
-	BUSY AND NOT uart_receiver1/count(1) AND uart_receiver1/count(2));
-
-FDCPE_uart_receiver1/idata6: FDCPE port map (uart_receiver1/idata(6),RXD,uart_receiver1/clk,'0','0',uart_receiver1/idata_CE(6));
-uart_receiver1/idata_CE(6) <= (NOT uart_receiver1/count(3) AND NOT uart_receiver1/count(0) AND 
-	BUSY AND uart_receiver1/count(1) AND uart_receiver1/count(2));
-
-FDCPE_uart_receiver1/idata7: FDCPE port map (uart_receiver1/idata(7),RXD,uart_receiver1/clk,'0','0',uart_receiver1/idata_CE(7));
-uart_receiver1/idata_CE(7) <= (NOT uart_receiver1/count(3) AND uart_receiver1/count(0) AND 
-	BUSY AND uart_receiver1/count(1) AND uart_receiver1/count(2));
-
-FDCPE_uart_receiver1/idata8: FDCPE port map (uart_receiver1/idata(8),RXD,uart_receiver1/clk,'0','0',uart_receiver1/idata_CE(8));
-uart_receiver1/idata_CE(8) <= (uart_receiver1/count(3) AND NOT uart_receiver1/count(0) AND 
-	BUSY AND N_PZ_277);
+OUT_D(6) <= NOT ('0');
 
 
 Register Legend:
@@ -1357,17 +570,17 @@ Device : XC2C256-7-TQ144
 Pin Signal                         Pin Signal                        
 No. Name                           No. Name                          
   1 VCC                              73 VCCIO-1.8                     
-  2 OUT_D<3>                         74 KPR                           
-  3 OUT_D<2>                         75 KPR                           
-  4 OUT_D<0>                         76 KPR                           
-  5 OUT_D<1>                         77 KPR                           
-  6 OUT_D<5>                         78 KPR                           
-  7 OUT_D<6>                         79 KPR                           
+  2 KPR                              74 KPR                           
+  3 KPR                              75 KPR                           
+  4 KPR                              76 KPR                           
+  5 KPR                              77 KPR                           
+  6 KPR                              78 KPR                           
+  7 KPR                              79 KPR                           
   8 VCCAUX                           80 KPR                           
-  9 OUT_D<4>                         81 KPR                           
+  9 KPR                              81 KPR                           
  10 KPR                              82 KPR                           
- 11 BUSY                             83 KPR                           
- 12 EN_SEGMENT                       84 VCC                           
+ 11 KPR                              83 KPR                           
+ 12 KPR                              84 VCC                           
  13 KPR                              85 KPR                           
  14 KPR                              86 KPR                           
  15 KPR                              87 KPR                           
@@ -1385,9 +598,9 @@ No. Name                           No. Name
  27 VCCIO-1.8                        99 GND                           
  28 KPR                             100 KPR                           
  29 GND                             101 KPR                           
- 30 RXD                             102 KPR                           
+ 30 KPR                             102 KPR                           
  31 KPR                             103 KPR                           
- 32 CLK                             104 KPR                           
+ 32 KPR                             104 KPR                           
  33 KPR                             105 KPR                           
  34 KPR                             106 KPR                           
  35 KPR                             107 KPR                           
@@ -1408,15 +621,15 @@ No. Name                           No. Name
  50 KPR                             122 TDO                           
  51 KPR                             123 GND                           
  52 KPR                             124 KPR                           
- 53 KPR                             125 KPR                           
- 54 KPR                             126 KPR                           
+ 53 OUT_D<5>                        125 KPR                           
+ 54 OUT_D<1>                        126 KPR                           
  55 VCCIO-1.8                       127 VCCIO-1.8                     
- 56 KPR                             128 KPR                           
- 57 KPR                             129 KPR                           
- 58 KPR                             130 KPR                           
+ 56 OUT_D<6>                        128 KPR                           
+ 57 OUT_D<2>                        129 KPR                           
+ 58 OUT_D<3>                        130 EN_SEGMENT                    
  59 KPR                             131 KPR                           
- 60 KPR                             132 KPR                           
- 61 KPR                             133 KPR                           
+ 60 OUT_D<4>                        132 KPR                           
+ 61 OUT_D<0>                        133 KPR                           
  62 GND                             134 KPR                           
  63 TDI                             135 KPR                           
  64 KPR                             136 KPR                           
@@ -1426,7 +639,7 @@ No. Name                           No. Name
  68 KPR                             140 KPR                           
  69 KPR                             141 VCCIO-1.8                     
  70 KPR                             142 KPR                           
- 71 KPR                             143 KPR                           
+ 71 KPR                             143 BUSY                          
  72 GND                             144 GND                           
 
 

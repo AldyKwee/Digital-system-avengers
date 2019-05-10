@@ -76,20 +76,20 @@ wysiwyg                            : NO
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "D:/My Documents/College Assignments/Semester 4/Digital System/Project/uart_reciever/uart_rx.vhd" in Library work.
-Architecture behavior of Entity uart is up to date.
+Entity <uart> compiled.
+Entity <uart> (Architecture <behavior>) compiled.
 Compiling vhdl file "D:/My Documents/College Assignments/Semester 4/Digital System/Project/seve_segment/uart_7segment.vhd" in Library work.
 Architecture behavioral of Entity sevensegment is up to date.
 Compiling vhdl file "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/MAINRX.vhd" in Library work.
-Entity <mainrx> compiled.
-Entity <MAINRX> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity mainrx is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <MAINRX> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <MAINRX> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <UART> in library <work> (architecture <behavior>) with generics.
-	divisor = 2604
+	divisor = 416
 
 Analyzing hierarchy for entity <SevenSegment> in library <work> (architecture <behavioral>).
 
@@ -97,13 +97,15 @@ Analyzing hierarchy for entity <SevenSegment> in library <work> (architecture <b
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <MAINRX> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <MAINRX> in library <work> (Architecture <behavioral>).
 Entity <MAINRX> analyzed. Unit <MAINRX> generated.
 
 Analyzing generic Entity <UART> in library <work> (Architecture <behavior>).
-	divisor = 2604
+	divisor = 416
 WARNING:Xst:819 - "D:/My Documents/College Assignments/Semester 4/Digital System/Project/uart_reciever/uart_rx.vhd" line 123: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <ibusy>
+INFO:Xst:2679 - Register <ibusy> in unit <UART> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <DATA> in unit <UART> has a constant value of XXXXXXXX during circuit operation. The register is replaced by logic.
 Entity <UART> analyzed. Unit <UART> generated.
 
 Analyzing Entity <SevenSegment> in library <work> (Architecture <behavioral>).
@@ -118,20 +120,15 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <UART>.
     Related source file is "D:/My Documents/College Assignments/Semester 4/Digital System/Project/uart_reciever/uart_rx.vhd".
-WARNING:Xst:646 - Signal <idata<9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <idata<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-    Found 8-bit register for signal <DATA>.
+WARNING:Xst:646 - Signal <idata> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 1-bit register for signal <clk>.
-    Found 25-bit comparator less for signal <clk$cmp_lt0000> created at line 84.
+    Found 22-bit comparator less for signal <clk$cmp_lt0000> created at line 84.
     Found 4-bit up counter for signal <count>.
-    Found 25-bit up counter for signal <divider>.
-    Found 1-bit register for signal <ibusy>.
-    Found 4-bit comparator greater for signal <ibusy$cmp_gt0000> created at line 67.
-    Found 8-bit register for signal <idata<8:1>>.
+    Found 22-bit up counter for signal <divider>.
     Summary:
 	inferred   2 Counter(s).
-	inferred  10 D-type flip-flop(s).
-	inferred   2 Comparator(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
 Unit <UART> synthesized.
 
 
@@ -150,14 +147,12 @@ HDL Synthesis Report
 
 Macro Statistics
 # Counters                                             : 2
- 25-bit up counter                                     : 1
+ 22-bit up counter                                     : 1
  4-bit up counter                                      : 1
-# Registers                                            : 11
- 1-bit register                                        : 10
- 8-bit register                                        : 1
-# Comparators                                          : 2
- 25-bit comparator less                                : 1
- 4-bit comparator greater                              : 1
+# Registers                                            : 1
+ 1-bit register                                        : 1
+# Comparators                                          : 1
+ 22-bit comparator less                                : 1
 
 =========================================================================
 
@@ -171,51 +166,49 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # Counters                                             : 2
- 25-bit up counter                                     : 1
+ 22-bit up counter                                     : 1
  4-bit up counter                                      : 1
-# Registers                                            : 10
- Flip-Flops                                            : 10
+# Registers                                            : 1
+ Flip-Flops                                            : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:2677 - Node <divider_21> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <divider_20> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <divider_19> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <divider_18> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <divider_17> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <divider_16> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <divider_15> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <divider_14> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <divider_13> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <divider_12> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <divider_11> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <divider_10> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <divider_9> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <divider_8> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <divider_7> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <divider_6> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <divider_5> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <divider_4> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <divider_3> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <divider_2> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <divider_1> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <divider_0> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <count_0> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <count_1> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <count_2> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <count_3> of sequential type is unconnected in block <UART>.
+WARNING:Xst:2677 - Node <clk> of sequential type is unconnected in block <UART>.
 
 Optimizing unit <MAINRX> ...
 
 Optimizing unit <SevenSegment> ...
 
 Optimizing unit <UART> ...
-  implementation constraint: INIT=r	 : divider_3
-  implementation constraint: INIT=r	 : divider_2
-  implementation constraint: INIT=r	 : divider_0
-  implementation constraint: INIT=r	 : divider_1
-  implementation constraint: INIT=r	 : divider_24
-  implementation constraint: INIT=r	 : divider_23
-  implementation constraint: INIT=r	 : divider_22
-  implementation constraint: INIT=r	 : divider_21
-  implementation constraint: INIT=r	 : divider_20
-  implementation constraint: INIT=r	 : divider_18
-  implementation constraint: INIT=r	 : divider_17
-  implementation constraint: INIT=r	 : divider_16
-  implementation constraint: INIT=r	 : divider_15
-  implementation constraint: INIT=r	 : divider_14
-  implementation constraint: INIT=r	 : divider_13
-  implementation constraint: INIT=r	 : divider_12
-  implementation constraint: INIT=r	 : divider_11
-  implementation constraint: INIT=r	 : divider_10
-  implementation constraint: INIT=r	 : divider_9
-  implementation constraint: INIT=r	 : count_3
-  implementation constraint: INIT=r	 : count_2
-  implementation constraint: INIT=r	 : count_1
-  implementation constraint: INIT=r	 : count_0
-  implementation constraint: INIT=r	 : divider_19
-  implementation constraint: INIT=r	 : divider_8
-  implementation constraint: INIT=r	 : divider_7
-  implementation constraint: INIT=r	 : divider_6
-  implementation constraint: INIT=r	 : divider_5
-  implementation constraint: INIT=r	 : divider_4
 
 =========================================================================
 *                           Partition Report                            *
@@ -247,35 +240,22 @@ Design Statistics
 # IOs                              : 11
 
 Cell Usage :
-# BELS                             : 242
-#      AND2                        : 87
-#      AND3                        : 10
-#      AND4                        : 2
-#      AND6                        : 1
-#      GND                         : 2
-#      INV                         : 78
-#      OR2                         : 34
-#      VCC                         : 1
-#      XOR2                        : 27
-# FlipFlops/Latches                : 47
-#      FD                          : 8
-#      FDC                         : 30
-#      FDCE                        : 8
-#      FDPE                        : 1
-# IO Buffers                       : 11
-#      IBUF                        : 2
+# BELS                             : 3
+#      GND                         : 1
+#      VCC                         : 2
+# IO Buffers                       : 9
 #      OBUF                        : 9
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.12 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.44 secs
  
 --> 
 
-Total memory usage is 4536976 kilobytes
+Total memory usage is 4520720 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    3 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :   29 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
 

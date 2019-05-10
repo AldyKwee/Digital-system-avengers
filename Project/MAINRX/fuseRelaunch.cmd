@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/RX_TB_isim_beh.exe" -prj "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/RX_TB_beh.prj" "work.RX_TB" 

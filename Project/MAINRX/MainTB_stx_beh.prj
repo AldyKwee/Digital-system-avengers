@@ -1,0 +1,4 @@
+vhdl isim_temp "../uart_reciever/uart_rx.vhd"
+vhdl isim_temp "../seve_segment/uart_7segment.vhd"
+vhdl isim_temp "MAINRX.vhd"
+vhdl isim_temp "MainTB.vhd"

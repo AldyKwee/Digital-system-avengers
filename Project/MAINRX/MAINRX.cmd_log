@@ -8,3 +8,59 @@ XSLTProcess MAINRX_build.xml
 tsim -intstyle ise MAINRX MAINRX.nga 
 taengine -intstyle ise -f MAINRX -w --format html1 -l MAINRX_html/tim/timing_report.htm 
 hprep6 -s IEEE1149 -i MAINRX 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/MAINRX/MAINRX.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/MAINRX/MAINRX.syr" 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/MAINRX/MAINRX.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/MAINRX/MAINRX.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc2c256-TQ144-7 "MAINRX.ngc" MAINRX.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 MAINRX.ngd 
+XSLTProcess MAINRX_build.xml 
+tsim -intstyle ise MAINRX MAINRX.nga 
+hprep6 -s IEEE1149 -i MAINRX 
+ngdbuild -intstyle ise -dd _ngo -uc nyambung.ucf -p xc2c256-TQ144-7 "MAINRX.ngc" MAINRX.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 MAINRX.ngd 
+XSLTProcess MAINRX_build.xml 
+tsim -intstyle ise MAINRX MAINRX.nga 
+hprep6 -s IEEE1149 -i MAINRX 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/MAINRX/MAINRX.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/MAINRX/MAINRX.syr" 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/MAINRX/MAINRX.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/MAINRX/MAINRX.syr" 
+xst -intstyle ise -ifn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/MAINRX/MAINRX.xst" -ofn "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/MAINRX/MAINRX.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc nyambung.ucf -p xc2c256-TQ144-7 "MAINRX.ngc" MAINRX.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 MAINRX.ngd 
+XSLTProcess MAINRX_build.xml 
+tsim -intstyle ise MAINRX MAINRX.nga 
+hprep6 -s IEEE1149 -i MAINRX 
+xst -intstyle ise -ifn "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/MAINRX.xst" -ofn "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/MAINRX.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc nyambung.ucf -p xc2c256-TQ144-7 "MAINRX.ngc" MAINRX.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 MAINRX.ngd 
+XSLTProcess MAINRX_build.xml 
+tsim -intstyle ise MAINRX MAINRX.nga 
+hprep6 -s IEEE1149 -i MAINRX 
+xst -intstyle ise -ifn "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/MAINRX.xst" -ofn "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/MAINRX.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc nyambung.ucf -p xc2c256-TQ144-7 "MAINRX.ngc" MAINRX.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 MAINRX.ngd 
+XSLTProcess MAINRX_build.xml 
+tsim -intstyle ise MAINRX MAINRX.nga 
+hprep6 -s IEEE1149 -i MAINRX 
+xst -intstyle ise -ifn "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/MAINRX.xst" -ofn "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/MAINRX.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc nyambung.ucf -p xc2c256-TQ144-7 "MAINRX.ngc" MAINRX.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 MAINRX.ngd 
+XSLTProcess MAINRX_build.xml 
+tsim -intstyle ise MAINRX MAINRX.nga 
+hprep6 -s IEEE1149 -i MAINRX 
+xst -intstyle ise -ifn "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/MAINRX.xst" -ofn "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/MAINRX.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc nyambung.ucf -p xc2c256-TQ144-7 "MAINRX.ngc" MAINRX.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 MAINRX.ngd 
+XSLTProcess MAINRX_build.xml 
+tsim -intstyle ise MAINRX MAINRX.nga 
+hprep6 -s IEEE1149 -i MAINRX 
+xst -intstyle ise -ifn "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/MAINRX.xst" -ofn "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/MAINRX.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc nyambung.ucf -p xc2c256-TQ144-7 "MAINRX.ngc" MAINRX.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 MAINRX.ngd 
+XSLTProcess MAINRX_build.xml 
+tsim -intstyle ise MAINRX MAINRX.nga 
+hprep6 -s IEEE1149 -i MAINRX 
+xst -intstyle ise -ifn "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/MAINRX.xst" -ofn "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/MAINRX.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc nyambung.ucf -p xc2c256-TQ144-7 "MAINRX.ngc" MAINRX.ngd  
+cpldfit -intstyle ise -p xc2c256-7-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 MAINRX.ngd 
+XSLTProcess MAINRX_build.xml 
+tsim -intstyle ise MAINRX MAINRX.nga 
+hprep6 -s IEEE1149 -i MAINRX 

@@ -1,0 +1,2 @@
+vhdl isim_temp "../uart_reciever/uart_rx.vhd"
+vhdl isim_temp "RX_TB.vhd"

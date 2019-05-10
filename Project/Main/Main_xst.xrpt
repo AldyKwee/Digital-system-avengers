@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Thu May 02 14:30:09 2019">
+  <application stringID="Xst" timeStamp="Fri May 10 10:11:10 2019">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="D:\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;D:\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64;D:\Xilinx\14.7\ISE_DS\ISE\lib\nt64;D:\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;D:\Xilinx\14.7\ISE_DS\PlanAhead\bin;D:\Xilinx\14.7\ISE_DS\EDK\bin\nt64;D:\Xilinx\14.7\ISE_DS\EDK\lib\nt64;D:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;D:\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;D:\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;D:\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;D:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;D:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;D:\Xilinx\14.7\ISE_DS\common\bin\nt64;D:\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Windows;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\libnvvp;C:\Windows\system32;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Microsoft VS Code\bin;C:\Users\ACER\Anaconda3;C:\Users\ACER\Anaconda3\Scripts;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\NVIDIA Corporation\Nsight Compute 2019.1\;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA;D:\Matlab\runtime\win64;D:\Matlab\bin;D:\My Documents\Arduino\libraries;D:\cmake-3.14.3-win64-x64\bin;C:\Users\ACER\AppData\Local\Microsoft\WindowsApps;C:\Users\ACER\AppData\Local\GitHubDesktop\bin;C:\Users\ACER\AppData\Local\atom\bin"/>
+          <item stringID="value" value="D:\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;D:\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64;D:\Xilinx\14.7\ISE_DS\ISE\lib\nt64;D:\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;D:\Xilinx\14.7\ISE_DS\PlanAhead\bin;D:\Xilinx\14.7\ISE_DS\EDK\bin\nt64;D:\Xilinx\14.7\ISE_DS\EDK\lib\nt64;D:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;D:\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;D:\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;D:\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;D:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;D:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;D:\Xilinx\14.7\ISE_DS\common\bin\nt64;D:\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Windows;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\libnvvp;C:\Windows\system32;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Microsoft VS Code\bin;C:\Users\ACER\Anaconda3;C:\Users\ACER\Anaconda3\Scripts;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\NVIDIA Corporation\Nsight Compute 2019.1\;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA;D:\Matlab\runtime\win64;D:\Matlab\bin;D:\My Documents\Arduino\libraries;D:\cmake-3.14.3-win64-x64\bin;D:\PuTTY\;C:\Users\ACER\AppData\Local\Microsoft\WindowsApps;C:\Users\ACER\AppData\Local\GitHubDesktop\bin;C:\Users\ACER\AppData\Local\atom\bin"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -107,34 +107,34 @@
         <item stringID="XST_KEEP_HIERARCHY" value="Yes"/>
       </section>
       <section stringID="XST_DESIGN_STATISTICS">
-        <item stringID="XST_IOS" value="20"/>
+        <item stringID="XST_IOS" value="21"/>
       </section>
       <section stringID="XST_CELL_USAGE">
-        <item dataType="int" stringID="XST_BELS" value="240">
-          <item dataType="int" stringID="XST_AND2" value="90"/>
-          <item dataType="int" stringID="XST_AND3" value="4"/>
+        <item dataType="int" stringID="XST_BELS" value="253">
+          <item dataType="int" stringID="XST_AND2" value="100"/>
+          <item dataType="int" stringID="XST_AND3" value="5"/>
           <item dataType="int" stringID="XST_AND4" value="1"/>
           <item dataType="int" stringID="XST_GND" value="2"/>
-          <item dataType="int" stringID="XST_INV" value="72"/>
-          <item dataType="int" stringID="XST_OR2" value="42"/>
+          <item dataType="int" stringID="XST_INV" value="77"/>
+          <item dataType="int" stringID="XST_OR2" value="34"/>
           <item dataType="int" stringID="XST_VCC" value="1"/>
-          <item dataType="int" stringID="XST_XOR2" value="27"/>
+          <item dataType="int" stringID="XST_XOR2" value="24"/>
         </item>
-        <item dataType="int" stringID="XST_FLIPFLOPSLATCHES" value="40">
-          <item dataType="int" stringID="XST_FD" value="33"/>
+        <item dataType="int" stringID="XST_FLIPFLOPSLATCHES" value="37">
+          <item dataType="int" stringID="XST_FD" value="30"/>
           <item dataType="int" stringID="XST_FDC" value="1"/>
           <item dataType="int" stringID="XST_FDCE" value="5"/>
         </item>
-        <item dataType="int" stringID="XST_IO_BUFFERS" value="20">
+        <item dataType="int" stringID="XST_IO_BUFFERS" value="21">
           <item dataType="int" stringID="XST_IBUF" value="10"/>
-          <item dataType="int" stringID="XST_OBUF" value="10"/>
+          <item dataType="int" stringID="XST_OBUF" value="11"/>
         </item>
       </section>
     </section>
     <section stringID="XST_ERRORS_STATISTICS">
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_ERRORS" value="0"/>
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="3"/>
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="3"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="4"/>
     </section>
   </application>
 

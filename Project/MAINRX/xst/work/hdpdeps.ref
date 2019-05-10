@@ -1,22 +1,25 @@
-V3 11
-FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/MAINRX.vhd" 2019/05/02.15:13:11 P.20131013
-EN work/MAINRX 1556784798 \
+V3 14
+FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/MAINRX/MAINRX.vhd" 2019/05/07.08:44:00 P.20131013
+FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/seve_segment/uart_7segment.vhd" 2019/05/03.09:54:44 P.20131013
+FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/uart_reciever/uart_rx.vhd" 2019/05/07.15:23:16 P.20131013
+FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/MAINRX.vhd" 2019/05/10.10:32:01 P.20131013
+EN work/MAINRX 1557463165 \
       FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/MAINRX.vhd" \
       PB ieee/std_logic_1164 1381692176
-AR work/MAINRX/Behavioral 1556784799 \
+AR work/MAINRX/Behavioral 1557463166 \
       FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/MAINRX/MAINRX.vhd" \
-      EN work/MAINRX 1556784798 CP UART CP SevenSegment
-FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/seve_segment/uart_7segment.vhd" 2019/05/02.13:51:46 P.20131013
-EN work/SevenSegment 1556784796 \
+      EN work/MAINRX 1557463165 CP UART CP SevenSegment
+FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/seve_segment/uart_7segment.vhd" 2019/05/10.10:11:08 P.20131013
+EN work/SevenSegment 1557463163 \
       FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/seve_segment/uart_7segment.vhd" \
       PB ieee/std_logic_1164 1381692176
-AR work/SevenSegment/Behavioral 1556784797 \
+AR work/SevenSegment/Behavioral 1557463164 \
       FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/seve_segment/uart_7segment.vhd" \
-      EN work/SevenSegment 1556784796
-FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/uart_reciever/uart_rx.vhd" 2019/04/30.14:51:45 P.20131013
-EN work/UART 1556784794 \
+      EN work/SevenSegment 1557463163
+FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/uart_reciever/uart_rx.vhd" 2019/05/10.11:34:47 P.20131013
+EN work/UART 1557463161 \
       FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/uart_reciever/uart_rx.vhd" \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/UART/Behavior 1556784795 \
+AR work/UART/Behavior 1557463162 \
       FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/uart_reciever/uart_rx.vhd" \
-      EN work/UART 1556784794
+      EN work/UART 1557463161
