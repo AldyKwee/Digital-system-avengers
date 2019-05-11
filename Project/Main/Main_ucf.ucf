@@ -1,5 +1,5 @@
-NET DATA(5) LOC = "p124";
-NET DATA(4) LOC = "p39";
+NET DATA(2) LOC = "p124";
+NET DATA(1) LOC = "p39";
 NET DATA(0) LOC = "p94";
 NET EN_SEGMENT LOC = "p130";
 NET TXD LOC = "p10";

@@ -3,7 +3,7 @@
  
 cpldfit:  version P.20131013                        Xilinx Inc.
                                   Fitter Report
-Design Name: Main                                Date:  5-10-2019, 10:11AM
+Design Name: Main                                Date:  5-11-2019,  7:28PM
 Device Used: XC2C256-7-TQ144
 Fitting Status: Successful
 
@@ -11,15 +11,15 @@ Fitting Status: Successful
 
 Macrocells     Product Terms    Function Block   Registers      Pins           
 Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
-50 /256 ( 20%) 98  /896  ( 11%) 82  /640  ( 13%) 37 /256 ( 14%) 21 /118 ( 18%)
+48 /256 ( 19%) 66  /896  (  7%) 67  /640  ( 10%) 37 /256 ( 14%) 21 /118 ( 18%)
 
 ** Function Block Resources **
 
 Function Mcells   FB Inps  Pterms   IO       CTC      CTR      CTS      CTE     
 Block    Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot
-FB1      16/16*     2/40     2/56     0/ 6    1/1*     1/1*     0/1      0/1
-FB2      16/16*    38/40*   49/56     2/ 8    1/1*     1/1*     1/1*     0/1
-FB3       6/16     23/40    29/56     0/ 6    0/1      0/1      0/1      0/1
+FB1      16/16*     1/40     1/56     0/ 6    1/1*     0/1      0/1      0/1
+FB2      16/16*    22/40    36/56     2/ 8    1/1*     1/1*     1/1*     0/1
+FB3       4/16     25/40     9/56     0/ 6    1/1*     1/1*     0/1      0/1
 FB4       0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
 FB5       0/16      0/40     0/56     0/ 5    0/1      0/1      0/1      0/1
 FB6       1/16      1/40     1/56     0/ 8    1/1*     0/1      0/1      0/1
@@ -32,9 +32,9 @@ FB12      1/16      1/40     1/56     0/ 6    1/1*     0/1      0/1      0/1
 FB13      0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
 FB14      2/16      8/40     3/56     2/ 8    0/1      0/1      0/1      0/1
 FB15      0/16      0/40     0/56     0/ 7    0/1      0/1      0/1      0/1
-FB16      6/16      8/40    12/56     6/ 7    0/1      0/1      0/1      0/1
+FB16      6/16      8/40    14/56     6/ 7    0/1      0/1      0/1      0/1
          -----    -------  -------   -----    ---      ---      ---      ---
-Total    50/256    82/640   98/896   11/118   5/16     2/16     1/16     0/16
+Total    48/256    67/640   66/896   11/118   6/16     2/16     1/16     0/16
 
 CTC - Control Term Clock
 CTR - Control Term Reset
@@ -90,50 +90,48 @@ DISPLAY<3>              4     8     1    FB16_11 58    I/O       O       LVCMOS1
 DISPLAY<2>              2     8     1    FB16_12 57    I/O       O       LVCMOS18           FAST         
 DISPLAY<6>              3     8     1    FB16_13 56    I/O       O       LVCMOS18           FAST         
 DISPLAY<1>              3     8     1    FB16_15 54    I/O       O       LVCMOS18           FAST         
-DISPLAY<5>              5     8     1    FB16_16 53    I/O       O       LVCMOS18           FAST         
+DISPLAY<5>              3     8     1    FB16_16 53    I/O       O       LVCMOS18           FAST         
 
-** 39 Buried Nodes **
+** 37 Buried Nodes **
 
 Signal                  Total Total Loc     Reg     Reg Init
 Name                    Pts   Inps          Use     State
-TX_CIRCUIT/divider<21>  0     0     FB1_1   DFF     RESET
-TX_CIRCUIT/divider<20>  0     0     FB1_2   DFF     RESET
-TX_CIRCUIT/start        2     2     FB1_3   DFF     RESET
-TX_CIRCUIT/output<3>    1     1     FB1_4   DFF     RESET
-TX_CIRCUIT/divider<19>  0     0     FB1_5   DFF     RESET
-TX_CIRCUIT/output<4>    1     1     FB1_6   DFF     RESET
-TX_CIRCUIT/divider<18>  0     0     FB1_7   DFF     RESET
-TX_CIRCUIT/divider<17>  0     0     FB1_8   DFF     RESET
-TX_CIRCUIT/divider<16>  0     0     FB1_9   DFF     RESET
-TX_CIRCUIT/divider<15>  0     0     FB1_10  DFF     RESET
-TX_CIRCUIT/divider<14>  0     0     FB1_11  DFF     RESET
-TX_CIRCUIT/output<5>    1     1     FB1_12  DFF     RESET
+TX_CIRCUIT/divider<19>  0     0     FB1_1   DFF     RESET
+TX_CIRCUIT/divider<18>  0     0     FB1_2   DFF     RESET
+TX_CIRCUIT/divider<20>  0     0     FB1_3   DFF     RESET
+TX_CIRCUIT/output<5>    1     1     FB1_4   DFF     RESET
+TX_CIRCUIT/divider<17>  0     0     FB1_5   DFF     RESET
+TX_CIRCUIT/output<6>    1     1     FB1_6   DFF     RESET
+TX_CIRCUIT/divider<16>  0     0     FB1_7   DFF     RESET
+TX_CIRCUIT/divider<15>  0     0     FB1_8   DFF     RESET
+TX_CIRCUIT/divider<14>  0     0     FB1_9   DFF     RESET
+TX_CIRCUIT/divider<13>  0     0     FB1_10  DFF     RESET
+TX_CIRCUIT/divider<12>  0     0     FB1_11  DFF     RESET
+TX_CIRCUIT/output<7>    1     1     FB1_12  DFF     RESET
 TX_CIRCUIT/output<8>    1     1     FB1_13  DFF     RESET
 TX_CIRCUIT/output<9>    1     1     FB1_14  DFF     RESET
-TX_CIRCUIT/divider<13>  0     0     FB1_15  DFF     RESET
-TX_CIRCUIT/divider<12>  0     0     FB1_16  DFF     RESET
-TX_CIRCUIT/divider<9>   5     21    FB2_2   DFF     RESET
-N_PZ_174                3     7     FB2_3           
-N_PZ_208                2     13    FB2_4           
-TX_CIRCUIT/divider<10>  6     17    FB2_5   DFF     RESET
-TX_CIRCUIT/divider<8>   2     5     FB2_6   TFF     RESET
-TX_CIRCUIT/divider<7>   2     4     FB2_7   TFF     RESET
-TX_CIRCUIT/divider<6>   2     3     FB2_8   DFF     RESET
+TX_CIRCUIT/divider<11>  0     0     FB1_15  DFF     RESET
+TX_CIRCUIT/divider<10>  0     0     FB1_16  DFF     RESET
+TX_CIRCUIT/divider<0>   1     2     FB2_2   DFF     RESET
+TX_CIRCUIT/divider<6>   7     8     FB2_3   DFF     RESET
+TX_CIRCUIT/divider<5>   2     7     FB2_4   DFF     RESET
+TX_CIRCUIT/divider<4>   2     6     FB2_5   TFF     RESET
+TX_CIRCUIT/clk          1     1     FB2_6   TFF     RESET
+TX_CIRCUIT/divider<9>   0     0     FB2_7   DFF     RESET
+TX_CIRCUIT/divider<21>  0     0     FB2_8   DFF     RESET
 TX_CIRCUIT/count<1>     3     3     FB2_9   TFF     RESET
 TX_CIRCUIT/count<2>     3     4     FB2_10  TFF     RESET
 TX_CIRCUIT/count<3>     3     5     FB2_11  TFF     RESET
-TX_CIRCUIT/divider<0>   3     19    FB2_12  DFF     RESET
-TX_CIRCUIT/clk          3     18    FB2_13  TFF     RESET
-TX_CIRCUIT/divider<11>  4     22    FB2_14  DFF     RESET
+TX_CIRCUIT/divider<3>   2     5     FB2_12  TFF     RESET
+TX_CIRCUIT/divider<2>   2     4     FB2_13  TFF     RESET
+TX_CIRCUIT/divider<1>   2     3     FB2_14  DFF     RESET
 TX_CIRCUIT/count<0>     3     6     FB2_16  TFF     RESET
-N_PZ_250                1     6     FB3_9           
-TX_CIRCUIT/divider<4>   5     16    FB3_10  DFF     RESET
-TX_CIRCUIT/divider<3>   6     20    FB3_11  DFF     RESET
-TX_CIRCUIT/divider<2>   6     20    FB3_12  DFF     RESET
-TX_CIRCUIT/divider<1>   6     20    FB3_13  DFF     RESET
-TX_CIRCUIT/divider<5>   5     22    FB3_15  DFF     RESET
-TX_CIRCUIT/output<6>    1     1     FB6_12  DFF     RESET
-TX_CIRCUIT/output<7>    1     1     FB11_11 DFF     RESET
+TX_CIRCUIT/start        2     2     FB3_11  DFF     RESET
+TX_CIRCUIT/divider<7>   2     9     FB3_12  TFF     RESET
+TX_CIRCUIT/divider<8>   2     10    FB3_13  DFF     RESET
+N_PZ_234                3     17    FB3_15          
+TX_CIRCUIT/output<3>    1     1     FB6_12  DFF     RESET
+TX_CIRCUIT/output<4>    1     1     FB11_11 DFF     RESET
 TX_CIRCUIT/output<2>    1     1     FB12_15 DFF     RESET
 
 ** 10 Inputs **
@@ -141,14 +139,14 @@ TX_CIRCUIT/output<2>    1     1     FB12_15 DFF     RESET
 Signal                  Bank Loc     Pin   Pin       Pin     I/O      I/O
 Name                                 No.   Type      Use     STD      Style
 LOAD                    2    FB1_3   143   GSR/I/O   I       LVCMOS18 KPR
-DATA<1>                 2    FB1_4   142   I/O       I       LVCMOS18 KPR
-DATA<2>                 2    FB1_6   140   I/O       I       LVCMOS18 KPR
-DATA<3>                 2    FB1_12  139   I/O       I       LVCMOS18 KPR
+DATA<3>                 2    FB1_4   142   I/O       I       LVCMOS18 KPR
+DATA<4>                 2    FB1_6   140   I/O       I       LVCMOS18 KPR
+DATA<5>                 2    FB1_12  139   I/O       I       LVCMOS18 KPR
 DATA<6>                 2    FB1_13  138   I/O       I       LVCMOS18 KPR
 DATA<7>                 2    FB1_14  137   I/O       I       LVCMOS18 KPR
 CLK50                   1    FB6_4   38    GCK/I/O   GCK     LVCMOS18 KPR
-DATA<4>                 1    FB6_12  39    DGE/I/O   I       LVCMOS18 KPR
-DATA<5>                 2    FB11_11 124   I/O       I       LVCMOS18 KPR
+DATA<1>                 1    FB6_12  39    DGE/I/O   I       LVCMOS18 KPR
+DATA<2>                 2    FB11_11 124   I/O       I       LVCMOS18 KPR
 DATA<0>                 2    FB12_15 94    I/O       I       LVCMOS18 KPR
 
 Legend:
@@ -177,41 +175,38 @@ Pin Type/Use - I  - Input             GCK - Global clock
 Pin No.      - ~  - User Assigned
 *********************************** FB1  ***********************************
 This function block is part of I/O Bank number:               2
-Number of function block inputs used/remaining:               2/38
-Number of function block control terms used/remaining:        2/2
-Number of PLA product terms used/remaining:                   2/54
+Number of function block inputs used/remaining:               1/39
+Number of function block control terms used/remaining:        1/3
+Number of PLA product terms used/remaining:                   1/55
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
-TX_CIRCUIT/divider<21>        0     FB1_1        (b)     (b)               
-TX_CIRCUIT/divider<20>        0     FB1_2        (b)     (b)               
-TX_CIRCUIT/start              2     FB1_3   143  GSR/I/O I      +   +      
-TX_CIRCUIT/output<3>          1     FB1_4   142  I/O     I      +          
-TX_CIRCUIT/divider<19>        0     FB1_5        (b)     (b)               
-TX_CIRCUIT/output<4>          1     FB1_6   140  I/O     I      +          
-TX_CIRCUIT/divider<18>        0     FB1_7        (b)     (b)               
-TX_CIRCUIT/divider<17>        0     FB1_8        (b)     (b)               
-TX_CIRCUIT/divider<16>        0     FB1_9        (b)     (b)               
-TX_CIRCUIT/divider<15>        0     FB1_10       (b)     (b)               
-TX_CIRCUIT/divider<14>        0     FB1_11       (b)     (b)               
-TX_CIRCUIT/output<5>          1     FB1_12  139  I/O     I      +          
+TX_CIRCUIT/divider<19>        0     FB1_1        (b)     (b)               
+TX_CIRCUIT/divider<18>        0     FB1_2        (b)     (b)               
+TX_CIRCUIT/divider<20>        0     FB1_3   143  GSR/I/O I                 
+TX_CIRCUIT/output<5>          1     FB1_4   142  I/O     I      +          
+TX_CIRCUIT/divider<17>        0     FB1_5        (b)     (b)               
+TX_CIRCUIT/output<6>          1     FB1_6   140  I/O     I      +          
+TX_CIRCUIT/divider<16>        0     FB1_7        (b)     (b)               
+TX_CIRCUIT/divider<15>        0     FB1_8        (b)     (b)               
+TX_CIRCUIT/divider<14>        0     FB1_9        (b)     (b)               
+TX_CIRCUIT/divider<13>        0     FB1_10       (b)     (b)               
+TX_CIRCUIT/divider<12>        0     FB1_11       (b)     (b)               
+TX_CIRCUIT/output<7>          1     FB1_12  139  I/O     I      +          
 TX_CIRCUIT/output<8>          1     FB1_13  138  I/O     I      +          
 TX_CIRCUIT/output<9>          1     FB1_14  137  I/O     I      +          
-TX_CIRCUIT/divider<13>        0     FB1_15       (b)     (b)               
-TX_CIRCUIT/divider<12>        0     FB1_16       (b)     (b)               
+TX_CIRCUIT/divider<11>        0     FB1_15       (b)     (b)               
+TX_CIRCUIT/divider<10>        0     FB1_16       (b)     (b)               
 
 Signals Used by Logic in Function Block
-  1: BUSY               2: LOAD             
+  1: LOAD             
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-TX_CIRCUIT/divider<21> 
-                  ........................................ 0       
-TX_CIRCUIT/divider<20> 
-                  ........................................ 0       
-TX_CIRCUIT/start  XX...................................... 2       
 TX_CIRCUIT/divider<19> 
                   ........................................ 0       
 TX_CIRCUIT/divider<18> 
+                  ........................................ 0       
+TX_CIRCUIT/divider<20> 
                   ........................................ 0       
 TX_CIRCUIT/divider<17> 
                   ........................................ 0       
@@ -225,83 +220,84 @@ TX_CIRCUIT/divider<13>
                   ........................................ 0       
 TX_CIRCUIT/divider<12> 
                   ........................................ 0       
+TX_CIRCUIT/divider<11> 
+                  ........................................ 0       
+TX_CIRCUIT/divider<10> 
+                  ........................................ 0       
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB2  ***********************************
 This function block is part of I/O Bank number:               2
-Number of function block inputs used/remaining:               38/2
+Number of function block inputs used/remaining:               22/18
 Number of function block control terms used/remaining:        3/1
-Number of PLA product terms used/remaining:                   49/7
+Number of PLA product terms used/remaining:                   36/20
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
 BUSY                          2     FB2_1   2    GTS/I/O O              +  
-TX_CIRCUIT/divider<9>         5     FB2_2        (b)     (b)               
-N_PZ_174                      3     FB2_3   3    GTS/I/O (b)               
-N_PZ_208                      2     FB2_4   4    I/O     (b)               
-TX_CIRCUIT/divider<10>        6     FB2_5   5    GTS/I/O (b)               
-TX_CIRCUIT/divider<8>         2     FB2_6        (b)     (b)               
-TX_CIRCUIT/divider<7>         2     FB2_7        (b)     (b)               
-TX_CIRCUIT/divider<6>         2     FB2_8        (b)     (b)               
+TX_CIRCUIT/divider<0>         1     FB2_2        (b)     (b)               
+TX_CIRCUIT/divider<6>         7     FB2_3   3    GTS/I/O (b)               
+TX_CIRCUIT/divider<5>         2     FB2_4   4    I/O     (b)               
+TX_CIRCUIT/divider<4>         2     FB2_5   5    GTS/I/O (b)               
+TX_CIRCUIT/clk                1     FB2_6        (b)     (b)               
+TX_CIRCUIT/divider<9>         0     FB2_7        (b)     (b)               
+TX_CIRCUIT/divider<21>        0     FB2_8        (b)     (b)               
 TX_CIRCUIT/count<1>           3     FB2_9        (b)     (b)    +   +      
 TX_CIRCUIT/count<2>           3     FB2_10       (b)     (b)    +   +      
 TX_CIRCUIT/count<3>           3     FB2_11       (b)     (b)    +   +      
-TX_CIRCUIT/divider<0>         3     FB2_12  6    GTS/I/O (b)               
-TX_CIRCUIT/clk                3     FB2_13  7    I/O     (b)               
-TX_CIRCUIT/divider<11>        4     FB2_14  9    I/O     (b)               
+TX_CIRCUIT/divider<3>         2     FB2_12  6    GTS/I/O (b)               
+TX_CIRCUIT/divider<2>         2     FB2_13  7    I/O     (b)               
+TX_CIRCUIT/divider<1>         2     FB2_14  9    I/O     (b)               
 TXD                           9     FB2_15  10   I/O     O                 
 TX_CIRCUIT/count<0>           3     FB2_16       (b)     (b)    +   +      
 
 Signals Used by Logic in Function Block
-  1: N_PZ_174                14: TX_CIRCUIT/divider<14>  27: TX_CIRCUIT/divider<7> 
-  2: N_PZ_208                15: TX_CIRCUIT/divider<15>  28: TX_CIRCUIT/divider<8> 
-  3: N_PZ_250                16: TX_CIRCUIT/divider<16>  29: TX_CIRCUIT/divider<9> 
-  4: TX_CIRCUIT/clk          17: TX_CIRCUIT/divider<17>  30: TX_CIRCUIT/output<2> 
-  5: TX_CIRCUIT/count<0>     18: TX_CIRCUIT/divider<18>  31: TX_CIRCUIT/output<3> 
-  6: TX_CIRCUIT/count<1>     19: TX_CIRCUIT/divider<19>  32: TX_CIRCUIT/output<4> 
-  7: TX_CIRCUIT/count<2>     20: TX_CIRCUIT/divider<20>  33: TX_CIRCUIT/output<5> 
-  8: TX_CIRCUIT/count<3>     21: TX_CIRCUIT/divider<21>  34: TX_CIRCUIT/output<6> 
-  9: TX_CIRCUIT/divider<0>   22: TX_CIRCUIT/divider<2>   35: TX_CIRCUIT/output<7> 
- 10: TX_CIRCUIT/divider<10>  23: TX_CIRCUIT/divider<3>   36: TX_CIRCUIT/output<8> 
- 11: TX_CIRCUIT/divider<11>  24: TX_CIRCUIT/divider<4>   37: TX_CIRCUIT/output<9> 
- 12: TX_CIRCUIT/divider<12>  25: TX_CIRCUIT/divider<5>   38: TX_CIRCUIT/start 
- 13: TX_CIRCUIT/divider<13>  26: TX_CIRCUIT/divider<6>  
+  1: N_PZ_234                9: TX_CIRCUIT/divider<2>  16: TX_CIRCUIT/output<4> 
+  2: TX_CIRCUIT/clk         10: TX_CIRCUIT/divider<3>  17: TX_CIRCUIT/output<5> 
+  3: TX_CIRCUIT/count<0>    11: TX_CIRCUIT/divider<4>  18: TX_CIRCUIT/output<6> 
+  4: TX_CIRCUIT/count<1>    12: TX_CIRCUIT/divider<5>  19: TX_CIRCUIT/output<7> 
+  5: TX_CIRCUIT/count<2>    13: TX_CIRCUIT/divider<6>  20: TX_CIRCUIT/output<8> 
+  6: TX_CIRCUIT/count<3>    14: TX_CIRCUIT/output<2>   21: TX_CIRCUIT/output<9> 
+  7: TX_CIRCUIT/divider<0>  15: TX_CIRCUIT/output<3>   22: TX_CIRCUIT/start 
+  8: TX_CIRCUIT/divider<1> 
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-BUSY              ....XXXX.............................X.. 5       
-TX_CIRCUIT/divider<9> 
-                  .XX......X.XXXXXXXXXXXXXXXXXX........... 21      
-N_PZ_174          .........XX.............XXXXX........... 7       
-N_PZ_208          .........XXXXXXXXXXXX.......X........... 13      
-TX_CIRCUIT/divider<10> 
-                  ..X......XXXXXXXXXXXX....XXXX........... 17      
-TX_CIRCUIT/divider<8> 
-                  .XX......................XXX............ 5       
-TX_CIRCUIT/divider<7> 
-                  .XX......................XX............. 4       
-TX_CIRCUIT/divider<6> 
-                  .XX......................X.............. 3       
-TX_CIRCUIT/count<1> 
-                  ...XX................................X.. 3       
-TX_CIRCUIT/count<2> 
-                  ...XXX...............................X.. 4       
-TX_CIRCUIT/count<3> 
-                  ...XXXX..............................X.. 5       
+BUSY              ..XXXX...............X.................. 5       
 TX_CIRCUIT/divider<0> 
-                  X.......XX.XXXXXXXXXXXXX.XXX............ 19      
-TX_CIRCUIT/clk    X........X.XXXXXXXXXXXXX.XXX............ 18      
-TX_CIRCUIT/divider<11> 
-                  XXX......XXXXXXXXXXXXXXX.XXXX........... 22      
-TXD               ....XXXX.....................XXXXXXXX... 12      
+                  X.....X................................. 2       
+TX_CIRCUIT/divider<6> 
+                  X.....XXXXXXX........................... 8       
+TX_CIRCUIT/divider<5> 
+                  X.....XXXXXX............................ 7       
+TX_CIRCUIT/divider<4> 
+                  X.....XXXXX............................. 6       
+TX_CIRCUIT/clk    X....................................... 1       
+TX_CIRCUIT/divider<9> 
+                  ........................................ 0       
+TX_CIRCUIT/divider<21> 
+                  ........................................ 0       
+TX_CIRCUIT/count<1> 
+                  .XX..................X.................. 3       
+TX_CIRCUIT/count<2> 
+                  .XXX.................X.................. 4       
+TX_CIRCUIT/count<3> 
+                  .XXXX................X.................. 5       
+TX_CIRCUIT/divider<3> 
+                  X.....XXXX.............................. 5       
+TX_CIRCUIT/divider<2> 
+                  X.....XXX............................... 4       
+TX_CIRCUIT/divider<1> 
+                  X.....XX................................ 3       
+TXD               ..XXXX.......XXXXXXXX................... 12      
 TX_CIRCUIT/count<0> 
-                  ...XXXXX.............................X.. 6       
+                  .XXXXX...............X.................. 6       
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB3  ***********************************
 This function block is part of I/O Bank number:               2
-Number of function block inputs used/remaining:               23/17
-Number of function block control terms used/remaining:        0/4
-Number of PLA product terms used/remaining:                   29/27
+Number of function block inputs used/remaining:               25/15
+Number of function block control terms used/remaining:        2/2
+Number of PLA product terms used/remaining:                   9/47
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
 (unused)                      0     FB3_1   136  I/O           
@@ -312,38 +308,34 @@ Name                          Pt            No.  Type    Use
 (unused)                      0     FB3_6        (b)           
 (unused)                      0     FB3_7        (b)           
 (unused)                      0     FB3_8        (b)           
-N_PZ_250                      1     FB3_9        (b)     (b)               
-TX_CIRCUIT/divider<4>         5     FB3_10       (b)     (b)               
-TX_CIRCUIT/divider<3>         6     FB3_11       (b)     (b)               
-TX_CIRCUIT/divider<2>         6     FB3_12       (b)     (b)               
-TX_CIRCUIT/divider<1>         6     FB3_13       (b)     (b)               
+(unused)                      0     FB3_9        (b)           
+(unused)                      0     FB3_10       (b)           
+TX_CIRCUIT/start              2     FB3_11       (b)     (b)    +   +      
+TX_CIRCUIT/divider<7>         2     FB3_12       (b)     (b)               
+TX_CIRCUIT/divider<8>         2     FB3_13       (b)     (b)               
 (unused)                      0     FB3_14  132  I/O           
-TX_CIRCUIT/divider<5>         5     FB3_15       (b)     (b)               
+N_PZ_234                      3     FB3_15       (b)     (b)               
 (unused)                      0     FB3_16  131  I/O           
 
 Signals Used by Logic in Function Block
-  1: N_PZ_174                 9: TX_CIRCUIT/divider<15>  17: TX_CIRCUIT/divider<2> 
-  2: N_PZ_208                10: TX_CIRCUIT/divider<16>  18: TX_CIRCUIT/divider<3> 
-  3: N_PZ_250                11: TX_CIRCUIT/divider<17>  19: TX_CIRCUIT/divider<4> 
-  4: TX_CIRCUIT/divider<0>   12: TX_CIRCUIT/divider<18>  20: TX_CIRCUIT/divider<5> 
-  5: TX_CIRCUIT/divider<10>  13: TX_CIRCUIT/divider<19>  21: TX_CIRCUIT/divider<6> 
-  6: TX_CIRCUIT/divider<12>  14: TX_CIRCUIT/divider<1>   22: TX_CIRCUIT/divider<7> 
-  7: TX_CIRCUIT/divider<13>  15: TX_CIRCUIT/divider<20>  23: TX_CIRCUIT/divider<8> 
-  8: TX_CIRCUIT/divider<14>  16: TX_CIRCUIT/divider<21> 
+  1: BUSY                    10: TX_CIRCUIT/divider<15>  18: TX_CIRCUIT/divider<2> 
+  2: LOAD                    11: TX_CIRCUIT/divider<16>  19: TX_CIRCUIT/divider<3> 
+  3: N_PZ_234                12: TX_CIRCUIT/divider<17>  20: TX_CIRCUIT/divider<4> 
+  4: TX_CIRCUIT/divider<0>   13: TX_CIRCUIT/divider<18>  21: TX_CIRCUIT/divider<5> 
+  5: TX_CIRCUIT/divider<10>  14: TX_CIRCUIT/divider<19>  22: TX_CIRCUIT/divider<6> 
+  6: TX_CIRCUIT/divider<11>  15: TX_CIRCUIT/divider<1>   23: TX_CIRCUIT/divider<7> 
+  7: TX_CIRCUIT/divider<12>  16: TX_CIRCUIT/divider<20>  24: TX_CIRCUIT/divider<8> 
+  8: TX_CIRCUIT/divider<13>  17: TX_CIRCUIT/divider<21>  25: TX_CIRCUIT/divider<9> 
+  9: TX_CIRCUIT/divider<14> 
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-N_PZ_250          ...X.........X..XXXX.................... 6       
-TX_CIRCUIT/divider<4> 
-                  X..X.XXXXXXXXXXXXXX..................... 16      
-TX_CIRCUIT/divider<3> 
-                  X..XXXXXXXXXXXXXXXX.XXX................. 20      
-TX_CIRCUIT/divider<2> 
-                  X..XXXXXXXXXXXXXXXX.XXX................. 20      
-TX_CIRCUIT/divider<1> 
-                  X..XXXXXXXXXXXXXXXX.XXX................. 20      
-TX_CIRCUIT/divider<5> 
-                  .XXXXXXXXXXXXXXXXXXXXXX................. 22      
+TX_CIRCUIT/start  XX...................................... 2       
+TX_CIRCUIT/divider<7> 
+                  ..XX..........X..XXXXXX................. 9       
+TX_CIRCUIT/divider<8> 
+                  ..XX..........X..XXXXXXX................ 10      
+N_PZ_234          ....XXXXXXXXXX.XX...XXXXX............... 17      
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB4  ***********************************
@@ -410,7 +402,7 @@ Name                          Pt            No.  Type    Use
 (unused)                      0     FB6_9        (b)           
 (unused)                      0     FB6_10       (b)           
 (unused)                      0     FB6_11       (b)           
-TX_CIRCUIT/output<6>          1     FB6_12  39   DGE/I/O I      +          
+TX_CIRCUIT/output<3>          1     FB6_12  39   DGE/I/O I      +          
 (unused)                      0     FB6_13  40   I/O           
 (unused)                      0     FB6_14  41   I/O           
 (unused)                      0     FB6_15  42   I/O           
@@ -532,7 +524,7 @@ Name                          Pt            No.  Type    Use
 (unused)                      0     FB11_8       (b)           
 (unused)                      0     FB11_9       (b)           
 (unused)                      0     FB11_10      (b)           
-TX_CIRCUIT/output<7>          1     FB11_11 124  I/O     I      +          
+TX_CIRCUIT/output<4>          1     FB11_11 124  I/O     I      +          
 (unused)                      0     FB11_12 125  I/O           
 (unused)                      0     FB11_13 126  I/O           
 (unused)                      0     FB11_14 128  I/O           
@@ -663,7 +655,7 @@ Name                          Pt            No.  Type    Use
 This function block is part of I/O Bank number:               1
 Number of function block inputs used/remaining:               8/32
 Number of function block control terms used/remaining:        0/4
-Number of PLA product terms used/remaining:                   12/44
+Number of PLA product terms used/remaining:                   14/42
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
 (unused)                      0     FB16_1       (b)           
@@ -681,7 +673,7 @@ DISPLAY<2>                    2     FB16_12 57   I/O     O
 DISPLAY<6>                    3     FB16_13 56   I/O     O                 
 (unused)                      0     FB16_14      (b)           
 DISPLAY<1>                    3     FB16_15 54   I/O     O                 
-DISPLAY<5>                    5     FB16_16 53   I/O     O                 
+DISPLAY<5>                    3     FB16_16 53   I/O     O                 
 
 Signals Used by Logic in Function Block
   1: DATA<0>            4: DATA<3>            7: DATA<6> 
@@ -707,89 +699,81 @@ BUSY_G <= (NOT TX_CIRCUIT/count(0) AND TX_CIRCUIT/count(1) AND
 	NOT TX_CIRCUIT/count(2) AND TX_CIRCUIT/count(3));
 
 
-DISPLAY(0) <= NOT (((DATA(7) AND DATA(6) AND DATA(3) AND DATA(2) AND 
-	DATA(4) AND DATA(5) AND NOT DATA(1))
-	OR (DATA(7) AND DATA(6) AND DATA(3) AND NOT DATA(2) AND 
-	DATA(0) AND DATA(4) AND DATA(5))
-	OR (DATA(7) AND DATA(6) AND DATA(3) AND NOT DATA(2) AND 
-	DATA(4) AND DATA(5) AND DATA(1))));
+DISPLAY(0) <= NOT (((DATA(0) AND NOT DATA(1) AND DATA(3) AND DATA(4) AND 
+	DATA(5) AND DATA(6) AND DATA(7))
+	OR (DATA(1) AND DATA(3) AND DATA(4) AND DATA(5) AND 
+	DATA(6) AND DATA(7) AND NOT DATA(2))
+	OR (NOT DATA(1) AND DATA(3) AND DATA(4) AND DATA(5) AND 
+	DATA(6) AND DATA(7) AND DATA(2))));
 
 
-DISPLAY(1) <= NOT (((DATA(7) AND DATA(6) AND DATA(3) AND NOT DATA(2) AND 
-	DATA(0) AND DATA(4) AND DATA(5))
-	OR (DATA(7) AND DATA(6) AND DATA(3) AND NOT DATA(2) AND 
-	DATA(4) AND DATA(5) AND DATA(1))
-	OR (DATA(7) AND DATA(6) AND DATA(3) AND DATA(2) AND 
-	DATA(0) AND NOT DATA(4) AND NOT DATA(5) AND DATA(1))));
+DISPLAY(1) <= NOT (((DATA(0) AND DATA(1) AND DATA(3) AND DATA(4) AND 
+	DATA(5) AND DATA(6) AND DATA(7))
+	OR (DATA(0) AND DATA(3) AND DATA(4) AND DATA(5) AND 
+	DATA(6) AND DATA(7) AND NOT DATA(2))
+	OR (DATA(1) AND DATA(3) AND DATA(4) AND DATA(5) AND 
+	DATA(6) AND DATA(7) AND NOT DATA(2))));
 
 
-DISPLAY(2) <= NOT (((DATA(7) AND DATA(6) AND DATA(3) AND DATA(0) AND 
-	DATA(4) AND DATA(5) AND NOT DATA(1))
-	OR (DATA(7) AND DATA(6) AND DATA(3) AND DATA(2) AND 
-	DATA(0) AND NOT DATA(4) AND NOT DATA(5) AND DATA(1))));
+DISPLAY(2) <= NOT (((DATA(0) AND NOT DATA(1) AND DATA(3) AND DATA(4) AND 
+	DATA(5) AND DATA(6) AND DATA(7))
+	OR (DATA(0) AND DATA(3) AND DATA(4) AND DATA(5) AND 
+	DATA(6) AND DATA(7) AND DATA(2))));
 
 
-DISPLAY(3) <= NOT (((DATA(7) AND DATA(6) AND DATA(3) AND DATA(2) AND 
-	DATA(4) AND DATA(5) AND NOT DATA(1))
-	OR (DATA(7) AND DATA(6) AND DATA(3) AND DATA(2) AND 
-	DATA(0) AND NOT DATA(4) AND NOT DATA(5) AND DATA(1))
-	OR (DATA(7) AND DATA(6) AND DATA(3) AND NOT DATA(2) AND 
-	DATA(0) AND DATA(4) AND DATA(5) AND NOT DATA(1))
-	OR (DATA(7) AND DATA(6) AND DATA(3) AND NOT DATA(2) AND 
-	NOT DATA(0) AND DATA(4) AND DATA(5) AND DATA(1))));
+DISPLAY(3) <= NOT (((DATA(0) AND NOT DATA(1) AND DATA(3) AND DATA(4) AND 
+	DATA(5) AND DATA(6) AND DATA(7))
+	OR (DATA(0) AND DATA(3) AND DATA(4) AND DATA(5) AND 
+	DATA(6) AND DATA(7) AND DATA(2))
+	OR (NOT DATA(1) AND DATA(3) AND DATA(4) AND DATA(5) AND 
+	DATA(6) AND DATA(7) AND DATA(2))
+	OR (NOT DATA(0) AND DATA(1) AND DATA(3) AND DATA(4) AND 
+	DATA(5) AND DATA(6) AND DATA(7) AND NOT DATA(2))));
 
 
-DISPLAY(4) <= NOT (((DATA(7) AND DATA(6) AND DATA(3) AND NOT DATA(0) AND 
-	DATA(4) AND DATA(5))
-	OR (DATA(7) AND DATA(6) AND DATA(3) AND NOT DATA(2) AND 
-	DATA(0) AND DATA(4) AND DATA(5))
-	OR (DATA(7) AND DATA(6) AND DATA(3) AND DATA(2) AND 
-	DATA(0) AND NOT DATA(4) AND NOT DATA(5) AND DATA(1))));
+DISPLAY(4) <= NOT (((NOT DATA(0) AND DATA(3) AND DATA(4) AND DATA(5) AND 
+	DATA(6) AND DATA(7))
+	OR (DATA(1) AND DATA(3) AND DATA(4) AND DATA(5) AND 
+	DATA(6) AND DATA(7))
+	OR (DATA(3) AND DATA(4) AND DATA(5) AND DATA(6) AND 
+	DATA(7) AND NOT DATA(2))));
 
 
-DISPLAY(5) <= NOT (((DATA(7) AND DATA(6) AND DATA(3) AND DATA(2) AND 
-	NOT DATA(0) AND DATA(4) AND DATA(5))
-	OR (DATA(7) AND DATA(6) AND DATA(3) AND DATA(2) AND 
-	DATA(4) AND DATA(5) AND NOT DATA(1))
-	OR (DATA(7) AND DATA(6) AND DATA(3) AND NOT DATA(0) AND 
-	DATA(4) AND DATA(5) AND NOT DATA(1))
-	OR (DATA(7) AND DATA(6) AND DATA(3) AND DATA(2) AND 
-	DATA(0) AND NOT DATA(4) AND NOT DATA(5) AND DATA(1))
-	OR (DATA(7) AND DATA(6) AND DATA(3) AND NOT DATA(2) AND 
-	DATA(0) AND DATA(4) AND DATA(5) AND DATA(1))));
+DISPLAY(5) <= NOT (((DATA(3) AND DATA(4) AND DATA(5) AND DATA(6) AND 
+	DATA(7) AND DATA(2))
+	OR (DATA(0) AND DATA(1) AND DATA(3) AND DATA(4) AND 
+	DATA(5) AND DATA(6) AND DATA(7))
+	OR (NOT DATA(0) AND NOT DATA(1) AND DATA(3) AND DATA(4) AND 
+	DATA(5) AND DATA(6) AND DATA(7))));
 
 
-DISPLAY(6) <= NOT (((DATA(7) AND DATA(6) AND DATA(3) AND DATA(4) AND 
-	DATA(5) AND NOT DATA(1))
-	OR (DATA(7) AND DATA(6) AND DATA(3) AND DATA(2) AND 
-	DATA(0) AND NOT DATA(4) AND NOT DATA(5) AND DATA(1))
-	OR (DATA(7) AND DATA(6) AND DATA(3) AND NOT DATA(2) AND 
-	NOT DATA(0) AND DATA(4) AND DATA(5) AND DATA(1))));
+DISPLAY(6) <= NOT (((NOT DATA(1) AND DATA(3) AND DATA(4) AND DATA(5) AND 
+	DATA(6) AND DATA(7))
+	OR (DATA(0) AND DATA(3) AND DATA(4) AND DATA(5) AND 
+	DATA(6) AND DATA(7) AND DATA(2))
+	OR (NOT DATA(0) AND DATA(3) AND DATA(4) AND DATA(5) AND 
+	DATA(6) AND DATA(7) AND NOT DATA(2))));
 
 
 EN_SEGMENT <= '0';
 
 
-N_PZ_174 <= ((NOT TX_CIRCUIT/divider(11))
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(9))
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(5) AND 
-	NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(8)));
-
-
-N_PZ_208 <= ((NOT TX_CIRCUIT/divider(11) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21))
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	NOT TX_CIRCUIT/divider(9)));
-
-
-N_PZ_250 <= (TX_CIRCUIT/divider(5) AND TX_CIRCUIT/divider(2) AND 
-	TX_CIRCUIT/divider(0) AND TX_CIRCUIT/divider(4) AND TX_CIRCUIT/divider(3) AND 
-	TX_CIRCUIT/divider(1));
+N_PZ_234 <= ((NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(11) AND 
+	NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND 
+	NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND 
+	NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND 
+	NOT TX_CIRCUIT/divider(9) AND NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(7))
+	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(11) AND 
+	NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND 
+	NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND 
+	NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND 
+	NOT TX_CIRCUIT/divider(9) AND NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(8))
+	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(11) AND 
+	NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND 
+	NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND 
+	NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND 
+	NOT TX_CIRCUIT/divider(5) AND NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(9) AND 
+	NOT TX_CIRCUIT/divider(21)));
 
 
 TXD <= (NOT TX_CIRCUIT/count(0) AND NOT TX_CIRCUIT/count(2))
@@ -810,23 +794,7 @@ TXD <= (NOT TX_CIRCUIT/count(0) AND NOT TX_CIRCUIT/count(2))
 	OR (NOT TX_CIRCUIT/count(0) AND NOT TX_CIRCUIT/count(1) AND 
 	NOT TX_CIRCUIT/count(2) AND TX_CIRCUIT/count(3) AND NOT TX_CIRCUIT/output(8)));
 
-FTCPE_TX_CIRCUIT/clk: FTCPE port map (TX_CIRCUIT/clk,TX_CIRCUIT/clk_T,CLK50,'0','0','1');
-TX_CIRCUIT/clk_T <= NOT (((NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
-	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
-	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174)
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	NOT TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(6) AND 
-	NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(8))
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(6) AND 
-	NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(8))));
+FTCPE_TX_CIRCUIT/clk: FTCPE port map (TX_CIRCUIT/clk,N_PZ_234,CLK50,'0','0','1');
 
 FTCPE_TX_CIRCUIT/count0: FTCPE port map (TX_CIRCUIT/count(0),TX_CIRCUIT/count_T(0),TX_CIRCUIT/clk,TX_CIRCUIT/start,'0','1');
 TX_CIRCUIT/count_T(0) <= NOT ((NOT TX_CIRCUIT/count(0) AND TX_CIRCUIT/count(1) AND 
@@ -842,283 +810,70 @@ TX_CIRCUIT/count_T(3) <= (TX_CIRCUIT/count(0) AND TX_CIRCUIT/count(1) AND
 	TX_CIRCUIT/count(2));
 
 FDCPE_TX_CIRCUIT/divider0: FDCPE port map (TX_CIRCUIT/divider(0),TX_CIRCUIT/divider_D(0),CLK50,'0','0','1');
-TX_CIRCUIT/divider_D(0) <= ((NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
-	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
-	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
-	NOT TX_CIRCUIT/divider(0))
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	NOT TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(4) AND 
-	NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(8))
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	NOT TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(3) AND 
-	NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(8)));
+TX_CIRCUIT/divider_D(0) <= (N_PZ_234 AND NOT TX_CIRCUIT/divider(0));
 
 FDCPE_TX_CIRCUIT/divider1: FDCPE port map (TX_CIRCUIT/divider(1),TX_CIRCUIT/divider_D(1),CLK50,'0','0','1');
-TX_CIRCUIT/divider_D(1) <= ((NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
-	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
-	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
-	TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(1))
-	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
-	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
-	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
-	NOT TX_CIRCUIT/divider(0) AND TX_CIRCUIT/divider(1))
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	NOT TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(4) AND 
-	NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(1) AND NOT TX_CIRCUIT/divider(7) AND 
-	NOT TX_CIRCUIT/divider(8))
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	NOT TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(4) AND 
-	NOT TX_CIRCUIT/divider(6) AND TX_CIRCUIT/divider(1) AND NOT TX_CIRCUIT/divider(7) AND 
-	NOT TX_CIRCUIT/divider(8))
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(3) AND 
-	NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(1) AND NOT TX_CIRCUIT/divider(7) AND 
-	NOT TX_CIRCUIT/divider(8))
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	NOT TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(3) AND 
-	NOT TX_CIRCUIT/divider(6) AND TX_CIRCUIT/divider(1) AND NOT TX_CIRCUIT/divider(7) AND 
-	NOT TX_CIRCUIT/divider(8)));
+TX_CIRCUIT/divider_D(1) <= ((N_PZ_234 AND TX_CIRCUIT/divider(0) AND 
+	NOT TX_CIRCUIT/divider(1))
+	OR (N_PZ_234 AND NOT TX_CIRCUIT/divider(0) AND 
+	TX_CIRCUIT/divider(1)));
 
-FDCPE_TX_CIRCUIT/divider2: FDCPE port map (TX_CIRCUIT/divider(2),TX_CIRCUIT/divider_D(2),CLK50,'0','0','1');
-TX_CIRCUIT/divider_D(2) <= ((NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
-	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
-	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
-	TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(0))
-	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
-	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
-	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
-	TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(1))
-	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
-	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
-	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
-	NOT TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(0) AND TX_CIRCUIT/divider(1))
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(4) AND 
-	NOT TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(7) AND 
-	NOT TX_CIRCUIT/divider(8))
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(3) AND 
-	NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(1) AND NOT TX_CIRCUIT/divider(7) AND 
-	NOT TX_CIRCUIT/divider(8))
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	NOT TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(4) AND 
-	NOT TX_CIRCUIT/divider(6) AND TX_CIRCUIT/divider(1) AND NOT TX_CIRCUIT/divider(7) AND 
-	NOT TX_CIRCUIT/divider(8)));
+FTCPE_TX_CIRCUIT/divider2: FTCPE port map (TX_CIRCUIT/divider(2),TX_CIRCUIT/divider_T(2),CLK50,'0','0','1');
+TX_CIRCUIT/divider_T(2) <= ((NOT N_PZ_234 AND TX_CIRCUIT/divider(2))
+	OR (N_PZ_234 AND TX_CIRCUIT/divider(0) AND 
+	TX_CIRCUIT/divider(1)));
 
-FDCPE_TX_CIRCUIT/divider3: FDCPE port map (TX_CIRCUIT/divider(3),TX_CIRCUIT/divider_D(3),CLK50,'0','0','1');
-TX_CIRCUIT/divider_D(3) <= ((NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
-	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
-	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
-	NOT TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(3))
-	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
-	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
-	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
-	NOT TX_CIRCUIT/divider(0) AND TX_CIRCUIT/divider(3))
-	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
-	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
-	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
-	TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(1))
-	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
-	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
-	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
-	TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(3) AND 
-	TX_CIRCUIT/divider(1))
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	NOT TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(4) AND TX_CIRCUIT/divider(3) AND 
-	NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(8))
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(4) AND 
-	NOT TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(6) AND TX_CIRCUIT/divider(1) AND 
-	NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(8)));
+FTCPE_TX_CIRCUIT/divider3: FTCPE port map (TX_CIRCUIT/divider(3),TX_CIRCUIT/divider_T(3),CLK50,'0','0','1');
+TX_CIRCUIT/divider_T(3) <= ((NOT N_PZ_234 AND TX_CIRCUIT/divider(3))
+	OR (N_PZ_234 AND TX_CIRCUIT/divider(0) AND 
+	TX_CIRCUIT/divider(1) AND TX_CIRCUIT/divider(2)));
 
-FDCPE_TX_CIRCUIT/divider4: FDCPE port map (TX_CIRCUIT/divider(4),TX_CIRCUIT/divider_D(4),CLK50,'0','0','1');
-TX_CIRCUIT/divider_D(4) <= ((NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
-	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
-	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
-	NOT TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(4))
-	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
-	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
-	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
-	NOT TX_CIRCUIT/divider(0) AND TX_CIRCUIT/divider(4))
-	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
-	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
-	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
-	TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(3))
-	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
-	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
-	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
-	TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(1))
-	OR (NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND 
-	NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND 
-	NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND 
-	NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND N_PZ_174 AND 
-	TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(0) AND NOT TX_CIRCUIT/divider(4) AND 
-	TX_CIRCUIT/divider(3) AND TX_CIRCUIT/divider(1)));
+FTCPE_TX_CIRCUIT/divider4: FTCPE port map (TX_CIRCUIT/divider(4),TX_CIRCUIT/divider_T(4),CLK50,'0','0','1');
+TX_CIRCUIT/divider_T(4) <= ((NOT N_PZ_234 AND TX_CIRCUIT/divider(4))
+	OR (N_PZ_234 AND TX_CIRCUIT/divider(0) AND 
+	TX_CIRCUIT/divider(1) AND TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(3)));
 
 FDCPE_TX_CIRCUIT/divider5: FDCPE port map (TX_CIRCUIT/divider(5),TX_CIRCUIT/divider_D(5),CLK50,'0','0','1');
-TX_CIRCUIT/divider_D(5) <= ((TX_CIRCUIT/divider(5) AND NOT N_PZ_250 AND N_PZ_208)
-	OR (TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(0) AND 
-	TX_CIRCUIT/divider(4) AND TX_CIRCUIT/divider(3) AND NOT N_PZ_250 AND 
-	TX_CIRCUIT/divider(1) AND N_PZ_208)
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	TX_CIRCUIT/divider(5) AND NOT TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(4) AND 
-	NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(8))
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	TX_CIRCUIT/divider(5) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(3) AND 
-	NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(8))
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(0) AND TX_CIRCUIT/divider(4) AND 
-	TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(6) AND NOT N_PZ_250 AND 
-	TX_CIRCUIT/divider(1) AND NOT TX_CIRCUIT/divider(7) AND NOT TX_CIRCUIT/divider(8)));
+TX_CIRCUIT/divider_D(5) <= (N_PZ_234 AND TX_CIRCUIT/divider(5))
+	XOR (N_PZ_234 AND TX_CIRCUIT/divider(0) AND 
+	TX_CIRCUIT/divider(1) AND TX_CIRCUIT/divider(2) AND TX_CIRCUIT/divider(3) AND 
+	TX_CIRCUIT/divider(4));
 
 FDCPE_TX_CIRCUIT/divider6: FDCPE port map (TX_CIRCUIT/divider(6),TX_CIRCUIT/divider_D(6),CLK50,'0','0','1');
-TX_CIRCUIT/divider_D(6) <= ((TX_CIRCUIT/divider(6) AND NOT N_PZ_250 AND N_PZ_208)
-	OR (NOT TX_CIRCUIT/divider(6) AND N_PZ_250 AND N_PZ_208));
+TX_CIRCUIT/divider_D(6) <= ((N_PZ_234 AND NOT TX_CIRCUIT/divider(5) AND 
+	TX_CIRCUIT/divider(6))
+	OR (N_PZ_234 AND NOT TX_CIRCUIT/divider(0) AND 
+	TX_CIRCUIT/divider(6))
+	OR (N_PZ_234 AND NOT TX_CIRCUIT/divider(1) AND 
+	TX_CIRCUIT/divider(6))
+	OR (N_PZ_234 AND NOT TX_CIRCUIT/divider(2) AND 
+	TX_CIRCUIT/divider(6))
+	OR (N_PZ_234 AND NOT TX_CIRCUIT/divider(3) AND 
+	TX_CIRCUIT/divider(6))
+	OR (N_PZ_234 AND NOT TX_CIRCUIT/divider(4) AND 
+	TX_CIRCUIT/divider(6))
+	OR (N_PZ_234 AND TX_CIRCUIT/divider(5) AND 
+	TX_CIRCUIT/divider(0) AND TX_CIRCUIT/divider(1) AND TX_CIRCUIT/divider(2) AND 
+	TX_CIRCUIT/divider(3) AND TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(6)));
 
 FTCPE_TX_CIRCUIT/divider7: FTCPE port map (TX_CIRCUIT/divider(7),TX_CIRCUIT/divider_T(7),CLK50,'0','0','1');
-TX_CIRCUIT/divider_T(7) <= ((TX_CIRCUIT/divider(7) AND NOT N_PZ_208)
-	OR (TX_CIRCUIT/divider(6) AND N_PZ_250 AND N_PZ_208));
+TX_CIRCUIT/divider_T(7) <= ((NOT N_PZ_234 AND TX_CIRCUIT/divider(7))
+	OR (N_PZ_234 AND TX_CIRCUIT/divider(5) AND 
+	TX_CIRCUIT/divider(0) AND TX_CIRCUIT/divider(1) AND TX_CIRCUIT/divider(2) AND 
+	TX_CIRCUIT/divider(3) AND TX_CIRCUIT/divider(4) AND TX_CIRCUIT/divider(6)));
 
-FTCPE_TX_CIRCUIT/divider8: FTCPE port map (TX_CIRCUIT/divider(8),TX_CIRCUIT/divider_T(8),CLK50,'0','0','1');
-TX_CIRCUIT/divider_T(8) <= ((NOT N_PZ_208 AND TX_CIRCUIT/divider(8))
-	OR (TX_CIRCUIT/divider(6) AND N_PZ_250 AND 
-	TX_CIRCUIT/divider(7) AND N_PZ_208));
+FDCPE_TX_CIRCUIT/divider8: FDCPE port map (TX_CIRCUIT/divider(8),TX_CIRCUIT/divider_D(8),CLK50,'0','0','1');
+TX_CIRCUIT/divider_D(8) <= ((N_PZ_234 AND TX_CIRCUIT/divider(8))
+	OR (N_PZ_234 AND TX_CIRCUIT/divider(5) AND 
+	TX_CIRCUIT/divider(0) AND TX_CIRCUIT/divider(1) AND TX_CIRCUIT/divider(2) AND 
+	TX_CIRCUIT/divider(3) AND TX_CIRCUIT/divider(4) AND TX_CIRCUIT/divider(6) AND 
+	TX_CIRCUIT/divider(7)));
 
-FDCPE_TX_CIRCUIT/divider9: FDCPE port map (TX_CIRCUIT/divider(9),TX_CIRCUIT/divider_D(9),CLK50,'0','0','1');
-TX_CIRCUIT/divider_D(9) <= (N_PZ_208 AND TX_CIRCUIT/divider(9))
-	XOR ((TX_CIRCUIT/divider(6) AND N_PZ_250 AND 
-	TX_CIRCUIT/divider(7) AND N_PZ_208 AND TX_CIRCUIT/divider(8))
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	NOT TX_CIRCUIT/divider(5) AND NOT TX_CIRCUIT/divider(6) AND NOT TX_CIRCUIT/divider(7) AND 
-	NOT N_PZ_208 AND TX_CIRCUIT/divider(9) AND NOT TX_CIRCUIT/divider(8))
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	NOT TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(6) AND 
-	NOT TX_CIRCUIT/divider(7) AND NOT N_PZ_208 AND TX_CIRCUIT/divider(9) AND 
-	NOT TX_CIRCUIT/divider(8))
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(6) AND 
-	NOT TX_CIRCUIT/divider(7) AND NOT N_PZ_208 AND TX_CIRCUIT/divider(9) AND 
-	NOT TX_CIRCUIT/divider(8)));
+FDCPE_TX_CIRCUIT/divider9: FDCPE port map (TX_CIRCUIT/divider(9),'0',CLK50,'0','0','1');
 
-FDCPE_TX_CIRCUIT/divider10: FDCPE port map (TX_CIRCUIT/divider(10),TX_CIRCUIT/divider_D(10),CLK50,'0','0','1');
-TX_CIRCUIT/divider_D(10) <= ((TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(11) AND 
-	NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND 
-	NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND 
-	NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND 
-	NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(6))
-	OR (TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(11) AND 
-	NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND 
-	NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND 
-	NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND 
-	NOT TX_CIRCUIT/divider(21) AND NOT N_PZ_250)
-	OR (TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(11) AND 
-	NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND 
-	NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND 
-	NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND 
-	NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(7))
-	OR (TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(11) AND 
-	NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND 
-	NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND 
-	NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND 
-	NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(9))
-	OR (TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(11) AND 
-	NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND 
-	NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND 
-	NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND 
-	NOT TX_CIRCUIT/divider(21) AND NOT TX_CIRCUIT/divider(8))
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(11) AND 
-	NOT TX_CIRCUIT/divider(12) AND NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND 
-	NOT TX_CIRCUIT/divider(15) AND NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND 
-	NOT TX_CIRCUIT/divider(18) AND NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND 
-	NOT TX_CIRCUIT/divider(21) AND TX_CIRCUIT/divider(6) AND N_PZ_250 AND 
-	TX_CIRCUIT/divider(7) AND TX_CIRCUIT/divider(9) AND TX_CIRCUIT/divider(8)));
+FDCPE_TX_CIRCUIT/divider10: FDCPE port map (TX_CIRCUIT/divider(10),'0',CLK50,'0','0','1');
 
-FDCPE_TX_CIRCUIT/divider11: FDCPE port map (TX_CIRCUIT/divider(11),TX_CIRCUIT/divider_D(11),CLK50,'0','0','1');
-TX_CIRCUIT/divider_D(11) <= ((TX_CIRCUIT/divider(10) AND TX_CIRCUIT/divider(6) AND 
-	N_PZ_250 AND TX_CIRCUIT/divider(7) AND N_PZ_208 AND 
-	TX_CIRCUIT/divider(9) AND TX_CIRCUIT/divider(8))
-	OR (TX_CIRCUIT/divider(11) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	N_PZ_174)
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	NOT TX_CIRCUIT/divider(2) AND NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(6) AND 
-	NOT TX_CIRCUIT/divider(7) AND NOT N_PZ_208 AND NOT TX_CIRCUIT/divider(8))
-	OR (NOT TX_CIRCUIT/divider(10) AND NOT TX_CIRCUIT/divider(12) AND 
-	NOT TX_CIRCUIT/divider(13) AND NOT TX_CIRCUIT/divider(14) AND NOT TX_CIRCUIT/divider(15) AND 
-	NOT TX_CIRCUIT/divider(16) AND NOT TX_CIRCUIT/divider(17) AND NOT TX_CIRCUIT/divider(18) AND 
-	NOT TX_CIRCUIT/divider(19) AND NOT TX_CIRCUIT/divider(20) AND NOT TX_CIRCUIT/divider(21) AND 
-	NOT TX_CIRCUIT/divider(4) AND NOT TX_CIRCUIT/divider(3) AND NOT TX_CIRCUIT/divider(6) AND 
-	NOT TX_CIRCUIT/divider(7) AND NOT N_PZ_208 AND NOT TX_CIRCUIT/divider(8)));
+FDCPE_TX_CIRCUIT/divider11: FDCPE port map (TX_CIRCUIT/divider(11),'0',CLK50,'0','0','1');
 
 FDCPE_TX_CIRCUIT/divider12: FDCPE port map (TX_CIRCUIT/divider(12),'0',CLK50,'0','0','1');
 
@@ -1214,7 +969,7 @@ No. Name                           No. Name
  36 GND                             108 GND                           
  37 VCC                             109 VCCIO-1.8                     
  38 CLK50                           110 KPR                           
- 39 DATA<4>                         111 KPR                           
+ 39 DATA<1>                         111 KPR                           
  40 KPR                             112 KPR                           
  41 KPR                             113 KPR                           
  42 KPR                             114 KPR                           
@@ -1227,7 +982,7 @@ No. Name                           No. Name
  49 KPR                             121 KPR                           
  50 KPR                             122 TDO                           
  51 KPR                             123 GND                           
- 52 KPR                             124 DATA<5>                       
+ 52 KPR                             124 DATA<2>                       
  53 DISPLAY<5>                      125 KPR                           
  54 DISPLAY<1>                      126 KPR                           
  55 VCCIO-1.8                       127 VCCIO-1.8                     
@@ -1242,10 +997,10 @@ No. Name                           No. Name
  64 KPR                             136 KPR                           
  65 TMS                             137 DATA<7>                       
  66 KPR                             138 DATA<6>                       
- 67 TCK                             139 DATA<3>                       
- 68 KPR                             140 DATA<2>                       
+ 67 TCK                             139 DATA<5>                       
+ 68 KPR                             140 DATA<4>                       
  69 led                             141 VCCIO-1.8                     
- 70 KPR                             142 DATA<1>                       
+ 70 KPR                             142 DATA<3>                       
  71 KPR                             143 LOAD                          
  72 GND                             144 GND                           
 

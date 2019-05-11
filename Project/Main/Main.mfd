@@ -34,521 +34,279 @@ EQ | 3 |
     TX_CIRCUIT/count<1>.CLK = TX_CIRCUIT/clk;	// CTC	(1 pt, 1 inp)
     TX_CIRCUIT/count<1>.AR = TX_CIRCUIT/start;	// CTR	(1 pt, 1 inp)
 
-MACROCELL | 1 | 12 | TX_CIRCUIT/clk_MC
+MACROCELL | 1 | 5 | TX_CIRCUIT/clk_MC
 ATTRIBUTES | 2151711488 | 0
-INPUTS | 18 | TX_CIRCUIT/divider<12>  | TX_CIRCUIT/divider<13>  | TX_CIRCUIT/divider<14>  | TX_CIRCUIT/divider<15>  | TX_CIRCUIT/divider<16>  | TX_CIRCUIT/divider<17>  | TX_CIRCUIT/divider<18>  | TX_CIRCUIT/divider<19>  | TX_CIRCUIT/divider<20>  | TX_CIRCUIT/divider<21>  | N_PZ_174  | TX_CIRCUIT/divider<10>  | TX_CIRCUIT/divider<2>  | TX_CIRCUIT/divider<4>  | TX_CIRCUIT/divider<6>  | TX_CIRCUIT/divider<7>  | TX_CIRCUIT/divider<8>  | TX_CIRCUIT/divider<3>
-INPUTMC | 18 | 0 | 15 | 0 | 14 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 1 | 0 | 0 | 1 | 2 | 1 | 4 | 2 | 11 | 2 | 9 | 1 | 7 | 1 | 6 | 1 | 5 | 2 | 10
-EQ | 17 | 
-   !TX_CIRCUIT/clk.T := !TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & 
-	!TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & 
-	!TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & 
-	!TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & N_PZ_174
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	!TX_CIRCUIT/divider<2> & !TX_CIRCUIT/divider<4> & !TX_CIRCUIT/divider<6> & 
-	!TX_CIRCUIT/divider<7> & !TX_CIRCUIT/divider<8>
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	!TX_CIRCUIT/divider<4> & !TX_CIRCUIT/divider<3> & !TX_CIRCUIT/divider<6> & 
-	!TX_CIRCUIT/divider<7> & !TX_CIRCUIT/divider<8>;	// (3 pt, 18 inp)
+INPUTS | 1 | N_PZ_234
+INPUTMC | 1 | 2 | 14
+EQ | 2 | 
+   !TX_CIRCUIT/clk.T := N_PZ_234;	// (1 pt, 1 inp)
    TX_CIRCUIT/clk.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | CLK50
 
-MACROCELL | 1 | 4 | TX_CIRCUIT/divider<10>_MC
-ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 11 | 1 | 1 | 1 | 3 | 2 | 12 | 2 | 10 | 1 | 11 | 2 | 11 | 2 | 14 | 1 | 2 | 1 | 13 | 1 | 4 | 1 | 12
-INPUTS | 17 | TX_CIRCUIT/divider<10>  | TX_CIRCUIT/divider<11>  | TX_CIRCUIT/divider<12>  | TX_CIRCUIT/divider<13>  | TX_CIRCUIT/divider<14>  | TX_CIRCUIT/divider<15>  | TX_CIRCUIT/divider<16>  | TX_CIRCUIT/divider<17>  | TX_CIRCUIT/divider<18>  | TX_CIRCUIT/divider<19>  | TX_CIRCUIT/divider<20>  | TX_CIRCUIT/divider<21>  | TX_CIRCUIT/divider<6>  | N_PZ_250  | TX_CIRCUIT/divider<7>  | TX_CIRCUIT/divider<9>  | TX_CIRCUIT/divider<8>
-INPUTMC | 17 | 1 | 4 | 1 | 13 | 0 | 15 | 0 | 14 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 1 | 0 | 0 | 1 | 7 | 2 | 8 | 1 | 6 | 1 | 1 | 1 | 5
-EQ | 32 | 
-   TX_CIRCUIT/divider<10> := TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<11> & 
+MACROCELL | 2 | 14 | N_PZ_234_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 10 | 1 | 3 | 1 | 1 | 1 | 13 | 1 | 12 | 1 | 11 | 1 | 4 | 1 | 2 | 2 | 11 | 2 | 12 | 1 | 5
+INPUTS | 17 | TX_CIRCUIT/divider<10>  | TX_CIRCUIT/divider<11>  | TX_CIRCUIT/divider<12>  | TX_CIRCUIT/divider<13>  | TX_CIRCUIT/divider<14>  | TX_CIRCUIT/divider<15>  | TX_CIRCUIT/divider<16>  | TX_CIRCUIT/divider<17>  | TX_CIRCUIT/divider<18>  | TX_CIRCUIT/divider<19>  | TX_CIRCUIT/divider<20>  | TX_CIRCUIT/divider<9>  | TX_CIRCUIT/divider<21>  | TX_CIRCUIT/divider<7>  | TX_CIRCUIT/divider<8>  | TX_CIRCUIT/divider<5>  | TX_CIRCUIT/divider<6>
+INPUTMC | 17 | 0 | 15 | 0 | 14 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 1 | 0 | 0 | 0 | 2 | 1 | 6 | 1 | 7 | 2 | 11 | 2 | 12 | 1 | 3 | 1 | 2
+EQ | 16 | 
+   N_PZ_234 = !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<11> & 
 	!TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & 
 	!TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & 
 	!TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & 
-	!TX_CIRCUIT/divider<21> & !TX_CIRCUIT/divider<6>
-	# TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<11> & 
-	!TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & 
-	!TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & 
-	!TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & 
-	!TX_CIRCUIT/divider<21> & !N_PZ_250
-	# TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<11> & 
-	!TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & 
-	!TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & 
-	!TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & 
-	!TX_CIRCUIT/divider<21> & !TX_CIRCUIT/divider<7>
-	# TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<11> & 
-	!TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & 
-	!TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & 
-	!TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & 
-	!TX_CIRCUIT/divider<21> & !TX_CIRCUIT/divider<9>
-	# TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<11> & 
-	!TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & 
-	!TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & 
-	!TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & 
-	!TX_CIRCUIT/divider<21> & !TX_CIRCUIT/divider<8>
+	!TX_CIRCUIT/divider<9> & !TX_CIRCUIT/divider<21> & !TX_CIRCUIT/divider<7>
 	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<11> & 
 	!TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & 
 	!TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & 
 	!TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & 
-	!TX_CIRCUIT/divider<21> & TX_CIRCUIT/divider<6> & N_PZ_250 & 
-	TX_CIRCUIT/divider<7> & TX_CIRCUIT/divider<9> & TX_CIRCUIT/divider<8>;	// (6 pt, 17 inp)
+	!TX_CIRCUIT/divider<9> & !TX_CIRCUIT/divider<21> & !TX_CIRCUIT/divider<8>
+	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<11> & 
+	!TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & 
+	!TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & 
+	!TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & 
+	!TX_CIRCUIT/divider<5> & !TX_CIRCUIT/divider<6> & !TX_CIRCUIT/divider<9> & 
+	!TX_CIRCUIT/divider<21>;	// (3 pt, 17 inp)
+
+MACROCELL | 0 | 15 | TX_CIRCUIT/divider<10>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 2 | 14
+INPUTS | 0
+EQ | 2 | 
+   TX_CIRCUIT/divider<10> := Gnd;	// (0 pt, 0 inp)
    TX_CIRCUIT/divider<10>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | CLK50
 
-MACROCELL | 1 | 13 | TX_CIRCUIT/divider<11>_MC
+MACROCELL | 0 | 14 | TX_CIRCUIT/divider<11>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 4 | 1 | 3 | 1 | 2 | 1 | 13 | 1 | 4
-INPUTS | 22 | TX_CIRCUIT/divider<10>  | TX_CIRCUIT/divider<6>  | N_PZ_250  | TX_CIRCUIT/divider<7>  | N_PZ_208  | TX_CIRCUIT/divider<9>  | TX_CIRCUIT/divider<8>  | TX_CIRCUIT/divider<11>  | TX_CIRCUIT/divider<12>  | TX_CIRCUIT/divider<13>  | TX_CIRCUIT/divider<14>  | TX_CIRCUIT/divider<15>  | TX_CIRCUIT/divider<16>  | TX_CIRCUIT/divider<17>  | TX_CIRCUIT/divider<18>  | TX_CIRCUIT/divider<19>  | TX_CIRCUIT/divider<20>  | TX_CIRCUIT/divider<21>  | N_PZ_174  | TX_CIRCUIT/divider<2>  | TX_CIRCUIT/divider<4>  | TX_CIRCUIT/divider<3>
-INPUTMC | 22 | 1 | 4 | 1 | 7 | 2 | 8 | 1 | 6 | 1 | 3 | 1 | 1 | 1 | 5 | 1 | 13 | 0 | 15 | 0 | 14 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 1 | 0 | 0 | 1 | 2 | 2 | 11 | 2 | 9 | 2 | 10
-EQ | 21 | 
-   TX_CIRCUIT/divider<11> := TX_CIRCUIT/divider<10> & TX_CIRCUIT/divider<6> & 
-	N_PZ_250 & TX_CIRCUIT/divider<7> & N_PZ_208 & 
-	TX_CIRCUIT/divider<9> & TX_CIRCUIT/divider<8>
-	# TX_CIRCUIT/divider<11> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	N_PZ_174
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	!TX_CIRCUIT/divider<2> & !TX_CIRCUIT/divider<4> & !TX_CIRCUIT/divider<6> & 
-	!TX_CIRCUIT/divider<7> & !N_PZ_208 & !TX_CIRCUIT/divider<8>
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	!TX_CIRCUIT/divider<4> & !TX_CIRCUIT/divider<3> & !TX_CIRCUIT/divider<6> & 
-	!TX_CIRCUIT/divider<7> & !N_PZ_208 & !TX_CIRCUIT/divider<8>;	// (4 pt, 22 inp)
+OUTPUTMC | 1 | 2 | 14
+INPUTS | 0
+EQ | 2 | 
+   TX_CIRCUIT/divider<11> := Gnd;	// (0 pt, 0 inp)
    TX_CIRCUIT/divider<11>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | CLK50
 
-MACROCELL | 0 | 15 | TX_CIRCUIT/divider<12>_MC
+MACROCELL | 0 | 10 | TX_CIRCUIT/divider<12>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 11 | 1 | 1 | 1 | 3 | 2 | 12 | 2 | 10 | 2 | 9 | 1 | 11 | 2 | 11 | 2 | 14 | 1 | 13 | 1 | 4 | 1 | 12
+OUTPUTMC | 1 | 2 | 14
 INPUTS | 0
 EQ | 2 | 
    TX_CIRCUIT/divider<12> := Gnd;	// (0 pt, 0 inp)
    TX_CIRCUIT/divider<12>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | CLK50
 
-MACROCELL | 0 | 14 | TX_CIRCUIT/divider<13>_MC
+MACROCELL | 0 | 9 | TX_CIRCUIT/divider<13>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 11 | 1 | 1 | 1 | 3 | 2 | 12 | 2 | 10 | 2 | 9 | 1 | 11 | 2 | 11 | 2 | 14 | 1 | 13 | 1 | 4 | 1 | 12
+OUTPUTMC | 1 | 2 | 14
 INPUTS | 0
 EQ | 2 | 
    TX_CIRCUIT/divider<13> := Gnd;	// (0 pt, 0 inp)
    TX_CIRCUIT/divider<13>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | CLK50
 
-MACROCELL | 0 | 10 | TX_CIRCUIT/divider<14>_MC
+MACROCELL | 0 | 8 | TX_CIRCUIT/divider<14>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 11 | 1 | 1 | 1 | 3 | 2 | 12 | 2 | 10 | 2 | 9 | 1 | 11 | 2 | 11 | 2 | 14 | 1 | 13 | 1 | 4 | 1 | 12
+OUTPUTMC | 1 | 2 | 14
 INPUTS | 0
 EQ | 2 | 
    TX_CIRCUIT/divider<14> := Gnd;	// (0 pt, 0 inp)
    TX_CIRCUIT/divider<14>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | CLK50
 
-MACROCELL | 0 | 9 | TX_CIRCUIT/divider<15>_MC
+MACROCELL | 0 | 7 | TX_CIRCUIT/divider<15>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 11 | 1 | 1 | 1 | 3 | 2 | 12 | 2 | 10 | 2 | 9 | 1 | 11 | 2 | 11 | 2 | 14 | 1 | 13 | 1 | 4 | 1 | 12
+OUTPUTMC | 1 | 2 | 14
 INPUTS | 0
 EQ | 2 | 
    TX_CIRCUIT/divider<15> := Gnd;	// (0 pt, 0 inp)
    TX_CIRCUIT/divider<15>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | CLK50
 
-MACROCELL | 0 | 8 | TX_CIRCUIT/divider<16>_MC
+MACROCELL | 0 | 6 | TX_CIRCUIT/divider<16>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 11 | 1 | 1 | 1 | 3 | 2 | 12 | 2 | 10 | 2 | 9 | 1 | 11 | 2 | 11 | 2 | 14 | 1 | 13 | 1 | 4 | 1 | 12
+OUTPUTMC | 1 | 2 | 14
 INPUTS | 0
 EQ | 2 | 
    TX_CIRCUIT/divider<16> := Gnd;	// (0 pt, 0 inp)
    TX_CIRCUIT/divider<16>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | CLK50
 
-MACROCELL | 0 | 7 | TX_CIRCUIT/divider<17>_MC
+MACROCELL | 0 | 4 | TX_CIRCUIT/divider<17>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 11 | 1 | 1 | 1 | 3 | 2 | 12 | 2 | 10 | 2 | 9 | 1 | 11 | 2 | 11 | 2 | 14 | 1 | 13 | 1 | 4 | 1 | 12
+OUTPUTMC | 1 | 2 | 14
 INPUTS | 0
 EQ | 2 | 
    TX_CIRCUIT/divider<17> := Gnd;	// (0 pt, 0 inp)
    TX_CIRCUIT/divider<17>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | CLK50
 
-MACROCELL | 0 | 6 | TX_CIRCUIT/divider<18>_MC
+MACROCELL | 0 | 1 | TX_CIRCUIT/divider<18>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 11 | 1 | 1 | 1 | 3 | 2 | 12 | 2 | 10 | 2 | 9 | 1 | 11 | 2 | 11 | 2 | 14 | 1 | 13 | 1 | 4 | 1 | 12
+OUTPUTMC | 1 | 2 | 14
 INPUTS | 0
 EQ | 2 | 
    TX_CIRCUIT/divider<18> := Gnd;	// (0 pt, 0 inp)
    TX_CIRCUIT/divider<18>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | CLK50
 
-MACROCELL | 0 | 4 | TX_CIRCUIT/divider<19>_MC
+MACROCELL | 0 | 0 | TX_CIRCUIT/divider<19>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 11 | 1 | 1 | 1 | 3 | 2 | 12 | 2 | 10 | 2 | 9 | 1 | 11 | 2 | 11 | 2 | 14 | 1 | 13 | 1 | 4 | 1 | 12
+OUTPUTMC | 1 | 2 | 14
 INPUTS | 0
 EQ | 2 | 
    TX_CIRCUIT/divider<19> := Gnd;	// (0 pt, 0 inp)
    TX_CIRCUIT/divider<19>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | CLK50
 
-MACROCELL | 0 | 1 | TX_CIRCUIT/divider<20>_MC
+MACROCELL | 0 | 2 | TX_CIRCUIT/divider<20>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 11 | 1 | 1 | 1 | 3 | 2 | 12 | 2 | 10 | 2 | 9 | 1 | 11 | 2 | 11 | 2 | 14 | 1 | 13 | 1 | 4 | 1 | 12
+OUTPUTMC | 1 | 2 | 14
 INPUTS | 0
 EQ | 2 | 
    TX_CIRCUIT/divider<20> := Gnd;	// (0 pt, 0 inp)
    TX_CIRCUIT/divider<20>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | CLK50
 
-MACROCELL | 0 | 0 | TX_CIRCUIT/divider<21>_MC
+MACROCELL | 1 | 3 | TX_CIRCUIT/divider<5>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 11 | 1 | 1 | 1 | 3 | 2 | 12 | 2 | 10 | 2 | 9 | 1 | 11 | 2 | 11 | 2 | 14 | 1 | 13 | 1 | 4 | 1 | 12
+OUTPUTMC | 5 | 1 | 3 | 1 | 2 | 2 | 11 | 2 | 12 | 2 | 14
+INPUTS | 7 | N_PZ_234  | TX_CIRCUIT/divider<5>  | TX_CIRCUIT/divider<0>  | TX_CIRCUIT/divider<1>  | TX_CIRCUIT/divider<2>  | TX_CIRCUIT/divider<3>  | TX_CIRCUIT/divider<4>
+INPUTMC | 7 | 2 | 14 | 1 | 3 | 1 | 1 | 1 | 13 | 1 | 12 | 1 | 11 | 1 | 4
+EQ | 5 | 
+   TX_CIRCUIT/divider<5> := N_PZ_234 & TX_CIRCUIT/divider<5>
+	$ N_PZ_234 & TX_CIRCUIT/divider<0> & 
+	TX_CIRCUIT/divider<1> & TX_CIRCUIT/divider<2> & TX_CIRCUIT/divider<3> & 
+	TX_CIRCUIT/divider<4>;	// (2 pt, 7 inp)
+   TX_CIRCUIT/divider<5>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 1 | 1 | TX_CIRCUIT/divider<0>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 9 | 1 | 1 | 1 | 13 | 1 | 12 | 1 | 11 | 1 | 4 | 1 | 3 | 1 | 2 | 2 | 11 | 2 | 12
+INPUTS | 2 | N_PZ_234  | TX_CIRCUIT/divider<0>
+INPUTMC | 2 | 2 | 14 | 1 | 1
+EQ | 2 | 
+   TX_CIRCUIT/divider<0> := N_PZ_234 & !TX_CIRCUIT/divider<0>;	// (1 pt, 2 inp)
+   TX_CIRCUIT/divider<0>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 1 | 13 | TX_CIRCUIT/divider<1>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 8 | 1 | 13 | 1 | 12 | 1 | 11 | 1 | 4 | 1 | 3 | 1 | 2 | 2 | 11 | 2 | 12
+INPUTS | 3 | N_PZ_234  | TX_CIRCUIT/divider<0>  | TX_CIRCUIT/divider<1>
+INPUTMC | 3 | 2 | 14 | 1 | 1 | 1 | 13
+EQ | 5 | 
+   TX_CIRCUIT/divider<1> := N_PZ_234 & TX_CIRCUIT/divider<0> & 
+	!TX_CIRCUIT/divider<1>
+	# N_PZ_234 & !TX_CIRCUIT/divider<0> & 
+	TX_CIRCUIT/divider<1>;	// (2 pt, 3 inp)
+   TX_CIRCUIT/divider<1>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 1 | 12 | TX_CIRCUIT/divider<2>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 7 | 1 | 12 | 1 | 11 | 1 | 4 | 1 | 3 | 1 | 2 | 2 | 11 | 2 | 12
+INPUTS | 4 | N_PZ_234  | TX_CIRCUIT/divider<2>  | TX_CIRCUIT/divider<0>  | TX_CIRCUIT/divider<1>
+INPUTMC | 4 | 2 | 14 | 1 | 12 | 1 | 1 | 1 | 13
+EQ | 4 | 
+   TX_CIRCUIT/divider<2>.T := !N_PZ_234 & TX_CIRCUIT/divider<2>
+	# N_PZ_234 & TX_CIRCUIT/divider<0> & 
+	TX_CIRCUIT/divider<1>;	// (2 pt, 4 inp)
+   TX_CIRCUIT/divider<2>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 1 | 11 | TX_CIRCUIT/divider<3>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 6 | 1 | 11 | 1 | 4 | 1 | 3 | 1 | 2 | 2 | 11 | 2 | 12
+INPUTS | 5 | N_PZ_234  | TX_CIRCUIT/divider<3>  | TX_CIRCUIT/divider<0>  | TX_CIRCUIT/divider<1>  | TX_CIRCUIT/divider<2>
+INPUTMC | 5 | 2 | 14 | 1 | 11 | 1 | 1 | 1 | 13 | 1 | 12
+EQ | 4 | 
+   TX_CIRCUIT/divider<3>.T := !N_PZ_234 & TX_CIRCUIT/divider<3>
+	# N_PZ_234 & TX_CIRCUIT/divider<0> & 
+	TX_CIRCUIT/divider<1> & TX_CIRCUIT/divider<2>;	// (2 pt, 5 inp)
+   TX_CIRCUIT/divider<3>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 1 | 4 | TX_CIRCUIT/divider<4>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 5 | 1 | 4 | 1 | 3 | 1 | 2 | 2 | 11 | 2 | 12
+INPUTS | 6 | N_PZ_234  | TX_CIRCUIT/divider<4>  | TX_CIRCUIT/divider<0>  | TX_CIRCUIT/divider<1>  | TX_CIRCUIT/divider<2>  | TX_CIRCUIT/divider<3>
+INPUTMC | 6 | 2 | 14 | 1 | 4 | 1 | 1 | 1 | 13 | 1 | 12 | 1 | 11
+EQ | 4 | 
+   TX_CIRCUIT/divider<4>.T := !N_PZ_234 & TX_CIRCUIT/divider<4>
+	# N_PZ_234 & TX_CIRCUIT/divider<0> & 
+	TX_CIRCUIT/divider<1> & TX_CIRCUIT/divider<2> & TX_CIRCUIT/divider<3>;	// (2 pt, 6 inp)
+   TX_CIRCUIT/divider<4>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 1 | 2 | TX_CIRCUIT/divider<6>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 4 | 1 | 2 | 2 | 11 | 2 | 12 | 2 | 14
+INPUTS | 8 | N_PZ_234  | TX_CIRCUIT/divider<5>  | TX_CIRCUIT/divider<6>  | TX_CIRCUIT/divider<0>  | TX_CIRCUIT/divider<1>  | TX_CIRCUIT/divider<2>  | TX_CIRCUIT/divider<3>  | TX_CIRCUIT/divider<4>
+INPUTMC | 8 | 2 | 14 | 1 | 3 | 1 | 2 | 1 | 1 | 1 | 13 | 1 | 12 | 1 | 11 | 1 | 4
+EQ | 16 | 
+   TX_CIRCUIT/divider<6> := N_PZ_234 & !TX_CIRCUIT/divider<5> & 
+	TX_CIRCUIT/divider<6>
+	# N_PZ_234 & !TX_CIRCUIT/divider<0> & 
+	TX_CIRCUIT/divider<6>
+	# N_PZ_234 & !TX_CIRCUIT/divider<1> & 
+	TX_CIRCUIT/divider<6>
+	# N_PZ_234 & !TX_CIRCUIT/divider<2> & 
+	TX_CIRCUIT/divider<6>
+	# N_PZ_234 & !TX_CIRCUIT/divider<3> & 
+	TX_CIRCUIT/divider<6>
+	# N_PZ_234 & !TX_CIRCUIT/divider<4> & 
+	TX_CIRCUIT/divider<6>
+	# N_PZ_234 & TX_CIRCUIT/divider<5> & 
+	TX_CIRCUIT/divider<0> & TX_CIRCUIT/divider<1> & TX_CIRCUIT/divider<2> & 
+	TX_CIRCUIT/divider<3> & TX_CIRCUIT/divider<4> & !TX_CIRCUIT/divider<6>;	// (7 pt, 8 inp)
+   TX_CIRCUIT/divider<6>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 1 | 6 | TX_CIRCUIT/divider<9>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 2 | 14
+INPUTS | 0
+EQ | 2 | 
+   TX_CIRCUIT/divider<9> := Gnd;	// (0 pt, 0 inp)
+   TX_CIRCUIT/divider<9>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK50
+
+MACROCELL | 1 | 7 | TX_CIRCUIT/divider<21>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 2 | 14
 INPUTS | 0
 EQ | 2 | 
    TX_CIRCUIT/divider<21> := Gnd;	// (0 pt, 0 inp)
    TX_CIRCUIT/divider<21>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | CLK50
 
-MACROCELL | 1 | 2 | N_PZ_174_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 7 | 2 | 12 | 2 | 10 | 2 | 9 | 1 | 11 | 2 | 11 | 1 | 13 | 1 | 12
-INPUTS | 7 | TX_CIRCUIT/divider<11>  | TX_CIRCUIT/divider<10>  | TX_CIRCUIT/divider<9>  | TX_CIRCUIT/divider<5>  | TX_CIRCUIT/divider<6>  | TX_CIRCUIT/divider<7>  | TX_CIRCUIT/divider<8>
-INPUTMC | 7 | 1 | 13 | 1 | 4 | 1 | 1 | 2 | 14 | 1 | 7 | 1 | 6 | 1 | 5
-EQ | 4 | 
-   N_PZ_174 = !TX_CIRCUIT/divider<11>
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<9>
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<5> & 
-	!TX_CIRCUIT/divider<6> & !TX_CIRCUIT/divider<7> & !TX_CIRCUIT/divider<8>;	// (3 pt, 7 inp)
-
-MACROCELL | 2 | 14 | TX_CIRCUIT/divider<5>_MC
-ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 4 | 1 | 1 | 2 | 8 | 2 | 14 | 1 | 2
-INPUTS | 22 | TX_CIRCUIT/divider<5>  | N_PZ_250  | N_PZ_208  | TX_CIRCUIT/divider<2>  | TX_CIRCUIT/divider<0>  | TX_CIRCUIT/divider<4>  | TX_CIRCUIT/divider<3>  | TX_CIRCUIT/divider<1>  | TX_CIRCUIT/divider<10>  | TX_CIRCUIT/divider<12>  | TX_CIRCUIT/divider<13>  | TX_CIRCUIT/divider<14>  | TX_CIRCUIT/divider<15>  | TX_CIRCUIT/divider<16>  | TX_CIRCUIT/divider<17>  | TX_CIRCUIT/divider<18>  | TX_CIRCUIT/divider<19>  | TX_CIRCUIT/divider<20>  | TX_CIRCUIT/divider<21>  | TX_CIRCUIT/divider<6>  | TX_CIRCUIT/divider<7>  | TX_CIRCUIT/divider<8>
-INPUTMC | 22 | 2 | 14 | 2 | 8 | 1 | 3 | 2 | 11 | 1 | 11 | 2 | 9 | 2 | 10 | 2 | 12 | 1 | 4 | 0 | 15 | 0 | 14 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 1 | 0 | 0 | 1 | 7 | 1 | 6 | 1 | 5
-EQ | 24 | 
-   TX_CIRCUIT/divider<5> := TX_CIRCUIT/divider<5> & !N_PZ_250 & N_PZ_208
-	# TX_CIRCUIT/divider<2> & TX_CIRCUIT/divider<0> & 
-	TX_CIRCUIT/divider<4> & TX_CIRCUIT/divider<3> & !N_PZ_250 & 
-	TX_CIRCUIT/divider<1> & N_PZ_208
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	TX_CIRCUIT/divider<5> & !TX_CIRCUIT/divider<2> & !TX_CIRCUIT/divider<4> & 
-	!TX_CIRCUIT/divider<6> & !TX_CIRCUIT/divider<7> & !TX_CIRCUIT/divider<8>
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	TX_CIRCUIT/divider<5> & !TX_CIRCUIT/divider<4> & !TX_CIRCUIT/divider<3> & 
-	!TX_CIRCUIT/divider<6> & !TX_CIRCUIT/divider<7> & !TX_CIRCUIT/divider<8>
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	TX_CIRCUIT/divider<2> & TX_CIRCUIT/divider<0> & TX_CIRCUIT/divider<4> & 
-	TX_CIRCUIT/divider<3> & !TX_CIRCUIT/divider<6> & !N_PZ_250 & 
-	TX_CIRCUIT/divider<1> & !TX_CIRCUIT/divider<7> & !TX_CIRCUIT/divider<8>;	// (5 pt, 22 inp)
-   TX_CIRCUIT/divider<5>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK50
-
-MACROCELL | 2 | 11 | TX_CIRCUIT/divider<2>_MC
-ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 10 | 1 | 1 | 2 | 12 | 2 | 8 | 2 | 10 | 2 | 9 | 1 | 11 | 2 | 11 | 2 | 14 | 1 | 13 | 1 | 12
-INPUTS | 20 | TX_CIRCUIT/divider<12>  | TX_CIRCUIT/divider<13>  | TX_CIRCUIT/divider<14>  | TX_CIRCUIT/divider<15>  | TX_CIRCUIT/divider<16>  | TX_CIRCUIT/divider<17>  | TX_CIRCUIT/divider<18>  | TX_CIRCUIT/divider<19>  | TX_CIRCUIT/divider<20>  | TX_CIRCUIT/divider<21>  | N_PZ_174  | TX_CIRCUIT/divider<2>  | TX_CIRCUIT/divider<0>  | TX_CIRCUIT/divider<1>  | TX_CIRCUIT/divider<10>  | TX_CIRCUIT/divider<4>  | TX_CIRCUIT/divider<3>  | TX_CIRCUIT/divider<6>  | TX_CIRCUIT/divider<7>  | TX_CIRCUIT/divider<8>
-INPUTMC | 20 | 0 | 15 | 0 | 14 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 1 | 0 | 0 | 1 | 2 | 2 | 11 | 1 | 11 | 2 | 12 | 1 | 4 | 2 | 9 | 2 | 10 | 1 | 7 | 1 | 6 | 1 | 5
-EQ | 37 | 
-   TX_CIRCUIT/divider<2> := !TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & 
-	!TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & 
-	!TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & 
-	!TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & N_PZ_174 & 
-	TX_CIRCUIT/divider<2> & !TX_CIRCUIT/divider<0>
-	# !TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & 
-	!TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & 
-	!TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & 
-	!TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & N_PZ_174 & 
-	TX_CIRCUIT/divider<2> & !TX_CIRCUIT/divider<1>
-	# !TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & 
-	!TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & 
-	!TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & 
-	!TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & N_PZ_174 & 
-	!TX_CIRCUIT/divider<2> & TX_CIRCUIT/divider<0> & TX_CIRCUIT/divider<1>
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	TX_CIRCUIT/divider<2> & !TX_CIRCUIT/divider<0> & !TX_CIRCUIT/divider<4> & 
-	!TX_CIRCUIT/divider<3> & !TX_CIRCUIT/divider<6> & !TX_CIRCUIT/divider<7> & 
-	!TX_CIRCUIT/divider<8>
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	TX_CIRCUIT/divider<2> & !TX_CIRCUIT/divider<4> & !TX_CIRCUIT/divider<3> & 
-	!TX_CIRCUIT/divider<6> & !TX_CIRCUIT/divider<1> & !TX_CIRCUIT/divider<7> & 
-	!TX_CIRCUIT/divider<8>
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	!TX_CIRCUIT/divider<2> & TX_CIRCUIT/divider<0> & !TX_CIRCUIT/divider<4> & 
-	!TX_CIRCUIT/divider<6> & TX_CIRCUIT/divider<1> & !TX_CIRCUIT/divider<7> & 
-	!TX_CIRCUIT/divider<8>;	// (6 pt, 20 inp)
-   TX_CIRCUIT/divider<2>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK50
-
-MACROCELL | 1 | 11 | TX_CIRCUIT/divider<0>_MC
-ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 7 | 2 | 12 | 2 | 8 | 2 | 10 | 2 | 9 | 1 | 11 | 2 | 11 | 2 | 14
-INPUTS | 19 | TX_CIRCUIT/divider<12>  | TX_CIRCUIT/divider<13>  | TX_CIRCUIT/divider<14>  | TX_CIRCUIT/divider<15>  | TX_CIRCUIT/divider<16>  | TX_CIRCUIT/divider<17>  | TX_CIRCUIT/divider<18>  | TX_CIRCUIT/divider<19>  | TX_CIRCUIT/divider<20>  | TX_CIRCUIT/divider<21>  | N_PZ_174  | TX_CIRCUIT/divider<0>  | TX_CIRCUIT/divider<10>  | TX_CIRCUIT/divider<2>  | TX_CIRCUIT/divider<4>  | TX_CIRCUIT/divider<6>  | TX_CIRCUIT/divider<7>  | TX_CIRCUIT/divider<8>  | TX_CIRCUIT/divider<3>
-INPUTMC | 19 | 0 | 15 | 0 | 14 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 1 | 0 | 0 | 1 | 2 | 1 | 11 | 1 | 4 | 2 | 11 | 2 | 9 | 1 | 7 | 1 | 6 | 1 | 5 | 2 | 10
-EQ | 18 | 
-   TX_CIRCUIT/divider<0> := !TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & 
-	!TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & 
-	!TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & 
-	!TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & N_PZ_174 & 
-	!TX_CIRCUIT/divider<0>
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	!TX_CIRCUIT/divider<2> & !TX_CIRCUIT/divider<0> & !TX_CIRCUIT/divider<4> & 
-	!TX_CIRCUIT/divider<6> & !TX_CIRCUIT/divider<7> & !TX_CIRCUIT/divider<8>
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	!TX_CIRCUIT/divider<0> & !TX_CIRCUIT/divider<4> & !TX_CIRCUIT/divider<3> & 
-	!TX_CIRCUIT/divider<6> & !TX_CIRCUIT/divider<7> & !TX_CIRCUIT/divider<8>;	// (3 pt, 19 inp)
-   TX_CIRCUIT/divider<0>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK50
-
-MACROCELL | 2 | 9 | TX_CIRCUIT/divider<4>_MC
-ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 10 | 1 | 1 | 2 | 12 | 2 | 8 | 2 | 10 | 2 | 9 | 1 | 11 | 2 | 11 | 2 | 14 | 1 | 13 | 1 | 12
-INPUTS | 16 | TX_CIRCUIT/divider<12>  | TX_CIRCUIT/divider<13>  | TX_CIRCUIT/divider<14>  | TX_CIRCUIT/divider<15>  | TX_CIRCUIT/divider<16>  | TX_CIRCUIT/divider<17>  | TX_CIRCUIT/divider<18>  | TX_CIRCUIT/divider<19>  | TX_CIRCUIT/divider<20>  | TX_CIRCUIT/divider<21>  | N_PZ_174  | TX_CIRCUIT/divider<2>  | TX_CIRCUIT/divider<4>  | TX_CIRCUIT/divider<0>  | TX_CIRCUIT/divider<3>  | TX_CIRCUIT/divider<1>
-INPUTMC | 16 | 0 | 15 | 0 | 14 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 1 | 0 | 0 | 1 | 2 | 2 | 11 | 2 | 9 | 1 | 11 | 2 | 10 | 2 | 12
-EQ | 27 | 
-   TX_CIRCUIT/divider<4> := !TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & 
-	!TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & 
-	!TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & 
-	!TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & N_PZ_174 & 
-	!TX_CIRCUIT/divider<2> & TX_CIRCUIT/divider<4>
-	# !TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & 
-	!TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & 
-	!TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & 
-	!TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & N_PZ_174 & 
-	!TX_CIRCUIT/divider<0> & TX_CIRCUIT/divider<4>
-	# !TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & 
-	!TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & 
-	!TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & 
-	!TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & N_PZ_174 & 
-	TX_CIRCUIT/divider<4> & !TX_CIRCUIT/divider<3>
-	# !TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & 
-	!TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & 
-	!TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & 
-	!TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & N_PZ_174 & 
-	TX_CIRCUIT/divider<4> & !TX_CIRCUIT/divider<1>
-	# !TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & 
-	!TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & 
-	!TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & 
-	!TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & N_PZ_174 & 
-	TX_CIRCUIT/divider<2> & TX_CIRCUIT/divider<0> & !TX_CIRCUIT/divider<4> & 
-	TX_CIRCUIT/divider<3> & TX_CIRCUIT/divider<1>;	// (5 pt, 16 inp)
-   TX_CIRCUIT/divider<4>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK50
-
-MACROCELL | 2 | 10 | TX_CIRCUIT/divider<3>_MC
-ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 10 | 1 | 1 | 2 | 12 | 2 | 8 | 2 | 10 | 2 | 9 | 1 | 11 | 2 | 11 | 2 | 14 | 1 | 13 | 1 | 12
-INPUTS | 20 | TX_CIRCUIT/divider<12>  | TX_CIRCUIT/divider<13>  | TX_CIRCUIT/divider<14>  | TX_CIRCUIT/divider<15>  | TX_CIRCUIT/divider<16>  | TX_CIRCUIT/divider<17>  | TX_CIRCUIT/divider<18>  | TX_CIRCUIT/divider<19>  | TX_CIRCUIT/divider<20>  | TX_CIRCUIT/divider<21>  | N_PZ_174  | TX_CIRCUIT/divider<2>  | TX_CIRCUIT/divider<3>  | TX_CIRCUIT/divider<0>  | TX_CIRCUIT/divider<1>  | TX_CIRCUIT/divider<10>  | TX_CIRCUIT/divider<4>  | TX_CIRCUIT/divider<6>  | TX_CIRCUIT/divider<7>  | TX_CIRCUIT/divider<8>
-INPUTMC | 20 | 0 | 15 | 0 | 14 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 1 | 0 | 0 | 1 | 2 | 2 | 11 | 2 | 10 | 1 | 11 | 2 | 12 | 1 | 4 | 2 | 9 | 1 | 7 | 1 | 6 | 1 | 5
-EQ | 35 | 
-   TX_CIRCUIT/divider<3> := !TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & 
-	!TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & 
-	!TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & 
-	!TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & N_PZ_174 & 
-	!TX_CIRCUIT/divider<2> & TX_CIRCUIT/divider<3>
-	# !TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & 
-	!TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & 
-	!TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & 
-	!TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & N_PZ_174 & 
-	!TX_CIRCUIT/divider<0> & TX_CIRCUIT/divider<3>
-	# !TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & 
-	!TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & 
-	!TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & 
-	!TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & N_PZ_174 & 
-	TX_CIRCUIT/divider<3> & !TX_CIRCUIT/divider<1>
-	# !TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & 
-	!TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & 
-	!TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & 
-	!TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & N_PZ_174 & 
-	TX_CIRCUIT/divider<2> & TX_CIRCUIT/divider<0> & !TX_CIRCUIT/divider<3> & 
-	TX_CIRCUIT/divider<1>
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	!TX_CIRCUIT/divider<2> & !TX_CIRCUIT/divider<4> & TX_CIRCUIT/divider<3> & 
-	!TX_CIRCUIT/divider<6> & !TX_CIRCUIT/divider<7> & !TX_CIRCUIT/divider<8>
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	TX_CIRCUIT/divider<2> & TX_CIRCUIT/divider<0> & !TX_CIRCUIT/divider<4> & 
-	!TX_CIRCUIT/divider<3> & !TX_CIRCUIT/divider<6> & TX_CIRCUIT/divider<1> & 
-	!TX_CIRCUIT/divider<7> & !TX_CIRCUIT/divider<8>;	// (6 pt, 20 inp)
-   TX_CIRCUIT/divider<3>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK50
-
-MACROCELL | 1 | 7 | TX_CIRCUIT/divider<6>_MC
-ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 13 | 1 | 5 | 1 | 1 | 1 | 6 | 2 | 12 | 1 | 7 | 2 | 10 | 1 | 11 | 2 | 11 | 2 | 14 | 1 | 2 | 1 | 13 | 1 | 4 | 1 | 12
-INPUTS | 3 | TX_CIRCUIT/divider<6>  | N_PZ_250  | N_PZ_208
-INPUTMC | 3 | 1 | 7 | 2 | 8 | 1 | 3
-EQ | 3 | 
-   TX_CIRCUIT/divider<6> := TX_CIRCUIT/divider<6> & !N_PZ_250 & N_PZ_208
-	# !TX_CIRCUIT/divider<6> & N_PZ_250 & N_PZ_208;	// (2 pt, 3 inp)
-   TX_CIRCUIT/divider<6>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK50
-
-MACROCELL | 2 | 8 | N_PZ_250_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 7 | 1 | 5 | 1 | 1 | 1 | 6 | 1 | 7 | 2 | 14 | 1 | 13 | 1 | 4
-INPUTS | 6 | TX_CIRCUIT/divider<5>  | TX_CIRCUIT/divider<2>  | TX_CIRCUIT/divider<0>  | TX_CIRCUIT/divider<4>  | TX_CIRCUIT/divider<3>  | TX_CIRCUIT/divider<1>
-INPUTMC | 6 | 2 | 14 | 2 | 11 | 1 | 11 | 2 | 9 | 2 | 10 | 2 | 12
-EQ | 3 | 
-   N_PZ_250 = TX_CIRCUIT/divider<5> & TX_CIRCUIT/divider<2> & 
-	TX_CIRCUIT/divider<0> & TX_CIRCUIT/divider<4> & TX_CIRCUIT/divider<3> & 
-	TX_CIRCUIT/divider<1>;	// (1 pt, 6 inp)
-
-MACROCELL | 2 | 12 | TX_CIRCUIT/divider<1>_MC
-ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 6 | 2 | 12 | 2 | 8 | 2 | 10 | 2 | 9 | 2 | 11 | 2 | 14
-INPUTS | 20 | TX_CIRCUIT/divider<12>  | TX_CIRCUIT/divider<13>  | TX_CIRCUIT/divider<14>  | TX_CIRCUIT/divider<15>  | TX_CIRCUIT/divider<16>  | TX_CIRCUIT/divider<17>  | TX_CIRCUIT/divider<18>  | TX_CIRCUIT/divider<19>  | TX_CIRCUIT/divider<20>  | TX_CIRCUIT/divider<21>  | N_PZ_174  | TX_CIRCUIT/divider<0>  | TX_CIRCUIT/divider<1>  | TX_CIRCUIT/divider<10>  | TX_CIRCUIT/divider<2>  | TX_CIRCUIT/divider<4>  | TX_CIRCUIT/divider<6>  | TX_CIRCUIT/divider<7>  | TX_CIRCUIT/divider<8>  | TX_CIRCUIT/divider<3>
-INPUTMC | 20 | 0 | 15 | 0 | 14 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 1 | 0 | 0 | 1 | 2 | 1 | 11 | 2 | 12 | 1 | 4 | 2 | 11 | 2 | 9 | 1 | 7 | 1 | 6 | 1 | 5 | 2 | 10
-EQ | 39 | 
-   TX_CIRCUIT/divider<1> := !TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & 
-	!TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & 
-	!TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & 
-	!TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & N_PZ_174 & 
-	TX_CIRCUIT/divider<0> & !TX_CIRCUIT/divider<1>
-	# !TX_CIRCUIT/divider<12> & !TX_CIRCUIT/divider<13> & 
-	!TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & !TX_CIRCUIT/divider<16> & 
-	!TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & !TX_CIRCUIT/divider<19> & 
-	!TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & N_PZ_174 & 
-	!TX_CIRCUIT/divider<0> & TX_CIRCUIT/divider<1>
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	!TX_CIRCUIT/divider<2> & TX_CIRCUIT/divider<0> & !TX_CIRCUIT/divider<4> & 
-	!TX_CIRCUIT/divider<6> & !TX_CIRCUIT/divider<1> & !TX_CIRCUIT/divider<7> & 
-	!TX_CIRCUIT/divider<8>
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	!TX_CIRCUIT/divider<2> & !TX_CIRCUIT/divider<0> & !TX_CIRCUIT/divider<4> & 
-	!TX_CIRCUIT/divider<6> & TX_CIRCUIT/divider<1> & !TX_CIRCUIT/divider<7> & 
-	!TX_CIRCUIT/divider<8>
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	TX_CIRCUIT/divider<0> & !TX_CIRCUIT/divider<4> & !TX_CIRCUIT/divider<3> & 
-	!TX_CIRCUIT/divider<6> & !TX_CIRCUIT/divider<1> & !TX_CIRCUIT/divider<7> & 
-	!TX_CIRCUIT/divider<8>
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	!TX_CIRCUIT/divider<0> & !TX_CIRCUIT/divider<4> & !TX_CIRCUIT/divider<3> & 
-	!TX_CIRCUIT/divider<6> & TX_CIRCUIT/divider<1> & !TX_CIRCUIT/divider<7> & 
-	!TX_CIRCUIT/divider<8>;	// (6 pt, 20 inp)
-   TX_CIRCUIT/divider<1>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK50
-
-MACROCELL | 1 | 6 | TX_CIRCUIT/divider<7>_MC
+MACROCELL | 2 | 11 | TX_CIRCUIT/divider<7>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 12 | 1 | 5 | 1 | 1 | 1 | 6 | 2 | 12 | 2 | 10 | 1 | 11 | 2 | 11 | 2 | 14 | 1 | 2 | 1 | 13 | 1 | 4 | 1 | 12
-INPUTS | 4 | TX_CIRCUIT/divider<7>  | N_PZ_208  | TX_CIRCUIT/divider<6>  | N_PZ_250
-INPUTMC | 4 | 1 | 6 | 1 | 3 | 1 | 7 | 2 | 8
-EQ | 3 | 
-   TX_CIRCUIT/divider<7>.T := TX_CIRCUIT/divider<7> & !N_PZ_208
-	# TX_CIRCUIT/divider<6> & N_PZ_250 & N_PZ_208;	// (2 pt, 4 inp)
+OUTPUTMC | 3 | 2 | 11 | 2 | 12 | 2 | 14
+INPUTS | 9 | N_PZ_234  | TX_CIRCUIT/divider<7>  | TX_CIRCUIT/divider<5>  | TX_CIRCUIT/divider<0>  | TX_CIRCUIT/divider<1>  | TX_CIRCUIT/divider<2>  | TX_CIRCUIT/divider<3>  | TX_CIRCUIT/divider<4>  | TX_CIRCUIT/divider<6>
+INPUTMC | 9 | 2 | 14 | 2 | 11 | 1 | 3 | 1 | 1 | 1 | 13 | 1 | 12 | 1 | 11 | 1 | 4 | 1 | 2
+EQ | 5 | 
+   TX_CIRCUIT/divider<7>.T := !N_PZ_234 & TX_CIRCUIT/divider<7>
+	# N_PZ_234 & TX_CIRCUIT/divider<5> & 
+	TX_CIRCUIT/divider<0> & TX_CIRCUIT/divider<1> & TX_CIRCUIT/divider<2> & 
+	TX_CIRCUIT/divider<3> & TX_CIRCUIT/divider<4> & TX_CIRCUIT/divider<6>;	// (2 pt, 9 inp)
    TX_CIRCUIT/divider<7>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | CLK50
 
-MACROCELL | 1 | 3 | N_PZ_208_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 6 | 1 | 1 | 1 | 5 | 1 | 6 | 1 | 7 | 2 | 14 | 1 | 13
-INPUTS | 13 | TX_CIRCUIT/divider<11>  | TX_CIRCUIT/divider<12>  | TX_CIRCUIT/divider<13>  | TX_CIRCUIT/divider<14>  | TX_CIRCUIT/divider<15>  | TX_CIRCUIT/divider<16>  | TX_CIRCUIT/divider<17>  | TX_CIRCUIT/divider<18>  | TX_CIRCUIT/divider<19>  | TX_CIRCUIT/divider<20>  | TX_CIRCUIT/divider<21>  | TX_CIRCUIT/divider<10>  | TX_CIRCUIT/divider<9>
-INPUTMC | 13 | 1 | 13 | 0 | 15 | 0 | 14 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 1 | 0 | 0 | 1 | 4 | 1 | 1
-EQ | 9 | 
-   N_PZ_208 = !TX_CIRCUIT/divider<11> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21>
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	!TX_CIRCUIT/divider<9>;	// (2 pt, 13 inp)
-
-MACROCELL | 1 | 1 | TX_CIRCUIT/divider<9>_MC
+MACROCELL | 2 | 12 | TX_CIRCUIT/divider<8>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 5 | 1 | 1 | 1 | 3 | 1 | 2 | 1 | 13 | 1 | 4
-INPUTS | 21 | N_PZ_208  | TX_CIRCUIT/divider<9>  | TX_CIRCUIT/divider<6>  | N_PZ_250  | TX_CIRCUIT/divider<7>  | TX_CIRCUIT/divider<8>  | TX_CIRCUIT/divider<10>  | TX_CIRCUIT/divider<12>  | TX_CIRCUIT/divider<13>  | TX_CIRCUIT/divider<14>  | TX_CIRCUIT/divider<15>  | TX_CIRCUIT/divider<16>  | TX_CIRCUIT/divider<17>  | TX_CIRCUIT/divider<18>  | TX_CIRCUIT/divider<19>  | TX_CIRCUIT/divider<20>  | TX_CIRCUIT/divider<21>  | TX_CIRCUIT/divider<5>  | TX_CIRCUIT/divider<2>  | TX_CIRCUIT/divider<4>  | TX_CIRCUIT/divider<3>
-INPUTMC | 21 | 1 | 3 | 1 | 1 | 1 | 7 | 2 | 8 | 1 | 6 | 1 | 5 | 1 | 4 | 0 | 15 | 0 | 14 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 1 | 0 | 0 | 2 | 14 | 2 | 11 | 2 | 9 | 2 | 10
-EQ | 24 | 
-   TX_CIRCUIT/divider<9> := N_PZ_208 & TX_CIRCUIT/divider<9>
-	$ TX_CIRCUIT/divider<6> & N_PZ_250 & 
-	TX_CIRCUIT/divider<7> & N_PZ_208 & TX_CIRCUIT/divider<8>
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	!TX_CIRCUIT/divider<5> & !TX_CIRCUIT/divider<6> & !TX_CIRCUIT/divider<7> & 
-	!N_PZ_208 & TX_CIRCUIT/divider<9> & !TX_CIRCUIT/divider<8>
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	!TX_CIRCUIT/divider<2> & !TX_CIRCUIT/divider<4> & !TX_CIRCUIT/divider<6> & 
-	!TX_CIRCUIT/divider<7> & !N_PZ_208 & TX_CIRCUIT/divider<9> & 
-	!TX_CIRCUIT/divider<8>
-	# !TX_CIRCUIT/divider<10> & !TX_CIRCUIT/divider<12> & 
-	!TX_CIRCUIT/divider<13> & !TX_CIRCUIT/divider<14> & !TX_CIRCUIT/divider<15> & 
-	!TX_CIRCUIT/divider<16> & !TX_CIRCUIT/divider<17> & !TX_CIRCUIT/divider<18> & 
-	!TX_CIRCUIT/divider<19> & !TX_CIRCUIT/divider<20> & !TX_CIRCUIT/divider<21> & 
-	!TX_CIRCUIT/divider<4> & !TX_CIRCUIT/divider<3> & !TX_CIRCUIT/divider<6> & 
-	!TX_CIRCUIT/divider<7> & !N_PZ_208 & TX_CIRCUIT/divider<9> & 
-	!TX_CIRCUIT/divider<8>;	// (5 pt, 21 inp)
-   TX_CIRCUIT/divider<9>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK50
-
-MACROCELL | 1 | 5 | TX_CIRCUIT/divider<8>_MC
-ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 11 | 1 | 5 | 1 | 1 | 2 | 12 | 2 | 10 | 1 | 11 | 2 | 11 | 2 | 14 | 1 | 2 | 1 | 13 | 1 | 4 | 1 | 12
-INPUTS | 5 | N_PZ_208  | TX_CIRCUIT/divider<8>  | TX_CIRCUIT/divider<6>  | N_PZ_250  | TX_CIRCUIT/divider<7>
-INPUTMC | 5 | 1 | 3 | 1 | 5 | 1 | 7 | 2 | 8 | 1 | 6
-EQ | 4 | 
-   TX_CIRCUIT/divider<8>.T := !N_PZ_208 & TX_CIRCUIT/divider<8>
-	# TX_CIRCUIT/divider<6> & N_PZ_250 & 
-	TX_CIRCUIT/divider<7> & N_PZ_208;	// (2 pt, 5 inp)
+OUTPUTMC | 2 | 2 | 12 | 2 | 14
+INPUTS | 10 | N_PZ_234  | TX_CIRCUIT/divider<8>  | TX_CIRCUIT/divider<5>  | TX_CIRCUIT/divider<0>  | TX_CIRCUIT/divider<1>  | TX_CIRCUIT/divider<2>  | TX_CIRCUIT/divider<3>  | TX_CIRCUIT/divider<4>  | TX_CIRCUIT/divider<6>  | TX_CIRCUIT/divider<7>
+INPUTMC | 10 | 2 | 14 | 2 | 12 | 1 | 3 | 1 | 1 | 1 | 13 | 1 | 12 | 1 | 11 | 1 | 4 | 1 | 2 | 2 | 11
+EQ | 6 | 
+   TX_CIRCUIT/divider<8> := N_PZ_234 & TX_CIRCUIT/divider<8>
+	# N_PZ_234 & TX_CIRCUIT/divider<5> & 
+	TX_CIRCUIT/divider<0> & TX_CIRCUIT/divider<1> & TX_CIRCUIT/divider<2> & 
+	TX_CIRCUIT/divider<3> & TX_CIRCUIT/divider<4> & TX_CIRCUIT/divider<6> & 
+	TX_CIRCUIT/divider<7>;	// (2 pt, 10 inp)
    TX_CIRCUIT/divider<8>.CLK  =  CLK50;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | CLK50
 
-MACROCELL | 0 | 2 | TX_CIRCUIT/start_MC
+MACROCELL | 2 | 10 | TX_CIRCUIT/start_MC
 ATTRIBUTES | 2323645184 | 0
 INPUTS | 0
 LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
@@ -582,91 +340,87 @@ EQ | 4 |
 
 MACROCELL | 13 | 15 | DISPLAY<0>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 8 | DATA<7>  | DATA<6>  | DATA<3>  | DATA<2>  | DATA<4>  | DATA<5>  | DATA<1>  | DATA<0>
-INPUTP | 8 | 211 | 212 | 213 | 214 | 62 | 190 | 217 | 142
+INPUTS | 8 | DATA<0>  | DATA<1>  | DATA<3>  | DATA<4>  | DATA<5>  | DATA<6>  | DATA<7>  | DATA<2>
+INPUTP | 8 | 142 | 62 | 217 | 214 | 213 | 212 | 211 | 190
 EQ | 6 | 
-   !DISPLAY<0> = DATA<7> & DATA<6> & DATA<3> & DATA<2> & 
-	DATA<4> & DATA<5> & !DATA<1>
-	# DATA<7> & DATA<6> & DATA<3> & !DATA<2> & 
-	DATA<0> & DATA<4> & DATA<5>
-	# DATA<7> & DATA<6> & DATA<3> & !DATA<2> & 
-	DATA<4> & DATA<5> & DATA<1>;	// (3 pt, 8 inp)
+   !DISPLAY<0> = DATA<0> & !DATA<1> & DATA<3> & DATA<4> & 
+	DATA<5> & DATA<6> & DATA<7>
+	# DATA<1> & DATA<3> & DATA<4> & DATA<5> & 
+	DATA<6> & DATA<7> & !DATA<2>
+	# !DATA<1> & DATA<3> & DATA<4> & DATA<5> & 
+	DATA<6> & DATA<7> & DATA<2>;	// (3 pt, 8 inp)
 
 MACROCELL | 15 | 14 | DISPLAY<1>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 8 | DATA<7>  | DATA<6>  | DATA<3>  | DATA<2>  | DATA<0>  | DATA<4>  | DATA<5>  | DATA<1>
-INPUTP | 8 | 211 | 212 | 213 | 214 | 142 | 62 | 190 | 217
+INPUTS | 8 | DATA<0>  | DATA<1>  | DATA<3>  | DATA<4>  | DATA<5>  | DATA<6>  | DATA<7>  | DATA<2>
+INPUTP | 8 | 142 | 62 | 217 | 214 | 213 | 212 | 211 | 190
 EQ | 6 | 
-   !DISPLAY<1> = DATA<7> & DATA<6> & DATA<3> & !DATA<2> & 
-	DATA<0> & DATA<4> & DATA<5>
-	# DATA<7> & DATA<6> & DATA<3> & !DATA<2> & 
-	DATA<4> & DATA<5> & DATA<1>
-	# DATA<7> & DATA<6> & DATA<3> & DATA<2> & 
-	DATA<0> & !DATA<4> & !DATA<5> & DATA<1>;	// (3 pt, 8 inp)
+   !DISPLAY<1> = DATA<0> & DATA<1> & DATA<3> & DATA<4> & 
+	DATA<5> & DATA<6> & DATA<7>
+	# DATA<0> & DATA<3> & DATA<4> & DATA<5> & 
+	DATA<6> & DATA<7> & !DATA<2>
+	# DATA<1> & DATA<3> & DATA<4> & DATA<5> & 
+	DATA<6> & DATA<7> & !DATA<2>;	// (3 pt, 8 inp)
 
 MACROCELL | 15 | 11 | DISPLAY<2>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 8 | DATA<7>  | DATA<6>  | DATA<3>  | DATA<0>  | DATA<4>  | DATA<5>  | DATA<1>  | DATA<2>
-INPUTP | 8 | 211 | 212 | 213 | 142 | 62 | 190 | 217 | 214
+INPUTS | 8 | DATA<0>  | DATA<1>  | DATA<3>  | DATA<4>  | DATA<5>  | DATA<6>  | DATA<7>  | DATA<2>
+INPUTP | 8 | 142 | 62 | 217 | 214 | 213 | 212 | 211 | 190
 EQ | 4 | 
-   !DISPLAY<2> = DATA<7> & DATA<6> & DATA<3> & DATA<0> & 
-	DATA<4> & DATA<5> & !DATA<1>
-	# DATA<7> & DATA<6> & DATA<3> & DATA<2> & 
-	DATA<0> & !DATA<4> & !DATA<5> & DATA<1>;	// (2 pt, 8 inp)
+   !DISPLAY<2> = DATA<0> & !DATA<1> & DATA<3> & DATA<4> & 
+	DATA<5> & DATA<6> & DATA<7>
+	# DATA<0> & DATA<3> & DATA<4> & DATA<5> & 
+	DATA<6> & DATA<7> & DATA<2>;	// (2 pt, 8 inp)
 
 MACROCELL | 15 | 10 | DISPLAY<3>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 8 | DATA<7>  | DATA<6>  | DATA<3>  | DATA<2>  | DATA<4>  | DATA<5>  | DATA<1>  | DATA<0>
-INPUTP | 8 | 211 | 212 | 213 | 214 | 62 | 190 | 217 | 142
+INPUTS | 8 | DATA<0>  | DATA<1>  | DATA<3>  | DATA<4>  | DATA<5>  | DATA<6>  | DATA<7>  | DATA<2>
+INPUTP | 8 | 142 | 62 | 217 | 214 | 213 | 212 | 211 | 190
 EQ | 8 | 
-   !DISPLAY<3> = DATA<7> & DATA<6> & DATA<3> & DATA<2> & 
-	DATA<4> & DATA<5> & !DATA<1>
-	# DATA<7> & DATA<6> & DATA<3> & DATA<2> & 
-	DATA<0> & !DATA<4> & !DATA<5> & DATA<1>
-	# DATA<7> & DATA<6> & DATA<3> & !DATA<2> & 
-	DATA<0> & DATA<4> & DATA<5> & !DATA<1>
-	# DATA<7> & DATA<6> & DATA<3> & !DATA<2> & 
-	!DATA<0> & DATA<4> & DATA<5> & DATA<1>;	// (4 pt, 8 inp)
+   !DISPLAY<3> = DATA<0> & !DATA<1> & DATA<3> & DATA<4> & 
+	DATA<5> & DATA<6> & DATA<7>
+	# DATA<0> & DATA<3> & DATA<4> & DATA<5> & 
+	DATA<6> & DATA<7> & DATA<2>
+	# !DATA<1> & DATA<3> & DATA<4> & DATA<5> & 
+	DATA<6> & DATA<7> & DATA<2>
+	# !DATA<0> & DATA<1> & DATA<3> & DATA<4> & 
+	DATA<5> & DATA<6> & DATA<7> & !DATA<2>;	// (4 pt, 8 inp)
 
 MACROCELL | 15 | 4 | DISPLAY<4>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 8 | DATA<7>  | DATA<6>  | DATA<3>  | DATA<0>  | DATA<4>  | DATA<5>  | DATA<2>  | DATA<1>
-INPUTP | 8 | 211 | 212 | 213 | 142 | 62 | 190 | 214 | 217
+INPUTS | 8 | DATA<0>  | DATA<3>  | DATA<4>  | DATA<5>  | DATA<6>  | DATA<7>  | DATA<1>  | DATA<2>
+INPUTP | 8 | 142 | 217 | 214 | 213 | 212 | 211 | 62 | 190
 EQ | 6 | 
-   !DISPLAY<4> = DATA<7> & DATA<6> & DATA<3> & !DATA<0> & 
-	DATA<4> & DATA<5>
-	# DATA<7> & DATA<6> & DATA<3> & !DATA<2> & 
-	DATA<0> & DATA<4> & DATA<5>
-	# DATA<7> & DATA<6> & DATA<3> & DATA<2> & 
-	DATA<0> & !DATA<4> & !DATA<5> & DATA<1>;	// (3 pt, 8 inp)
+   !DISPLAY<4> = !DATA<0> & DATA<3> & DATA<4> & DATA<5> & 
+	DATA<6> & DATA<7>
+	# DATA<1> & DATA<3> & DATA<4> & DATA<5> & 
+	DATA<6> & DATA<7>
+	# DATA<3> & DATA<4> & DATA<5> & DATA<6> & 
+	DATA<7> & !DATA<2>;	// (3 pt, 8 inp)
 
 MACROCELL | 15 | 15 | DISPLAY<5>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 8 | DATA<7>  | DATA<6>  | DATA<3>  | DATA<2>  | DATA<0>  | DATA<4>  | DATA<5>  | DATA<1>
-INPUTP | 8 | 211 | 212 | 213 | 214 | 142 | 62 | 190 | 217
-EQ | 10 | 
-   !DISPLAY<5> = DATA<7> & DATA<6> & DATA<3> & DATA<2> & 
-	!DATA<0> & DATA<4> & DATA<5>
-	# DATA<7> & DATA<6> & DATA<3> & DATA<2> & 
-	DATA<4> & DATA<5> & !DATA<1>
-	# DATA<7> & DATA<6> & DATA<3> & !DATA<0> & 
-	DATA<4> & DATA<5> & !DATA<1>
-	# DATA<7> & DATA<6> & DATA<3> & DATA<2> & 
-	DATA<0> & !DATA<4> & !DATA<5> & DATA<1>
-	# DATA<7> & DATA<6> & DATA<3> & !DATA<2> & 
-	DATA<0> & DATA<4> & DATA<5> & DATA<1>;	// (5 pt, 8 inp)
+INPUTS | 8 | DATA<3>  | DATA<4>  | DATA<5>  | DATA<6>  | DATA<7>  | DATA<2>  | DATA<0>  | DATA<1>
+INPUTP | 8 | 217 | 214 | 213 | 212 | 211 | 190 | 142 | 62
+EQ | 6 | 
+   !DISPLAY<5> = DATA<3> & DATA<4> & DATA<5> & DATA<6> & 
+	DATA<7> & DATA<2>
+	# DATA<0> & DATA<1> & DATA<3> & DATA<4> & 
+	DATA<5> & DATA<6> & DATA<7>
+	# !DATA<0> & !DATA<1> & DATA<3> & DATA<4> & 
+	DATA<5> & DATA<6> & DATA<7>;	// (3 pt, 8 inp)
 
 MACROCELL | 15 | 12 | DISPLAY<6>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 8 | DATA<7>  | DATA<6>  | DATA<3>  | DATA<4>  | DATA<5>  | DATA<1>  | DATA<2>  | DATA<0>
-INPUTP | 8 | 211 | 212 | 213 | 62 | 190 | 217 | 214 | 142
+INPUTS | 8 | DATA<1>  | DATA<3>  | DATA<4>  | DATA<5>  | DATA<6>  | DATA<7>  | DATA<0>  | DATA<2>
+INPUTP | 8 | 62 | 217 | 214 | 213 | 212 | 211 | 142 | 190
 EQ | 6 | 
-   !DISPLAY<6> = DATA<7> & DATA<6> & DATA<3> & DATA<4> & 
-	DATA<5> & !DATA<1>
-	# DATA<7> & DATA<6> & DATA<3> & DATA<2> & 
-	DATA<0> & !DATA<4> & !DATA<5> & DATA<1>
-	# DATA<7> & DATA<6> & DATA<3> & !DATA<2> & 
-	!DATA<0> & DATA<4> & DATA<5> & DATA<1>;	// (3 pt, 8 inp)
+   !DISPLAY<6> = !DATA<1> & DATA<3> & DATA<4> & DATA<5> & 
+	DATA<6> & DATA<7>
+	# DATA<0> & DATA<3> & DATA<4> & DATA<5> & 
+	DATA<6> & DATA<7> & DATA<2>
+	# !DATA<0> & DATA<3> & DATA<4> & DATA<5> & 
+	DATA<6> & DATA<7> & !DATA<2>;	// (3 pt, 8 inp)
 
 MACROCELL | 10 | 15 | EN_SEGMENT_MC
 ATTRIBUTES | 1074004738 | 0
@@ -677,7 +431,7 @@ EQ | 1 |
 MACROCELL | 1 | 14 | TXD_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 12 | TX_CIRCUIT/count<0>  | TX_CIRCUIT/count<2>  | TX_CIRCUIT/count<1>  | TX_CIRCUIT/count<3>  | TX_CIRCUIT/output<7>  | TX_CIRCUIT/output<3>  | TX_CIRCUIT/output<5>  | TX_CIRCUIT/output<9>  | TX_CIRCUIT/output<6>  | TX_CIRCUIT/output<2>  | TX_CIRCUIT/output<4>  | TX_CIRCUIT/output<8>
-INPUTMC | 12 | 1 | 15 | 1 | 9 | 1 | 8 | 1 | 10 | 10 | 10 | 0 | 3 | 0 | 11 | 0 | 13 | 5 | 11 | 11 | 14 | 0 | 5 | 0 | 12
+INPUTMC | 12 | 1 | 15 | 1 | 9 | 1 | 8 | 1 | 10 | 0 | 11 | 5 | 11 | 0 | 3 | 0 | 13 | 0 | 5 | 11 | 14 | 10 | 10 | 0 | 12
 EQ | 17 | 
    TXD = !TX_CIRCUIT/count<0> & !TX_CIRCUIT/count<2>
 	$ TX_CIRCUIT/count<0> & TX_CIRCUIT/count<1> & 
@@ -719,7 +473,7 @@ EQ | 4 |
 TX_CIRCUIT/output<9> := DATA<7>;	// (0 pt, 0 inp)
     TX_CIRCUIT/output<9>.CLK = !(LOAD);	// CTC	(1 pt, 1 inp)
 
-MACROCELL | 5 | 11 | TX_CIRCUIT/output<6>_MC
+MACROCELL | 0 | 5 | TX_CIRCUIT/output<6>_MC
 ATTRIBUTES | 2290089984 | 4
 OUTPUTMC | 1 | 1 | 14
 INPUTS | 0 
@@ -730,7 +484,7 @@ EQ | 4 |
 TX_CIRCUIT/output<6> := DATA<4>;	// (0 pt, 0 inp)
     TX_CIRCUIT/output<6>.CLK = !(LOAD);	// CTC	(1 pt, 1 inp)
 
-MACROCELL | 10 | 10 | TX_CIRCUIT/output<7>_MC
+MACROCELL | 0 | 11 | TX_CIRCUIT/output<7>_MC
 ATTRIBUTES | 2290089984 | 4
 OUTPUTMC | 1 | 1 | 14
 INPUTS | 0 
@@ -741,7 +495,7 @@ EQ | 4 |
 TX_CIRCUIT/output<7> := DATA<5>;	// (0 pt, 0 inp)
     TX_CIRCUIT/output<7>.CLK = !(LOAD);	// CTC	(1 pt, 1 inp)
 
-MACROCELL | 0 | 5 | TX_CIRCUIT/output<4>_MC
+MACROCELL | 10 | 10 | TX_CIRCUIT/output<4>_MC
 ATTRIBUTES | 2290089984 | 4
 OUTPUTMC | 1 | 1 | 14
 INPUTS | 0 
@@ -752,7 +506,7 @@ EQ | 4 |
 TX_CIRCUIT/output<4> := DATA<2>;	// (0 pt, 0 inp)
     TX_CIRCUIT/output<4>.CLK = !(LOAD);	// CTC	(1 pt, 1 inp)
 
-MACROCELL | 0 | 11 | TX_CIRCUIT/output<5>_MC
+MACROCELL | 0 | 3 | TX_CIRCUIT/output<5>_MC
 ATTRIBUTES | 2290089984 | 4
 OUTPUTMC | 1 | 1 | 14
 INPUTS | 0 
@@ -774,7 +528,7 @@ EQ | 4 |
 TX_CIRCUIT/output<2> := DATA<0>;	// (0 pt, 0 inp)
     TX_CIRCUIT/output<2>.CLK = !(LOAD);	// CTC	(1 pt, 1 inp)
 
-MACROCELL | 0 | 3 | TX_CIRCUIT/output<3>_MC
+MACROCELL | 5 | 11 | TX_CIRCUIT/output<3>_MC
 ATTRIBUTES | 2290089984 | 4
 OUTPUTMC | 1 | 1 | 14
 INPUTS | 0 
@@ -791,16 +545,16 @@ INPUTS | 0
 EQ | 1 | 
    led = Gnd;	// (0 pt, 0 inp)
 
-PIN | CLK50 | 16384 | 16 | LVCMOS18 | 59 | 23 | 0 | 15 | 0 | 14 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 1 | 0 | 0 | 1 | 5 | 1 | 1 | 1 | 6 | 2 | 12 | 1 | 7 | 2 | 10 | 2 | 9 | 1 | 11 | 2 | 11 | 2 | 14 | 1 | 13 | 1 | 4 | 1 | 12
+PIN | CLK50 | 16384 | 16 | LVCMOS18 | 59 | 23 | 0 | 15 | 0 | 14 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 4 | 0 | 1 | 0 | 0 | 0 | 2 | 1 | 1 | 1 | 13 | 1 | 12 | 1 | 11 | 1 | 4 | 1 | 3 | 1 | 2 | 1 | 6 | 1 | 7 | 2 | 11 | 2 | 12 | 1 | 5
 PIN | LOAD | 64 | 16 | LVCMOS18 | 218 | 0
-PIN | DATA<7> | 64 | 16 | LVCMOS18 | 211 | 8 | 13 | 15 | 15 | 14 | 15 | 11 | 15 | 10 | 15 | 4 | 15 | 15 | 15 | 12 | 0 | 13
-PIN | DATA<6> | 64 | 16 | LVCMOS18 | 212 | 8 | 13 | 15 | 15 | 14 | 15 | 11 | 15 | 10 | 15 | 4 | 15 | 15 | 15 | 12 | 0 | 12
-PIN | DATA<3> | 64 | 16 | LVCMOS18 | 213 | 8 | 13 | 15 | 15 | 14 | 15 | 11 | 15 | 10 | 15 | 4 | 15 | 15 | 15 | 12 | 0 | 11
-PIN | DATA<2> | 64 | 16 | LVCMOS18 | 214 | 8 | 13 | 15 | 15 | 14 | 15 | 11 | 15 | 10 | 15 | 4 | 15 | 15 | 15 | 12 | 0 | 5
 PIN | DATA<0> | 64 | 16 | LVCMOS18 | 142 | 8 | 13 | 15 | 15 | 14 | 15 | 11 | 15 | 10 | 15 | 4 | 15 | 15 | 15 | 12 | 11 | 14
-PIN | DATA<4> | 64 | 16 | LVCMOS18 | 62 | 8 | 13 | 15 | 15 | 14 | 15 | 11 | 15 | 10 | 15 | 4 | 15 | 15 | 15 | 12 | 5 | 11
-PIN | DATA<5> | 64 | 16 | LVCMOS18 | 190 | 8 | 13 | 15 | 15 | 14 | 15 | 11 | 15 | 10 | 15 | 4 | 15 | 15 | 15 | 12 | 10 | 10
-PIN | DATA<1> | 64 | 16 | LVCMOS18 | 217 | 8 | 13 | 15 | 15 | 14 | 15 | 11 | 15 | 10 | 15 | 4 | 15 | 15 | 15 | 12 | 0 | 3
+PIN | DATA<1> | 64 | 16 | LVCMOS18 | 62 | 8 | 13 | 15 | 15 | 14 | 15 | 11 | 15 | 10 | 15 | 4 | 15 | 15 | 15 | 12 | 5 | 11
+PIN | DATA<3> | 64 | 16 | LVCMOS18 | 217 | 8 | 13 | 15 | 15 | 14 | 15 | 11 | 15 | 10 | 15 | 4 | 15 | 15 | 15 | 12 | 0 | 3
+PIN | DATA<4> | 64 | 16 | LVCMOS18 | 214 | 8 | 13 | 15 | 15 | 14 | 15 | 11 | 15 | 10 | 15 | 4 | 15 | 15 | 15 | 12 | 0 | 5
+PIN | DATA<5> | 64 | 16 | LVCMOS18 | 213 | 8 | 13 | 15 | 15 | 14 | 15 | 11 | 15 | 10 | 15 | 4 | 15 | 15 | 15 | 12 | 0 | 11
+PIN | DATA<6> | 64 | 16 | LVCMOS18 | 212 | 8 | 13 | 15 | 15 | 14 | 15 | 11 | 15 | 10 | 15 | 4 | 15 | 15 | 15 | 12 | 0 | 12
+PIN | DATA<7> | 64 | 16 | LVCMOS18 | 211 | 8 | 13 | 15 | 15 | 14 | 15 | 11 | 15 | 10 | 15 | 4 | 15 | 15 | 15 | 12 | 0 | 13
+PIN | DATA<2> | 64 | 16 | LVCMOS18 | 190 | 8 | 13 | 15 | 15 | 14 | 15 | 11 | 15 | 10 | 15 | 4 | 15 | 15 | 15 | 12 | 10 | 10
 PIN | BUSY | 536871040 | 0 | LVCMOS18 | 1
 PIN | DISPLAY<0> | 536871040 | 0 | LVCMOS18 | 95
 PIN | DISPLAY<1> | 536871040 | 0 | LVCMOS18 | 82

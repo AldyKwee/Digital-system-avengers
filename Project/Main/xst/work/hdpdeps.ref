@@ -1,26 +1,29 @@
-V3 15
+V3 18
 FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/Main/Main.vhd" 2019/05/07.13:59:07 P.20131013
 FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/seve_segment/uart_7segment.vhd" 2019/05/03.09:54:44 P.20131013
 FL "C:/Users/budis.DESKTOP-HTRVQ17/Desktop/Kevin Teo Sem 4/Digital System/Project/Digital-system-avengers-master/Project/UART_Transmitter/uart_tx.vhd" 2019/05/07.15:11:47 P.20131013
 FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/Main/Main.vhd" 2019/05/07.13:59:07 P.20131013
-EN work/Main 1557457874 \
-      FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/Main/Main.vhd" \
-      PB ieee/std_logic_1164 1381692176
-AR work/Main/Behavioral 1557457875 \
-      FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/Main/Main.vhd" \
-      EN work/Main 1557457874 CP SevenSegment CP UART_TX
 FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/Main/uart_7segment.vhd" 2019/05/02.13:20:10 P.20131013
 FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/seve_segment/uart_7segment.vhd" 2019/05/10.10:11:08 P.20131013
-EN work/SevenSegment 1557457870 \
-      FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/seve_segment/uart_7segment.vhd" \
-      PB ieee/std_logic_1164 1381692176
-AR work/SevenSegment/Behavioral 1557457871 \
-      FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/seve_segment/uart_7segment.vhd" \
-      EN work/SevenSegment 1557457870
 FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/UART_Transmitter/uart_tx.vhd" 2019/05/10.10:02:29 P.20131013
-EN work/UART_TX 1557457872 \
-      FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/UART_Transmitter/uart_tx.vhd" \
+FL "D:/My Documents/GitHub/Digital-system-avengers/Project/Main/Main.vhd" 2019/05/11.19:00:09 P.20131013
+EN work/Main 1557577689 \
+      FL "D:/My Documents/GitHub/Digital-system-avengers/Project/Main/Main.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/Main/Behavioral 1557577690 \
+      FL "D:/My Documents/GitHub/Digital-system-avengers/Project/Main/Main.vhd" \
+      EN work/Main 1557577689 CP SevenSegment CP UART_TX
+FL "D:/My Documents/GitHub/Digital-system-avengers/Project/seve_segment/uart_7segment.vhd" 2019/05/11.19:28:00 P.20131013
+EN work/SevenSegment 1557577685 \
+      FL "D:/My Documents/GitHub/Digital-system-avengers/Project/seve_segment/uart_7segment.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/SevenSegment/Behavioral 1557577686 \
+      FL "D:/My Documents/GitHub/Digital-system-avengers/Project/seve_segment/uart_7segment.vhd" \
+      EN work/SevenSegment 1557577685
+FL "D:/My Documents/GitHub/Digital-system-avengers/Project/UART_Transmitter/uart_tx.vhd" 2019/05/11.19:00:03 P.20131013
+EN work/UART_TX 1557577687 \
+      FL "D:/My Documents/GitHub/Digital-system-avengers/Project/UART_Transmitter/uart_tx.vhd" \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/UART_TX/Behavior 1557457873 \
-      FL "D:/My Documents/College Assignments/Semester 4/Digital System/Project/UART_Transmitter/uart_tx.vhd" \
-      EN work/UART_TX 1557457872
+AR work/UART_TX/Behavior 1557577688 \
+      FL "D:/My Documents/GitHub/Digital-system-avengers/Project/UART_Transmitter/uart_tx.vhd" \
+      EN work/UART_TX 1557577687

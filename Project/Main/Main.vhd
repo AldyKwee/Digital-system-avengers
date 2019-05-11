@@ -66,7 +66,7 @@ end component;
 
 component UART_TX
 	generic (
-                divisor    : integer := 2604    -- Set the Baud Rate Divisor here.  
+                divisor    : integer := 416   -- Set the Baud Rate Divisor here.  
                                                 -- Some common values:  300 Baud = 83333, 9600 Baud = 2604, 115200 Baud = 217, 921600 Baud = 27
             );
             

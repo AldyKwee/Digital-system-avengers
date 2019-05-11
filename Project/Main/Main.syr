@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: Main.prj
 
@@ -75,12 +75,12 @@ wysiwyg                            : NO
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "D:/My Documents/College Assignments/Semester 4/Digital System/Project/seve_segment/uart_7segment.vhd" in Library work.
+Compiling vhdl file "D:/My Documents/GitHub/Digital-system-avengers/Project/seve_segment/uart_7segment.vhd" in Library work.
 Entity <sevensegment> compiled.
 Entity <sevensegment> (Architecture <behavioral>) compiled.
-Compiling vhdl file "D:/My Documents/College Assignments/Semester 4/Digital System/Project/UART_Transmitter/uart_tx.vhd" in Library work.
+Compiling vhdl file "D:/My Documents/GitHub/Digital-system-avengers/Project/UART_Transmitter/uart_tx.vhd" in Library work.
 Architecture behavior of Entity uart_tx is up to date.
-Compiling vhdl file "D:/My Documents/College Assignments/Semester 4/Digital System/Project/Main/Main.vhd" in Library work.
+Compiling vhdl file "D:/My Documents/GitHub/Digital-system-avengers/Project/Main/Main.vhd" in Library work.
 Architecture behavioral of Entity main is up to date.
 
 =========================================================================
@@ -91,7 +91,7 @@ Analyzing hierarchy for entity <Main> in library <work> (architecture <behaviora
 Analyzing hierarchy for entity <SevenSegment> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <UART_TX> in library <work> (architecture <behavior>) with generics.
-	divisor = 2604
+	divisor = 416
 
 
 =========================================================================
@@ -104,10 +104,10 @@ Analyzing Entity <SevenSegment> in library <work> (Architecture <behavioral>).
 Entity <SevenSegment> analyzed. Unit <SevenSegment> generated.
 
 Analyzing generic Entity <UART_TX> in library <work> (Architecture <behavior>).
-	divisor = 2604
-WARNING:Xst:819 - "D:/My Documents/College Assignments/Semester 4/Digital System/Project/UART_Transmitter/uart_tx.vhd" line 74: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+	divisor = 416
+WARNING:Xst:819 - "D:/My Documents/GitHub/Digital-system-avengers/Project/UART_Transmitter/uart_tx.vhd" line 74: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <ibusy>
-WARNING:Xst:819 - "D:/My Documents/College Assignments/Semester 4/Digital System/Project/UART_Transmitter/uart_tx.vhd" line 87: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "D:/My Documents/GitHub/Digital-system-avengers/Project/UART_Transmitter/uart_tx.vhd" line 87: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <count>
 INFO:Xst:2679 - Register <lampu> in unit <UART_TX> has a constant value of 0 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <output<0>> in unit <UART_TX> has a constant value of 1 during circuit operation. The register is replaced by logic.
@@ -123,12 +123,12 @@ Entity <UART_TX> analyzed. Unit <UART_TX> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <SevenSegment>.
-    Related source file is "D:/My Documents/College Assignments/Semester 4/Digital System/Project/seve_segment/uart_7segment.vhd".
+    Related source file is "D:/My Documents/GitHub/Digital-system-avengers/Project/seve_segment/uart_7segment.vhd".
 Unit <SevenSegment> synthesized.
 
 
 Synthesizing Unit <UART_TX>.
-    Related source file is "D:/My Documents/College Assignments/Semester 4/Digital System/Project/UART_Transmitter/uart_tx.vhd".
+    Related source file is "D:/My Documents/GitHub/Digital-system-avengers/Project/UART_Transmitter/uart_tx.vhd".
 WARNING:Xst:737 - Found 1-bit latch for signal <ibusy>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Found 1-bit 11-to-1 multiplexer for signal <TXD>.
     Found 1-bit register for signal <clk>.
@@ -145,7 +145,7 @@ Unit <UART_TX> synthesized.
 
 
 Synthesizing Unit <Main>.
-    Related source file is "D:/My Documents/College Assignments/Semester 4/Digital System/Project/Main/Main.vhd".
+    Related source file is "D:/My Documents/GitHub/Digital-system-avengers/Project/Main/Main.vhd".
 Unit <Main> synthesized.
 
 
@@ -255,14 +255,15 @@ Design Statistics
 # IOs                              : 21
 
 Cell Usage :
-# BELS                             : 253
-#      AND2                        : 100
-#      AND3                        : 5
+# BELS                             : 219
+#      AND2                        : 82
+#      AND3                        : 3
 #      AND4                        : 1
+#      AND6                        : 1
 #      GND                         : 2
-#      INV                         : 77
-#      OR2                         : 34
-#      OR3                         : 9
+#      INV                         : 66
+#      OR2                         : 38
+#      OR3                         : 1
 #      VCC                         : 1
 #      XOR2                        : 24
 # FlipFlops/Latches                : 37
@@ -276,12 +277,12 @@ Cell Usage :
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.18 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.39 secs
  
 --> 
 
-Total memory usage is 4536924 kilobytes
+Total memory usage is 4536940 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    3 (   0 filtered)

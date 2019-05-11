@@ -1,7 +1,7 @@
 Release 8.1i - Fit P.20131013
 Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
 
- 5-10-2019 10:11AM
+ 5-11-2019  7:28PM
 
 NOTE: This file is designed to be imported into a spreadsheet program
 such as Microsoft Excel for viewing, printing and sorting. The comma ','
@@ -56,7 +56,7 @@ P35,KPR,,I/O/CDR,,,1,,,,,,,
 P36,GND,,GND,,,,,,,,,,
 P37,,VCC,VCC,,,,,,,,,,
 P38,CLK50,GCK,I/O/GCK2,,LVCMOS18,1,,FAST,,,,
-P39,DATA<4>,I,I/O/DGE0,INPUT,LVCMOS18,1,,FAST,,,,
+P39,DATA<1>,I,I/O/DGE0,INPUT,LVCMOS18,1,,FAST,,,,
 P40,KPR,,I/O,,,1,,,,,,,
 P41,KPR,,I/O,,,1,,,,,,,
 P42,KPR,,I/O,,,1,,,,,,,
@@ -141,7 +141,7 @@ P120,KPR,,I/O,,,2,,,,,,,
 P121,KPR,,I/O,,,2,,,,,,,
 P122,TDO,,TDO,,,,,,,,,,
 P123,GND,,GND,,,,,,,,,,
-P124,DATA<5>,I,I/O/DGE1,INPUT,LVCMOS18,2,,FAST,,,,
+P124,DATA<2>,I,I/O/DGE1,INPUT,LVCMOS18,2,,FAST,,,,
 P125,KPR,,I/O,,,2,,,,,,,
 P126,KPR,,I/O,,,2,,,,,,,
 P127,,VCCIO-1.8,VCCIO,,,2,,,,,,,
@@ -156,10 +156,10 @@ P135,KPR,,I/O,,,2,,,,,,,
 P136,KPR,,I/O,,,2,,,,,,,
 P137,DATA<7>,I,I/O,INPUT,LVCMOS18,2,,FAST,,,,
 P138,DATA<6>,I,I/O,INPUT,LVCMOS18,2,,FAST,,,,
-P139,DATA<3>,I,I/O,INPUT,LVCMOS18,2,,FAST,,,,
-P140,DATA<2>,I,I/O,INPUT,LVCMOS18,2,,FAST,,,,
+P139,DATA<5>,I,I/O,INPUT,LVCMOS18,2,,FAST,,,,
+P140,DATA<4>,I,I/O,INPUT,LVCMOS18,2,,FAST,,,,
 P141,,VCCIO-1.8,VCCIO,,,2,,,,,,,
-P142,DATA<1>,I,I/O,INPUT,LVCMOS18,2,,FAST,,,,
+P142,DATA<3>,I,I/O,INPUT,LVCMOS18,2,,FAST,,,,
 P143,LOAD,I,I/O/GSR,INPUT,LVCMOS18,2,,FAST,,,,
 P144,GND,,GND,,,,,,,,,,
 
