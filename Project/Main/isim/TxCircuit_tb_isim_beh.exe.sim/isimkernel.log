@@ -1,10 +1,30 @@
 Command line:
    TxCircuit_tb_isim_beh.exe
      -simmode  gui
-     -simrunnum  0
-     -socket  64498
+     -simrunnum  1
+     -socket  51524
 
-Fri May 10 10:04:23 2019
+Mon May 13 17:23:41 2019
 
 
- Elaboration Time: 0.1875 sec
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 5829.8 Meg
+
+ Total Signals          : 19
+ Total Nets             : 30
+ Total Signal Drivers   : 13
+ Total Blocks           : 4
+ Total Primitive Blocks : 3
+ Total Processes        : 9
+ Total Traceable Variables  : 15
+ Total Scalar Nets and Variables : 515
+Total Line Count : 35
+Total Line Count : 35
+
+ Total Simulation Time: 0.328125 sec
+
+ Current Memory Usage: 4728.76 Meg
+
+Mon May 13 18:07:16 2019
+

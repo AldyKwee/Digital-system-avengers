@@ -1,5 +1,5 @@
 ISim log file
-Running: D:\My Documents\College Assignments\Semester 4\Digital System\Project\Main\TxCircuit_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/My Documents/College Assignments/Semester 4/Digital System/Project/Main/TxCircuit_tb_isim_beh.wdb 
+Running: D:\My Documents\GitHub\Digital-system-avengers\Project\Main\MainTx_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/My Documents/GitHub/Digital-system-avengers/Project/Main/MainTx_tb_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -11,18 +11,11 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run 10us
-# run 10us
 # restart
 # run 100us
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # restart
-# run 1000us
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# run 1000us
-# restart
-# run 1000us
+# run 200us
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.

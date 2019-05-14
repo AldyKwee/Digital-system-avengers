@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "D:/My Documents/College Assignments/Semester 4/Digital System/Project/Main/TxCircuit_tb_isim_beh.exe" -prj "D:/My Documents/College Assignments/Semester 4/Digital System/Project/Main/TxCircuit_tb_beh.prj" "work.TxCircuit_tb" 
+-intstyle "ise" -incremental -o "D:/My Documents/GitHub/Digital-system-avengers/Project/Main/MainTx_tb_isim_beh.exe" -prj "D:/My Documents/GitHub/Digital-system-avengers/Project/Main/MainTx_tb_beh.prj" "work.MainTx_tb" 

@@ -101,7 +101,7 @@ BEGIN
       wait for CLK50_period*10;
 
       -- insert stimulus here 
-		DATA <= "00110010";
+		DATA <= "11111110";
 		LOAD <= '0';
 		
 		wait for 10 us;

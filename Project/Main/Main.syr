@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: Main.prj
 
@@ -76,10 +76,10 @@ wysiwyg                            : NO
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "D:/My Documents/GitHub/Digital-system-avengers/Project/seve_segment/uart_7segment.vhd" in Library work.
-Entity <sevensegment> compiled.
-Entity <sevensegment> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity sevensegment is up to date.
 Compiling vhdl file "D:/My Documents/GitHub/Digital-system-avengers/Project/UART_Transmitter/uart_tx.vhd" in Library work.
-Architecture behavior of Entity uart_tx is up to date.
+Entity <uart_tx> compiled.
+Entity <uart_tx> (Architecture <behavior>) compiled.
 Compiling vhdl file "D:/My Documents/GitHub/Digital-system-avengers/Project/Main/Main.vhd" in Library work.
 Architecture behavioral of Entity main is up to date.
 
@@ -198,6 +198,7 @@ Optimizing unit <SevenSegment> ...
 
 Optimizing unit <UART_TX> ...
   implementation constraint: INIT=r	 : clk
+  implementation constraint: INIT=r	 : start
   implementation constraint: INIT=r	 : divider_21
   implementation constraint: INIT=r	 : divider_0
   implementation constraint: INIT=r	 : divider_1
@@ -277,12 +278,12 @@ Cell Usage :
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.39 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.87 secs
  
 --> 
 
-Total memory usage is 4536940 kilobytes
+Total memory usage is 4536928 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    3 (   0 filtered)

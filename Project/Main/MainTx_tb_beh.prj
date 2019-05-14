@@ -1,0 +1,4 @@
+vhdl work "../UART_Transmitter/uart_tx.vhd"
+vhdl work "../seve_segment/uart_7segment.vhd"
+vhdl work "Main.vhd"
+vhdl work "MainTx_tb.vhd"

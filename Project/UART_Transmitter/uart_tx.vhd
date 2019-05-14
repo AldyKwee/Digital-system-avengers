@@ -52,8 +52,8 @@ end UART_TX;
 
 architecture Behavior of UART_TX is
 
-    signal    start        : std_logic;                        -- Starts the bit counter.
-    signal    ibusy        : std_logic;                        -- Signals the module is currently transmitting.
+    signal    start        : std_logic := '0';                        -- Starts the bit counter.
+    signal    ibusy        : std_logic := '0';                        -- Signals the module is currently transmitting.
     signal    output       : std_logic_vector(10 downto 0);    -- Shift register data.
     signal    divider      : integer range 0 to 4000000;       -- Counter used for dividing the system clock.
     signal    clk          : std_logic:= '0';                        -- Baud rate clock.
@@ -84,7 +84,7 @@ begin
     -- BIT COUNTER
     -- This counter increments the bit counter for each clock pulse.  This is used to select which bit
     -- is transmitted.
-    process(clk,start)
+    process(clk, start)
     begin
         if (start = '1') then            -- Detect the 'start' signal and then set the 'busy' signal
             count <= 0;                  -- and reset the bit count value.

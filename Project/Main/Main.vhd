@@ -73,7 +73,7 @@ component UART_TX
     port(
             TXD         : out    std_logic;                      -- Transmitter output.
             BUSY        : out    std_logic;                      -- HIGH = Busy currently transmitting, LOW = Ready to transmit.
-            DATA        : in    std_logic_vector(7 downto 0);    -- 8-bits of data to be transmitted.
+            DATA        : in    std_logic_vector(7 downto 0) := "00000000";    -- 8-bits of data to be transmitted.
             LOAD        : in    std_logic;                       -- LOW-to-HIGH transition latched DATA and starts transmitting.
             CLK50       : in    std_logic;                        -- 50 MHz system clock.
 				led 			: out std_logic
